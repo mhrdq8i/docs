@@ -4,7 +4,7 @@
 
 ### The two main configuration terms `Context` & `Directive`
 
-![**Context & Directive**](../../assets/services/nginx/nginx-main-context.png "Context & Directive")
+![nginx-main-context]
 
 ### [Context](#context)
 
@@ -25,7 +25,7 @@
 
 ## [VirtualHost](#virtualhost)
 
-### Sample Virtualhost configuration for nginx:
+### Sample Virtualhost configuration for nginx
 
 ```nginx
 events {
@@ -113,7 +113,7 @@ http {
 
 ## [Variables](#variables)
 
-### ![built-in variables](../../assets/services/nginx/nginx-uri-schema.jpg)
+### ![nginx-uri-schema]
 
 ```nginx
 http {
@@ -478,3 +478,8 @@ http {
   }
 }
 ```
+
+<!-- image links -->
+
+[nginx-main-context]: ../../../assets/ops/services/nginx/nginx-main-context.png
+[nginx-uri-schema]: ../../../assets/ops/services/nginx/nginx-uri-schema.jpg

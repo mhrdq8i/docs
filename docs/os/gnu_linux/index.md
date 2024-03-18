@@ -2,23 +2,6 @@
 
 ### Linux
 
-- [**Architecture**](docs/arch/)
-
-  - [**ELF**](docs/arch/elf.md)
-  - [**Linker & Loader**](docs/arch/linker-loader.md)
-  - [**Kernel**](docs/arch/kernel.md)
-  - [**MMU**](docs/arch/mmu.md)
-
-- [**LPIC**](docs/lpic/)
-
-  - [**docs**](docs/lpic/)
-    - [**LPIC 101**](../gnu_linux/docs/lpic/lpic_1-exam_101.md)
-    - [**LPIC 102**](../gnu_linux/docs/lpic/lpic_1-exam_102.md)
-  - [**refs**](refs/)
-    - [**LPIC 101**](../gnu_linux/refs/LPI-Learning-Material-101-500-en.pdf)
-    - [**LPIC 102**](../gnu_linux/refs/LPI-Learning-Material-102-500-en.pdf)
-    - [**LPIC 2**](../gnu_linux/refs/lpic2book.pdf)
-
 - [**Hardware**](docs/hardware.md#work-with-hardware-via-linux)
 
   - [**Mainboard info**](docs/hardware.md#check-mainboard-info)

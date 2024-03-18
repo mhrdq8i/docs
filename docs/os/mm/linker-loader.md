@@ -132,13 +132,13 @@ we have to understand some concept that related to this topic.
 - ldd ../source.out
 
 <!-- image links -->
-[Image-01]: ../../assets/mm/linker-loader-1.png
-[Image-02]: ../../assets/mm/linker-loader-2.png
-[Image-03]: ../../assets/mm/linker-loader-3.png
-[Image-04]: ../../assets/mm/linker-loader-4.png
-[Image-05]: ../../assets/mm/linker-loader-5.png
-[Image-06]: ../../assets/mm/linker-loader-6.png
-[Image-07]: ../../assets/mm/linker-loader-7.png
-[Image-08]: ../../assets/mm/linker-loader-8.jpg
-[Image-09]: ../../assets/mm/linker-loader-9.jpg
-[Image-10]: ../../assets/mm/linker-loader-10.jpg
+[Image-01]: ../../assets/os/mm/linker-loader-1.png
+[Image-02]: ../../assets/os/mm/linker-loader-2.png
+[Image-03]: ../../assets/os/mm/linker-loader-3.png
+[Image-04]: ../../assets/os/mm/linker-loader-4.png
+[Image-05]: ../../assets/os/mm/linker-loader-5.png
+[Image-06]: ../../assets/os/mm/linker-loader-6.png
+[Image-07]: ../../assets/os/mm/linker-loader-7.png
+[Image-08]: ../../assets/os/mm/linker-loader-8.jpg
+[Image-09]: ../../assets/os/mm/linker-loader-9.jpg
+[Image-10]: ../../assets/os/mm/linker-loader-10.jpg

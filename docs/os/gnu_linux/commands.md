@@ -122,28 +122,28 @@
 
 ### Knowing LVM's concept through some images
 
-[image 1](../../../../assets/os/drsrv/gnu_linux/docs/lvm1.png)
-[image 2](../../../../assets/os/drsrv/gnu_linux/docs/lvm2.png)
-[image 3](../../../../assets/os/drsrv/gnu_linux/docs/lvm3.png)
-[image 4](../../../../assets/os/drsrv/gnu_linux/docs/lvm4.png)
+[image 1](../../assets/os/mm/lvm1.png)
+[image 2](../../assets/os/mm/lvm2.png)
+[image 3](../../assets/os/mm/lvm3.png)
+[image 4](../../assets/os/mm/lvm4.png)
 
 Steps to add physical disk or new partition to LVM
 
-> lsblk -f  
-> df -Th  
-> fdisk /dev/sda  
-> F  
-> n  
-> l  
-> find 8e (lvm)  
-> t  
-> 8e (lvm)  
-> w  
-> mkfs.ext4 /dev/sdb[x]  
-> pvcreate /dev/sdaX  
-> vgextend vg-name /dev/new-partition  
-> lvextend -L [final-partition-size] /dev/VGname  
-> lvextend -L 99G /dev/ubuntu1804-vg/root  
+> lsblk -f
+> df -Th
+> fdisk /dev/sda
+> F
+> n
+> l
+> find 8e (lvm)
+> t
+> 8e (lvm)
+> w
+> mkfs.ext4 /dev/sdb[x]
+> pvcreate /dev/sdaX
+> vgextend vg-name /dev/new-partition
+> lvextend -L [final-partition-size] /dev/VGname
+> lvextend -L 99G /dev/ubuntu1804-vg/root
 > resize2fs /dev/vg-name/lv-name
 
 ### LVM snapshot
@@ -154,32 +154,32 @@ Steps to add physical disk or new partition to LVM
 
 ### [Check the free space and partitions with mount point](#check-the-free-space-and-partitions-with-mount-point)
 
-> lsblk  
+> lsblk
 > df -h
 
 ### [Create a new partition on the disk](#create-a-new-partition-on-the-disk)
 
-> fdisk /dev/sd{a..z}  
-> n  
-> p / e  
-> choice partition number  
-> choice partition first sector  
-> choice partition last sector  
-> w  
+> fdisk /dev/sd{a..z}
+> n
+> p / e
+> choice partition number
+> choice partition first sector
+> choice partition last sector
+> w
 > mkfs.ext4 /dev/sd{a..z}{1..n}
 
 ### [Mount Option](#mount-option)
 
 #### [Show mounted partitions](#show-mounted-partitions)
 
-> fdisk -l  
-> mount | column -t  
+> fdisk -l
+> mount | column -t
 > df -h
 
 #### [findmnt](#findmnt)
 
-> findmnt -l  
-> findmnt -D  
+> findmnt -l
+> findmnt -D
 > findmnt --fstab /home
 
 ### [Mount temporary](#mount-temporary)
@@ -276,24 +276,24 @@ change owner/group of a directory
 
 Lock and Unlock an user:
 
-> usermod -L mehrdad  
+> usermod -L mehrdad
 > usermod -U mehrdad
 
 lock user manually
 
 in the Redhat base
 
-> vim /etc/passwd  
+> vim /etc/passwd
 > root:x:0:0:root:/root:/sbin/nologin
 
 in the Debian base
 
-> vim /etc/passwd  
+> vim /etc/passwd
 > root:x:0:0:root:/root:/usr/sbin/nologin
 
 Kill user in another session:
 
-> ctrl + alt + f2  
+> ctrl + alt + f2
 > $ pkill -9 -u USER || $ ps -fp $(pgrep -d, -u USERNAME)
 
 Grep all active users:
@@ -348,7 +348,7 @@ Add directory into the XZ compress file
 
 Create/Extract one file to XZ file
 
-> xz -z ramz.txt.gpg  
+> xz -z ramz.txt.gpg
 > xz -d ramz.txt.gpg.xz
 
 Create `XZ` file into the another file
@@ -405,7 +405,7 @@ end line character
 
 or
 
-> -e -e  
+> -e -e
 > |
 
 ## [sed](#sed)
@@ -433,13 +433,13 @@ or
 
 ## [Monitor Resources](#monitor-resources)
 
-> top  
-> htop  
-> btop  
-> pybtop  
-> uptime  
-> iotop  
-> vmstat  
+> top
+> htop
+> btop
+> pybtop
+> uptime
+> iotop
+> vmstat
 > iftop
 
 ## [open ssl](#open-ssl)

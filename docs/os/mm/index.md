@@ -1,4 +1,4 @@
-## Memory Managements
+## Stack.Push(Memory Managements\)
 
 - [**ELF**](elf.md)
 - [**Linker & Loader**](linker-loader.md)
