@@ -12,3 +12,5 @@
 - ### [Operation System](os/index.md)
 
 - ### [Memory Management](mm/index.md)
+
+- ### [LPIC Syllabus](lpic_syllabus/index.md)

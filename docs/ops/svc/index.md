@@ -1,4 +1,4 @@
-## S.V.C
+## Stack.Push(S.V.C\)
 
 ### Git
 
