@@ -17,6 +17,6 @@
 
 ---
 
-> Your are here `/devops/cicd/kuber/docs/cheatsheet/`
+> Your are here `/ops/cicd/kuber/docs/cheatsheet/`
 
 [back](../../index.md)

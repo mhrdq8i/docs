@@ -11,4 +11,3 @@ encrypt a file with gpg:
 decrypt encrypted gpg file:
 
 > gpg --output file-name --decrypt file-name.gpg
-

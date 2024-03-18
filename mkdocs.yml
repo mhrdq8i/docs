@@ -19,8 +19,9 @@ theme:
 
 nav:
   - Home: index.md
-  - Programming: codes/README.md
-  - DevOps: devops/README.md
+  - Programming: dev/index.md
+  - DevOps: ops/index.md
+  - Network: net/
   - About:
       - Me: about/me.md
       - Help: about/help.md

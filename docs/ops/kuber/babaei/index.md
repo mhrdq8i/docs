@@ -93,6 +93,6 @@
 
 ---
 
-> Your are here `/devops/cicd/kuber/docs/babaei/`
+> Your are here `/ops/cicd/kuber/docs/babaei/`
 
 [back](../../index.md)

@@ -42,6 +42,6 @@
 
 ---
 
-> Your are here `/devops/svc/`
+> Your are here `/ops/svc/`
 
 [back](../index.md)

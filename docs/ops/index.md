@@ -12,6 +12,6 @@ All my studies list by alphabetical sort
 
 ---
 
-> Your are here `/devops/`
+> Your are here `/ops/`
 
 [back](../index.md)

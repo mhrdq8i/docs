@@ -18,16 +18,16 @@ we have to understand some concept that related to this topic.
 
 ## There are some schemas for better understanding
 
-- [**Image #1**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-1.png)
-- [**Image #2**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-2.png)
-- [**Image #3**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-3.png)
-- [**Image #4**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-4.png)
-- [**Image #5**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-5.png)
-- [**Image #6**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-6.png)
-- [**Image #7**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-7.png)
-- [**Image #8**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-8.jpg)
-- [**Image #9**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-9.jpg)
-- [**Image #10**](../../../../../assets/os/drsrv/gnu_linux/docs/arch/linker-loader-10.jpg)
+![Image-01]
+![Image-02]
+![Image-03]
+![Image-04]
+![Image-05]
+![Image-06]
+![Image-07]
+![Image-08]
+![Image-09]
+![Image-10]
 
 ## Functions of loader
 
@@ -130,3 +130,15 @@ we have to understand some concept that related to this topic.
 **`print shared object dependencies`**
 
 - ldd ../source.out
+
+<!-- image links -->
+[Image-01]: ../../assets/mm/linker-loader-1.png
+[Image-02]: ../../assets/mm/linker-loader-2.png
+[Image-03]: ../../assets/mm/linker-loader-3.png
+[Image-04]: ../../assets/mm/linker-loader-4.png
+[Image-05]: ../../assets/mm/linker-loader-5.png
+[Image-06]: ../../assets/mm/linker-loader-6.png
+[Image-07]: ../../assets/mm/linker-loader-7.png
+[Image-08]: ../../assets/mm/linker-loader-8.jpg
+[Image-09]: ../../assets/mm/linker-loader-9.jpg
+[Image-10]: ../../assets/mm/linker-loader-10.jpg

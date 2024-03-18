@@ -12,6 +12,6 @@
 
 ---
 
-> Your are here `/devops/databases/`
+> Your are here `/ops/databases/`
 
 [back](../README.md)

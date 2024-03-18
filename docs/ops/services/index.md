@@ -13,6 +13,6 @@
 
 ---
 
-> Your are here `/devops/services/`
+> Your are here `/ops/services/`
 
 [back](../README.md)

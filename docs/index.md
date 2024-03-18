@@ -1,15 +1,12 @@
-# All My Docs
 
-## DevOps Documentation
+## Mehrdad's DocStack
 
-### Some explanations about this document section
+- ### [Programming](dev/index.md)
 
-- #### [DevOps](devops/README.md)
+- ### [DevOps](ops/index.md)
 
-## Programming Documentation
+- ### [Operation System](os/index.md)
 
-- [Programming](codes/README.md)
+- ### [Database](db/index.md)
 
-## Networking Documentation
-
-- [Networking]()
+- ### [Networking]()

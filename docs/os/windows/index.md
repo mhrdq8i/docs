@@ -43,6 +43,6 @@
 
 ---
 
-> Your are here `/devops/os/drpc/windows`
+> Your are here `/ops/os/drpc/windows`
 
 [back](../index.md)

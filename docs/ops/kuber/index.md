@@ -10,6 +10,6 @@
 
 ---
 
-> Your are here `/devops/kuber/`
+> Your are here `/ops/kuber/`
 
 [back](../README.md)
