@@ -2,7 +2,7 @@
 
 ## CI/CD Section
 
-### S.V.C.
+### S.V.C
 
 #### Git
 
@@ -42,6 +42,6 @@
 
 ---
 
-> Your are here `/devops/cicd/svc/`
+> Your are here `/devops/svc/`
 
 [back](../index.md)

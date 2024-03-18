@@ -4,11 +4,14 @@
 
 All my studies list by alphabetical sort
 
-- [**DevOps (CI/CD)**](cicd/index.md)
-- [**Operation System**](os/index.md)
 - [**Databases**](database/index.md)
+- [**Kubernetes**](kuber/index.md)
+- [**Operation Systems**](os/index.md)
+- [**Source Version Controller**](svc/index.md)
 - [**Services**](services/index.md)
 
 ---
 
 > Your are here `/devops/`
+
+[back](../index.md)

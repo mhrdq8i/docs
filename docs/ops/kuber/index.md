@@ -10,6 +10,6 @@
 
 ---
 
-> Your are here `/devops/cicd/kuber/`
+> Your are here `/devops/kuber/`
 
-[back](../index.md)
+[back](../README.md)
