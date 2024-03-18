@@ -9,6 +9,4 @@
 
 ---
 
-> Your are here `/ops/os/`
-
-[back](../README.md)
+[back](../index.md)

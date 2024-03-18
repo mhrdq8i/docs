@@ -5,5 +5,3 @@
 ### Topic
 
 - [**MTCNA**](mtcna/index.md)
-
-> Your are here `/network/mikrotik/`

@@ -13,6 +13,4 @@
 
 ---
 
-> Your are here `/ops/services/`
-
-[back](../README.md)
+[back](../index.md)

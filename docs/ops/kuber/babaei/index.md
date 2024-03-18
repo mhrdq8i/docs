@@ -93,6 +93,4 @@
 
 ---
 
-> Your are here `/ops/cicd/kuber/docs/babaei/`
-
 [back](../../index.md)

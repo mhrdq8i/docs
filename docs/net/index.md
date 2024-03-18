@@ -6,4 +6,3 @@
 
 - [**MikroTik**](mikrotik/index.md)
 
-> Your are here `/network/`

@@ -12,6 +12,4 @@
 
 ---
 
-> Your are here `/ops/databases/`
-
-[back](../README.md)
+[back](../index.md)

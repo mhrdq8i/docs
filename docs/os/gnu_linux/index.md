@@ -127,6 +127,4 @@
 
 ---
 
-> Your are here `/ops/os/drsrv/gnu_linux/`
-
 [back](../index.md)

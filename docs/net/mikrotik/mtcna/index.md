@@ -6,4 +6,3 @@
 
 - [**IP**]()
 
-> Your are here `/network/mikrotik/mtcna/`

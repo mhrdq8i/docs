@@ -61,6 +61,4 @@
 
 ---
 
-> Your are here `/ops/services/nginx/`
-
 [back](../index.md)

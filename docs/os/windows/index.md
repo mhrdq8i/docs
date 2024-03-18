@@ -43,6 +43,4 @@
 
 ---
 
-> Your are here `/ops/os/drpc/windows`
-
 [back](../index.md)

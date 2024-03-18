@@ -12,6 +12,4 @@ All my studies list by alphabetical sort
 
 ---
 
-> Your are here `/ops/`
-
 [back](../index.md)

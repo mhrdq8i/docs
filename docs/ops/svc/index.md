@@ -42,6 +42,4 @@
 
 ---
 
-> Your are here `/ops/svc/`
-
 [back](../index.md)

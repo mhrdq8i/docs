@@ -10,6 +10,4 @@
 
 ---
 
-> Your are here `/ops/kuber/`
-
-[back](../README.md)
+[back](../index.md)

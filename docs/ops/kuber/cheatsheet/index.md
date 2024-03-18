@@ -17,6 +17,4 @@
 
 ---
 
-> Your are here `/ops/cicd/kuber/docs/cheatsheet/`
-
-[back](../../index.md)
+[back](../index.md)

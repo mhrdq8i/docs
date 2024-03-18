@@ -6,6 +6,4 @@
 
 ---
 
-> Your are here `/ops/mm/mm/`
-
 [back](../index.md)
