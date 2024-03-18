@@ -18,6 +18,7 @@ pages:
   script:
     - mkdocs build --no-strict --verbose
     - ls -lthr
+    - ls ./public -lthr
   artifacts:
     paths:
       - public
