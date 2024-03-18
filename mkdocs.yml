@@ -1,10 +1,10 @@
 ---
-site_name: Mehrdad's Docs
+site_name: Mehrdad's Docs Stack
 site_url: https://www.geekfa.net/
 site_description: My all project documentation in MD format.
 site_author: MkDocs Team
 
-repo_url: https://github.com/mkdocs/mkdocs/
+repo_url: https://gitlab.com/mehrdad-docs/docstack
 edit_uri: blob/master/docs/
 
 theme:
@@ -19,12 +19,11 @@ theme:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
   - Programming: codes/README.md
   - DevOps: devops/README.md
   - About:
-      - Me: about/contributing.md
-      - Help: about/license.md
+      - Me: about/me.md
+      - Help: about/help.md
 
 extra_css:
   - css/extra.css

@@ -1,4 +1,4 @@
-# My DevOps Documentation Framework
+# My DevOps Doc Stack
 
 ## Root Section
 
