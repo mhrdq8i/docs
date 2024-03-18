@@ -6,8 +6,9 @@ before_script:
 pages:
   script:
     - export IP=`ip -br -c a | tail -n 1 | cut -d / -f 1 | awk '{print $3}'`
-    - mkdocs build --verbose --clean
-    - mkdocs serve $IP:80
+    - echo $IP
+    # - mkdocs build --verbose --clean
+    # - mkdocs serve $IP:80
   artifacts:
     paths:
       - public
