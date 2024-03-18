@@ -8,7 +8,7 @@ pages:
     # - export IP=`ip -br -c a | tail -n 1 | cut -d / -f 1 | awk '{print $3}'`
     # - echo $IP
     - hostname -i
-    - ip -br -c a | tail -n 1 | cut -d / -f 1 | awk '{print $3}'
+    - ip -br -c a
     # - mkdocs build --verbose --clean
     # - mkdocs serve $IP:80
   artifacts:
