@@ -5,8 +5,9 @@ before_script:
   - pip install mkdocs
 pages:
   script:
-    - export IP=`ip -br -c a | tail -n 1 | cut -d / -f 1 | awk '{print $3}'`
-    - echo $IP
+    # - export IP=`ip -br -c a | tail -n 1 | cut -d / -f 1 | awk '{print $3}'`
+    # - echo $IP
+    - hostname -i
     # - mkdocs build --verbose --clean
     # - mkdocs serve $IP:80
   artifacts:
