@@ -1,0 +1,98 @@
+# My DevOps Documentation Framework
+
+## CI/CD Section
+
+### Kubernetes
+
+#### Anisa/Babaei
+
+## [Session 01](1.md)
+
+- [**Kubernetes Components**](1.md#kubernetes-components)
+
+- [**Control Plane Components**](1.md#control-plane-components)
+
+  - [**Kube API Server**](1.md#kube-apiserver)
+  - [**ETCD**](1.md#etcd)
+  - [**Kube Scheduler**](1.md#kube-scheduler)
+  - [**Kube Controller Manager**](1.md#kube-controller-manager)
+  - [**Cloud Controller Manager**](1.md#cloud-controller-manager)
+
+- [**Node Components**](1.md#node-components)
+  - [**Kubelet**](1.md#kubelet)
+  - [**KubeProxy**](1.md#kube-proxy)
+  - [**Container Runtime**](1.md#container-runtime)
+- [**Commands**](1.md#commands)
+
+## [Session 02](2.md)
+
+- [**Kubernetes Main Component (chapter 1 in more detail)**](2.md#kubernetes-main-component)
+- [**Control Plane Components**](2.md#control-plane-components)
+  - [**API Server**](2.md#api-server)
+  - [**Kube Schedular**](2.md#kube-scheduler)
+  - [**Kube Control Manager**](2.md#kube-controller-manager)
+- [**Node Components**](2.md#node-components)
+  - [**Kubelet**](2.md#kubelet)
+  - [**KubeProxy**](2.md#kube-proxy)
+  - [**Container Runtime**](2.md#container-runtime)
+  - [**PODs**](2.md#pods)
+    - [**Key Pod Container Attributes**](2.md#key-pod-container-attributes)
+- [**APIs**](2.md#apis)
+  - [**Container v1 core**](2.md#container-v1-core)
+  - [**Terminology**](2.md#api-terminology)
+
+## [Session 03](3.md)
+
+- [**APIs List**](3.md#apis)
+- [**WorkLoad**](3.md#workloads)
+- [**ReplicaSet**](3.md#replica-set)
+  - [**ReplicaSet**](3.md#how-a-replicaset-works)
+  - [**Scaling a ReplicaSet**](3.md#scaling-a-replicaset)
+  - [**APIs**](3.md#replicaset-apis)
+- [**Deployment**](3.md#deployment-set)
+  - [**UseCase**](3.md#use-case)
+  - [**APIs**](3.md#deploymentset-apis)
+- [**Labels & Selectors**](3.md#label-selectors)
+- [**Namespace**](3.md#namespace)
+- [**Namespace & DNS**](3.md#namespaces-and-dns)
+- [**Resource Quota**](3.md#resource-quotas)
+  - [**APIs**](3.md#resource-quotas-api)
+- [**Service**](3.md#service)
+  - [**Service Type**](3.md#service-type)
+    - [**Cluster IP**](3.md#clusterip)
+    - [**Node Port**](3.md#nodeport)
+    - [**Load Balancer**](3.md#loadbalancer)
+    - [**External**](3.md#externalname)
+    - [**Service Types Schema**](3.md#service-type-schema)
+  - [**Port Forward**](3.md#port-forward)
+- [**Commands**](3.md#commands)
+
+## [Session 04](4.md)
+
+- [**Node Selector**](4.md#node-selector)
+- [**Node Label**](4.md#node-labels)
+- [**Node Affinity**](4.md#node-affinity)
+  - [**Node Affinity Type**](4.md#node-affinity-type)
+    - [**Available**](4.md#available)
+    - [**Planned**](4.md#planned)
+- [**Resource Management for Pods and Containers**](4.md#resource-management-for-pods-and-containers)
+  - [**Example**](4.md#container-resources-example)
+- [**Daemon Set**](4.md#daemonset)
+- [**Static Pods**](4.md#static-pods)
+- [**Configure Multiple Schedulers**](4.md#configure-multiple-schedulers)
+- [**Monitoring, Logging, and Debugging**](4.md#monitoring-logging-and-debugging)
+- [**Application Lifecycle Management**](4.md#application-lifecycle-management)
+- [**Commands**](4.md#commands)
+
+## [Session 05](5.md)
+
+- [**Define Environment Variables for a Container**](5.md#define-environment-variables-for-a-container)
+- [**Multiple containers pods**](5.md#multiple-containers-pods)
+- [**Init Containers**](5.md#init-containers)
+- [**Self-Healing Applications**](5.md#self-healing-applications)
+
+---
+
+> Your are here `/devops/cicd/kuber/docs/babaei/`
+
+[back](../../index.md)

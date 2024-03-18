@@ -1,0 +1,46 @@
+# [ubuntu Distro Doc](#ubuntu-distro-doc)
+
+## [Config netplan (network)](#config-netplan-network)
+
+```bash
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+	enp0s3:
+	  dhcp4: no
+	  addresses:
+	    - 192.168.1.100/24
+	  routes:
+	    - to: default
+	      via: 192.168.1.1
+	  nameservers:
+		  addresses:
+		    - 192.168.1.1
+		    - 8.8.8.8
+```
+
+## [Get the list of installed packages](#get-the-list-of-installed-packages)
+
+> dpkg -l | grep kube  
+> dpkg -l ubuntu-desktop  
+> dpkg -l ubuntu-server
+
+## [Set APT Proxy](#set-apt-proxy)
+
+### [via squid](#via-squid)
+
+```bash
+cat <<EOF | sudo tee /etc/apt/apt.conf.d/21proxy
+Acquire::http::proxy::download.docker.com "http://user:pass@proxy.example.com:3128/";
+Acquire::http::proxy::apt.kubernetes.io "http://user:pass@proxy.example.com:3128/";
+EOF
+```
+
+### [via socks](#via-socks)
+
+```bash
+cat <<EOF | sudo tee /etc/apt/apt.conf.d/21proxy
+Acquire::http::proxy "socks5h://localhost:9090";
+EOF
+```
