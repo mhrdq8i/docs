@@ -5,7 +5,7 @@ before_script:
   - pip install mkdocs
 pages:
   script:
-    - IP=`ip -br -c a | tail -n 1 | cut -d / -f 1 | awk '{print $3}'`
+    - export IP=`ip -br -c a | tail -n 1 | cut -d / -f 1 | awk '{print $3}'`
     - mkdocs build --verbose --clean
     - mkdocs serve $IP:80
   artifacts:
