@@ -85,6 +85,10 @@
 - [**Multiple containers pods**](5.md#multiple-containers-pods)
 - [**Init Containers**](5.md#init-containers)
 - [**Self-Healing Applications**](5.md#self-healing-applications)
+- [**Cluster Maintenance**](5.md#cluster-maintenance)
+- [**Kubernetes Release**](5.md#kubernetes-release)
+- [**Update Cluster**](5.md#update-cluster)
+- [**Commands**](5.md#commands)
 
 ---
 
