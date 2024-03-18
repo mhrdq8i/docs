@@ -1,8 +1,10 @@
 ---
 site_name: Mehrdad's Docs Stack
-site_url: https://www.geekfa.net/
+site_url: https://pages.gitlab.io/mkdocs
+# site_url: https://www.geekfa.net/
 site_description: My all project documentation in MD format.
-site_author: MkDocs Team
+site_author: Mehrdad Qasemkhani
+site_dir: public
 
 repo_url: https://gitlab.com/mehrdad-docs/docstack
 edit_uri: blob/master/docs/
