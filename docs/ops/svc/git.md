@@ -1,4 +1,4 @@
-# Git doc
+# Stack.Push(Git Doc\)
 
 ## [Git 3 level concept](#git-3-level-concept)
 
@@ -208,15 +208,15 @@ git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 ![git-merge-rebase-2]
 
 <!-- image links -->
-[git-concept-1]: ../assets/svc/git-3-level-concept-1.png
-[git-concept-2]: ../assets/svc/git-3-level-concept-2.png
-[git-concept-3]: ../assets/svc/git-3-level-concept-3.png
-[git-concept-4]: ../assets/svc/git-3-level-concept-4.png
-[git-concept-5]: ../assets/svc/git-3-level-concept-5.png
-[git-pictorial]: ../assets/svc/git-a-pictorial-walkthrough.gif
-[git-workflow]: ../assets/svc/git-a-pictorial-walkthrough.gif
-[git-pull-fetch]: ../assets/svc/git-pull-fetch.png
-[git-reset-revert-1]: ../assets/svc/git-reset-revert-1.png
-[git-reset-revert-2]: ../assets/svc/git-reset-revert-2.png
-[git-merge-rebase-1]: ../assets/svc/git-merge-rebase-1.png
-[git-merge-rebase-2]: ../assets/svc/git-merge-rebase-2.png
+[git-concept-1]: ../../assets/ops/svc/git-3-level-concept-1.png
+[git-concept-2]: ../../assets/ops/svc/git-3-level-concept-2.png
+[git-concept-3]: ../../assets/ops/svc/git-3-level-concept-3.png
+[git-concept-4]: ../../assets/ops/svc/git-3-level-concept-4.png
+[git-concept-5]: ../../assets/ops/svc/git-3-level-concept-5.png
+[git-pictorial]: ../../assets/ops/svc/git-a-pictorial-walkthrough.gif
+[git-workflow]: ../../assets/ops/svc/git-a-pictorial-walkthrough.gif
+[git-pull-fetch]: ../../assets/ops/svc/git-pull-fetch.png
+[git-reset-revert-1]: ../../assets/ops/svc/git-reset-revert-1.png
+[git-reset-revert-2]: ../../assets/ops/svc/git-reset-revert-2.png
+[git-merge-rebase-1]: ../../assets/ops/svc/git-merge-rebase-1.png
+[git-merge-rebase-2]: ../../assets/ops/svc/git-merge-rebase-2.png

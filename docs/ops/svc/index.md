@@ -1,10 +1,6 @@
-# My DevOps Documentation Framework
+## S.V.C
 
-## CI/CD Section
-
-### S.V.C
-
-#### Git
+### Git
 
 - [**Git 3 level concept**](git.md#git-3-level-concept)
 - [**Git Configuration**](git.md#git-configuration)

@@ -1,8 +1,4 @@
-# My Network Documentation Framework
 
-## Root Section
-
-### Topic
+## Stack.Push(Network Section\)
 
 - [**MikroTik**](mikrotik/index.md)
-

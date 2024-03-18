@@ -1,4 +1,4 @@
-# GitLab doc
+# # Stack.Push(GitLab Doc\)
 
 ## [Install gitlab-ce over CentOS](#install-gitlab-ce-over-centos)
 
@@ -18,8 +18,8 @@ sudo systemctl start postfix
 
 ### Add the GitLab package repository and install the package
 
-> - curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
-> - sudo EXTERNAL_URL="https://gitlab.example.com" yum install -y gitlab-ce
+> - curl <https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh> | sudo bash
+> - sudo EXTERNAL_URL="<https://gitlab.example.com>" yum install -y gitlab-ce
 
 ### Run Gitlab
 

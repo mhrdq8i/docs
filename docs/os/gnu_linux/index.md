@@ -1,10 +1,6 @@
-# My DevOps Documentation Framework
+## Stack.Push(GUN/Linux Section\)
 
-## OS Section
-
-### Server OS
-
-#### Linux
+### Linux
 
 - [**Architecture**](docs/arch/)
 

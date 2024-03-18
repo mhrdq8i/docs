@@ -1,8 +1,8 @@
-# GitFlow doc
+# # Stack.Push(GitFlow Doc\)
 
 ## [Creating a feature branch](#creating-a-feature-branch)
 
-<img src="../../assets/cicd/svc/git-flow-feature.png" width="30%" height="30%" >
+![git-flow-feature]
 
 ### May branch `feature` off from
 
@@ -18,7 +18,7 @@
 
 ## [Creating a release branch](#creating-a-release-branch)
 
-<img src="../../assets/cicd/svc/git-flow-release.png" width="50%" height="50%" >
+![git-flow-release]
 
 ### May branch `release` off from
 
@@ -32,9 +32,9 @@
 
 - release-\*
 
-## [Creating a Hotfix branch](#hotfix-branches)
+## [Creating a Hotfix branch](#creating-a-hotfix-branch)
 
-<img src="../../assets/cicd/svc/git-flow-hotfix.png" width="30%" height="30%" >
+![git-flow-hotfix]
 
 ### May branch `hotfix` off from
 
@@ -47,3 +47,9 @@
 ### Branch naming convention for `hotfix`
 
 - hotfix-\*
+
+<!-- image links -->
+
+[git-flow-feature]: ../../assets/ops/svc/git-flow-feature.png
+[git-flow-release]: ../../assets/ops/svc/git-flow-release.png
+[git-flow-hotfix]: ../../assets/ops//svc/git-flow-hotfix.png

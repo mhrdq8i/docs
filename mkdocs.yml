@@ -18,9 +18,10 @@ theme:
     - rust
 
 nav:
-  - Home: index.md
-  - Programming: dev/index.md
+  - Code: dev/index.md
   - DevOps: ops/index.md
+  - OS: os/index.md
+  - Database: db/index.md
   - Network: net/
   - About:
       - Me: about/me.md

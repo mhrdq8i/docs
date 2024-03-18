@@ -1,8 +1,4 @@
-# My DevOps Documentation Framework
-
-## CI/CD Section
-
-### Kubernetes
+## Stack.Push(Kubernetes\)
 
 - [**Anisa - Babaei**](babaei/index.md)
 - [**Visualize & CheatSheet**](cheatsheet/index.md)

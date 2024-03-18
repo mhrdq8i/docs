@@ -1,6 +1,4 @@
-# My DevOps Documentation Framework
-
-## OS Section
+## Stack.Push(OS Section\)
 
 - [**GNU/Linux**](gnu_linux/index.md)
 - [**UNIX**](unix/index.md)

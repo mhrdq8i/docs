@@ -1,10 +1,6 @@
-# My DevOps Documentation Framework
+## Stack.Push(Kubernetes Cheat Sheet\)
 
-## CI/CD Section
-
-### Kubernetes
-
-#### K8S Cheat Sheet / Overview
+### K8S Cheat Sheet / Overview
 
 - [**Schema**](schema.md)
   - [**RoadMap**](schema.md#roadmap-overview)

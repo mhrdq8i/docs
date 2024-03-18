@@ -1,8 +1,5 @@
-# My DevOps Documentation Framework
 
-## Services Section
-
-### Nginx
+## Stack.Push(Nginx\)
 
 - [**Install nginx**](concept.md#install-nginx-via-package-manager)
 
