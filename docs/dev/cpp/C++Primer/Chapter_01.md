@@ -21,7 +21,7 @@
 **C Programming Philosophy:**
 
 - C is a `procedural language`.That means it `emphasizes the algorithm side of programming`.
-  - `data` + `algorithm` = `program` [watch this photo](../../assets/data-algorithm=program.png)
+  - `data` + `algorithm` = `program` [watch this photo](../../../assets/cpp/data-algorithm=program.png)
   - With C, the idea is to `break a large program into smaller`, more manageable tasks.
   - C’s design facilitates this approach, encouraging you to develop program units called `functions` to `represent individual task modules`.
 

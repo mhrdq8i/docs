@@ -24,7 +24,7 @@ nav:
   - DevOps: ops/index.md
   - OS: os/index.md
   - Database: db/index.md
-  - Network: net/
+  - Network: net/index.md
   - About:
       - Me: about/me.md
       - Help: about/help.md

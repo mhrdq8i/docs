@@ -481,5 +481,5 @@ http {
 
 <!-- image links -->
 
-[nginx-main-context]: ../../../assets/ops/services/nginx/nginx-main-context.png
-[nginx-uri-schema]: ../../../assets/ops/services/nginx/nginx-uri-schema.jpg
+[nginx-main-context]: ../../../assets/services/nginx/nginx-main-context.png
+[nginx-uri-schema]: ../../../assets/services/nginx/nginx-uri-schema.jpg

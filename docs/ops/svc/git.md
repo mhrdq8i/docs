@@ -1,6 +1,6 @@
 # Stack.Push(Git Doc\)
 
-## [Git 3 level concept](#git-3-level-concept)
+## Git 3 level concept
 
 ### some example about this concept
 
@@ -12,9 +12,9 @@
 ![git-pictorial]
 ![git-workflow]
 
-## [Git Configuration](#git-configuration)
+## Git Configuration
 
-### [git config](#git-config)
+### git config
 
 - Exclude files permission from all local changes
 
@@ -35,7 +35,7 @@ git config --unset core.bare
 git config --global core.editor "vim"
 ```
 
-### [skip SSL C.A.](#skip-ssl-ca)
+### skip SSL C.A
 
 - skip unable to access `https://your.host/your-git/your-repor.git/` SSL certificate problem: self signed certificate
 
@@ -43,7 +43,7 @@ git config --global core.editor "vim"
 git config --global http.sslVerify false
 ```
 
-### [Specified Keys](#specified-keys)
+### Specified Keys
 
 - Add github to your hosts `~/.ssh/config`
 
@@ -53,19 +53,19 @@ Host github
   IdentityFile ~/.ssh/id_rsa_home
 ```
 
-### [store username pass](#store-username-pass)
+### store username pass
 
 ```bash
 git config --global credential.helper store
 ```
 
-## [Git Commands](#git-commands)
+## Git Commands
 
-### [git fetch](#git-fetch)
+### git fetch
 
 ![git-pull-fetch]
 
-### [git add](#git-add)
+### git add
 
 - add file to stage except one
 
@@ -74,7 +74,7 @@ git add --all -- :!main/dont_check_main.txt
 git add -- . :!main/dont_check_main.txt
 ```
 
-### [git clone](#git-clone)
+### git clone
 
 - clone and checkout simultaneously:
 
@@ -88,7 +88,7 @@ git clone -b <branch name> address
 git clone --mirror git@github.com/fernandoaleman/app.git app/.git
 ```
 
-### [git checkout](#git-checkout)
+### git checkout
 
 - Checkout master branch
 
@@ -120,7 +120,7 @@ git branch
 git checkout HEAD~3
 ```
 
-### [git remote](#git-remote)
+### git remote
 
 - Add new remote repository
 
@@ -141,7 +141,7 @@ git remote rename <old-name> <new-name>
 git remote -v
 ```
 
-### [git branch](#git-branch)
+### git branch
 
 - create new branch
 
@@ -161,7 +161,7 @@ git branch -m <old> <new>
 git branch -d <branch_name>
 ```
 
-### [git switch](#git-switch)
+### git switch
 
 - switch branch
 
@@ -175,7 +175,7 @@ git switch <existing-branch>
 git switch -
 ```
 
-### [git reset / git revert](#git-reset--git-revert)
+### git reset - git revert
 
 - git reset
 
@@ -191,32 +191,32 @@ git reset --hard <commit-id>
 git revert <commit-id>
 ```
 
-#### Difference between `git reset` & `git revert`
+Difference between `git reset` & `git revert`
 
 ![git-reset-revert-1]
 ![git-reset-revert-2]
 
-### [git tag](#git-tag)
+### git tag
 
 ```bash
 git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 ```
 
-### [git merge / git rebase](#git-merge--git-rebase)
+### git merge - git rebase
 
 ![git-merge-rebase-1]
 ![git-merge-rebase-2]
 
 <!-- image links -->
-[git-concept-1]: ../../assets/ops/svc/git-3-level-concept-1.png
-[git-concept-2]: ../../assets/ops/svc/git-3-level-concept-2.png
-[git-concept-3]: ../../assets/ops/svc/git-3-level-concept-3.png
-[git-concept-4]: ../../assets/ops/svc/git-3-level-concept-4.png
-[git-concept-5]: ../../assets/ops/svc/git-3-level-concept-5.png
-[git-pictorial]: ../../assets/ops/svc/git-a-pictorial-walkthrough.gif
-[git-workflow]: ../../assets/ops/svc/git-a-pictorial-walkthrough.gif
-[git-pull-fetch]: ../../assets/ops/svc/git-pull-fetch.png
-[git-reset-revert-1]: ../../assets/ops/svc/git-reset-revert-1.png
-[git-reset-revert-2]: ../../assets/ops/svc/git-reset-revert-2.png
-[git-merge-rebase-1]: ../../assets/ops/svc/git-merge-rebase-1.png
-[git-merge-rebase-2]: ../../assets/ops/svc/git-merge-rebase-2.png
+[git-concept-1]: ../../assets/svc/git-3-level-concept-1.png
+[git-concept-2]: ../../assets/svc/git-3-level-concept-2.png
+[git-concept-3]: ../../assets/svc/git-3-level-concept-3.png
+[git-concept-4]: ../../assets/svc/git-3-level-concept-4.png
+[git-concept-5]: ../../assets/svc/git-3-level-concept-5.png
+[git-pictorial]: ../../assets/svc/git-a-pictorial-walkthrough.gif
+[git-workflow]: ../../assets/svc/git-a-pictorial-walkthrough.gif
+[git-pull-fetch]: ../../assets/svc/git-pull-fetch.png
+[git-reset-revert-1]: ../../assets/svc/git-reset-revert-1.png
+[git-reset-revert-2]: ../../assets/svc/git-reset-revert-2.png
+[git-merge-rebase-1]: ../../assets/svc/git-merge-rebase-1.png
+[git-merge-rebase-2]: ../../assets/svc/git-merge-rebase-2.png

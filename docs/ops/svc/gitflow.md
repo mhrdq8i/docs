@@ -50,6 +50,6 @@
 
 <!-- image links -->
 
-[git-flow-feature]: ../../assets/ops/svc/git-flow-feature.png
-[git-flow-release]: ../../assets/ops/svc/git-flow-release.png
-[git-flow-hotfix]: ../../assets/ops//svc/git-flow-hotfix.png
+[git-flow-feature]: ../../assets/svc/git-flow-feature.png
+[git-flow-release]: ../../assets/svc/git-flow-release.png
+[git-flow-hotfix]: ../../assets//svc/git-flow-hotfix.png
