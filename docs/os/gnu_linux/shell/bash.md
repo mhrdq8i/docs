@@ -7,4 +7,4 @@
 - [**The Linux Set Command**](https://linuxhint.com/the-linux-set-command/)
 - [**Linux Set Command**](https://www.javatpoint.com/linux-set-command)
 - [**set Command in Linux | Explained**](https://itslinuxfoss.com/set-command-linux-explained/)
-- [**Move Across the Shell**](../../../assets/os/gnu_linux/shell/moving-erasing.png)
+- [**Move Across the Shell**](../../../assets/gnu_linux/shell/moving-erasing.png)

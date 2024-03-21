@@ -1,41 +1,39 @@
-# [Linux Network Stack, Tools, Commands](#linux-network-stack-tools-commands)
+# Linux Network Stack, Tools, Commands
 
-## [60 Linux Networking commands and scripts](https://haydenjames.io/linux-networking-commands-scripts/)
+## [60 Linux Networking commands and scripts][60-linux-networking-commands-scripts]
 
-## [Top 20 tools](#top-20-tools)
+## Top 20 tools
 
-[**useful link**](https://askubuntu.com/questions/257263/how-to-display-network-traffic-in-the-terminal)
+[**useful link**][display-network-traffic]
 
-### brief list:
+### brief list
 
-1. iftop
-2. vnstat
-3. iptraf
-4. monitorix
-5. bmon
-6. darkstat
-7. iperf
-8. cbm
-9. nload
+```bash
+01. iftop
+02. vnstat
+03. iptraf
+04. monitorix
+05. bmon
+06. darkstat
+07. iperf
+08. cbm
+09. nload
 10. htop
 11. slurm
 12. tcptrack
 13. nethogs
 14. speedmeter
-    ```bash
-     speedometer -l  -r wlan0 -t wlan0 -m $(( 1024  *1024*  3 / 2 ))
-    ```
+    speedometer -l  -r wlan0 -t wlan0 -m $(( 1024  *1024*  3 / 2 ))
 15. sar
-    ```bash
-     apt install sysstat
-     sar -n DEV  1 --iface=eth0
-    ```
+    apt install sysstat
+    sar -n DEV  1 --iface=eth0
 16. glances
 17. ifstat
 18. bpytop
 19. nmon
+```
 
-## [Proxy](#proxy)
+## Proxy
 
 ```bash
 export all_proxy="socks://172.22.132.33:9090/"
@@ -47,7 +45,7 @@ Real Example for gitlab:
 export HTTPS_PROXY=mprxy:mprxy@<remote-ip-addr>:3128
 ```
 
-## [SSH](#ssh)
+## SSH
 
 ### SSH 2 SSH
 
@@ -61,69 +59,70 @@ ssh user#host1@host2
 ssh user@<host-1> -J user@<host-2>
 ```
 
-## [SCP](#scp)
+## SCP
 
 Copy the file "foobar.txt" from a `remote` host to the `local` host
 
 ```bash
-$ scp username@remotehost_ip.edu:foobar.txt /some/local/directory
+scp username@remotehost_ip.edu:foobar.txt /some/local/directory
 ```
 
 Copy the file "foobar.txt" from the `local` host to a `remote` host
 
 ```bash
-$ scp foobar.txt username@remotehost.edu:/some/remote/directory
+scp foobar.txt username@remotehost.edu:/some/remote/directory
 ```
 
 Copy the `directory` "foo" from the `local` host to a `remote` host's `directory` "bar"
 
 ```bash
-$ scp -r foo username@remotehost.edu:/some/remote/directory/bar
+scp -r foo username@remotehost.edu:/some/remote/directory/bar
 ```
 
 Copy the file "foobar.txt" from `remote` host "rh1.edu" to `remote` host "rh2.edu"
 
 ```bash
-$ scp username@rh1.edu:/some/remote/directory/foobar.txt \
-username@rh2.edu:/some/remote/directory/
+scp username@rh1.edu:/some/remote/directory/foobar.txt username@rh2.edu:/some/remote/directory/
 ```
 
 Copying the files "foo.txt" and "bar.txt" from the `local` host to your `home directory` on the `remote` host
 
 ```bash
-$ scp foo.txt bar.txt username@remotehost.edu:~
+scp foo.txt bar.txt username@remotehost.edu:~
 ```
 
 Copy the file "foobar.txt" from the local host to a remote host using different port number
 
 ```bash
-$ scp -P 2264 foobar.txt username@remotehost.edu:/some/remote/directory
+scp -P 2264 foobar.txt username@remotehost.edu:/some/remote/directory
 ```
 
 Copy `multiple files` from the `remote` host to your current directory on the `local` host
 
 ```bash
-$ scp username@remotehost.edu:/some/remote/directory/\{a,b,c\} .
-$ scp username@remotehost.edu:~/\{foo.txt,bar.txt\} .
+scp username@remotehost.edu:/some/remote/directory/\{a,b,c\} .
+scp username@remotehost.edu:~/\{foo.txt,bar.txt\} .
 ```
 
-#### SCP Performance
+### SCP Performance
 
 By default, SCP uses the Triple-DES cipher to encrypt the data being sent. Using the Blowfish cipher has been shown to increase speed. This can be done by using option -c blowfish in the command line.
 
 ```bash
-$ scp -c blowfish some_file username@remotehost.edu:~
+scp -c blowfish some_file username@remotehost.edu:~
 ```
 
 It is often suggested that the -C option for compression should also be used to increase speed. The effect of compression, however, will only significantly increase speed if your connection is very slow. Otherwise, it may just be adding an extra burden to the CPU. An example of using blowfish and compression:
 
 ```bash
-$ scp -c blowfish -C local_file username@remotehost.edu:~
+scp -c blowfish -C local_file username@remotehost.edu:~
 ```
 
-## [rsync](#rsync)
+## rsync
 
-> Synchronize bidirectional directory on remote and local together
+```bash
+Synchronize bidirectional directory on remote and local together
+```
 
 Access via remote shell:
 
@@ -148,7 +147,7 @@ push to remote: rsync -atvz . -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp
 pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/debug.tar.gz .
 ```
 
-## [IP command](#ip-command)
+## IP command
 
 Add new ip address:
 
@@ -178,7 +177,7 @@ Up & Down Interface
 ip link set <interface-name> up
 ```
 
-## [route](#route)
+## route
 
 see all route:
 
@@ -192,7 +191,7 @@ Add new route:
 route add -net 172.22.132.0/24 gw 77.104.118.1 dev ens4
 ```
 
-## [telnet](#telnet)
+## telnet
 
 check connection between two machines:
 
@@ -200,7 +199,7 @@ check connection between two machines:
 telnet  <ip> <port>
 ```
 
-## [nc \(netcat\)](#nc-netcat)
+## nc (netcat)
 
 check port connection
 
@@ -214,7 +213,7 @@ we cant also check our connection between two machines via `nc`:
 nc  <ip> <port>
 ```
 
-## [nmap](#nmap)
+## nmap
 
 Scan port on the host(s)
 
@@ -222,9 +221,9 @@ Scan port on the host(s)
 nmap –p 80 192.168.0.1-100
 ```
 
-See [nmap Cheat Sheet](../refs/nmap-cheat-sheet.pdf)
+See [nmap Cheat Sheet](refs/nmap-cheat-sheet.pdf)
 
-## [fuser](#fuser)
+## fuser
 
 close open port
 
@@ -233,46 +232,62 @@ fuser -k -n tcp 80
 fuser -k -n udp 80
 ```
 
-## [T-Shoot Tools](#t-shoot-tools)
+## T-Shoot Tools
 
-### [1. log file](#1-log-file)
+### 1. log file
 
-- `dmesg`
-- /var/log/syslog
-- /var/log/messages
+```bash
+dmesg
+/var/log/syslog
+/var/log/messages
+```
 
-### [2. Commands](#2-commands)
+### 2. Commands
 
-- `arp -n`
-- `ping` gateway
-- `ss -l` list, -m memory
-- `netstat` netstat -tulpen
-- `traceroute` google.com
-- `mtr` google.com
-- `tcpflow` -c \<port-number\>
+```bash
+arp -n
+ping gateway
+ss -l list, -m memory
+netstat netstat -tulpen
+traceroute google.com
+mtr google.com
+tcpflow -c \<port-number\>
+```
 
-### [3. Interactive trouble](#3-interactive-trouble)
+### 3. Interactive trouble
 
-- `nc -l` 1234, nc localhost 1234
-- `telnet` host-ip host-port
+```bash
+nc -l 1234, nc localhost 1234
+telnet host-ip host-port
+```
 
-### [4. Expert & DNS resolve Commands](#4-expert--dns-resolve-commands)
+### 4. Expert & DNS resolve Commands
 
-- `nmap -v` google.com, `nmap` 192.168.1.1/24 80
-- `host` google.com
-- `nslookup` google.com
-- `dig` google.com
-- `lsof -i`
+```bash
+nmap -v google.com, nmap 192.168.1.1/24 80
+host google.com
+nslookup google.com
+dig google.com
+lsof -i
+```
 
-### [5. tcpdump](#5-tcpdump)
+### 5. tcpdump
 
-- `-i` any every port
-- `-p` 1234 port 1234
-- `-D` all availble interfaces
-- `-w` file.pcap write to file
-- `-r` file.pcap read from file
-- `-c` count of captured package
-- `dst ip` packet route TO address
-- `src ip` packet rotue FROM address
-- `-A` read packet data
-- `ngrep -t -W` byline port 8088 -d any
+```bash
+-i any every port
+-p 1234 port 1234
+-D all available interfaces
+-w file.pcap write to file
+-r file.pcap read from file
+-c count of captured package
+dst ip packet route TO address
+src ip packet route FROM address
+-A read packet data
+
+ngrep -t -W byline port 8088 -d any
+```
+
+<!-- external links -->
+[60-linux-networking-commands-scripts]: https://haydenjames.io/linux-networking-commands-scripts
+
+[display-network-traffic]: https://askubuntu.com/questions/257263/how-to-display-network-traffic-in-the-terminal
