@@ -90,6 +90,8 @@
 - [**Update Cluster**](5.md#update-cluster)
 - [**Commands**](5.md#commands)
 
+## [Session 06](6.md)
+
 ---
 
 [back](../../index.md)
