@@ -13,4 +13,4 @@
 
 - ### [Memory Management](os/mm/index.md)
 
-- ### [LPIC Syllabus](lpic_syllabus/)
+- ### [LPIC Syllabus](lpic/index.md)

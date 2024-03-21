@@ -7,5 +7,5 @@
 
 ## Main parts of this repo
 
-- [**doc**](./doc/readme.md)
-- [**src**](./src/readme.md)
+- [**doc**](#cpp-doc-src)
+- [**src**](src/readme.md)

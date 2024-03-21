@@ -52,7 +52,7 @@
 
   - If you can `recompile` the program `without making changes` and it runs without a hitch, we say the program is `portable`.
 
-  - Linking combines `your object code` with `object code for the functions you use` and with `some standard startup code` to pro-duce a runtime version of your program.The file containing this final product is called the [`executable` code](../../assets/programmin-steps.png).
+  - Linking combines `your object code` with `object code for the functions you use` and with `some standard startup code` to pro-duce a runtime version of your program.The file containing this final product is called the [`executable` code](../../../assets/cpp/programmin-steps.png).
 
 - **Compilation and Linking:**
 
