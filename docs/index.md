@@ -2,7 +2,7 @@
 
 - #### [Code](Programming/index.md)
 
-- #### [Database](Databas/index.md)
+- #### [Database](Database/index.md)
 
 - #### [DevOps](Operation/index.md)
 
