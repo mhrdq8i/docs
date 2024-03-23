@@ -1,16 +1,16 @@
 
 ## Mehrdad's DocStack
 
-- ### [Code](dev/index.md)
+- ### [Code](Programming/index.md)
 
-- ### [Database](db/index.md)
+- ### [Database](Databas/index.md)
 
-- ### [DevOps](ops/index.md)
+- ### [DevOps](Operation/index.md)
 
-- ### [Networking](net/index.md)
+- ### [Networking](Network/index.md)
 
-- ### [Operation System](os/index.md)
+- ### [Operation System](Operation%20System/index.md)
 
-- ### [Memory Management](os/mm/index.md)
+- ### [Memory Management](Memory%20Management/index.md)
 
-- ### [LPIC Syllabus](lpic/index.md)
+- ### [LPIC Syllabus](LPIC/index.md)
