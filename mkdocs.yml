@@ -15,21 +15,15 @@ theme:
   #   - navigation.tabs
   icon:
     logo: "material/cloud-outline"
-  favicon: "img/logo-notext.svg"
+    # logo: "img/favicon.ico"
+  favicon: "img/favicon.ico"
   palette:
     scheme: slate
-    primary: "teal"
-    accent: "green"
+    primary: black
+    accent: indigo
 
 extra_css: [extra.css]
 
-# plugins:
-#   - search
-
-# Plugins
 plugins:
-  - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - minify:
-      minify_html: true
