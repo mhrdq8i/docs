@@ -6,9 +6,9 @@
 
 - #### [DevOps](Operation/index.md)
 
-- #### [Operation System](Operation%20System/index.md)
+- #### [Operation System](OS/index.md)
 
-- #### [Memory Management](Memory%20Management/index.md)
+- #### [Memory Management](MMU/index.md)
 
 - #### [LPIC Syllabus](LPIC/index.md)
 
