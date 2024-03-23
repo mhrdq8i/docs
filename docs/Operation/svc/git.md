@@ -202,10 +202,11 @@ Difference between `git reset` & `git revert`
 git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 ```
 
-### git merge - git rebase
+### git [merge - rebase - merge+squash]
 
 ![git-merge-rebase-1]
 ![git-merge-rebase-2]
+![git-merge-squash-3]
 
 <!-- image links -->
 [git-concept-1]: /docs/assets/svc/git-3-level-concept-1.png
@@ -220,3 +221,4 @@ git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 [git-reset-revert-2]: /docs/assets/svc/git-reset-revert-2.png
 [git-merge-rebase-1]: /docs/assets/svc/git-merge-rebase-1.png
 [git-merge-rebase-2]: /docs/assets/svc/git-merge-rebase-2.png
+[git-merge-squash-3]: /docs/assets/svc/git-merge-squash.jpeg
