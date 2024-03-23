@@ -23,5 +23,13 @@ theme:
 
 extra_css: [extra.css]
 
+# plugins:
+#   - search
+
+# Plugins
 plugins:
-  - search
+  - blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
