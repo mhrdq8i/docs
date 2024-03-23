@@ -7,5 +7,7 @@
 
 ## Main parts of this repo
 
-- [**doc**](#cpp-doc-src)
-- [**src**](src/readme.md)
+- [**Cpp Primer**](C++Primer/)
+- [**Class Sessions 1**](sessions/S_01.md)
+- [**Class Sessions 2**](sessions/S_02.md)
+- [**Class Sessions 3**](sessions/S_03.md)

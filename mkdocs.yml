@@ -1,4 +1,5 @@
 ---
+# Project information
 site_name: Mehrdad's Docs Stack
 site_url: https://mehrdad-drpc.github.io/docstack
 # site_url: https://www.geekfa.net/
@@ -6,24 +7,171 @@ site_description: My all project documentation in MD format.
 site_author: Mehrdad Qasemkhani
 site_dir: public
 
+# Repository
 repo_url: https://github.com/mehrdad-drpc/docstack
 edit_uri: blob/master/docs/
 
-theme:
-  name: material
-  # features:
-  #   - navigation.tabs
-  icon:
-    logo: "material/cloud-outline"
-    # logo: "img/favicon.ico"
-  favicon: "img/favicon.ico"
-  palette:
-    scheme: slate
-    primary: black
-    accent: indigo
-
 extra_css: [extra.css]
 
+# Plugins
 plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+# Configuration
+theme:
+  name: material
+  custom_dir: material/overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.top
+    # - navigation.tracking
+    - search.highlight
+    # - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+# Additional configuration
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mehrdad-drc
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/@geekfa
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/mehrdad_drpc
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+# nav:
+# - Home:
+#     - index.md
+#     - Programming: Programming/index.md
+#     - Database: Database/index.md
+#     - DevOps: Operation/index.md
+#     - Operation System: OS/index.md
+#     - Memory Management: MMU/index.md
+#     - LPIC Syllabus: LPIC/index.md
+# - Programming:
+#     - Programming/index.md
+#     - Assembly: Programming/assembly/assembly.md
+#     - C++: Programming/cpp/index.md
+#     - Rust: Programming/rust/index.md
+# - Database:
+#     - Database/index.md
+#     - SQL:
+#         - Database/noSQL/index.md
+#         - Postgres: Database/SQL/index.md
+#     - NoSQL:
+#         - Database/SQL/index.md
+#         - Cassandra: Database/noSQL/cassandra.md
+# - DevOps:
+#     - Operation/index.md
+#     - Kubernetes:
+#         - Operation/kuber/index.md
+#         - Ahmad Babaei: Operation/kuber/babaei/index.md
+#         - CheatSheet: Operation/kuber/cheatsheet/index.md
+#         - Refs: Operation/kuber/files/k8s-cs.pdf
+#     - Services: Operation/services/index.md
+#     - GiT: Operation/svc/index.md
+# - Operation System:
+#     - OS/index.md
+#     - GNU/Linux: OS/gnu_linux/index.md
+#     - UNIX: OS/unix/index.md
+#     - Windows: OS/windows/index.md
+# - Memory Management:
+#     - MMU/index.md
+#     - ELF: MMU/content/elf.md
+#     - Linker/Loader: MMU/content/linker-loader.md
+#     - MM Units: MMU/content/mmu.md
+# - LPIC Syllabus:
+#     - LPIC/index.md
+#     - LPIC1/Exam101: LPIC/objectives/lpic1-exam101.md
+#     - LPIC1/Exam102: LPIC/objectives/lpic1-exam102.md
+#     - LPIC2: LPIC/objectives/lpic2.md
+#     - LPIC7/Exam701: LPIC/objectives/lpic7-exam701.md
+# - Network:
+#     - Network/index.md
+#     - Mikrotik: Network/mikrotik/index.md
+#     - MCTNA: Network/mikrotik/mtcna/index.md

@@ -56,6 +56,3 @@
 - [**Reverse Proxy**](reverse_proxy-load_balancing.md#reverse-proxy)
 - [**Load Balancing**](reverse_proxy-load_balancing.md#load-balancer)
 
----
-
-[back](../index.md)

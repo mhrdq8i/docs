@@ -96,6 +96,3 @@
 - [**Installation, Configuration and Validation**](6.md#installation-configuration-and-validation)
 - [**Commands**](6.md#commands)
 
----
-
-[back](../../index.md)

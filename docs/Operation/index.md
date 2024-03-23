@@ -1,10 +1,8 @@
 
-## Stack.Push(DevOps Section\)
+# Stack.Push(DevOps Section\)
 
-- [**Kubernetes**](kuber/index.md)
-- [**Source Version Controller**](svc/index.md)
-- [**Services**](services/index.md)
+## [**Kubernetes**](kuber/index.md)
 
----
+## [**Source Version Controller**](svc/index.md)
 
-[back](../index.md)
+## [**Services**](services/index.md)
