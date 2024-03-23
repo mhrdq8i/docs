@@ -1,107 +1,130 @@
-## Stack.Push(GUN/Linux Section\)
+# Stack.Push(GUN/Linux Section\)
 
-### Linux
+## Linux
 
-- [**Hardware**](hardware.md#work-with-hardware-via-linux)
+### [**Hardware**](CLI/hardware.md#work-with-hardware-via-linux)
 
-  - [**Mainboard info**](hardware.md#check-mainboard-info)
-  - [**CPU info**](hardware.md#check-cpu-info)
-  - [**Memory info**](hardware.md#check-memory-info)
-  - [**Disk info**](hardware.md#check-disk-info)
-  - [**Monitor info**](hardware.md#check-monitor-info)
+- [**Mainboard info**](CLI/hardware.md#check-mainboard-info)
+- [**CPU info**](CLI/hardware.md#check-cpu-info)
+- [**Memory info**](CLI/hardware.md#check-memory-info)
+- [**Disk info**](CLI/hardware.md#check-disk-info)
+- [**Monitor info**](CLI/hardware.md#check-monitor-info)
 
-- [**Apps**](apps.md)
+### [**Apps**](GUI/apps.md)
 
-  - [**Tmux**](apps.md#tmux)
+- [**Tmux**](GUI/apps.md#tmux)
 
-- [**Network**](networks.md#linux-network-stack-tools-commands)
+### [**Network**](CLI/networks.md#linux-network-stack-tools-commands)
 
-  - [**60 Linux Networking commands and scripts**](networks.md#linux-network-stack-tools-commands)
-  - [**Top 20 Useful Tools**](networks.md#top-20-tools)
-  - [**Proxy**](networks.md#proxy)
-  - [**SSH**](networks.md#ssh)
-  - [**SCP**](networks.md#scp)
-  - [**rsync**](networks.md#rsync)
-  - [**IP command**](networks.md#ip-command)
-  - [**Route**](networks.md#route)
-  - [**Telnet**](networks.md#telnet)
-  - [**NC**](networks.md#nc-netcat)
-  - [**Nmap**](networks.md#nmap)
-  - [**fuser**](networks.md#fuser)
-  - [**Troubleshooting Tools**](networks.md#t-shoot-tools)
-  - [**Log File**](networks.md#1-log-file)
-  - [**Commands**](networks.md#2-commands)
-  - [**Interactive Troubleshoot**](networks.md#3-interactive-trouble)
-  - [**Expert DNS Resolve Commands**](networks.md#4-expert--dns-resolve-commands)
-  - [**TCPDump**](networks.md#5-tcpdump)
+- [**60 Linux Networking commands and scripts**](CLI/networks.md#linux-network-stack-tools-commands)
+- [**Top 20 Useful Tools**](CLI/networks.md#top-20-tools)
+- [**Proxy**](CLI/networks.md#proxy)
+- [**SSH**](CLI/networks.md#ssh)
+- [**SCP**](CLI/networks.md#scp)
+- [**rsync**](CLI/networks.md#rsync)
+- [**IP command**](CLI/networks.md#ip-command)
+- [**Route**](CLI/networks.md#route)
+- [**Telnet**](CLI/networks.md#telnet)
+- [**NC**](CLI/networks.md#nc-netcat)
+- [**Nmap**](CLI/networks.md#nmap)
+- [**fuser**](CLI/networks.md#fuser)
+- [**Troubleshooting Tools**](CLI/networks.md#t-shoot-tools)
+- [**Log File**](CLI/networks.md#1-log-file)
+- [**Commands**](CLI/networks.md#2-commands)
+- [**Interactive Troubleshoot**](CLI/networks.md#3-interactive-trouble)
+- [**Expert DNS Resolve Commands**](CLI/networks.md#4-expert--dns-resolve-commands)
+- [**TCPDump**](CLI/networks.md#5-tcpdump)
 
-- [**Security**](security.md)
+### [**Security**](CLI/security.md)
 
-  - [**Encryption/Decryption**](security.md#encryptiondecryption)
-    - [**GPG**](security.md#gpg)
+- [**Encryption/Decryption**](CLI/security.md#encryptiondecryption)
+  - [**GPG**](CLI/security.md#gpg)
 
-- [**Shell**](shell/)
+### [**Shell**](CLI/bash.md)
 
-  - [**Shellscript doc & code from github**](shell/shellscript/)
-    - [**Code**](shell/shellscript/code/)
-    - [**Doc**](shell/shellscript/docs/)
-  - [**Bash**](shell/bash.md)
-    - [**Set**](shell/bash.md#set)
+- #### [**Shellscript doc & code from github**](CLI/shellscript/)
 
-- [**Distribution**](dists/)
+  - [**Code**](CLI/shellscript/code/)
+  - [**Doc**](CLI/shellscript/docs/)
 
-  - [**Debian**](dists/debian.md#debian-distro-doc)
+- #### [**Bash**](CLI/bash.md)
 
-    - [**Configure Static IP Address**](dists/debian.md#configure-static-ip-address)
-    - [**Sources.list**](dists/debian.md#debian-sourceslist)
-      - [**Debian 11**](dists/debian.md#debian-11)
-      - [**Debian 12**](dists/debian.md#debian-12)
-    - [**Download DEB Packages**](dists/debian.md#download-deb-packages)
-    - [**Update Python 3 on Debian**](dists/debian.md#update-python-on-debian-link)
+  - [**Set**](shell/bash.md#set)
 
-  - [**Ubuntu**](dists/ubuntu.md#ubuntu-distro-doc)
-    - [**Ubuntu Config netplan (network)**](dists/ubuntu.md#config-netplan-network)
-    - [**Get the list of installed packages**](dists/ubuntu.md#get-the-list-of-installed-packages)
-    - [**Set APT Proxy**](dists/ubuntu.md#set-apt-proxy)
-      - [**squid**](dists/ubuntu.md#via-squid)
-      - [**socks**](dists/ubuntu.md#via-socks)
-  - [**redhat**](dists/redhat.md#redhat-dist-doc)
-    - [**subscription for redhat enterprise**](dists/redhat.md#subscription-for-redhat-enterprise)
+### [**Distribution**](dist/)
 
-- [**Commands**](commands.md#linux-commands)
+- #### [**Debian**](dist/debian.md#debian-distro-doc)
 
-  - [**90 Linux Commands frequently used by Linux Sysadmins**](commands.md#90-linux-commands-frequently-used-by-linux-sysadmins)
-    - [**Part 1**](commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-1)
-    - [**Part 2**](commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-2)
-    - [**Part 3**](commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-3)
-    - [**Part 4**](commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-4)
-    - [**Part 5**](commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-5)
-    - [**Misc Commands**](commands.md)
-  - [**LVM**](commands.md#lvm)
-  - [**Write a new partition on disk**](commands.md#write-a-new-partition-on-disk)
-    - [**Check the free space and partitions with mount point**](commands.md#check-the-free-space-and-partitions-with-mount-point)
-    - [**Create a new partition on the disk**](commands.md#create-a-new-partition-on-the-disk)
-    - [**Mount Option**](commands.md#mount-option)
-      - [**Show mounted partitions**](commands.md#show-mounted-partitions)
-      - [**Find mount**](commands.md#findmnt)
-    - [**Mount temporary**](commands.md#mount-temporary)
-    - [**Mount permanently via fstab**](commands.md#mount-permanently-via-fstab)
-  - [**Mount chroot shell / change password**](commands.md#mount-chroot-shell--change-password)
-  - [**Find**](commands.md#find)
-  - [**Users and Groups**](commands.md#users-and-groups)
-    - [**Users**](commands.md#users)
-    - [**Groups**](commands.md#groups)
-  - [**Archive & Compress**](commands.md#archive--compress)
-    - [**tar**](commands.md#tar)
-    - [**xz**](commands.md#xz)
-    - [**gz**](commands.md#gz)
-    - [**bz**](commands.md#bzip2)
-  - [**systemctl**](commands.md#systemctl)
-  - [**grep**](commands.md#grep)
-  - [**sed**](commands.md#sed)
-  - [**sudoer**](commands.md#sudoer)
-  - [**Monitor Resources**](commands.md#monitor-resources)
-  - [**open ssl**](commands.md#open-ssl)
-  - [**curl**](commands.md#curl)
-  - [**OS installation date and time**](commands.md#os-installation-date-and-time)
+  - [**Configure Static IP Address**](dist/debian.md#configure-static-ip-address)
+  - [**Sources.list**](dist/debian.md#debian-sourceslist)
+    - [**Debian 11**](dist/debian.md#debian-11)
+    - [**Debian 12**](dist/debian.md#debian-12)
+  - [**Download DEB Packages**](dist/debian.md#download-deb-packages)
+  - [**Update Python 3 on Debian**](dist/debian.md#update-python-on-debian-link)
 
+- #### [**Ubuntu**](dist/ubuntu.md#ubuntu-distro-doc)
+
+  - [**Ubuntu Config netplan (network)**](dist/ubuntu.md#config-netplan-network)
+  - [**Get the list of installed packages**](dist/ubuntu.md#get-the-list-of-installed-packages)
+  - [**Set APT Proxy**](dist/ubuntu.md#set-apt-proxy)
+    - [**squid**](dist/ubuntu.md#via-squid)
+    - [**socks**](dist/ubuntu.md#via-socks)
+
+- #### [**redhat**](dist/redhat.md#redhat-dist-doc)
+
+  - [**subscription for redhat enterprise**](dist/redhat.md#subscription-for-redhat-enterprise)
+
+### [**Commands**](CLI/commands.md#linux-commands)
+
+- #### [**90 Linux Commands frequently used by Linux Sysadmins**](CLI/commands.md#90-linux-commands-frequently-used-by-linux-sysadmins)
+
+  - [**Part 1**](CLI/commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-1)
+  - [**Part 2**](CLI/commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-2)
+  - [**Part 3**](CLI/commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-3)
+  - [**Part 4**](CLI/commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-4)
+  - [**Part 5**](CLI/commands.md#linux-commands-frequently-used-by-linux-sysadmins-–-part-5)
+  - [**Misc Commands**](commands.md)
+
+- #### [**LVM**](CLI/commands.md#lvm)
+
+- #### [**Write a new partition on disk**](CLI/commands.md#write-a-new-partition-on-disk)
+
+  - [**Check the free space and partitions with mount point**](CLI/commands.md#check-the-free-space-and-partitions-with-mount-point)
+  - [**Create a new partition on the disk**](CLI/commands.md#create-a-new-partition-on-the-disk)
+  - [**Mount Option**](CLI/commands.md#mount-option)
+    - [**Show mounted partitions**](CLI/commands.md#show-mounted-partitions)
+    - [**Find mount**](CLI/commands.md#findmnt)
+  - [**Mount temporary**](CLI/commands.md#mount-temporary)
+  - [**Mount permanently via fstab**](CLI/commands.md#mount-permanently-via-fstab)
+
+- #### [**Mount chroot shell / change password**](CLI/commands.md#mount-chroot-shell--change-password)
+
+- #### [**Find**](CLI/commands.md#find)
+
+- #### [**Users and Groups**](CLI/commands.md#users-and-groups)
+
+  - [**Users**](CLI/commands.md#users)
+  - [**Groups**](CLI/commands.md#groups)
+
+- #### [**Archive & Compress**](CLI/commands.md#archive--compress)
+
+  - [**tar**](CLI/commands.md#tar)
+  - [**xz**](CLI/commands.md#xz)
+  - [**gz**](CLI/commands.md#gz)
+  - [**bz**](CLI/commands.md#bzip2)
+
+- #### [**systemctl**](CLI/commands.md#systemctl)
+
+- #### [**grep**](CLI/commands.md#grep)
+
+- #### [**sed**](CLI/commands.md#sed)
+
+- #### [**sudoer**](CLI/commands.md#sudoer)
+
+- #### [**Monitor Resources**](CLI/commands.md#monitor-resources)
+
+- #### [**open ssl**](CLI/commands.md#open-ssl)
+
+- #### [**curl**](CLI/commands.md#curl)
+
+- #### [**OS installation date and time**](CLI/commands.md#os-installation-date-and-time)
