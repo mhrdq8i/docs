@@ -67,9 +67,7 @@ imaging = ["pillow~=10.2", "cairosvg~=2.6"]
 [project.urls]
 Documentation = "https://mehrdad-drpc.github.io/docstack/"
 Source = "https://github.com/mehrdad-drpc/docstack"
-# Changelog = "https://mehrdad-drpc.github.io/docstack/changelog/"
 Issues = "https://github.com/mehrdad-drpc/docstack/issues"
-# Funding = "https://github.com/sponsors/mehrdad-drpc"
 
 [project.entry-points."mkdocs.plugins"]
 "material/blog" = "material.plugins.blog.plugin:BlogPlugin"

@@ -16,7 +16,7 @@
 
 ### [Memory Layout in C][ML-in-C]
 
-![mlc](/docs/assets/mm/memory-layout-in-c.png)
+![Memory-Layout-in-C](/docs/assets/mm/memory-layout-in-c.png){ align=left }
 
 ## Memory Segmentation Schema
 

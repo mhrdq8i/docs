@@ -21,11 +21,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-        #   sparse-checkout: |
-        #     docs
-        #     includes
-        #     material/overrides
-        #     src/templates/partials/languages
 
       - name: Set up Python runtime
         uses: actions/setup-python@v5
@@ -50,24 +45,8 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install mkdocs-material
+          pip install mkdocs-glightbox
           pip install -r requirements.txt
-        #   pip install .[recommended,git,imaging]
-
-      #   - name: Install Insiders build
-      #     if: github.event.repository.fork == false
-      #     env:
-      #       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      #     run: |
-      #       # Warning: please don't use this method when installing Insiders from
-      #       # CI! We have to do it this way in order to allow for overrides on our
-      #       # own documentation, but you should stick to the method we recommend
-      #       # in the publishing guide – see https://bit.ly/3zjdJtw
-      #       git clone --depth 1 git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material.git
-      #       pip install -e mkdocs-material-insiders
-      #       cp mkdocs-material-insiders/mkdocs.yml mkdocs.yml
-      #       # echo 'extra_javascript: [${{ vars.CHAT_CLIENT_URL }}]' >> mkdocs.yml
-      #       rm -rf material
-      #       cp -r mkdocs-material-insiders/material material
 
       - name: Build documentation
         env:
