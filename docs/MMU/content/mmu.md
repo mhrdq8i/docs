@@ -18,6 +18,11 @@
 
 ![Memory-Layout-in-C](/docs/assets/mm/memory-layout-in-c.png){ align=left }
 
+<figure markdown="span">
+![Memory-Layout-in-C](/docs/assets/mm/memory-layout-in-c.png){ width="300" }
+  <figcaption>Image caption</figcaption>
+</figure>
+
 ## Memory Segmentation Schema
 
 ```bash
