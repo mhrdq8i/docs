@@ -88,6 +88,19 @@ git clone -b <branch name> address
 git clone --mirror git@github.com/fernandoaleman/app.git app/.git
 ```
 
+### git log
+
+- git log arguments
+
+```bash
+git log --pretty=oneline
+git log --pretty=format:"%h - %an, %ar : %s"
+git log --max-count 3
+git log --oneline --max-count 5
+git log --since="3 days ago"; (--since, --after, --until, --before)
+git log --graph --oneline --decorate --all
+```
+
 ### git checkout
 
 - Checkout master branch
