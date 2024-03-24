@@ -4,7 +4,11 @@ on:
     branches:
       - master
 
+
 permissions:
+  pages: write
+  id-token: write
+
   contents: write
   pages: write
   id-token: write
@@ -15,10 +19,17 @@ jobs:
     if: github.event.repository.fork == false
     steps:
       - uses: actions/checkout@v4
-      - name: Configure Git Credentials
+      - name: Setup Python
+        uses: actions/setup-python@v5
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+    #   - name: Install pngquant
+    #     uses: appleboy/apt@v4
+    #     with:
+    #       packages: pngquant
+
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
@@ -29,7 +40,7 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: apt-get install pngquant
+      - run: sudo apt install -y pngquant
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: mkdocs gh-deploy --force
 env:
