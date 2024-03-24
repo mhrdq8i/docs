@@ -134,10 +134,10 @@
 
 ### Knowing LVM's concept through some images
 
-[image 1](../../assets/mm/lvm1.png)
-[image 2](../../assets/mm/lvm2.png)
-[image 3](../../assets/mm/lvm3.png)
-[image 4](../../assets/mm/lvm4.png)
+![lvm-image-1]
+![lvm-image-2]
+![lvm-image-3]
+![lvm-image-4]
 
 Steps to add physical disk or new partition to LVM
 
@@ -162,57 +162,57 @@ resize2fs /dev/vg-name/lv-name
 
 ### LVM snapshot
 
-> lvcreate -v -L -s -n backup /dev/vg-name
+```bash
+lvcreate -v -L -s -n backup /dev/vg-name
+```
 
-## write a new partition on disk
+### write a new partition on disk
 
-### Check the free space and partitions with mount point
+```bash
+# Check the free space and partitions with mount point
+lsblk
+df -h
 
-> lsblk
-> df -h
-
-### Create a new partition on the disk
-
-> fdisk /dev/sd{a..z}
-> n
-> p / e
-> choice partition number
-> choice partition first sector
-> choice partition last sector
-> w
-> mkfs.ext4 /dev/sd{a..z}{1..n}
+# Create a new partition on the disk
+fdisk /dev/sd{a..z}
+n
+p / e
+choice partition number
+choice partition first sector
+choice partition last sector
+w
+mkfs.ext4 /dev/sd{a..z}{1..n}
+```
 
 ### Mount Option
 
-#### Show mounted partitions
+```bash
 
-> fdisk -l
-> mount | column -t
-> df -h
+# Show mounted partitions
+fdisk -l
+mount | column -t
+df -h
 
-### findmnt
+# findmnt
+findmnt -l
+findmnt -D
+findmnt --fstab /home
 
-> findmnt -l
-> findmnt -D
-> findmnt --fstab /home
+# Mount temporary
+mount /dev/sd{a..z}{1..n} /xyz
 
-### Mount temporary
+# Mount permanently via fstab
+1. Add new disk (usually /dev/sdb)
+2. Create new partition on disk
+3. Format partition with new FS (mkfs.ext4 /dev/sdb[x])
+4. Mount a specific path to new partition
+5. Edit `fstab` for mount permanently
+```
 
-> mount /dev/sd{a..z}{1..n} /xyz
-
-### Mount permanently via fstab
-
-> 1. Add new disk (usually /dev/sdb)
-> 2. Create new partition on disk
-> 3. Format partition with new FS (mkfs.ext4 /dev/sdb[x])
-> 4. Mount a specific path to new partition
-> 5. Edit `fstab` for mount permanently
-
-## Mount chroot shell - change password
-
-[**Lost Password Steps**][LostPassword]
+### Change left root password
 
 ```bash
+# Mount chroot shell - change password
 1. Boot the Ubuntu Live CD.
 2. Press Ctrl-Alt-F1
 3. sudo mount /dev/sda1 /mnt
@@ -222,45 +222,26 @@ resize2fs /dev/vg-name/lv-name
 
 ## Find
 
-search normal files:
-
 ```bash
+# search normal files:
 find /root -type f -iname pom.xml
-```
 
-search socket files:
-
-```bash
+# search socket files:
 find / -type s
-```
 
-search suid files:
-
-```bash
+# search suid files:
 find /usr/bin -perm -4000
-```
 
-search sgid files:
-
-```bash
+# search sgid files:
 find /usr/bin -perm -2000
-```
 
-search sticky files:
-
-```bash
+# search sticky files:
 find /usr/bin -perm -1000
-```
 
-Exclude:
-
-```bash
+# exclude
 find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
-```
 
-Delete old 10 days files:
-
-```bash
+# Delete old 10 days files:
 find /path/to/base/dir/\\\* -type d -ctime +10 -exec rm -rf {} ;
 ```
 
@@ -268,91 +249,70 @@ find /path/to/base/dir/\\\* -type d -ctime +10 -exec rm -rf {} ;
 
 ### Users
 
-Difference between `useradd` and `adduser`:
+**Difference** between `useradd` and `adduser`:
 
 `useradd` is native binary compiled with the system. But, `adduser` is a perl script which uses `useradd` binary in back-end.
 
-`adduser` is more user friendly and interactive than its back-end useradd. There's no difference in features provided.
+`adduser` is a perl script and more user friendly and interactive than its back-end useradd. There's no difference in features provided.
 
 `adduser` is a wrapper for `useradd`
 
-Add a new user with home directory:
+#### Add user
 
 ```bash
+# Add a new user with home directory
 useradd -m mehrdad
-```
 
-Add a new user with group and default shell
-
-```bash
+# Add a new user with group and default shell
 useradd -m mehrdad -g mehrdadgrp -s /bin/zsh
-```
 
-Delete an existing user with home folder
-
-```bash
+# Delete an existing user with home folder
 userdel -r mehrdad
-```
 
-List of users that user has already added:
-
-```bash
+# List of users that user has already added
 groups mehrdad
 ```
 
-Change owner of file:
+#### Changing owner
 
 ```bash
+# Change owner of file
 chown user_name file_name
-```
 
-Change group and user owner:
-
-```bash
+# Change group and user owner:
 chown group_name:user_name file_name
+
+# change owner/group of a directory
+sudo chown -R username:group <directory-name>
 ```
 
-change owner/group of a directory
+#### Lock and Unlock an user
 
 ```bash
-sudo chown -R username:group \<directory-name\>
-```
-
-Lock and Unlock an user:
-
-```bash
+# automatically
 usermod -L mehrdad
 usermod -U mehrdad
-```
 
-lock user manually in the `Redhat` base destro
-
-```bash
+# manually
 vim /etc/passwd
 root:x:0:0:root:/root:/sbin/nologin
-```
-
-in the Debian base
-
-```bash
-vim /etc/passwd
 root:x:0:0:root:/root:/usr/sbin/nologin
 ```
 
-Kill user in another session:
+#### Kill user in another session
 
 ```bash
 ctrl + alt + f2
 pkill -9 -u USER || ps -fp $(pgrep -d, -u USERNAME)
 ```
 
-Grep all active users:
+#### Grep all active users
 
 ```bash
 sudo cat /etc/passwd | egrep "bash$"
 ```
 
-check user exists:
+#### check user exists
 
 ```bash
 getent passwd root
@@ -360,22 +320,15 @@ getent passwd root
 
 ### Groups
 
-Add a new group:
-
 ```bash
+# Add a new group
 grpadd
-```
 
-Add an existing user to a specific group:
-
-```bash
+# Add an existing user to a specific group
 usermod -aG grp_name user_name
 gpasswd -a user_name grp_name
-```
 
-Change group owner of file:
-
-```bash
+# Change group owner of file
 chgrp group_name file_name
 chown :group_name file_name
 ```
@@ -384,116 +337,77 @@ chown :group_name file_name
 
 ### TAR
 
-Create TAR file
-
 ```bash
+# Create TAR file
 tar -cf file-name.tar file/directory
-```
 
-Extract tar.xz file
-
-```bash
+# Extract tar.xz file
 tar -xf 1.tar.xz
-```
 
-Extract tar.gz file
-
-```bash
+# Extract tar.gz file
 tar -xvzf 1.tar.gz
-```
 
-Extract tar.bz file
-
-```bash
+# Extract tar.bz file
 tar -xvf 1.tar.bz
 ```
 
 ### XZ
 
-Add directory into the XZ compress file
-
 ```bash
+# Add directory into the XZ compress file
 tar cf - directory-name | xz -z > archive-name.tar.xz
-```
 
-Create/Extract one file to XZ file
-
-```bash
+# Create/Extract one file to XZ file
 xz -z ramz.txt.gpg
 xz -d ramz.txt.gpg.xz
-```
 
-Create `XZ` file into the another file
-
-```bash
+# Create `XZ` file into the another file
 xz -z ramz.txt.gpg > ramz.txt.gpg.tar.xz
-```
 
-Compress existed TAR file
-
-```bash
+# Compress existed TAR file
 xz --compress images.tar
 ```
 
 ### GZ
 
-Add directory into the GZ compress file
-
 ```bash
+# Add directory into the GZ compress file
 tar cf - directory-name | gzip > archive-name.tar.gz
 ```
 
 ### BZIP2
 
-Add directory into the BZ compress file
-
 ```bash
+# Add directory into the BZ compress file
 tar cf - directory-name | bzip2 > archive-name.tar.gz
 ```
 
 ## systemctl
 
-Get the list of services(units):
-
 ```bash
+# Get the list of services(units):
 systemctl list-units --type=service
 ```
 
 ## grep
 
-Reverse grep
-
 ```bash
+# Reverse grep
 grep -v
-```
 
-count target
-
-```bash
+# count target
 grep -c
-```
 
-grep with line number:
-
-```bash
+# grep with line number
 grep -n
-```
 
-grep case insensitive
-
-```bash
+# grep case insensitive
 grep -i
-```
 
-first line character
-
-```bash
+# first line character
 "^"
-```
 
-end line character
-
-```bash
+#end line character
 "$"
 or
 -e
@@ -546,11 +460,9 @@ Create new CERT file via openssl (squid example):
 
 ```bash
 openssl req -x509 -new -nodes -days 3650 -keyout /etc/squid/squid.key -out /etc/squid/squid.crt
-```
 
-open CERT file to show content:
+# open CERT file to show content:
 
-```bash
 openssl -x509 -in squid.key -text
 ```
 
@@ -558,11 +470,12 @@ openssl -x509 -in squid.key -text
 
 A lot of examples about curl, [**CLICK ME**][curl-https-request]
 
-download with curl:
+```bash
+# download with curl
+curl -C - -L -O URL
+```
 
-> curl -C - -L -O URL
-
-## OS installation date and time
+## Watch the OS installation date and time
 
 ```bash
 stat -c %w /
@@ -570,7 +483,8 @@ stat -c %w /
 
 <!-- external link -->
 [90LinuxCommandsfrequentlyusedbyLinuxSysadmins]: https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/
-
-[LostPassword]: https://help.ubuntu.com/community/LiveCdRecovery
-
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
+[lvm-image-1]: /docs/assets/gnu_linux/lvm1.png
+[lvm-image-2]: /docs/assets/gnu_linux/lvm2.png
+[lvm-image-3]: /docs/assets/gnu_linux/lvm3.png
+[lvm-image-4]: /docs/assets/gnu_linux/lvm4.png
