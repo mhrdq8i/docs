@@ -112,44 +112,68 @@ we have to understand some concept that related to this topic.
 
 ## some important linux commands
 
+- linux embed assembly
+
 ```bash
-# linux embed assembly
-$ as
+as
+```
 
-# show the content of preprocessor
-$ gcc -E source.c
+- show the content of preprocessor
 
-# export the assembly of source
+```bash
+gcc -E source.c
+```
+
+- export the assembly of source
+
+```bash
 $ gcc -S source.c
+└❯ output: source.s
+```
 
-    output: source.s
+- export the object of source
 
-# export the object of source
+```bash
 $ gcc -c source.c
+└❯ output: source.o
 
-    output: source.o
+- print the type, arch and address of object file
+```bash
+objdump -af /bin/touch[o,out]
+```
 
-# print the type, arch and address of object file:
-$ objdump -af /bin/touch[o,out]
+- display information about ELF files
 
-#display information about ELF files
-$ readelf -f /bin/touch
+```bash
+readelf -f /bin/touch
+```
 
-# list symbols from object files
+- list symbols from object files
+
+```bash
 (disassembly)
 $ nm -S ../source.out
 
 (show symbols)
 $ nm -A ../source.out
+```
 
-# linux linker
-$ ld
+- GNU linker
 
-# trace system calls and signals
-$ strace ../source.out
+```bash
+ld
+```
 
-# print shared object dependencies
-$ ldd ../source.out
+- trace system calls and signals
+
+```bash
+strace ../source.out
+```
+
+- print shared object dependencies
+
+```bash
+ldd ../source.out
 ```
 
 <!-- image links -->
