@@ -1,41 +1,41 @@
-name: ci/cd
-on:
-  push:
-    branches:
-      - master
+# name: ci/cd
+# on:
+#   push:
+#     branches:
+#       - master
 
-permissions:
-  pages: write
-  id-token: write
-  contents: write
+# permissions:
+#   pages: write
+#   id-token: write
+#   contents: write
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    if: github.event.repository.fork == false
-    steps:
-      - name: Checkout v4
-        uses: actions/checkout@v4
-      - name: Setup Python
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     if: github.event.repository.fork == false
+#     steps:
+#       - name: Checkout v4
+#         uses: actions/checkout@v4
+#       - name: Setup Python
+#         run: |
+#           git config user.name github-actions[bot]
+#           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
+#       - name: Setup Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: 3.x
 
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+#       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
 
-      - uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
+#       - uses: actions/cache@v4
+#         with:
+#           key: mkdocs-material-${{ env.cache_id }}
+#           path: .cache
+#           restore-keys: |
+#             mkdocs-material-
 
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material.git
-      - run: mkdocs gh-deploy --force
-env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material.git
+#       - run: mkdocs gh-deploy --force
+# env:
+#   GH_TOKEN: ${{ secrets.GH_TOKEN }}
