@@ -33,6 +33,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material.git
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --theme material --force
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
