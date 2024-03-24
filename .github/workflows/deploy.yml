@@ -4,33 +4,25 @@ on:
     branches:
       - master
 
-
 permissions:
   pages: write
   id-token: write
-
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout v4
+        uses: actions/checkout@v4
       - name: Setup Python
-        uses: actions/setup-python@v5
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-    #   - name: Install pngquant
-    #     uses: appleboy/apt@v4
-    #     with:
-    #       packages: pngquant
-
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
