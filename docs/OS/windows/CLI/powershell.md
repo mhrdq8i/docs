@@ -8,6 +8,12 @@
 
 ## Config
 
+### Restart Session
+
+```powershell
+. $PROFILE
+```
+
 ### Set alias for powershell
 
 - get the list of aliases
@@ -16,15 +22,15 @@
   gal
   ```
 
-### set new alias
+### Set new alias
 
-- **Set Temporary**
+- #### Temporary
 
   ```powershell
   Set-Alias -Name tf -Value terrafrom
   ```
 
-- **Set Permanently**
+- #### Permanently
 
   ```powershell
   notepad++ C:\Users\mehrdad\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
@@ -39,7 +45,7 @@ Remove-Item Alias:tf
 
 ### Disable `bell` alert in terminal
 
-> open the `json` file in setting section  
+> open the `json` file in setting section
 > add this `key & value` to json file
 
 ```json
