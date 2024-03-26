@@ -11,7 +11,9 @@
 ### Restart Session
 
 ```powershell
-. $PROFILE
+$ . $PROFILE
+
+$ powershell.exe -noprofile
 ```
 
 ### Set alias for powershell
