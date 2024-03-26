@@ -17,6 +17,7 @@
 ### [Memory Layout in C][ML-in-C]
 
 ![Memory-Layout-in-C](/docs/assets/mm/memory-layout-in-c.png){ align=left }
+![Memory-Layout-in-C-2](/docs/assets/mm/memory-layout-in-c-2.jpg){ align=left }
 
 <figure markdown="span">
 ![Memory-Layout-in-C](/docs/assets/mm/memory-layout-in-c.png){ width="300" }
