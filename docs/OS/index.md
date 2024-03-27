@@ -1,7 +1,13 @@
 # Operation Systems
 
-#### [**GNU/Linux**](gnu_linux/index.md)
+This section contain of most three important operation systems.
 
-#### [**UNIX**](unix/index.md)
+I've covered [GNU/Linux][GNULinux] in both Server and Desktop side.
 
-#### [**Windows**](windows/index.md)
+I've considered to work with [UNIX] later.
+
+I've covered [Windows] in Desktop side.
+
+[GNULinux]: gnu_linux/index.md
+[UNIX]: unix/index.md
+[Windows]: windows/index.md

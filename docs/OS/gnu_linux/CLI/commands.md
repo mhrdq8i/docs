@@ -1,8 +1,12 @@
-# Linux Commands
+# Commands
 
-## [90 Linux Commands frequently used by Linux Sysadmins][90LinuxCommandsfrequentlyusedbyLinuxSysadmins]
+## 90 Linux Commands frequently used by Linux Sysadmins
 
-### Linux Commands frequently used by Linux Sysadmins – Part 1
+[Click here to visit page][90LinuxCommandsfrequentlyusedbyLinuxSysadmins]
+
+## Linux Commands frequently used by Linux Sysadmins
+
+### Part 1
 
 ```bash
 01. ip – from Iproute2, a collection of utilities for controlling TCP/IP networking and traffic control in Linux.
@@ -19,7 +23,7 @@
 12. grep – Search a file for a pattern of characters, then display all matching lines.
 ```
 
-### Linux Commands frequently used by Linux Sysadmins – Part 2
+### Part 2
 
 ```bash
 13. uptime – shows system uptime and load average.
@@ -48,7 +52,7 @@
 36. apropos – Search man page names and descriptions.
 ```
 
-### Linux Commands frequently used by Linux Sysadmins – Part 3
+### Part 3
 
 ```bash
 37. rsync – remote file transfers and syncing.
@@ -69,7 +73,7 @@
 52. dig – DNS lookup utility.
 ```
 
-### Linux Commands frequently used by Linux Sysadmins – Part 4
+### Part 4
 
 ```bash
 53. wget – retrieve files over HTTP, HTTPS, FTP, and FTPS.
@@ -91,7 +95,7 @@
 69. usermod – used to modify or change any attributes of an existing user account.
 ```
 
-### Linux Commands frequently used by Linux Sysadmins – Part 5
+### Part 5
 
 ```bash
 70. vi – text editor.
@@ -468,7 +472,7 @@ openssl -x509 -in squid.key -text
 
 ## curl
 
-A lot of examples about curl, [**CLICK ME**][curl-https-request]
+A ton of curl examples [is here][curl-https-request]
 
 ```bash
 # download with curl

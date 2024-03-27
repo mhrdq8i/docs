@@ -1,12 +1,11 @@
-# Linux Network Stack, Tools, Commands
+# Network, Tools & Commands
 
-## [60 Linux Networking commands and scripts][60-linux-networking-commands-scripts]
+## 60 Linux Networking commands and scripts
+
+[Click to visit page][60-linux-networking-commands-scripts]
+[useful link][display-network-traffic]
 
 ## Top 20 tools
-
-[**useful link**][display-network-traffic]
-
-### brief list
 
 ```bash
 01. iftop

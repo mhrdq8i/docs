@@ -1,5 +1,0 @@
-# Job Interview
-
-## Iran
-
-## Foreign
