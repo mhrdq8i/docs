@@ -12,7 +12,7 @@ I also write provision tools such as [Ansible] and hashicorp tools like [Terrafo
 For containerization and orchestration I use [Docker] and [Kubernetes]
 
 [Services]: services/index.md
-[Git]: svc/git.md
+[Git]: git/index.md
 [Kubernetes]: kuber/index.md
 [Docker]
 [Ansible]
