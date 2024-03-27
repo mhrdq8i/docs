@@ -1,9 +1,9 @@
-# Stack.Push(GIT\)
+# Stack.Push(S.V.C\)
 
-## [Git](git/git.md)
+## [Git](GIT/git.md)
 
-## [GitLab](git/gitlab.md)
+## [GitLab](GIT/gitlab.md)
 
-## [GitHub](git/github.md)
+## [GitHub](GIT/github.md)
 
-## [GitFlow](git/gitflow.md)
+## [GitFlow](GIT/gitflow.md)

@@ -221,7 +221,7 @@ Scan port on the host(s)
 nmap –p 80 192.168.0.1-100
 ```
 
-See [nmap Cheat Sheet](refs/nmap-cheat-sheet.pdf)
+See [nmap Cheat Sheet](../refs/nmap-cheat-sheet.pdf)
 
 ## fuser
 
