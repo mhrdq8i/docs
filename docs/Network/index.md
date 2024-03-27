@@ -1,4 +1,4 @@
 
-## Stack.Push(Network Section\)
+# Stack.Push(Network\)
 
-- [**MikroTik**](mikrotik/index.md)
+- [MikroTik](mikrotik.md)
