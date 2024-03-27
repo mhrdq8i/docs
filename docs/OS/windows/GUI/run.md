@@ -1,9 +1,9 @@
 # RUN apps from run app
 
-## List of windows useful commands according to [webnots website](https://www.webnots.com/200-run-commands-for-windows-10/)
+## List of windows useful commands according to [webnots website][webnots-website]
 
 | command                                  | task                                             |
-| ---------------------------------------- | ------------------------------------------------ |
+| - | - |
 | %AppData%                                | AddData Directory                                |
 | control color                            | Personalization Settings                         |
 | control desktop                          | Personalization Settings                         |
@@ -133,3 +133,6 @@
 | shell:Common Administrative Tools        | Open Administrative Tools Folder                 |
 | shell:AppData                            | Open User AppData Folder                         |
 | shell:Cache                              | Open User Cache Folder                           |‍
+
+<!-- links -->
+[webnots-website]: https://www.webnots.com/200-run-commands-for-windows-10
