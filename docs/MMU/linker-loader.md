@@ -1,34 +1,33 @@
-# OS, common concept about all operation systems
 
-## Linker & Loader
+# Linker & Loader
 
 we have to understand some concept that related to this topic.
 
-### Preprocessor
+## Preprocessor
 
 - It includes all header files and also evaluates whether a macro(A macro is a piece of code that is given a name. Whenever the name is used, it is replaced by the contents of the macro by an interpreter or compiler. The purpose of macros is either to automate the frequency used for sequences or to enable more powerful abstraction) is included. It takes source code as input and produces modified source code as output. The preprocessor is also known as a macro evaluator, the processing is optional that is if any language that does not support `#include` macros processing is not required.
 
-### Compiler
+## Compiler
 
 - The compiler takes the modified code as input and produces the target code as output.
 
-### Assembler
+## Assembler
 
 - The assembler takes the target code as input and produces real locatable machine code as output.
 
-### Linker
+## Linker
 
 - Linker or link editor is a program that takes a collection of objects (created by assemblers and compilers) and combines them into an executable program.
 
-### Loader
+## Loader
 
 - The loader keeps the linked program in the main memory.
 
-### Executable code
+## Executable code
 
 - It is low-level and machine-specific code that the machine can easily understand. Once the job of the linker and loader is done the object code is finally converted it into executable code.
 
-### There are some schemas for better understanding
+## There are some schemas for better understanding
 
 ![Image-01]
 ![Image-02]
@@ -82,7 +81,7 @@ we have to understand some concept that related to this topic.
 | Linking is used to join all the modules.                                                                                                                                                                                                                                                          | Loading is used to allocate the address to all executable files and this task is done by the loader.    |
 | Linking is performed with the help of Linker.  It is also called a link editor.                                                                                              | A loader is a program that places programs into memory and prepares them for execution.                 |
 
-## some differences between `static` and `dynamic` linking
+## Differences between `static` and `dynamic` linking
 
 ### Static Linking (_linker_' task)
 
@@ -96,7 +95,7 @@ we have to understand some concept that related to this topic.
 - In dynamic linking, this is not the case and individual shared modules can be updated and recompiled. This is one of the greatest advantages dynamic linking offers.
 - In dynamic linking load time might be reduced if the shared library code is already present in memory.
 
-### Dynamic linking are of two types - Implicit and Explicit
+### Two Types of Dynamic Linking
 
 #### Implicit
 
@@ -106,49 +105,51 @@ we have to understand some concept that related to this topic.
 
 - **Explicit Dynamic linking** Another way is loading the symbol during run time explicitly. Operating system provides system calls to load a dynamic library and finding import symbol location, unloading the library etc. This way programmer can explicitly load a library and find out a symbol/function entry and execute that and then can unload that.
 
-### Relocatable Objects
+## Relocatable Objects
 
  a pure translation from the source code with `.o` extension suffix
 
-## some important linux commands
+## some important commands
 
-- linux embed assembly
+Linux embed assembly
 
 ```bash
 as
 ```
 
-- show the content of preprocessor
+Show the content of preprocessor
 
 ```bash
 gcc -E source.c
 ```
 
-- export the assembly of source
+Export the assembly of source
 
 ```bash
 $ gcc -S source.c
 └❯ output: source.s
 ```
 
-- export the object of source
+Export the object of source
 
 ```bash
 $ gcc -c source.c
 └❯ output: source.o
+```
 
-- print the type, arch and address of object file
+Print the type, arch and address of object file
+
 ```bash
 objdump -af /bin/touch[o,out]
 ```
 
-- display information about ELF files
+Display information about ELF files
 
 ```bash
 readelf -f /bin/touch
 ```
 
-- list symbols from object files
+List symbols from object files
 
 ```bash
 (disassembly)
@@ -158,19 +159,19 @@ $ nm -S ../source.out
 $ nm -A ../source.out
 ```
 
-- GNU linker
+GNU linker
 
 ```bash
 ld
 ```
 
-- trace system calls and signals
+Trace system calls and signals
 
 ```bash
 strace ../source.out
 ```
 
-- print shared object dependencies
+Print shared object dependencies
 
 ```bash
 ldd ../source.out

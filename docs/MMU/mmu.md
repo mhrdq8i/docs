@@ -1,28 +1,4 @@
-# Memory Management Unit (MMU)
-
-## GeeksForGeeks links
-
-### [Memory Management in Operating System][MM-in-OS]
-
-### [Memory Layout of C Programs][ML-of-C-Programs]
-
-### [Memory Segmentation in 8086 Microprocessor][MS-in-8086-MP]
-
-## Other Source Links
-
-### [C Memory Division Text (code segment), Data and BSS][code-segment-data-bss]
-
-### [Memory Management on C programming][MM-in-C]
-
-### [Memory Layout in C][ML-in-C]
-
-![Memory-Layout-in-C](/docs/assets/mm/memory-layout-in-c.png){ align=left }
-![Memory-Layout-in-C-2](/docs/assets/mm/memory-layout-in-c-2.jpg){ align=left }
-
-<figure markdown="span">
-![Memory-Layout-in-C](/docs/assets/mm/memory-layout-in-c.png){ width="300" }
-  <figcaption>Image caption</figcaption>
-</figure>
+# Memory Management
 
 ## Memory Segmentation Schema
 
@@ -46,7 +22,12 @@
             +------------------+
 ```
 
-## Initialized(data), Uninitialized(bss) & Read-Only, Read-Write Section
+## Data Segment
+
+- Initialized (data)
+- Uninitialized (bss)
+- Read-Only Section
+- Read-Write Section
 
 ```bash
 +--------------------+
@@ -116,6 +97,21 @@
 |                    |
 +--------------------+
 ```
+
+## Get More View
+
+- ![Memory Layout in C 1](/docs/assets/mm/memory-layout-in-c.png)
+- ![Memory Layout in C 2](/docs/assets/mm/memory-layout-in-c-2.jpg)
+
+## External Resources
+
+- [Memory Management in Operating System][MM-in-OS]
+- [Memory Layout of C Programs][ML-of-C-Programs]
+- [Memory Segmentation in 8086 Microprocessor][MS-in-8086-MP]
+- [C Memory Division Text (code segment), Data and BSS][code-segment-data-bss]
+- [Memory Management on C programming][MM-in-C]
+- [Memory Layout in C][ML-in-C]
+
 <!-- external links -->
 [MM-in-OS]: https://www.geeksforgeeks.org/memory-management-in-operating-system/
 [ML-of-C-Programs]: https://www.geeksforgeeks.org/memory-layout-of-c-program
