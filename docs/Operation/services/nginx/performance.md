@@ -2,7 +2,7 @@
 
 ## Add New Header (Cache-Control)
 
-> Add some header for special goal
+Add some header for special goal
 
 ```nginx
 http {
@@ -39,14 +39,18 @@ http {
 
 ### Request with extra header
 
-- curl -H "Accept-Encoding: gzip, deflate" <http://127.0.0.1/style.css>
+```bash
+curl -H "Accept-Encoding: gzip, deflate" <http://127.0.0.1/style.css>
+```
 
 **Note:** modern browser can support this feature, curl does not support in this example
 
 ### Check the file size
 
-- curl <http://127.0.0.1/style.css> > style.css
-- curl -H "Accept-Encoding: gzip, deflate" <http://127.0.0.1/style.css> > style.min.css
+```bash
+curl <http://127.0.0.1/style.css> > style.css
+curl -H "Accept-Encoding: gzip, deflate" <http://127.0.0.1/style.css> > style.min.css
+```
 
 ## gzip configuration directive
 
@@ -86,11 +90,11 @@ http {
 
 ### Request to check
 
-- curl -I <http://127.0.0.1>
-  `X-Cache: HIT` response header
+```bash
+curl -I <http://127.0.0.1> X-Cache: HIT response header
 
-- curl -I <http://127.0.0.1?skipcache=1>
-  `X-Cache: BYPASS` response header
+curl -I <http://127.0.0.1?skipcache=1> X-Cache: BYPASS response header
+```
 
 ```nginx
 user www-data;
@@ -152,7 +156,7 @@ http {
 
 - Binary Protocol
 - Compressed Headers
-- Persistant Connections
+- Persistent Connections
 - Multiplex Streaming
 - Server Push
 
@@ -160,19 +164,31 @@ http {
 
 ### Install nginx via package manager
 
-- **debian base**: sudo apt install nginx
-- **redhat base**: sudo yum install nginx
+Debian
 
-### [build from source](https://trello.com/c/uLe6hcU4/6-installation)
+```bash
+ sudo apt install nginx
+```
 
-add the following instraction and also check the dependency module **_--with_http_ssl_module_**
+Redhat base
 
-- **--with_http_v2_module**
+```bash
+sudo yum install nginx
+```
 
-- make
-- make install
+### [Build from Source][bldhttp2frmsrc]
 
-### Active _SSL_ for HTTP2
+add the following instruction and also check the dependency module
+
+```bash
+--with_http_ssl_module
+--with_http_v2_module
+
+make
+make install
+```
+
+### Active _SSL_ for _HTTP2_
 
 ```bash
 - Generate 'self-sign' and 'private-key'
@@ -250,6 +266,12 @@ http {
 }
 ```
 
-**Tips:** test via [**nghttp**](https://github.com/nghttp2/nghttp2) tool
+**Tips:** test via [nghttp2] tool
 
-- sudo nghttp -nysa <https://127.0.0.1>
+```bash
+sudo nghttp -nysa <https://127.0.0.1>
+```
+
+<!-- links -->
+[bldhttp2frmsrc]: https://trello.com/c/uLe6hcU4/6-installation
+[nghttp2]: https://github.com/nghttp2/nghttp2

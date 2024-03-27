@@ -1,4 +1,4 @@
-# Nginx configuration doc
+# Configuration
 
 ## Terminology
 
@@ -11,7 +11,7 @@
 - Context is a section with the configuration where **directive** can be set for that given context.
 - Contexts are also **nested** and **inherit** from their parents
 
-**Example**
+#### Example
 
 - In the below picture we have hierarchical context `http`, `server`, `location` and a single context `events`
 
@@ -19,13 +19,13 @@
 
 - A specific configuration option that gets set in the configuration files and consist of a key and value
 
-**Example**
+#### Example
 
-- server_name mydomain.com
+- server_name `mydomain.com`
 
 ## VirtualHost
 
-### Sample Virtualhost configuration for nginx
+### Sample Virtualhost configuration
 
 ```nginx
 events {
@@ -213,24 +213,30 @@ http {
 
 ## Logging
 
-- **Error Log:** As the name suggests for anything that failed or didn't happen as expected.
+### Error Log
 
-- **Access Log:** Log all request to the server
+ As the name suggests for anything that failed or didn't happen as expected.
 
-- Both of logs are located in `/var/log/nginx`
+### Access Log
+
+Log all request to the server
+
+Both of logs are located in `/var/log/nginx`
+
+### Custom Log File
 
 We can also create custom log files or disable logging all together
 
 - **access_log**
 - **error_log**
 
-#### Access Log format
+### Access Log format
 
-- **Syntax:** access_log path [format [buffer=size] [gzip[=level]] [flush=time] [if=condition]]; access_log off;
+- **Syntax:** access_log path `[format [buffer=size] [gzip[=level]] [flush=time] [if=condition]];` access_log off;
 - **Default:** access_log logs/access.log combined;
 - **Context:** http, server, location, if in location, limit_except
 
-#### Error Log format
+### Error Log format
 
 - **Syntax:** error_log file [level];
 - **Default:** error_log logs/error.log error;
@@ -328,7 +334,7 @@ http {
 
 - **worker_process:** the number of nginx worker
 - **worker_connection:** the number of each worker can handle
-- **worker_process** \* **worker_connection** = **max connection**
+- **worker_process** \* **worker_connection** = max connection
 
 ```nginx
 worker_processes 1024;
@@ -415,16 +421,14 @@ http {
 
 ## Dynamic Module
 
-### build from source
-
-add the following command to build from source
-
 ### Add image filtering module
 
-- **--with-http_image_filter_module=dynamic**
-- **--module-path=/etc/nginx/modules**
-- make
-- make install
+```bash
+--with-http_image_filter_module=dynamic
+--module-path=/etc/nginx/modules
+make
+make install
+```
 
 ### Example Configuration
 
