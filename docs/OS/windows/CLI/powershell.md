@@ -1,54 +1,52 @@
 # PowerShell
 
-## Commands
-
-### Find binary location like unix `which`
-
-> - gcm \<latex\> | select Source
-
-## Config
-
-### Restart Session
+## Find binary location like unix `which`
 
 ```powershell
-$ . $PROFILE
-
-$ powershell.exe -noprofile
+gcm \<latex\> | select Source
 ```
 
-### Set alias for powershell
+## Restart Session
 
-- get the list of aliases
+```powershell
+. $PROFILE
+or
+powershell.exe -noprofile
+```
 
-  ```powershell
-  gal
-  ```
+## Alias for Powershell
 
-### Set new alias
+### Get List
 
-- #### Temporary
+```powershell
+gal
+```
 
-  ```powershell
-  Set-Alias -Name tf -Value terrafrom
-  ```
+### Set an Alias
 
-- #### Permanently
+Temporary
 
-  ```powershell
-  notepad++ C:\Users\mehrdad\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-  add Set-Alias -Name ...  line
-  ```
+```powershell
+Set-Alias -Name tf -Value terrafrom
+```
 
-### Remove an exist alias
+Permanently
+
+```powershell
+notepad++ C:\Users\mehrdad\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+add Set-Alias -Name ...  line
+```
+
+### Remove an Alias
 
 ```powershell
 Remove-Item Alias:tf
 ```
 
-### Disable `bell` alert in terminal
+## Disable `Bell` alert in terminal
 
-> open the `json` file in setting section
-> add this `key & value` to json file
+- open the `json` file in setting section
+- add this `key & value` to json file
 
 ```json
  "profiles":
@@ -59,42 +57,42 @@ Remove-Item Alias:tf
              ...
 ```
 
-### Active powershell profile
+## Active powershell profile
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
 
-### Install oh-my-posh
+## Install oh-my-posh
 
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
 
-### Clone oh-my-posh Themes
+## Clone oh-my-posh Themes
 
 - git clone [**without-my-custom-theme**](https://github.com/JanDeDobbeleer/oh-my-posh.git)
 - copy [**with custom theme `mehrdad`**](oh-my-posh/ "with-my-custom-theme")
 
-### Active Custom Theme
+## Active Custom Theme
 
-> notepad++ $profile
+notepad++ $profile
 
 ```powershell
 oh-my-posh init pwsh --config C:\Users\mehrdad\oh-my-posh\themes\mehrdad.omp.json | Invoke-Expression
 ```
 
-### Fish-like Autosuggestion in Powershell
+## Fish-like Autosuggestion in Powershell
 
-#### Installation
+### Installation
 
-1. First, install ´PSReadLine´ version 2.1.0
+I. First, install ´PSReadLine´ version 2.1.0
 
 ```powershell
    Install-Module PSReadLine -RequiredVersion 2.1.0
 ```
 
-2. Then, initialize it with the command below(notepad $profile)
+II. Then, initialize it with the command below(notepad $profile)
 
 ```powershell
    Import-Module PSReadLine
