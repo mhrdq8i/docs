@@ -1,10 +1,10 @@
 # Install Windows the Arch Linux Way
 
-## [According from this link](https://christitus.com/install-windows-the-arch-linux-way/)
+## [According from this link][docreflnk]
 
-### From bootloader disk/flash
+### From boatloader disk/flash
 
-- Shift+F10
+Shift+F10
 
 ```powershell
 diskpart
@@ -30,7 +30,7 @@ Execute one of these commands into the `run`
 irm christitus.com/win | iex
 ```
 
-### Block these domain as well as this [source](https://www.youtube.com/watch?v=IJr2DcffquI)
+### Block these domain as well as this [source]
 
 ```powershell
 127.0.0.1   msftconnecttest.com
@@ -46,4 +46,9 @@ irm christitus.com/win | iex
 
 ## Install Windows 11 to Unsupported PC
 
-- [**Link #1**](https://pureinfotech.com/install-windows-11-unsupported-pc/amp/)
+- [Link #1]
+
+<!-- links -->
+[docreflnk]: https://christitus.com/install-windows-the-arch-linux-way
+[source]: https://www.youtube.com/watch?v=IJr2DcffquI
+[Link #1]: https://pureinfotech.com/install-windows-11-unsupported-pc/amp/
