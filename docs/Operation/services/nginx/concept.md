@@ -2,17 +2,21 @@
 
 ## Install nginx via package manager
 
-### debian base
+### Debian
 
-> sudo apt install nginx
+```bash
+sudo apt install nginx
+```
 
-### redhat base
+### Redhat
 
-> sudo yum install nginx
+```bash
+sudo yum install nginx
+```
 
-### build from source
+### Build From Source
 
-Download Nginx source code from [**this page**](http://nginx.org/en/download.html) extract tar file
+Download Nginx source code from [this page][dlnginx] then extract tar file, like this
 
 ```bash
 ./configure nginx with this parameters:
@@ -27,7 +31,7 @@ make
 make install
 ```
 
-> Save this file as `/lib/systemd/system/nginx.service` to create `systemctl unit`
+Save this file as `/lib/systemd/system/nginx.service` to create `systemctl unit`
 
 ```bash
 [Unit]
@@ -48,48 +52,51 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-[**get more help**](https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/examples/initscripts/)
+[**get more help**][nginxgermorehelp]
 
-## [Official Site](#official-site)
+## Nginx Official Site
 
-> [**_nginx.org_**](http://nginx.org/) is nginx **documentation**
-> but
-> [**_nginx.com_**](https://www.nginx.com) is nginx **production review** page
+- [**_nginx.org_**][nginxorg] is nginx **documentation**
+- [**_nginx.com_**][nginxcom] is nginx **production review** page
 
-## Useful Commands
+## Check Nginx Config File
 
 ```bash
 nginx -t (test all nginx config files)
 nginx -c /etc/nginx/nginx.conf -t (test nginx.conf)
 ```
 
-## Some useful Documentation & Reference link
+## Documentation & Reference
 
-- [Hub Nginx Docs](https://github.com/fcambus/nginx-resources)
-- [Official Documentation](https://docs.nginx.com/)
-- [nginx.org docs](http://nginx.org/en/docs/)
-- [Nginx Best Practice Configuration](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/)
-- [DigitalOcean Tutorial](https://www.digitalocean.com/community/tutorials?q=nginx)
-- [Nginx for Wordpress](https://wordpress.org/support/article/nginx/)
+- [Hub Nginx Docs][HubNginxDocs] Awesome
+- [Official Documentation][OfficialDocumentation]
+- [nginx.org docs][nginxorgdocs]
+- [Nginx Best Practice Configuration][NginxBestPracticeConfiguration]
+- [DigitalOcean Tutorial][DigitalOceanTutorial]
+- [Nginx for Wordpress][NginxForWordpress]
 
 ## Nginx GEO IP
 
-### build from source
+### Build GEO IP From Source
 
-- add `--with-http_geoip_module` to configure
-- fix error dependency with `apt install libgeoip-dev`
-- make
-- make install
+```bash
+add `--with-http_geoip_module` to configure
+fix error dependency with `apt install libgeoip-dev`
+make
+make install
+```
 
-download `GeoIP` and `GeoLiteCity` package from [**maxmind**](https://dev.maxmind.com/)
+download `GeoIP` and `GeoLiteCity` package from [maxmind]
 
 ## Video Streaming
 
-### build from source
+### Build from Source
 
-- add `--with-http_mp4_module` to configure
-- make
-- make install
+```bash
+add `--with-http_mp4_module` to configure
+make
+make install
+```
 
 ```nginx
 worker_processes auto;
@@ -115,3 +122,15 @@ http {
   }
 }
 ```
+<!-- links -->
+[dlnginx]: http://nginx.org/en/download.html
+[nginxgermorehelp]: https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/examples/initscripts/
+[nginxorg]: http://nginx.org/
+[nginxcom]: https://www.nginx.com
+[HubNginxDocs]: https://github.com/fcambus/nginx-resources
+[OfficialDocumentation]: https://docs.nginx.com
+[nginxorgdocs]: http://nginx.org/en/docs/
+[NginxBestPracticeConfiguration]: https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls
+[DigitalOceanTutorial]: https://www.digitalocean.com/community/tutorials?q=nginx
+[NginxForWordpress]: https://wordpress.org/support/article/nginx
+[maxmind]: https://dev.maxmind.com/

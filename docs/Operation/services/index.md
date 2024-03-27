@@ -1,5 +1,5 @@
 
-# Stack.Push(Services Section\)
+# Stack.Push(Services\)
 
 ## [HAProxy](haproxy/)
 
