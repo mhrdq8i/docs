@@ -60,9 +60,11 @@ http {
 }
 ```
 
-**Tips:** Generate `dhparam` pem file
+Generate `dhparam` pem file
 
-- sudo openssl dhparam 2048 -out /etc/nginx/ssl/dhparam.pem
+```bash
+sudo openssl dhparam 2048 -out /etc/nginx/ssl/dhparam.pem
+```
 
 ## Redirect non-HTTPS traffic to HTTPS
 
@@ -126,7 +128,7 @@ http {
 
 **Tips:** first define a `zone` with after that use this `zone` with own parameters to `location context`
 
-**Note:** 1r/s + 5 [bust](https://www.nginx.com/blog/rate-limiting-nginx/) 6 connections
+**Note:** 1r/s + 5 [bust] 6 connections
 
 ## Basic Auth
 
@@ -135,7 +137,7 @@ At the first we need to `apache2-utils` on debian base linux and `httpd-utils` o
 after that run the `htpasswd` command
 
 ```bash
-- htpasswd -c /etc/nginx/.htpasswd
+htpasswd -c /etc/nginx/.htpasswd
 ```
 
 ```nginx
@@ -200,10 +202,10 @@ http {
 
 ### useful link
 
-- [Certbot](https://certbot.eff.org/)
-- [Certbot Docs](https://certbot.eff.org/docs/)
-- [Let's Encrypt](https://letsencrypt.org/)
-- [Let's Encrypt Toturial](https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/)
+- [Certbot][Certbot]
+- [Certbot Docs][CertbotDocs]
+- [Let's Encrypt][LetsEncrypt]
+- [Let's Encrypt Toturial][LetsEncryptToturial]
 
 ```nginx
 httP {
@@ -225,3 +227,9 @@ httP {
     }
 }
 ```
+<!-- links -->
+[bust]: https://www.nginx.com/blog/rate-limiting-nginx
+[Certbot]: https://certbot.eff.org
+[CertbotDocs]: https://certbot.eff.org/docs
+[LetsEncrypt]: https://letsencrypt.org
+[LetsEncryptToturial]: https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/
