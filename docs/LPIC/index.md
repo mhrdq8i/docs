@@ -1,6 +1,4 @@
-# LPIC Course Syllabus
-
-## Objectives
+# LPIC Course Syllabus and Objectives
 
 - ### [**LPIC 1 - Exam 101**](objectives/lpic1-exam101.md)
 
