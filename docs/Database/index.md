@@ -1,8 +1,4 @@
 
-# Stack.Push(DBs Section\)
+# Stack.Push(Data Base\)
 
-- All configuration and documentation about `SQL` and `NoSQL` Databases.
-
-## [SQL](SQL/index.md)
-
-## [NoSQL](noSQL/index.md)
+All configuration and documentation about `SQL` and `NoSQL` Databases.

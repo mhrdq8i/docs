@@ -1,14 +1,14 @@
-# [Windows doc](#windows-doc)
+# Windows
 
-## [Enable/Disable HyperV](#enabledisable-hyperv)
+## Enable/Disable HyperV
 
-> enable:
+Enable
 
 ```powershell
 bcdedit /set hypervisorlaunchtype auto
 ```
 
-> disable:
+Disable
 
 ```powershell
 bcdedit /set hypervisorlaunchtype off
@@ -16,7 +16,7 @@ bcdedit /set hypervisorlaunchtype off
 
 ## SSH on windows
 
-> copy public key from windows machine
+Copy public key from windows machine
 
 ```powershell
 scp ~/.ssh/id_rsa.pub [linux_user]@[linux_IP/linux_hostname]:~/.ssh/authorized_keys
@@ -24,7 +24,7 @@ scp ~/.ssh/id_rsa.pub [linux_user]@[linux_IP/linux_hostname]:~/.ssh/authorized_k
 
 ## Generalize Windows Server
 
-> Open Run Menu:
+Open Run Menu:
 
 ```powershell
 sysprep
@@ -38,7 +38,7 @@ shutdown
 netstat -ano | findstr "desire-port-number"
 ```
 
-### Restart `net` service to solve `nekoray` problem
+## Restart `net` service to solve `nekoray` problem
 
 ```powershell
 net stop hns
