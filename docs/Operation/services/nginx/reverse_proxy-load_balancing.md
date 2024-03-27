@@ -18,7 +18,7 @@ python3 -m http.server 8000
 
 ## Reverse Proxy
 
-**_After the setup Environment_**
+After the setup Environment
 
 ```nginx
 worker_processes auto;
@@ -94,4 +94,6 @@ http {
 }
 ```
 
-**Note:** [_Nginx LoadBalancing Algorithm_](https://www.nginx.com/blog/choosing-nginx-plus-load-balancing-techniques/)
+**Note:** [Nginx LoadBalancing Algorithms][NginxLoadBalancingAlgorithms]
+
+[NginxLoadBalancingAlgorithms]: https://www.nginx.com/blog/choosing-nginx-plus-load-balancing-techniques/
