@@ -2,31 +2,31 @@
 
 ```bash
 # May branch `feature` off from
-$ develop
+develop
 
 # Must `feature` merge back into
-$ develop
+develop
 
 # Branch naming convention for `feature`
-$ feature-\*
+feature-\*
 
 # May branch `release` off from
-$ develop
+develop
 
 # Must merge `release` back into
-$ develop and master
+develop and master
 
 # Branch naming convention for `release`
-$ release-\*
+release-\*
 
 # May branch `hotfix` off from
-$ master
+master
 
 # Must merge `hotfix` back into
-$ develop and master
+develop and master
 
 # Branch naming convention for `hotfix`
-$ hotfix-\*
+hotfix-\*
 ```
 
 ## Creating a feature branch

@@ -35,7 +35,7 @@ git config --unset core.bare
 git config --global core.editor "vim"
 ```
 
-### skip SSL C.A
+### Skip SSL C.A
 
 - skip unable to access `https://your.host/your-git/your-repor.git/` SSL certificate problem: self signed certificate
 

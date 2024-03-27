@@ -46,10 +46,6 @@ sudo gitlab-ctl reconfigure
 gitlab-rake "gitlab:password:reset"
 ```
 
-## Install & Configure via ansible playbook
-
-### Click [here](https://gitlab.com/mehrdad-companies/spara/iac/-/tree/master) to see gitlab ansible playbook
-
 ## Initiate gitlab runner
 
 ```bash
