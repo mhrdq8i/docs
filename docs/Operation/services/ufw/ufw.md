@@ -1,15 +1,29 @@
 # Ubuntu FireWall
 
-## commands
+## Commands
 
-- ufw status
-- ufw status numbered 
-- ufw allow \<port-number\>
-- ufw delete \<rule-line-number\>
-  
-## close/open ICMP(ping) status
+### Get Status
 
-- edit `/etc/ufw/before.rules` file
+```bash
+ufw status
+ufw status numbered
+```
+
+### Allow
+
+```bash
+ufw allow \<port-number\>
+```
+
+### Delete
+
+```bash
+ufw delete \<rule-line-number\>
+```
+
+### Open/Close ICMP(ping)
+
+edit `/etc/ufw/before.rules` file
 
 ```bash
 # ok icmp codes for INPUT

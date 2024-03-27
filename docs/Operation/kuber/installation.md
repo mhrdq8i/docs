@@ -1,1 +1,1 @@
-# Kubernetes Cluster Setup
+# Cluster Setup
