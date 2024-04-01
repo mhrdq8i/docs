@@ -162,29 +162,41 @@ function run_vagrant_ssh {
 }
 
 
-
 while ($result -ne 'y' -and $result -ne 'n' -and $result -ne '') {
-    $result = Read-Host "would you like to start 'kubernetes' session? [ Y | n ]"
+    $result = Read-Host "would you like to start 'kubernetes' session? [Y | n]"
 }
-
-switch ( $result ) {
-    y {
-        run_code
-        run_vlc
-        # run_vmware_machines
-        # run_mobaxterm
-        run_vagrant_up
-        run_vagrant_ssh
-    }
-    n {
-        exit 0
-    }
-    default {
-        run_code
-        run_vlc
-        # run_vmware_machines
-        # run_mobaxterm
-        run_vagrant_up
-        run_vagrant_ssh
-    }
+    switch ( $result ) {
+        y {
+            while ($env_result -ne 'vmware' -and $env_result -ne 'vagrant' -and $env_result -ne '') {
+                $env_result = Read-Host "Which ENVs do you want to run? [ vmware | vagrant ]"
+            }
+                switch ( $env_result ) {
+                    vmware {
+                        run_code
+                        run_vlc
+                        run_vmware_machines
+                    }
+                    vagrant {
+                        run_code
+                        run_vlc
+                        run_vagrant_up
+                        run_vagrant_ssh
+                    }
+                    Default {
+                        run_code
+                        run_vlc
+                        run_vagrant_up
+                        run_vagrant_ssh
+                    }
+                }
+        }
+        n {
+            exit 0
+        }
+        default {
+            run_code
+            run_vlc
+            run_vagrant_up
+            run_vagrant_ssh
+        }
 }
