@@ -121,12 +121,10 @@ function run_vmware_machines {
 }
 
 function run_vagrant_up {
-
     Set-Location 'E:\sb\w\hashicorp\vagrant\vagrant-kubeadm-kubernetes'
     vagrant status
     Start-Sleep -Second 5
     vagrant up
-
     if ( $? -eq "True" ) {
         Write-Host -ForegroundColor green "Master Node is started successfully"
         Write-Host -ForegroundColor green "Worker Node 01 is started successfully"
@@ -142,14 +140,11 @@ function run_vagrant_up {
 }
 
 function run_vagrant_ssh {
-
     $vagrant_dir = 'E:\sb\w\hashicorp\vagrant\vagrant-kubeadm-kubernetes'
     $run_mn_00 = 'vagrant ssh controlplane'
     $run_wn_01 = 'vagrant ssh node01'
     $run_wn_02 = 'vagrant ssh node02'
-
-    wt -d $vagrant_dir powershell -c $run_mn_00 `; split-pane --vertical -d $vagrant_dir  powershell -c $run_wn_01 `; split-pane --horizontal -d $vagrant_dir powershell -c $run_wn_02 `;  focus-pane --target 0
-
+    wt -d $vagrant_dir pwsh -c $run_mn_00 `; split-pane --vertical -d $vagrant_dir  pwsh -c $run_wn_01 `; split-pane --horizontal -d $vagrant_dir pwsh -c $run_wn_02 `;  focus-pane --target 0
     if ( $? -eq "True" ) {
         Write-Host -ForegroundColor green "SSH connection over vagrant machines are successfully stablished"
         Start-Sleep -Second 5
@@ -165,38 +160,38 @@ function run_vagrant_ssh {
 while ($result -ne 'y' -and $result -ne 'n' -and $result -ne '') {
     $result = Read-Host "would you like to start 'kubernetes' session? [Y | n]"
 }
-    switch ( $result ) {
-        y {
-            while ($env_result -ne 'vmware' -and $env_result -ne 'vagrant' -and $env_result -ne '') {
-                $env_result = Read-Host "Which ENVs do you want to run? [ vmware | vagrant ]"
+switch ( $result ) {
+    y {
+        while ($env_result -ne 'vmware' -and $env_result -ne 'vagrant' -and $env_result -ne '') {
+            $env_result = Read-Host "Which ENVs do you want to run? [ vmware | vagrant ]"
+        }
+        switch ( $env_result ) {
+            vmware {
+                run_code
+                run_vlc
+                run_vmware_machines
             }
-                switch ( $env_result ) {
-                    vmware {
-                        run_code
-                        run_vlc
-                        run_vmware_machines
-                    }
-                    vagrant {
-                        run_code
-                        run_vlc
-                        run_vagrant_up
-                        run_vagrant_ssh
-                    }
-                    Default {
-                        run_code
-                        run_vlc
-                        run_vagrant_up
-                        run_vagrant_ssh
-                    }
-                }
+            vagrant {
+                run_code
+                run_vlc
+                run_vagrant_up
+                run_vagrant_ssh
+            }
+            Default {
+                run_code
+                run_vlc
+                run_vagrant_up
+                run_vagrant_ssh
+            }
         }
-        n {
-            exit 0
-        }
-        default {
-            run_code
-            run_vlc
-            run_vagrant_up
-            run_vagrant_ssh
-        }
+    }
+    n {
+        exit 0
+    }
+    default {
+        run_code
+        run_vlc
+        run_vagrant_up
+        run_vagrant_ssh
+    }
 }
