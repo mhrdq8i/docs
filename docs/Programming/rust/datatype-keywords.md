@@ -63,6 +63,8 @@ Compound types can group multiple values into one type. Rust has two primitive c
 
 ### [Compound Types][CompoundTypes]
 
+Compound types can group multiple values into one type. Rust has two primitive compound types: tuples and arrays
+
 #### [Tuple Type][TupleType]
 
 A tuple is a general way of grouping together a number of values with a variety of types into one compound type. Tuples have a `fixed length`: `once declared`, they cannot grow or shrink in size.
