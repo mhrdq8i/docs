@@ -22,13 +22,39 @@ Many programming languages don’t require you to think about the stack and the 
 
 Ownership is a set of rules that govern how a Rust program manages memory.
 
-### [Ownership Rules][ownershiprules]
+#### [Ownership Rules][ownershiprules]
 
 - Each value in Rust has an owner.
 - There can only be one owner at a time.
 - When the owner goes out of scope, the value will be dropped.
 
+#### [Ownership in Function][functionownership]
+
+#### [Return Values and Scope][fownerreturnv]
+
+Returning values can also transfer ownership
+
 ### [Variable Scope][variablescope]
+
+### [Memory and Allocation][memory-allocation]
+
+- The memory must be requested from the memory allocator at runtime.
+- We need a way of returning this memory to the allocator when we’re done.
+
+#### [Drop in Rust & RAII in C++][memory-allocation]
+
+> Note: In C++, this pattern of deallocating resources at the end of an item’s
+> lifetime is sometimes called *Resource Acquisition Is Initialization (RAII)*.
+> The `drop` function in Rust will be familiar to you if you’ve used RAII
+> patterns.
+
+#### [Move]
+
+> Shallow Copy
+
+#### [Clone]
+
+> Deep Copy
 
 ## Chapter 07
 
@@ -65,8 +91,6 @@ Library crates don’t have a `main` function, and they don’t compile to an ex
 
 A package can contain `src/main.rs` and `src/lib.rs`. In this case, it has two crates: a *binary* and a *library*, both with the same name as the package.
 
-![binary_library_pkg]
-
 <!-- links -->
 [Shadowing]: https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
 [reexporting]: https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#re-exporting-names-with-pub-use
@@ -75,3 +99,8 @@ A package can contain `src/main.rs` and `src/lib.rs`. In this case, it has two c
 [heap-stack]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-stack-and-the-heap
 [ownershiprules]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-rules
 [variablescope]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variable-scope
+[memory-allocation]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#memory-and-allocation
+[move]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variables-and-data-interacting-with-move
+[clone]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variables-and-data-interacting-with-clone
+[functionownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-and-functions
+[fownerreturnv]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#return-values-and-scope
