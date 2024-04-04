@@ -1,4 +1,4 @@
-# Data Types & Keywords
+# DataTypes & Keywords
 
 ## [Data Types][DTs]
 
