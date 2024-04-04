@@ -30,6 +30,7 @@
 
 ### Articles & Papers
 
+- [Lifetime in Rust - Arian Eqbali][LifetimeRustArianEqbali]
 - [Why is Rust's build system uniquely hard to use][wrbsuhu]
 - [Zero cost abstractions: Rust vs C++][zcbrcpp]
 
@@ -48,3 +49,4 @@
 [awesome-rust]: https://github.com/rust-unofficial/awesome-rust/
 [zcbrcpp]: https://www.rottedfrog.co.uk/?p=24
 [timClicks]: https://www.youtube.com/@timClicks
+[LifetimeRustArianEqbali]: https://ariyan-eghbal.github.io/posts/rust_lifetimes/
