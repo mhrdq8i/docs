@@ -12,14 +12,32 @@ The `&self` is actually short for 'self: &Self'
 
 - The other difference between `mut` and shadowing is that because we’re effectively creating a new variable when we use the `let` keyword again, "we can change the type of the value but reuse the same name"
 
+## Chapter 04
+
+### [The Stack and the Heap][heap-stack]
+
+Many programming languages don’t require you to think about the stack and the heap very often. But in a systems programming language like Rust, whether a value is on the stack or the heap affects how the language behaves and why you have to make certain decisions.
+
+### [What Is Ownership?][rustownership]
+
+Ownership is a set of rules that govern how a Rust program manages memory.
+
+### [Ownership Rules][ownershiprules]
+
+- Each value in Rust has an owner.
+- There can only be one owner at a time.
+- When the owner goes out of scope, the value will be dropped.
+
+### [Variable Scope][variablescope]
+
 ## Chapter 07
 
 Rust module system
 
-- _Packages:_ A Cargo feature that lets you build, test, and share crates
-- _Crates:_ A tree of modules that produces a library or executable
-- _Modules and use:_ Let you control the organization, scope, and privacy of paths
-- _Paths:_ A way of naming an item, such as a struct, function, or module
+- *Packages:* A Cargo feature that lets you build, test, and share crates
+- *Crates:* A tree of modules that produces a library or executable
+- *Modules and use:* Let you control the organization, scope, and privacy of paths
+- *Paths:* A way of naming an item, such as a struct, function, or module
 
 ### Paths for Referring to an Item in the Module Tree
 
@@ -35,6 +53,25 @@ This technique is called `re-exporting` because we’re bringing an item into sc
 
 Code within a module is private from its parent modules by default. To make a module public, declare it with pub mod instead of mod. To make items within a public module public as well, use pub before their declarations
 
+### [Packages and Crates][pnc]
+
+#### Binary crate
+
+Binary crates are programs you can compile to an executable that you can run
+
+#### Library crate
+
+Library crates don’t have a `main` function, and they don’t compile to an executable. Instead, they define functionality intended to be shared with multiple projects.
+
+A package can contain `src/main.rs` and `src/lib.rs`. In this case, it has two crates: a *binary* and a *library*, both with the same name as the package.
+
+![binary_library_pkg]
+
 <!-- links -->
 [Shadowing]: https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
 [reexporting]: https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#re-exporting-names-with-pub-use
+[pnc]: https://doc.rust-lang.org/stable/book/ch07-01-packages-and-crates.html#packages-and-crates
+[rustownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#what-is-ownership
+[heap-stack]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-stack-and-the-heap
+[ownershiprules]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-rules
+[variablescope]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variable-scope
