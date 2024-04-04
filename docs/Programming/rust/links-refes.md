@@ -17,14 +17,21 @@
 
 ## Non-Rust Links
 
+### Tutorials
+
+- [rust-learning]
+- [awesome-rust]
+
 ### Youtube & Podcasts
 
-- [Jon Gjengset][JonGjengset]
 - [Rustacean]
+- [Jon Gjengset][JonGjengset]
+- [ timClicks]
 
 ### Articles & Papers
 
 - [Why is Rust's build system uniquely hard to use][wrbsuhu]
+- [Zero cost abstractions: Rust vs C++][zcbrcpp]
 
 <!-- links -->
 [JonGjengset]: https://www.youtube.com/@jonhoo
@@ -37,3 +44,7 @@
 [dae]: https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#defining-an-enum
 [eo]: https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#the-option-enum-and-its-advantages-over-null-values
 [ownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
+[rust-learning]: https://github.com/ctjhoa/rust-learning
+[awesome-rust]: https://github.com/rust-unofficial/awesome-rust/
+[zcbrcpp]: https://www.rottedfrog.co.uk/?p=24
+[timClicks]: https://www.youtube.com/@timClicks
