@@ -26,7 +26,7 @@
 
 - [Rustacean]
 - [Jon Gjengset][JonGjengset]
-- [ timClicks]
+- [timClicks]
 
 ### Articles & Papers
 
