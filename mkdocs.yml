@@ -85,11 +85,11 @@ extra:
     deprecated: Deprecated
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/mehrdad-drc
+      link: https://github.com/mehrdadq8i
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/@geekfa
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/mehrdad_drpc
+      link: https://twitter.com/mehrdadq8i
 
 # Extensions
 markdown_extensions:
@@ -126,7 +126,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
 # nav:
 # - Home:
 #     - index.md
