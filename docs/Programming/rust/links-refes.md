@@ -33,7 +33,12 @@
 - [Lifetime in Rust - Arian Eqbali][LifetimeRustArianEqbali]
 - [Why is Rust's build system uniquely hard to use][wrbsuhu]
 - [Zero cost abstractions: Rust vs C++][zcbrcpp]
+- [An immediate mode GUI library written in Rust][regui]
 
+### Frameworks & Libraries
+
+- [Actix]
+- [Rinf: Rust in Flutter][rinf]
 <!-- links -->
 [JonGjengset]: https://www.youtube.com/@jonhoo
 [Rustacean]: https://rustacean-station.org
@@ -50,3 +55,6 @@
 [zcbrcpp]: https://www.rottedfrog.co.uk/?p=24
 [timClicks]: https://www.youtube.com/@timClicks
 [LifetimeRustArianEqbali]: https://ariyan-eghbal.github.io/posts/rust_lifetimes/
+[regui]: https://www.egui.rs
+[actix]: https://actix.rs
+[rinf]: https://github.com/cunarist/rinf
