@@ -15,7 +15,7 @@
 
 - [String][rbye-str]
 
-## Non-Official Rust Links
+## Non-Official Rust's Links
 
 ### Tutorials
 
