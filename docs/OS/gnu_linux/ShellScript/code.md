@@ -657,7 +657,9 @@ else
 fi
 ```
 
-## Directory Basename
+## Get Current working directory and Basename
+
+### Directory Basename
 
 ```bash
 #!/bin/bash
@@ -667,8 +669,6 @@ dirname $0
 
 # /dir/name/basename.file
 ```
-
-## Get Current working directory and Basename
 
 ### Print current directory
 
