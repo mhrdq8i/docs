@@ -487,7 +487,7 @@ stat -c %w /
 
 ## Print Format Date
 
-> date +%\<format-option\>
+> date +%<format-option\>
 
 ```bash
 date +"YEAR: %Y - Month: %m - Day: %d"
