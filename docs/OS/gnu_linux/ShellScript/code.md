@@ -668,6 +668,29 @@ dirname $0
 # /dir/name/basename.file
 ```
 
+## Get Current working directory and Basename
+
+### Print current directory
+
+```bash
+#!/bin/bash
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo $script_dir
+```
+
+### Print basename
+
+```bash
+#!/bin/bash
+
+pd=`pwd`
+bn=`basename $0`
+dirname $0
+
+echo "${pd}/${bn}"
+```
+
 ## Factorial
 
 ```bash

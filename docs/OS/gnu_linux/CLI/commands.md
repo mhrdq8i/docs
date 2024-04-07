@@ -487,11 +487,11 @@ stat -c %w /
 
 ## Print Format Date
 
-> date +%\<format-option>
->
->```bash
->date +"YEAR: %Y - Month: %m - Day: %d"
->```
+> date +%\<format-option\>
+
+```bash
+date +"YEAR: %Y - Month: %m - Day: %d"
+```
 
 <!-- external link -->
 [90LinuxCommandsfrequentlyusedbyLinuxSysadmins]: https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/
