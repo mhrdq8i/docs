@@ -1,14 +1,14 @@
 ---
 # Project information
 site_name: Mehrdad's Docs Stack
-site_url: https://mehrdad-drpc.github.io/docs
-# site_url: https://www.geekfa.net/
+# site_url: https://mehrdad-drpc.github.io/docs
+site_url: https://docs.geekfa.net/
 site_description: My all project documentation in MD format.
 site_author: Mehrdad Qasemkhani
 site_dir: public
 
 # Repository
-repo_url: https://github.com/mehrdad-drpc/docs
+repo_url: https://github.com/mehrdadq8i/docs
 edit_uri: blob/master/docs/
 
 extra_css: [extra.css]
