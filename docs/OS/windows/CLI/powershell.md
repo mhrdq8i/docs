@@ -14,6 +14,14 @@ or
 powershell.exe -noprofile
 ```
 
+## Update powershell
+
+Open powershell in administrative mode and enter this command
+
+```powershell
+winget upgrade powershell
+```
+
 ## Alias for Powershell
 
 ### Get List
