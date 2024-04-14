@@ -1,5 +1,5 @@
 
-# Stack.Push(DevOps\)
+# DevOps
 
 I write all my tasks and jobs that I've ever done.
 

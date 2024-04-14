@@ -1,4 +1,4 @@
 
-# Stack.Push(Data Base\)
+# Data Base
 
 All configuration and documentation about `SQL` and `NoSQL` Databases.
