@@ -1,4 +1,4 @@
-# Hasicorp Vagrant
+# Vagrant
 
 ## What is Vagrant?
 
