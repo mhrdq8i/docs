@@ -1,4 +1,4 @@
-# LPIC Course Syllabus and Objectives
+# Syllabus and Objectives
 
 I've covered LPIC topics here.
 
