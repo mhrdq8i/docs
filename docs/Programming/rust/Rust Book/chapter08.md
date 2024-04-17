@@ -8,6 +8,41 @@ Hash Map: all of the keys must have the same type as each other, and all of the 
 
 Rust strings don’t support indexing. A String is a wrapper over a Vec\<u8\>.
 
+## String Literal
+
+```rust
+
+#![allow(unused_variables)]
+fn main() {
+let greeting = "Hello there."; // greeting: &'static str
+}
+```
+
+"Hello there." is a string literal and its type is _&'static str_. A string literal is a string slice that is statically allocated, meaning that it’s saved inside our compiled program, and exists for the entire duration it runs.
+
+### Differences between `&str` and `String`
+
+- Unlike String, which is an owned, heap-allocated string, string slices are references and do not own the data they point to.
+- String slices have a fixed size determined at compile time, making them more efficient for certain use cases.
+
+### Creation of `&str`
+
+- _String slices_ can be created from string literals, owned String instances, or other string slices.
+
+- _String literals_ are automatically coerced to _&str_ when used in contexts expecting a reference.
+
+```rust
+let s: &str = "Hello, World!";
+
+```
+
+or
+
+```rust
+let s1: String = String::from("Hello");
+let s2: &str = &s1;
+```
+
 ## [Concatenation with the + Operator or the format! Macro][scwpomf]
 
 ```rust
@@ -27,8 +62,8 @@ fn add(self, s: &str) -> String {
 ```
 
 The reason we’re able to use `&s2` in the call to `add` is that the compiler
-can *coerce* the `&String` argument into a `&str`. When we call the `add`
-method, Rust uses a *deref coercion*, which here turns `&s2` into `&s2[..]`.
+can _coerce_ the `&String` argument into a `&str`. When we call the `add`
+method, Rust uses a _deref coercion_, which here turns `&s2` into `&s2[..]`.
 We’ll discuss deref coercion in more depth in Chapter 15. Because `add` does
 not take ownership of the `s` parameter, `s2` will still be a valid `String`
 after this operation.
@@ -56,7 +91,7 @@ fn main() {
 
 ## [Bytes and Scalar Values and Grapheme Clusters! Oh My!][bsgc]
 
-Another point about UTF-8 is that there are actually three relevant ways to look at strings from Rust’s perspective: as *bytes*, *scalar values*, and *grapheme clusters* (the closest thing to what we would call letters).
+Another point about UTF-8 is that there are actually three relevant ways to look at strings from Rust’s perspective: as _bytes_, _scalar values_, and _grapheme clusters_ (the closest thing to what we would call letters).
 
 <!-- links -->
 [HashMap]: https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html#creating-a-new-hash-map
