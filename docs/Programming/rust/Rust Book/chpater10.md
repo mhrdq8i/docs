@@ -71,12 +71,27 @@ mod math;
 pub fn main_function() {
     println!("Calling the main function");
 }
+```
 
+Declaration & Definition
+
+```rust
+// This is both a declaration and a definition
+
+mod my_module {
+
+// Function definition" inside "my_module"
+    pub fn my_function() {
+        // Function implementation
+    }
+}
 ```
 
 ### Assignment
 
 Variable _assignment_, on the other hand, is the process of assigning a new value to an already existing variable.
+
+__Note:__ Assignment statement in Rust and doesn't return a value.
 
 ## Lifetimes
 
@@ -134,6 +149,14 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 The generic lifetime 'a will get the concrete lifetime that is equal to the smaller of the lifetimes of _x_ and _y_.
 
 >Lifetimes on function or method parameters are called __input lifetimes__, and lifetimes on return values are called __output lifetimes__.
+
+### Compiler Rules in Lifetimes
+
+1. The first rule is that the compiler assigns a lifetime parameter to each parameter that’s a reference. In other words, a function with one parameter gets one lifetime parameter: fn foo<'a>(x: &'a i32); a function with two parameters gets two separate lifetime parameters: fn foo<'a, 'b>(x: &'a i32, y: &'b i32); and so on.
+
+2. The second rule is that, if there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetime parameters: fn foo<'a>(x: &'a i32) -> &'a i32.
+
+3. The third rule is that, if there are multiple input lifetime parameters, but one of them is &self or &mut self because this is a method, the lifetime of self is assigned to all output lifetime parameters. This third rule makes methods much nicer to read and write because fewer symbols are necessary.
 
 ## Monomorphization
 
