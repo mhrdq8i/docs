@@ -8,6 +8,8 @@ Most languages don’t distinguish between these two kinds of errors and handle 
 
 Rust doesn’t have exceptions. Instead, it has the type `Result<T, E>` for _**recoverable errors**_ and the `panic!` macro that stops execution when the program encounters an _**unrecoverable error**_.
 
+Using `unwrap_or_else` allows us to define some custom, _non-panic!_ error handling.
+
 ## [Unwinding the Stack or Aborting in Response to a Panic][usorarp]
 
 > By default, when a panic occurs, the program starts _unwinding_, which
