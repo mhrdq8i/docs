@@ -6,7 +6,7 @@ Many programming languages don’t require you to think about the stack and the 
 
 ## [What Is Ownership?][rustownership]
 
-Ownership is a set of rules that govern how a Rust program manages memory.
+[Ownership] is a set of rules that govern how a Rust program manages memory.
 
 ### [Ownership Rules][ownershiprules]
 
@@ -50,6 +50,19 @@ Returning values can also transfer ownership
 
 ### [The Rules of References][the-rules-of-references]
 
+### [Mutable References][mutableref]
+
+```rust
+    let mut s = String::from("hello");
+
+    let r1 = &mut s;
+    let r2 = &mut s;
+
+    println!("{}, {}", r1, r2);
+```
+
+Mutable references: have one big restriction, if you have a mutable reference to a value, you can have no other references to that value.
+
 <!-- links -->
 [rustownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#what-is-ownership
 [heap-stack]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-stack-and-the-heap
@@ -63,3 +76,5 @@ Returning values can also transfer ownership
 [references-and-borrowing]: https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#references-and-borrowing
 [dangling-references]: https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#dangling-references
 [the-rules-of-references]: https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#the-rules-of-references
+[mutableref]: https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#mutable-references
+[Ownership]: https://arxiv.org/pdf/2011.09012.pdf
