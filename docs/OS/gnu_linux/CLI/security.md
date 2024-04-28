@@ -2,7 +2,13 @@
 
 ## Encryption/Decryption
 
-### SSH
+### RSA
+
+Create new RSA KEY
+
+```bash
+ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ ```
 
 ### GPG
 
