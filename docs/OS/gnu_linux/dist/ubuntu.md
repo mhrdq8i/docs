@@ -2,6 +2,8 @@
 
 ## Config netplan (network)
 
+Open netplan file under the `/ect/netplan/` path
+
 ```bash
 network:
   version: 2
