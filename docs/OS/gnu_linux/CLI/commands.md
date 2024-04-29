@@ -451,7 +451,7 @@ pkexec visudo
 top
 htop
 btop
-pybtop
+bpytop
 uptime
 iotop
 vmstat
