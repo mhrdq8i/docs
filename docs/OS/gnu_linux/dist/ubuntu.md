@@ -51,6 +51,12 @@ EOF
 
 ## Show and Edit gnome shortkeys
 
+Install gnome related package
+
+```bash
+sudo apt install gnome-tweaks
+```
+
 Get the list of shortkeys
 
 ```bash
