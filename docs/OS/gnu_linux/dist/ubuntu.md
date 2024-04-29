@@ -48,3 +48,18 @@ cat <<EOF | sudo tee /etc/apt/apt.conf.d/21proxy
 Acquire::http::proxy "socks5h://localhost:9090";
 EOF
 ```
+
+## Show and Edit gnome shortkeys
+
+Get the list of shortkeys
+
+```bash
+gsettings list-recursively org.gnome.desktop.wm.keybindings
+```
+
+Replace the value for the specific key
+
+```bash
+gsettings set org.gnome.desktop.wm.keybindings key-name "[pattern]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right  "['<Super>Page_Down', '<Super><Alt>Right']"
+```
