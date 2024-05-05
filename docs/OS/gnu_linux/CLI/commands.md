@@ -213,6 +213,27 @@ mount /dev/sd{a..z}{1..n} /xyz
 5. Edit `fstab` for mount permanently
 ```
 
+### Get partition info
+
+List of partitions and mounted path
+
+```bash
+lsblk
+```
+
+List of ID and UUID of devices
+
+```bash
+blkid
+
+```
+
+Get the list of a partition
+
+```bash
+tune2fs -l /dev/sda2
+```
+
 ### Change left root password
 
 ```bash
@@ -498,6 +519,7 @@ date +"YEAR: %Y - Month: %m - Day: %d"
 ```bash
 ldconfig -p | grep <libname>
 ```
+
 <!-- external link -->
 [90LinuxCommandsfrequentlyusedbyLinuxSysadmins]: https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
