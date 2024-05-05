@@ -232,6 +232,13 @@ Get the list of a partition
 
 ```bash
 tune2fs -l /dev/sda2
+
+# Filesystem volume name
+# Last mounted on
+# Filesystem UUID
+# Filesystem magic number
+# Filesystem revision
+# Filesystem features
 ```
 
 ### Change left root password
