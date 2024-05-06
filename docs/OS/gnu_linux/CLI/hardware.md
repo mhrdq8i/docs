@@ -28,9 +28,19 @@ cat /proc/meminfo
 ## Check Disk info
 
 ```bash
+sudo lsblk -f
+
 sudo df -h
+sudo df -H /dev/sda1
+
+df -H /dev/sda1 # disk usage
+
 sudo hdparm -I /dev/sda
-check disk in 10 ways
+
+sudo lshw -class disk -class storage
+sudo lshw -short -C disk
+
+sudo hwinfo --disk
 ```
 
 ## Check Monitor info
