@@ -1,4 +1,6 @@
-# Network, Tools & Commands
+# Network
+
+## Tools & Commands
 
 ## 60 Linux Networking commands and scripts
 
@@ -53,6 +55,16 @@ sudo vnstat --days --begin "2024-01-01 00:00" --end "2024-02-01 23:59"
 ```
 
 ## ssh
+
+### ssh config to passwordless connection
+
+```bash
+Host [name]
+    HostName [ip-or-hostname]
+    Port [port_number]
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa.hub
+```
 
 ### ssh 2 ssh
 
