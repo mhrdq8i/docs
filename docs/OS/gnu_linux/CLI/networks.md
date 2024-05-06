@@ -56,7 +56,9 @@ sudo vnstat --days --begin "2024-01-01 00:00" --end "2024-02-01 23:59"
 
 ## ssh
 
-### ssh config to passwordless connection
+### ssh config
+
+To enable password-less connection
 
 ```bash
 Host [name]
