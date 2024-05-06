@@ -36,3 +36,11 @@ Get a list of local registry
 ```bash
 curl localhost:5000/v2/_catalog
 ```
+
+### docker images
+
+Output filter over columns
+
+```bash
+docker images --format '{{.Repository}}:{{.Tag}}'
+```
