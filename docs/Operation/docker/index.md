@@ -224,7 +224,7 @@ It serves as a form of documentation for developers and users to understand whic
 
 PUBLISH is a command-line option when running a Docker container. **It maps a container port to a host port**. When you use PUBLISH, you're telling Docker to forward traffic from the host machine to the container.
 
-## Commands
+## Frequency Use Commands
 
 ### docker privilege
 
