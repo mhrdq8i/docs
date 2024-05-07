@@ -20,6 +20,10 @@ Tmux [commands][tchsh]
 
 Tmux [plugins][tplg] & extension
 
+### TPM
+
+[Plugin Manger][tpm] for Tmux
+
 ## Other Source
 
 - [Easy Guid][tmxezgud] to use Tmux
@@ -28,3 +32,4 @@ Tmux [plugins][tplg] & extension
 [tins]: https://tmuxcheatsheet.com/how-to-install-tmux/
 [tplg]: https://tmuxcheatsheet.com/tmux-plugins-tools/
 [tmxezgud]: https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+[tpm]: https://github.com/tmux-plugins/tpm
