@@ -274,7 +274,7 @@ find /usr/bin -perm -1000
 find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
 
 # Delete old 10 days files:
-find /path/to/base/dir/\\\* -type d -ctime +10 -exec rm -rf {} ;
+find /path/to/base/dir/\\\* -type d -ctime +10 -exec rm -rf {} \;
 ```
 
 ## Users and Groups
