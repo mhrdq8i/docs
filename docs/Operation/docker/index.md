@@ -84,6 +84,20 @@ Create, Run, Build, Commit
 • docker save • Saves an image to a tar archive stream to STDOUT with all parent layers, tags
 ```
 
+### Remove
+
+Remove all images
+
+```docker
+docker rmi -f $(docker images -q)
+```
+
+Remove all containers
+
+```docker
+docker rm -f $(docker ps -qa)
+```
+
 #### Example
 
 ```docker
