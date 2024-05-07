@@ -1,6 +1,8 @@
-# Things that I've learned from Naha
+# Naha
 
-## GRUB Config
+## Things that I've learned from Naha
+
+### GRUB Config
 
 Update GRUB for CPU isolation and change memory page size
 
