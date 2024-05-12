@@ -106,6 +106,10 @@ docker load < my_image.tar.gz
 
 # Save an existing image
 docker save my_image•my_tag > my_image.tar.gz
+docker save my_image•my_tag --output my_image.tar
+
+# compress tar file to xz
+xz --compress my_image.tar 
 ```
 
 Import/Export Container
