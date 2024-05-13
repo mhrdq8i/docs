@@ -488,13 +488,23 @@ iftop
 
 ## open ssl
 
-Create new CERT file via openssl (squid example):
+Create a new CERT file via openssl
+
+### Create a new PrivateKey
 
 ```bash
-openssl req -x509 -new -nodes -days 3650 -keyout /etc/squid/squid.key -out /etc/squid/squid.crt
+openssl [key_type [genrsa]] -out /path/to/dir/self_priv_key.key 2048
+```
 
-# open CERT file to show content:
+### Create Self-Sign Cert with Private-Key
 
+```bash
+openssl req -x509 -new -days 3650 -key /path/to/dir/self_priv_key.key -out /path/to/dir/self_sing_cert.crt
+```
+
+### Open CERT file to show content
+
+```bash
 openssl x509 -in squid.key -text -noout
 ```
 
