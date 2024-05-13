@@ -29,6 +29,7 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
+
 # Install docker components
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
@@ -146,7 +147,7 @@ docker export my_container > my_container.tar.gz
 ### Info
 
 ```docker
-• docker history • Shows history of image
+• docker history • Shows the history of image
 • docker tag • Tags an image to a name (local or registry)
 ```
 
