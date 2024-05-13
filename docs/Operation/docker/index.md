@@ -31,7 +31,7 @@ echo \
 sudo apt update
 
 # Install docker components
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 ### Test for successful installation
