@@ -482,6 +482,11 @@ http {
   }
 }
 ```
+## Validate Nginx Configuration
+
+```bash
+sudo nginx -t
+```
 
 <!-- image links -->
 
