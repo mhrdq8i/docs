@@ -495,7 +495,7 @@ openssl req -x509 -new -nodes -days 3650 -keyout /etc/squid/squid.key -out /etc/
 
 # open CERT file to show content:
 
-openssl x509 -in squid.key -text
+openssl x509 -in squid.key -text -noout
 ```
 
 ## curl
