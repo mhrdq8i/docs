@@ -58,7 +58,7 @@ sudo vnstat --days --begin "2024-01-01 00:00" --end "2024-02-01 23:59"
 
 ### ssh config
 
-To enable password-less connection
+To enable a password-less connection
 
 ```bash
 Host [name]
@@ -112,7 +112,7 @@ Copying the files "foo.txt" and "bar.txt" from the `local` host to your `home di
 scp foo.txt bar.txt username@remotehost.edu:~
 ```
 
-Copy the file "foobar.txt" from the local host to a remote host using different port number
+Copy the file "foobar.txt" from the local host to a remote host using a different port number
 
 ```bash
 scp -P 2264 foobar.txt username@remotehost.edu:/some/remote/directory
@@ -161,14 +161,14 @@ push to remote: rsync -atvz \* root@<remote-ip-addr>:/root
 pull from remote: rsync -atvz  root@<remote-ip-addr>:/root/ .
 ```
 
-Setup rsync via different port
+Setup rsync via a different port
 
 ```bash
 push to remote: rsync -atvz . -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp
 pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/debug.tar.gz .
 ```
 
-## ip command
+## ip command (iproute2)
 
 Add new ip address:
 
@@ -198,9 +198,9 @@ Up & Down Interface
 ip link set <interface-name> up
 ```
 
-## route
+## route (net-tools)
 
-see all route:
+see all routes:
 
 ```bash
 route -n
@@ -214,7 +214,7 @@ route add -net 172.22.132.0/24 gw 77.104.118.1 dev ens4
 
 ## telnet
 
-check connection between two machines:
+check the connection between two machines:
 
 ```bash
 telnet  <ip> <port>
