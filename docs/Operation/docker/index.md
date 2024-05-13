@@ -8,11 +8,32 @@
 
 ### Linux
 
+Automatic
+
 ```docker
-curl -sSL https•//get.docker.com/ | sh
+curl -sSL https://get.docker.com/ | sh
+```
+Manual
+
+```docker
+# Add Docker's official GPG key:
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+# Install docker components
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-### Test to successful installation
+### Test for successful installation
 
 ```docker
 docker run hello-world
@@ -53,7 +74,7 @@ docker run hello-world
 • docker logs • Gets logs from container; you can use a custom log driver, but logs are only available for json-file and journald in 1.10
 • docker inspect • Looks at all the info on a container (including IP address)
 • docker events • Gets events from container
-• docker port • Shows public facing port of container
+• docker port • Shows public facing port of the container
 • docker top • Shows running processes in container
 • docker stats • Shows containers’ resource usage statistics
 • docker diff • Shows changed files in the container’s filesystem
