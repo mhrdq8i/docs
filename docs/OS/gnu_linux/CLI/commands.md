@@ -146,12 +146,12 @@
 ### Get PVs,VGs,LVs info
 
 ```bash
-lvs
-vgs
-vps
+lvs  # get the list of Logical Volumes
+vgs  # get the list of Volume Groups
+vps  # get the list of Physical Volumes
 ```
 
-Steps to add a physical disk or new partition to LVM
+### Steps to add a physical disk or new partition to LVM
 
 ```bash
 lsblk -f
@@ -171,10 +171,33 @@ lvextend -L [final-partition-size] /dev/VGname
 lvextend -L 99G /dev/ubuntu1804-vg/root
 resize2fs /dev/vg-name/lv-name
 ```
-### Create a new VolumeGroup
+### Create a new Logical Volume
+
+Create a new Logical Volume
 
 ```bash
 sudo lvcreate -L <LV size> -n <LV name> <VG name>
+```
+
+Make a filesystem for it
+
+```bash
+sudo mkfs.ext4 /dev/exists-vg/new_lv
+```
+
+Temporary mounting
+
+- Mount it to wherever you want
+
+```bash
+sudo mount /dev/exists-vg/new_lv /mnt/new_dir
+```
+
+Permanent mounting
+
+- Append this line of code to `/etc/fstab`
+```bash
+/dev/exists-vg/new_lv   /mnt/dir   [ext4 | btrfs]   defaults   0   2
 ```
 
 ### LVM snapshot
