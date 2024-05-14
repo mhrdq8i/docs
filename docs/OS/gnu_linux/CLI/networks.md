@@ -197,6 +197,21 @@ Up & Down Interface
 ```bash
 ip link set <interface-name> up
 ```
+## Subnet Mask
+
+Calculate the subnet mask from the IP address
+
+```bash
+ipcalc 0.0.0.0/1  
+```
+
+Range of Private Networks
+
+```
+Class A  10.0.0.0/8
+Class B  172.16.0.0/12
+Class C  192.168.0.0/16
+```
 
 ## route (net-tools)
 
