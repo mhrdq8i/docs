@@ -1,12 +1,21 @@
-# Hardware in Linux
+# Hardware
 
-## Check mainboard info
+## Proces
+
+```bash
+top
+htop
+bpytop
+ps -aux
+```
+
+## Mainboard
 
 ```bash
 sudo dmidecode -t 2
 ```
 
-## Check CPU info
+## CPU
 
 ```bash
 lscpu
@@ -14,7 +23,7 @@ cat /proc/cpuinfo
 sudo lshw -c cpu
 ```
 
-## Check Memory info
+## Memory
 
 ```bash
 free -m
@@ -25,7 +34,9 @@ sudo inxi --memory
 cat /proc/meminfo
 ```
 
-## Check Disk info
+## Disk
+
+### Offline
 
 ```bash
 sudo lsblk -f
@@ -42,8 +53,13 @@ sudo lshw -short -C disk
 
 sudo hwinfo --disk
 ```
+### Online
 
-## Check Monitor info
+```bash
+dstat
+```
+
+## Monitor
 
 ```bash
 sudo apt-get install read-edid
