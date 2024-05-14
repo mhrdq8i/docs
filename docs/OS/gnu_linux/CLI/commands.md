@@ -143,7 +143,15 @@
 ![lvm-image-3]
 ![lvm-image-4]
 
-Steps to add physical disk or new partition to LVM
+### Get PVs,VGs,LVs info
+
+```bash
+lvs
+vgs
+vps
+```
+
+Steps to add a physical disk or new partition to LVM
 
 ```bash
 lsblk -f
@@ -162,6 +170,11 @@ vgextend vg-name /dev/new-partition
 lvextend -L [final-partition-size] /dev/VGname
 lvextend -L 99G /dev/ubuntu1804-vg/root
 resize2fs /dev/vg-name/lv-name
+```
+### Create a new VolumeGroup
+
+```bash
+sudo lvcreate -L <LV size> -n <LV name> <VG name>
 ```
 
 ### LVM snapshot
