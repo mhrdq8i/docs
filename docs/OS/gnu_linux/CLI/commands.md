@@ -552,6 +552,18 @@ A ton of curl examples [is here][curl-https-request]
 # download with curl
 curl -C - -L -O URL
 ```
+## aria2
+
+```bash
+aria2c -c -s 16 -x 16 -k 1M -j 1 -i dl.txt
+
+-c, --continue [true|false]
+-s, --split=<N>
+-x, --max-connection-per-server=<NUM>
+-k, --min-split-size=<SIZE>
+-j, --max-concurrent-downloads=<N>
+-i, --input-file=<FILE>
+```
 
 ## Watch the OS installation date and time
 
