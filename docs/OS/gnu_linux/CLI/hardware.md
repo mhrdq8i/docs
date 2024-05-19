@@ -25,8 +25,10 @@ sudo lshw -c cpu
 
 ## Memory
 
+Check Memory & Swap
+
 ```bash
-free -m
+free -hw
 lsmem
 sudo dmidecode --type 17
 sudo lshw -c memory
