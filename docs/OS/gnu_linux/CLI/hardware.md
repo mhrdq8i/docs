@@ -29,11 +29,13 @@ Check Memory & Swap
 
 ```bash
 free -hw
-lsmem
+  lsmem
 sudo dmidecode --type 17
 sudo lshw -c memory
-sudo inxi --memory
+sudo inxi --memory #nice
 cat /proc/meminfo
+smem
+vmstat
 ```
 
 ## Disk
