@@ -8,6 +8,10 @@ htop
 bpytop
 ps -aux
 ```
+### Find Zombie Process
+
+```bash
+ps aux | awk '{if ($8 == "Z") print $2}'                                                                                                                                                                      ```
 
 ## Mainboard
 
