@@ -143,12 +143,28 @@
 ![lvm-image-3]
 ![lvm-image-4]
 
-### Get PVs,VGs,LVs info
+
+### Get more info about LVM
+
+Display and show Physical Volumes
 
 ```bash
-lvs  # get the list of Logical Volumes
-vgs  # get the list of Volume Groups
-vps  # get the list of Physical Volumes
+pvs
+pvdisplay [-s] <pv-name>
+```
+
+Display and show Volume Groups
+
+```bash
+vgs
+vgdisplay [-s] <vg-name>
+```
+
+Display and show Logical Volume
+
+```bash
+lvs
+lvdisplay <lv-name>
 ```
 
 ### Steps to add a physical disk or new partition to LVM
@@ -176,13 +192,14 @@ resize2fs /dev/vg-name/lv-name
 Create a new Logical Volume
 
 ```bash
-sudo lvcreate -L <LV size> -n <LV name> <VG name>
+sudo lvcreate -n <LV name> -l <LV-size> <VG name>
+sudo lvcreate -n new-lv    -l 100%FREE  vg-name
 ```
 
 Make a filesystem for it
 
 ```bash
-sudo mkfs.ext4 /dev/exists-vg/new_lv
+sudo mkfs.ext4 /dev/exists-vg/new-lv
 ```
 
 Temporary mounting
