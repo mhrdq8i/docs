@@ -181,11 +181,20 @@ ip addr add 172.22.170.22/24 dev enp0s3
 
 Add new route:
 
+Via _default_ keyword
+
 ```bash
-ip route add default {NETWORK/MASK} via {GATEWAYIP}
-ip route add default {NETWORK/MASK} via {GATEWAYIP} dev {INTERFACE-NAME}
-ip route add 172.16.5.0/24 via 10.0.0.101 dev eth0
-ip route add default 172.16.5.0/24 via 10.0.0.101 dev eth0
+ip route add default via {GATEWAYIP} [dev {INTERFACE-NAME}]
+ip route add default via 192.168.146.2 dev ens33
+```
+
+Via _specific_ ip_address
+
+```bash
+ip route add {NETWORK/MASK} via {GATEWAYIP} [dev {INTERFACE-NAME}]
+ip route add 0.0.0.0/0 via 192.168.146.2 dev ens33  #default route with specific address "0.0.0.0/0"
+ip route add 192.168.146.0/24 via 192.168.146.2 dev ens33
+ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
 ```
 
 **Note:** You can use `r` instead of `route`
