@@ -168,9 +168,9 @@ push to remote: rsync -atvz . -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp
 pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/debug.tar.gz .
 ```
 
-## ip command (iproute2)
+## ip command (iproute2 pckg)
 
-Add new ip address:
+### Add a new ip_address
 
 ```bash
 ip addr add <ip-address/cidr> dev <interface-name>
@@ -179,7 +179,7 @@ ip addr add 172.22.170.22/24 dev enp0s3
 
 **Note:** You can use `a` instead of `addr`
 
-Add new route:
+### Add a new route
 
 Via _default_ keyword
 
@@ -199,13 +199,12 @@ ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
 
 **Note:** You can use `r` instead of `route`
 
-**Note:** You can use `0.0.0.0/0` instead of `default`
-
-Up & Down Interface
+### Up & Down Interface
 
 ```bash
 ip link set <interface-name> up
 ```
+
 ## Subnet Mask
 
 Calculate the subnet mask from the IP address
