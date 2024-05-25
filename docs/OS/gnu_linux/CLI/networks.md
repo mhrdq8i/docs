@@ -170,6 +170,25 @@ pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/deb
 
 ## ip command (iproute2 pckg)
 
+### Shows IPs, Routes, Interfaces, Links, ...
+
+Show IPs
+
+```bash
+ip -br -c a
+```
+
+Show Routes
+
+```bash
+ip -br -c r
+```
+
+Show Links
+
+```bash
+ip -br -c l
+```
 ### Add a new ip_address
 
 ```bash
