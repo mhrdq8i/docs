@@ -558,7 +558,7 @@ openssl req -x509 -new -days 3650 -key /path/to/dir/self_priv_key.key -out /path
 ### Open CERT file to show content
 
 ```bash
-openssl x509 -in squid.key -text -noout
+openssl x509 -in made-cert.crt -text -noout
 ```
 
 ## curl
