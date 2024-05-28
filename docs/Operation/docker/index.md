@@ -11,7 +11,7 @@
 Automatic
 
 ```docker
-curl -sSL https://get.docker.com/ | sh
+curl -sSL https://get.docker.com | sh
 ```
 Manual
 
