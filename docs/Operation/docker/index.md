@@ -284,7 +284,7 @@ sudo exec newgrp <docker-grp>
 Add insecure docker registry to bypass TLS error
 
 ```docker
-sudo vim /etc/docker/daemon.
+sudo vim /etc/docker/daemon.json
 {
   "insecure-registries":
   [
