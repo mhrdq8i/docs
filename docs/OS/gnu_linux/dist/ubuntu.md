@@ -9,15 +9,15 @@ network:
   version: 2
   renderer: networkd
   ethernets:
- enp0s3:
-   dhcp4: no
-   addresses:
+   enp0s3:
+     dhcp4: no
+     addresses:
      - 192.168.1.100/24
-   routes:
+     routes:
      - to: default
        via: 192.168.1.1
-   nameservers:
-    addresses:
+     nameservers:
+      addresses:
       - 192.168.1.1
       - 8.8.8.8
 ```
