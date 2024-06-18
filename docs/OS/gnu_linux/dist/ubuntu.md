@@ -2,7 +2,7 @@
 
 ## Config netplan (network)
 
-Open netplan file under the `/ect/netplan/` path
+Open netplan file under the `/ect/netplan/01-netcfg.yaml` path
 
 ```bash
 network:
