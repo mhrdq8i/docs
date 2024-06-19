@@ -294,6 +294,23 @@ close open port
 fuser -k -n tcp 80
 fuser -k -n udp 80
 ```
+## Enable or disable IP forwarding
+
+manually 
+
+```bash
+# echo 0 > /proc/sys/net/ipv4/ip_forward
+OR
+# echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+
+via sysctl
+
+```bash
+# sysctl -w net.ipv4.ip_forward=0
+OR
+# sysctl -w net.ipv4.ip_forward=1
+```
 
 ## T-Shoot Tools
 
