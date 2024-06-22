@@ -568,7 +568,17 @@ A ton of curl examples [is here][curl-https-request]
 ```bash
 # download with curl
 curl -C - -L -O URL
+
+# Explain argumets
+-C, --continue-at <offset>
+      Continue/Resume a previous file transfer at the given offset.
+-L, --location
+      (HTTP) If the server reports that the requested page has moved to a different location
+-O, --remote-name
+      Write  output to a local file named like the remote file we get.
+'-',  Read from std-in
 ```
+
 ## aria2
 
 ```bash
