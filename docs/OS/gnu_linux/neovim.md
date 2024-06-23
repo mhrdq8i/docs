@@ -14,6 +14,12 @@ create neovim config path at first
 mkdir ~/.config/nvim/
 ```
 
+Better way
+
+```bash
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+```
+
 ### Kick Start
 
 - start configuration point with [kickstart] project
