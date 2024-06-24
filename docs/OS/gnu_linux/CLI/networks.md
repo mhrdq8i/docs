@@ -170,7 +170,7 @@ pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/deb
 
 ## ip command (iproute2 pckg)
 
-### Shows IPs, Routes, Interfaces, Links, ...
+### Shows IPs, Routes, Interfaces, Links
 
 Show IPs
 
@@ -189,6 +189,7 @@ Show Links
 ```bash
 ip -br -c l
 ```
+
 ### Add a new ip_address
 
 ```bash
@@ -229,7 +230,7 @@ ip link set <interface-name> up
 Calculate the subnet mask from the IP address
 
 ```bash
-ipcalc 0.0.0.0/1  
+ipcalc 0.0.0.0/1
 ```
 
 Range of Private Networks
@@ -294,23 +295,36 @@ close open port
 fuser -k -n tcp 80
 fuser -k -n udp 80
 ```
-## Enable or disable IP forwarding
 
-manually 
+## Kernel IP forwarding
+
+### Temporarily Enable Forwarding
+
+manually
 
 ```bash
-# echo 0 > /proc/sys/net/ipv4/ip_forward
-OR
-# echo 1 > /proc/sys/net/ipv4/ip_forward
+echo 0 > /proc/sys/net/ipv4/ip_forward
+## OR ##
+echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
 via sysctl
 
 ```bash
-# sysctl -w net.ipv4.ip_forward=0
-OR
-# sysctl -w net.ipv4.ip_forward=1
+sysctl -w net.ipv4.ip_forward=0
+## OR ##
+sysctl -w net.ipv4.ip_forward=1
 ```
+
+### Permanently Enable Forwarding
+
+To ensure forwarding settings persist between reboots
+
+```bash
+cat /etc/sysctl.conf | grep -i ip_forward
+```
+
+change the value and uncomment the line
 
 ## T-Shoot Tools
 
