@@ -26,13 +26,58 @@ http_access allow all
 request_header_access Allow allow all
 ```
 
-**Note:** Use authorized users only
-
 ### Check the config file
 
 ```bash
 squid -k parse
 ```
+
+**Note:** Use authorized users only
+
+### Set authorized users
+
+Install apache2-utils
+
+```bash
+sudo apt update
+sudo apt install apache2-utils
+```
+
+Create the Password File
+
+```bash
+sudo htpasswd -c /etc/squid/passwd <user-1>
+```
+
+Add more users later without recreating the file
+
+```bash
+sudo htpasswd /etc/squid/passwd <user-2>
+```
+
+Secure the Password File
+
+```bash
+sudo chmod 600 /etc/squid/passwd
+sudo chown proxy:proxy /etc/squid/passwd
+```
+
+Configure ACLs and Authentication
+
+```bash
+# Squid normally listens to port 3128
+http_port 3128
+
+# Define an ACL to restrict access to authorized users
+acl authorized_users proxy_auth REQUIRED
+acl localnet src 192.168.1.0/24  # Adjust this to your network
+
+# Deny access to everyone except authorized users and your local network
+http_access allow localnet
+http_access allow authorized_users
+http_access deny all
+```
+
 ## OS tasks
 
 ### Enable ip-v4-forwarding
