@@ -48,7 +48,7 @@ iptables -I OUTPUT -p tcp --dport 3128 -j ACCEPT
 
 ## Client Proxy
 
-### export proxy variables in to the `~/.bashrc for Bash, ~/.zshrc for Zsh` file
+### export proxy variables in to the _~/.bashrc_ for Bash, _~/.zshrc_ for Zsh file
 
 ```bash
 # Set proxy environment variables
