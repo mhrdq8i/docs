@@ -6,7 +6,7 @@ Install HAProxy via vim plugin
 
 ```bash
 sudo apt update -y
-sudo apt install -y haproxy vim-haproxy
+sudo apt install -y haproxy
 ```
 
 Activate vim plugin
@@ -43,7 +43,7 @@ global
 
         setenv int_ip_addr 45.92.94.213 # set internal-IP variable
         setenv ext_ip_addr 65.108.92.60 # set external-IP variable
-        setenv PSLN extsrv
+        setenv PSLN extsrv # set proxy server location name
 
 
 defaults
@@ -76,7 +76,7 @@ listen mehrdad_hetzner
 validation config file
 
 ```bash
-haproxy -C /etc/haproxy/haproxy.cfg
+haproxy haproxy -c -f /etc/haproxy/haproxy.cfg
 ```
 
 Restart haproxy to apply new config
@@ -84,4 +84,24 @@ Restart haproxy to apply new config
 ```bash
 sudo systemctl restart haproxy
 sudo systemctl status haproxy
+```
+
+## haproxy-vim
+
+installation vim-haproxy
+
+```bash
+sudo apt install -y vim-haproxy
+```
+
+install haproxy vim plugin
+
+```bash
+vim-addon-manager install haproxy
+```
+
+check it
+
+```bash
+vim-addon-manager status haproxy
 ```

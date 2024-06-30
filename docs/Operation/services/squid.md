@@ -1,12 +1,11 @@
-# Commands and tips
-
-## Squid Server
+# Squid
 
 A minimal set of instructions to work with squid proxy
 
-### config 
+## configuration
 
 push the below config to this path `/etc/squid/squid.conf`
+
 ```config
 acl local src 127.0.0.1
 
@@ -104,6 +103,7 @@ export https_proxy="http://IP_OF_YOUR_SQUID_SERVER:3128"
 export ftp_proxy="http://IP_OF_YOUR_SQUID_SERVER:3128"
 export no_proxy="localhost,127.0.0.1,::1"
 ```
+
 Apply the Changes
 
 ```bash
