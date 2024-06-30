@@ -1,3 +1,21 @@
+# HAProxy
+
+## Installation
+
+Install HAProxy via vim plugin
+
+```bash
+sudo apt update -y
+sudo apt install -y haproxy vim-haproxy
+```
+
+## Configuration
+
+### A simiple HAProxy config file
+
+write the below config to _/etc/haproxy/haproxy.cfg_
+
+```bash
 global
         log /dev/log    local0
         log /dev/log    local1 notice
@@ -17,8 +35,8 @@ global
         ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
         ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets
 
-        setenv int_ip_addr 45.92.94.213
-        setenv ext_ip_addr 65.108.92.60
+        setenv int_ip_addr 45.92.94.213 # set internal-IP variable
+        setenv ext_ip_addr 65.108.92.60 # set external-IP variable
         setenv PSLN extsrv
 
 
@@ -47,43 +65,17 @@ listen mehrdad_hetzner_admin_panel
 listen mehrdad_hetzner
         bind "$int_ip_addr":27523
         server "$PSLN" "$ext_ip_addr":27523 check
+```
 
-listen masoume
-        bind "$int_ip_addr":27310
-        server "$PSLN" "$ext_ip_addr":27310 check
+validation config file
 
-listen mahsa
-        bind "$int_ip_addr":27873
-        server "$PSLN" "$ext_ip_addr":27873 check
+```bash
+haproxy -C /etc/haproxy/haproxy.cfg
+```
 
-listen khatere
-        bind "$int_ip_addr":27950
-        server "$PSLN" "$ext_ip_addr":27950 check
+Restart haproxy to apply new config
 
-listen muluk
-        bind "$int_ip_addr":27416
-        server "$PSLN" "$ext_ip_addr":27416 check
-
-listen ahmadrexa
-        bind "$int_ip_addr":27984
-        server "$PSLN" "$ext_ip_addr":27984 check
-
-listen mrs_k1poor
-        bind "$int_ip_addr":27179
-        server "$PSLN" "$ext_ip_addr":27179 check
-
-listen babak
-        bind "$int_ip_addr":27598
-        server "$PSLN" "$ext_ip_addr":27598 check
-
-listen amir_ardalan
-        bind "$int_ip_addr":27038
-        server "$PSLN" "$ext_ip_addr":27038 check
-
-listen sanaz_khare
-        bind "$int_ip_addr":27095
-        server "$PSLN" "$ext_ip_addr":27095 check
-
-listen radin
-        bind "$int_ip_addr":27955
-        server "$PSLN" "$ext_ip_addr":27955 check
+```bash
+sudo systemctl restart haproxy
+sudo systemctl status haproxy
+```
