@@ -9,6 +9,12 @@ sudo apt update -y
 sudo apt install -y haproxy vim-haproxy
 ```
 
+Activate vim plugin
+
+```bash
+vim-addon-manager install haproxy
+```
+
 ## Configuration
 
 ### A simiple HAProxy config file
