@@ -287,13 +287,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: my-namespace
+  namespace: my-ns
   labels:
-    - environment: production,
-    - teir: frontend
+    environment: production
+    tier: frontend
   annotations:
-    - key1: value1,
-    - key2: value2
+    key1: value1
+    key2: value2
 spec:
   replicas: 3
   selector:
