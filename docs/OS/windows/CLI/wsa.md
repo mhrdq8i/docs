@@ -1,8 +1,8 @@
-# Windows Subsystem for Android™️
+# WSA
 
-## Download and Install
+## Windows Subsystem for Android™️
 
-### WSA
+### Download and Install
 
 Follow [this link][wsadllink] to download and install "Windows Subsystem for Android" in secure way
 
