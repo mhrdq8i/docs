@@ -21,6 +21,11 @@ Copy public key from windows machine
 ```powershell
 scp ~/.ssh/id_rsa.pub [linux_user]@[linux_IP/linux_hostname]:~/.ssh/authorized_keys
 ```
+or
+
+```pwsh
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh {IP-ADDRESS-OR-FQDN} "cat >> .ssh/authorized_keys"
+```
 
 ## Generalize Windows Server
 
