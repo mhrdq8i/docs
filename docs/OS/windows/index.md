@@ -2,13 +2,15 @@
 
 ## Enable/Disable HyperV
 
-Enable
+### Enable
 
 ```powershell
 bcdedit /set hypervisorlaunchtype auto
 ```
 
-Disable
+This command sets the hypervisor launch type to "auto", which ensures the hypervisor starts automatically on boot.
+
+### Disable
 
 ```powershell
 bcdedit /set hypervisorlaunchtype off
@@ -21,6 +23,7 @@ Copy public key from windows machine
 ```powershell
 scp ~/.ssh/id_rsa.pub [linux_user]@[linux_IP/linux_hostname]:~/.ssh/authorized_keys
 ```
+
 or
 
 ```pwsh
