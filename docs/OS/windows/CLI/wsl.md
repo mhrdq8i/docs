@@ -7,7 +7,7 @@
 Windows Hyper-V must be enabled except this one
 
 ```pwsh
- Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
+Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
 ```
 
 **off** hypervisiorlaunchtype
