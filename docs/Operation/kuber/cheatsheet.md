@@ -2,12 +2,20 @@
 
 A cheat sheet for Kubernetes commands.
 
-## Kubectl Alias
+## Kubectl Command
 
-### Linux
+### Alias
 
 ```shell
 alias k=kubectl
+```
+
+### Completion
+
+Add kubectl auto completion
+
+```bash
+source <(kubectl completion bash)
 ```
 
 ### Windows
