@@ -17,6 +17,6 @@ requests~=2.26
 # Comes from github-ci file
 mkdocs-material
 mkdocs-glightbox
-recommended
+# recommended
 git
 imaging
