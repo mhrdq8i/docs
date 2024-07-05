@@ -18,5 +18,5 @@ requests~=2.26
 mkdocs-material
 mkdocs-glightbox
 # recommended
-git
-imaging
+# git
+# imaging
