@@ -178,8 +178,8 @@ ldd ../source.out
 ```
 
 <!-- image links -->
-[Image-01]: /docs/assets/mm/linker-loader-1.png
-[Image-02]: /docs/assets/mm/linker-loader-2.png
+[Image-01]: docs/assets/mm/linker-loader-1.png
+[Image-02]: ../assets/mm/linker-loader-2.png
 [Image-03]: /docs/assets/mm/linker-loader-3.png
 [Image-04]: /docs/assets/mm/linker-loader-4.png
 [Image-05]: /docs/assets/mm/linker-loader-5.png
