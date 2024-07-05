@@ -222,16 +222,16 @@ git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 ![git-merge-squash-3]
 
 <!-- image links -->
-[git-concept-1]: /docs/assets/svc/git-3-level-concept-1.png
-[git-concept-2]: /docs/assets/svc/git-3-level-concept-2.png
-[git-concept-3]: /docs/assets/svc/git-3-level-concept-3.png
-[git-concept-4]: /docs/assets/svc/git-3-level-concept-4.png
-[git-concept-5]: /docs/assets/svc/git-3-level-concept-5.png
-[git-pictorial]: /docs/assets/svc/git-a-pictorial-walkthrough.gif
-[git-workflow]: /docs/assets/svc/git-a-pictorial-walkthrough.gif
-[git-pull-fetch]: /docs/assets/svc/git-pull-fetch.png
-[git-reset-revert-1]: /docs/assets/svc/git-reset-revert-1.png
-[git-reset-revert-2]: /docs/assets/svc/git-reset-revert-2.png
-[git-merge-rebase-1]: /docs/assets/svc/git-merge-rebase-1.png
-[git-merge-rebase-2]: /docs/assets/svc/git-merge-rebase-2.png
-[git-merge-squash-3]: /docs/assets/svc/git-merge-squash.jpeg
+[git-concept-1]: ../../assets/svc/git-3-level-concept-1.png
+[git-concept-2]: ../../assets/svc/git-3-level-concept-2.png
+[git-concept-3]: ../../assets/svc/git-3-level-concept-3.png
+[git-concept-4]: ../../assets/svc/git-3-level-concept-4.png
+[git-concept-5]: ../../assets/svc/git-3-level-concept-5.png
+[git-pictorial]: ../../assets/svc/git-a-pictorial-walkthrough.gif
+[git-workflow]: ../../assets/svc/git-a-pictorial-walkthrough.gif
+[git-pull-fetch]: ../../assets/svc/git-pull-fetch.png
+[git-reset-revert-1]: ../../assets/svc/git-reset-revert-1.png
+[git-reset-revert-2]: ../../assets/svc/git-reset-revert-2.png
+[git-merge-rebase-1]: ../../assets/svc/git-merge-rebase-1.png
+[git-merge-rebase-2]: ../../assets/svc/git-merge-rebase-2.png
+[git-merge-squash-3]: ../../assets/svc/git-merge-squash.jpeg

@@ -21,7 +21,7 @@
 **C Programming Philosophy:**
 
 - C is a `procedural language`.That means it `emphasizes the algorithm side of programming`.
-  - `data` + `algorithm` = `program` [watch this photo][data-algo-program]
+  - `data` + `algorithm` = `program` ![watch this photo][data-algo-program]
   - With C, the idea is to `break a large program into smaller`, more manageable tasks.
   - C’s design facilitates this approach, encouraging you to develop program units called `functions` to `represent individual task modules`.
 
@@ -52,7 +52,7 @@
 
   - If you can `recompile` the program `without making changes` and it runs without a hitch, we say the program is `portable`.
 
-  - Linking combines `your object code` with `object code for the functions you use` and with `some standard startup code` to pro-duce a runtime version of your program.The file containing this final product is called the [`executable code`][executable-code]
+  - Linking combines `your object code` with `object code for the functions you use` and with `some standard startup code` to pro-duce a runtime version of your program.The file containing this final product is called the ![`executable code`][executable-code]
 
 - **Compilation and Linking:**
 
@@ -70,5 +70,5 @@
     - g++ my.cxx precious.o
 
 <!-- image links -->
-[executable-code]: /docs/assets/cpp/programmin-steps.png
-[data-algo-program]: /docs/assets/cpp/data-algorithm=program.png
+[executable-code]: ../../../assets/cpp/programmin-steps.png
+[data-algo-program]: ../../../assets/cpp/data-algorithm=program.png

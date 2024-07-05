@@ -100,8 +100,8 @@
 
 ## Get More View
 
-- ![Memory Layout in C 1](/docs/assets/mm/memory-layout-in-c.png)
-- ![Memory Layout in C 2](/docs/assets/mm/memory-layout-in-c-2.jpg)
+- ![Memory Layout in C 1](../assets/mm/memory-layout-in-c.png)
+- ![Memory Layout in C 2](../assets/mm/memory-layout-in-c-2.jpg)
 
 ## External Resources
 

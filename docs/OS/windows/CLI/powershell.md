@@ -80,7 +80,6 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 ## Clone oh-my-posh Themes
 
 - git clone [**without-my-custom-theme**](https://github.com/JanDeDobbeleer/oh-my-posh.git)
-- copy [**with custom theme `mehrdad`**](oh-my-posh/ "with-my-custom-theme")
 
 ## Active Custom Theme
 

@@ -615,7 +615,7 @@ ldconfig -p | grep <libname>
 <!-- external link -->
 [90LinuxCommandsfrequentlyusedbyLinuxSysadmins]: https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
-[lvm-image-1]: /docs/assets/gnu_linux/lvm1.png
-[lvm-image-2]: /docs/assets/gnu_linux/lvm2.png
-[lvm-image-3]: /docs/assets/gnu_linux/lvm3.png
-[lvm-image-4]: /docs/assets/gnu_linux/lvm4.png
+[lvm-image-1]: ../../../assets/gnu_linux/lvm1.png
+[lvm-image-2]: ../../../assets/gnu_linux/lvm2.png
+[lvm-image-3]: ../../../assets/gnu_linux/lvm3.png
+[lvm-image-4]: ../../../assets/gnu_linux/lvm4.png

@@ -31,12 +31,12 @@ hotfix-\*
 
 ## Creating a feature branch
 
-![gitflow-feature](/docs/assets/svc/gitflow-feature.png)
+![gitflow-feature](../../assets/svc/gitflow-feature.png)
 
 ## Creating a release branch
 
-![gitflow-release](/docs/assets/svc/gitflow-release.png)
+![gitflow-release](../../assets/svc/gitflow-release.png)
 
 ## Creating a Hotfix branch
 
-![gitflow-hotfix](/docs/assets/svc/gitflow-hotfix.png)
+![gitflow-hotfix](../../assets/svc/gitflow-hotfix.png)

@@ -490,5 +490,5 @@ sudo nginx -t
 
 <!-- image links -->
 
-[nginx-main-context]: /docs/assets/services/nginx/nginx-main-context.png
-[nginx-uri-schema]: /docs/assets/services/nginx/nginx-uri-schema.jpg
+[nginx-main-context]: ../../../assets/services/nginx/nginx-main-context.png
+[nginx-uri-schema]: ../../../assets/services/nginx/nginx-uri-schema.jpg
