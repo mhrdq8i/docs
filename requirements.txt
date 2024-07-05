@@ -12,3 +12,11 @@ colorama~=0.4
 paginate~=0.5
 regex>=2022.4
 requests~=2.26
+
+
+# Comes from github-ci file
+mkdocs-material
+mkdocs-glightbox
+recommended
+git
+imaging

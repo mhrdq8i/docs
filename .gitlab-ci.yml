@@ -16,7 +16,7 @@ test:
 pages:
   stage: deploy
   script:
-    - mkdocs build --no-strict --verbose
+    - mkdocs build --no-strict --quiet
     - ls -lthr
     - ls ./public -lthr
   artifacts:
