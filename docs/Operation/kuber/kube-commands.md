@@ -4,12 +4,22 @@ Kubernetes [commands] and [cheatsheet]
 
 ## Kubectl
 
+Version and Info
+
+```bash
+kubectl version
+kubectl cluster-info
+kubectl cluster-info dump > cluster-info.dump
+```
+
 ### Nodes
 
 Get All Nodes
 
 ```bash
 kubectl get nodes
+kubectl get nodes -o wide
+kubectl get nodes -o wide -w/--watch
 ```
 
 Describe Nodes
