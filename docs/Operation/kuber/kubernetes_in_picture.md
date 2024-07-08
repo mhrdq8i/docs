@@ -76,6 +76,10 @@
 
 ![kube-api-pods]
 
+## Deployment
+
+![deployment]
+
 ### Service Type Schema
 
 ![S03-service-01]
@@ -108,3 +112,5 @@
 [kuber-proxy]: ../../assets/kuber/babaei/S02-kube-components-kube-proxy.png
 [kc_cc_arch]: ../../assets/kuber/babaei/S01-kuber-cloud-arch.png
 [kube-api-pods]: ../../assets/kuber/babaei/S02-kube-api-pods.png
+
+[deployment]: ../../assets/kuber/babaei/S03-deployment.png
