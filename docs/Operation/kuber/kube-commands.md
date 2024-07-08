@@ -50,6 +50,7 @@ kubectl -n kube-system get pods -o wide
 kubectl -n kube-system describe pods <podname>
 kubectl delete <pod_name>
 kubectl get pods --show-labels
+kubectl get pods -o yaml > pods.yaml
 kubectl describe pod
 kubectl explain pod
 kubectl explain pod.spec
