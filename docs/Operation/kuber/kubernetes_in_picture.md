@@ -86,9 +86,19 @@
 
 ### Service Type Schema
 
+![S03-service-00]
 ![S03-service-01]
 ![S03-service-02]
 ![S03-service-03]
+
+#### Cluster IP
+
+![service-cluster-ip]
+
+#### NodePort
+
+![service-node-port-1]
+![service-node-port-2]
 
 <!-- links -->
 [k-debug-flowchart]: ../../assets/kuber/cheatsheet/cs-k8s-debug-flowchart.png
@@ -100,6 +110,7 @@
 [k-rbac]: ../../assets/kuber/cheatsheet/cs-krbacobj.png
 [k-trafficrouting]: ../../assets/kuber/cheatsheet/cs-k8s-traffic_routing.gif
 
+[S03-service-00]: ../../assets/kuber/babaei/S03-service-00.png
 [S03-service-01]: ../../assets/kuber/babaei/S03-service-01.png
 [S03-service-02]: ../../assets/kuber/babaei/S03-service-02.jpg
 [S03-service-03]: ../../assets/kuber/babaei/S03-service-03.png
@@ -119,3 +130,6 @@
 
 [deployment]: ../../assets/kuber/babaei/S03-deployment.png
 [dns]: ../../assets/kuber/babaei/S03-DNS.png
+[service-cluster-ip]: ../../assets/kuber/babaei/S03-service-cluster-ip.png
+[service-node-port-1]: ../../assets/kuber/babaei/S03-service-node-port-1.png
+[service-node-port-2]: ../../assets/kuber/babaei/S03-service-node-port-2.png
