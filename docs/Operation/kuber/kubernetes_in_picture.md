@@ -80,6 +80,10 @@
 
 ![deployment]
 
+### DNS
+
+![dns]
+
 ### Service Type Schema
 
 ![S03-service-01]
@@ -114,3 +118,4 @@
 [kube-api-pods]: ../../assets/kuber/babaei/S02-kube-api-pods.png
 
 [deployment]: ../../assets/kuber/babaei/S03-deployment.png
+[dns]: ../../assets/kuber/babaei/S03-DNS.png
