@@ -64,7 +64,7 @@ kubectl config current-context foo
 kubectl config use-context docker-desktop
 ```
 
-To switch between contexts, you can also install and use [kubectx](https://github.com/ahmetb/kubectx).
+To switch between contexts, you can also install and use [kubectx].
 
 ## Get Commands
 
@@ -88,19 +88,15 @@ Additional switches that can be added to the above commands:
 
 ### Set default namespace
 
-```shell
-kubectl config set-context $(kubectl config current-context) --namespace=my-namespace
-```
-
-`--namespace` - Get a resource for a specific namespace
-
 You can set the default namespace for the current context like so
 
 ```shell
 kubectl config set-context $(kubectl config current-context) --namespace=my-namespace
 ```
 
-To switch namespaces, you can also install and use [kubens](https://github.com/ahmetb/kubectx/blob/master/kubens)
+`--namespace` - Get a resource for a specific namespace
+
+To switch namespaces, you can also install and use [kubens]
 
 ## Labels
 
@@ -213,7 +209,7 @@ Requires `tar` binary in container
 kubectl cp POD_NAME:/var/log .
 ```
 
-You can also install and use [kail](https://github.com/boz/kail).
+You can also install and use [kail].
 
 ## Port Forward
 
@@ -329,11 +325,11 @@ kubectl proxy
 
 ## Azure Kubernetes Service
 
-[List of az aks commands](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest)
+[List of az aks commands]
 
 ## Show Dashboard
 
-Secure the dashboard like [this](http://blog.cowger.us/2018/07/03/a-read-only-kubernetes-dashboard.html). Then run:
+Secure the dashboard like [this]. Then run:
 
 ```shell
 az aks browse --resource-group <Resource Group Name> --name <AKS Name>
@@ -352,3 +348,9 @@ Get updates
 ```shell
 az aks get-upgrades --resource-group <Resource Group Name> --name <AKS Name>
 ```
+<!-- links -->
+[kubectx]: https://github.com/ahmetb/kubectx
+[kubens]: https://github.com/ahmetb/kubectx/blob/master/kubens
+[kail]: https://github.com/boz/kail
+[List of az aks commands]: https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest
+[this]: http://blog.cowger.us/2018/07/03/a-read-only-kubernetes-dashboard.html
