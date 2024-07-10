@@ -1,14 +1,10 @@
 # Kubernetes in Picture
 
-## Visualize Kubernetes Schemas
+## Kubernetes Big Picture
 
 ### Cluster Schema
 
 ![k-cluster]
-
-### K8S debug flowchart
-
-![k-debug-flowchart]
 
 ### ChestSheet
 
@@ -34,7 +30,7 @@
 
 ![k-trafficrouting]
 
-### All Controller Components
+## Controller Plan Components
 
 ![kube-components]
 
@@ -63,49 +59,59 @@
 
 ![replication-controller]
 
-## Kubelet
+## Node Components
+
+### Kubelet
 
 ![kubelet-1]
 ![kubelet-2]
 
-## Kube Proxy
+### Kube Proxy
 
 ![kuber-proxy]
 
-## Pods
+## Workloads
+
+### Pods
 
 ![kube-api-pods]
 
-## Deployment
+### Deployment
 
 ![deployment]
 
-### DNS
-
-![dns]
-
-### Service Type Schema
+## Services
 
 ![S03-service-00]
 ![S03-service-01]
 ![S03-service-02]
 ![S03-service-03]
 
-#### Cluster IP
+### Cluster IP
 
 ![service-cluster-ip-1]
 ![service-cluster-ip-2]
 
-#### NodePort
+### NodePort
 
 ![service-node-port-1]
 ![service-node-port-2]
 ![service-node-port-3]
 ![service-node-port-4]
 
-#### Load Balancer
+## Load Balancer
 
 ![service-load-balancer-1]
+
+## DNS
+
+![dns]
+
+## T-Shoot and Debug
+
+### K8S debug flowchart
+
+![k-debug-flowchart]
 
 <!-- links -->
 [k-debug-flowchart]: ../../assets/kuber/cheatsheet/cs-k8s-debug-flowchart.png
