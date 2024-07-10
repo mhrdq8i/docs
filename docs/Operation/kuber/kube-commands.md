@@ -58,6 +58,7 @@ kubectl explain pod.spec.ports
 kubectl explain pod.spec.containers.ports
 kubectl explain pod.spec.affinity
 kubectl exec -it <pod-name> bash # get an interactive shell from a running pod
+kubectl get pods --selector key=value
 ```
 
 ### Resource

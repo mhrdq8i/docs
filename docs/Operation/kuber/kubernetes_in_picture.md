@@ -116,6 +116,22 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![dns]
 
+## Labels and Selector
+
+![labels-selector-1]
+
+### GroupBy App
+
+![labels-selector-2]
+
+### GroupBy Type
+
+![labels-selector-3]
+
+### Manifest Usage
+
+![labels-selector-4]
+
 ## T-Shoot and Debug
 
 ### K8S debug flowchart
@@ -166,3 +182,8 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 [service-node-port-4]: ../../assets/kuber/kinpic/S03-service-node-port-4.png
 
 [service-load-balancer-1]: ../../assets/kuber/kinpic/S03-service-load-balancer-1.png
+
+[labels-selector-1]: ../../assets/kuber/kinpic/S03-labels-selectors-1.png
+[labels-selector-2]: ../../assets/kuber/kinpic/S03-labels-selectors-2.png
+[labels-selector-3]: ../../assets/kuber/kinpic/S03-labels-selectors-3.png
+[labels-selector-4]: ../../assets/kuber/kinpic/S03-labels-selectors-4.png
