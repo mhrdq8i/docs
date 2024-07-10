@@ -107,7 +107,6 @@
 
 ![service-load-balancer-1]
 
-
 <!-- links -->
 [k-debug-flowchart]: ../../assets/kuber/cheatsheet/cs-k8s-debug-flowchart.png
 [k-cheatsheet]: ../../assets/kuber/cheatsheet/cs-CheatSheet.jpg
@@ -118,34 +117,34 @@
 [k-rbac]: ../../assets/kuber/cheatsheet/cs-krbacobj.png
 [k-trafficrouting]: ../../assets/kuber/cheatsheet/cs-k8s-traffic_routing.gif
 
-[kube-components]: ../../assets/kuber/babaei/S02-kube-components.png
-[kube-api-server]: ../../assets/kuber/babaei/S02-kube-components-api-server.png
-[kube-scheduler]: ../../assets/kuber/babaei/S02-kube-components-schedular.png
-[kube-controller]: ../../assets/kuber/babaei/S02-kube-components-control-manager.png
-[node-controller]: ../../assets/kuber/babaei/S02-kube-components-node-controller.png
-[replication-controller]: ../../assets/kuber/babaei/S02-kube-components-replication-controller.png
-[kube-controller-components]: ../../assets/kuber/babaei/S02-kube-components-control-manager-components.png
+[kube-components]: ../../assets/kuber/kinpic/S02-kube-components.png
+[kube-api-server]: ../../assets/kuber/kinpic/S02-kube-components-api-server.png
+[kube-scheduler]: ../../assets/kuber/kinpic/S02-kube-components-schedular.png
+[kube-controller]: ../../assets/kuber/kinpic/S02-kube-components-control-manager.png
+[node-controller]: ../../assets/kuber/kinpic/S02-kube-components-node-controller.png
+[replication-controller]: ../../assets/kuber/kinpic/S02-kube-components-replication-controller.png
+[kube-controller-components]: ../../assets/kuber/kinpic/S02-kube-components-control-manager-components.png
 
-[kubelet-1]: ../../assets/kuber/babaei/S02-kube-components-kubelet-1.png
-[kubelet-2]: ../../assets/kuber/babaei/S02-kube-components-kubelet-2.png
-[kuber-proxy]: ../../assets/kuber/babaei/S02-kube-components-kube-proxy.png
-[kc_cc_arch]: ../../assets/kuber/babaei/S01-kuber-cloud-arch.png
-[kube-api-pods]: ../../assets/kuber/babaei/S02-kube-api-pods.png
+[kubelet-1]: ../../assets/kuber/kinpic/S02-kube-components-kubelet-1.png
+[kubelet-2]: ../../assets/kuber/kinpic/S02-kube-components-kubelet-2.png
+[kuber-proxy]: ../../assets/kuber/kinpic/S02-kube-components-kube-proxy.png
+[kc_cc_arch]: ../../assets/kuber/kinpic/S01-kuber-cloud-arch.png
+[kube-api-pods]: ../../assets/kuber/kinpic/S02-kube-api-pods.png
 
-[deployment]: ../../assets/kuber/babaei/S03-deployment.png
-[dns]: ../../assets/kuber/babaei/S03-DNS.png
+[deployment]: ../../assets/kuber/kinpic/S03-deployment.png
+[dns]: ../../assets/kuber/kinpic/S03-DNS.png
 
-[S03-service-00]: ../../assets/kuber/babaei/S03-service-00.png
-[S03-service-01]: ../../assets/kuber/babaei/S03-service-01.png
-[S03-service-02]: ../../assets/kuber/babaei/S03-service-02.jpg
-[S03-service-03]: ../../assets/kuber/babaei/S03-service-03.png
+[S03-service-00]: ../../assets/kuber/kinpic/S03-service-00.png
+[S03-service-01]: ../../assets/kuber/kinpic/S03-service-01.png
+[S03-service-02]: ../../assets/kuber/kinpic/S03-service-02.jpg
+[S03-service-03]: ../../assets/kuber/kinpic/S03-service-03.png
 
-[service-cluster-ip-1]: ../../assets/kuber/babaei/S03-service-cluster-ip-1.png
-[service-cluster-ip-2]: ../../assets/kuber/babaei/S03-service-cluster-ip-2.png
+[service-cluster-ip-1]: ../../assets/kuber/kinpic/S03-service-cluster-ip-1.png
+[service-cluster-ip-2]: ../../assets/kuber/kinpic/S03-service-cluster-ip-2.png
 
-[service-node-port-1]: ../../assets/kuber/babaei/S03-service-node-port-1.png
-[service-node-port-2]: ../../assets/kuber/babaei/S03-service-node-port-2.png
-[service-node-port-3]: ../../assets/kuber/babaei/S03-service-node-port-3.png
-[service-node-port-4]: ../../assets/kuber/babaei/S03-service-node-port-4.png
+[service-node-port-1]: ../../assets/kuber/kinpic/S03-service-node-port-1.png
+[service-node-port-2]: ../../assets/kuber/kinpic/S03-service-node-port-2.png
+[service-node-port-3]: ../../assets/kuber/kinpic/S03-service-node-port-3.png
+[service-node-port-4]: ../../assets/kuber/kinpic/S03-service-node-port-4.png
 
-[service-load-balancer-1]: ../../assets/kuber/babaei/S03-service-load-balancer-1.png
+[service-load-balancer-1]: ../../assets/kuber/kinpic/S03-service-load-balancer-1.png
