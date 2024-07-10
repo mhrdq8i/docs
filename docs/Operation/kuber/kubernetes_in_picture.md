@@ -1,5 +1,7 @@
 # Kubernetes in Picture
 
+All kubernetes **resources**, **services**, **components** and etc... in picture
+
 ## Kubernetes Big Picture
 
 ### Cluster Schema
@@ -31,6 +33,8 @@
 ![k-trafficrouting]
 
 ## Controller Plan Components
+
+### Master Node Components
 
 ![kube-components]
 
@@ -80,9 +84,14 @@
 
 ![deployment]
 
+### Daemon Set
+
+![S04-workload-daemonset-1]
+![S04-workload-daemonset-2]
+![S04-workload-daemonset-3]
+
 ## Services
 
-![S03-service-00]
 ![S03-service-01]
 ![S03-service-02]
 ![S03-service-03]
@@ -140,7 +149,10 @@
 [deployment]: ../../assets/kuber/kinpic/S03-deployment.png
 [dns]: ../../assets/kuber/kinpic/S03-DNS.png
 
-[S03-service-00]: ../../assets/kuber/kinpic/S03-service-00.png
+[S04-workload-daemonset-1]: ../../assets/kuber/kinpic/S04-workload-daemonset-01.png
+[S04-workload-daemonset-2]: ../../assets/kuber/kinpic/S04-workload-daemonset-02.png
+[S04-workload-daemonset-3]: ../../assets/kuber/kinpic/S04-workload-daemonset-03.png
+
 [S03-service-01]: ../../assets/kuber/kinpic/S03-service-01.png
 [S03-service-02]: ../../assets/kuber/kinpic/S03-service-02.jpg
 [S03-service-03]: ../../assets/kuber/kinpic/S03-service-03.png
