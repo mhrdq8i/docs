@@ -12,7 +12,7 @@ kubectl cluster-info
 kubectl cluster-info dump > cluster-info.dump
 ```
 
-### Nodes
+## Nodes
 
 Get All Nodes
 
@@ -43,7 +43,7 @@ kubectl taint node <node-name> taint_label_key=taint_label_value ;"add taint lab
 kubectl taint node <node-name> taint_label_key- ;"remove added taint label to node"
 ```
 
-### Pods
+## Pods
 
 ```bash
 kubectl -n kube-system get pods -o wide
@@ -61,7 +61,7 @@ kubectl exec -it <pod-name> bash # get an interactive shell from a running pod
 kubectl get pods --selector key=value
 ```
 
-### Resource
+## Resource
 
 ```bash
 kubectl create -f <pod_file_name.yml>
@@ -82,7 +82,7 @@ Update a resource
 kubectl edit <unit-type> <unit-name>
 ```
 
-### Namespace
+## Namespace
 
 ```bash
 kubectl get namespace
@@ -94,7 +94,7 @@ kubectl -n <ns-name> events
 kubectl get pods --all-namespaces
 ```
 
-### Config
+## Config
 
 ```bash
 # imperative method
@@ -114,7 +114,7 @@ kubectl cordon <node-name> ;set unscheduled label to node
 kubectl uncordon <node-name> ;Remove unscheduled label from node
 ```
 
-### Application Lifecycle summarize commands
+## Application Lifecycle summarize commands
 
 ```bash
 kubectl create -f <deployment-filename.yml>
