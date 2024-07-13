@@ -162,6 +162,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![pod-cntnr-envs]
 
+### Pod Config Methods
+
+![pod-config-methods]
+
 ## T-Shoot and Debug
 
 ### K8S debug flowchart
@@ -224,3 +228,4 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 [deployment-rollback-strategy]: ../../assets/kuber/kinpic/S04-deployment-rollback-strategy.png
 
 [pod-cntnr-envs]: ../../assets/kuber/kinpic/S05-environment-variables.png
+[pod-config-methods]: ../../assets/kuber/kinpic/S05-config-map-methods.png

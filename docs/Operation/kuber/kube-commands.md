@@ -110,6 +110,21 @@ kubectl describe cm <configmapfile.yml>
 kubectl describe cm <configmapfile.yml> --output yaml
 ```
 
+## Secret
+
+```bash
+# imperative method
+# from cli
+kubectl create secret <config-name> --from-literal=<key=value>
+# from file
+kubectl create secret <config-name> --from-=<path-to-file>
+# declarative method
+kubectl create/apply -f <secret-configmapfile.yml>
+# describe
+kubectl describe secret <configmapfile.yml>
+kubectl describe secret <configmapfile.yml> --output yaml
+```
+
 ### Drain/Cordon/Uncordon
 
 ```bash
