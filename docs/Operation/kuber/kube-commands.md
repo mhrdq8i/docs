@@ -58,6 +58,7 @@ kubectl explain pod.spec.ports
 kubectl explain pod.spec.containers.ports
 kubectl explain pod.spec.affinity
 kubectl exec -it <pod-name> bash # get an interactive shell from a running pod
+kubectl exec -it <pod-name> -- bash
 kubectl get pods --selector key=value
 ```
 
@@ -94,10 +95,13 @@ kubectl -n <ns-name> events
 kubectl get pods --all-namespaces
 ```
 
-## Config
+## ConfigMap
 
 ```bash
 # imperative method
+# from cli
+kubectl create configmap <config-name> --from-literal=<key=value>
+# from file
 kubectl create configmap <config-name> --from-file=<path-to-file>
 # declarative method
 kubectl create/apply -f <configmapfile.yml>
