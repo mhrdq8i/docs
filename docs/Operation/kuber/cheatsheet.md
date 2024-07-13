@@ -348,9 +348,14 @@ Get updates
 ```shell
 az aks get-upgrades --resource-group <Resource Group Name> --name <AKS Name>
 ```
+
+## Get Node Resources Info
+
+The Node Feature Discovery operator is a tool for Kubernetes administrators that makes it easy to detect and understand the hardware features and configurations of a cluster's nodes. With this operator, administrators can easily gather information about their nodes that can be used for scheduling, resource management, and more by controlling the life cycle of [NFD].
 <!-- links -->
 [kubectx]: https://github.com/ahmetb/kubectx
 [kubens]: https://github.com/ahmetb/kubectx/blob/master/kubens
 [kail]: https://github.com/boz/kail
 [List of az aks commands]: https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest
 [this]: http://blog.cowger.us/2018/07/03/a-read-only-kubernetes-dashboard.html
+[NFD]: https://github.com/kubernetes-sigs/node-feature-discovery-operator
