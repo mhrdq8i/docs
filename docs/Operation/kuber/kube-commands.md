@@ -129,7 +129,10 @@ kubectl set image <deployment-name> <image=imagename:imagetag>
 ```bash
 kubectl rollout status <deployments/deployment-name>
 kubectl rollout history <deployments/deployment-name>
-kubectl rollout undo <deployments/deployment-name>
+kubectl rollout undo <deployments/deployment-name> # go to pervious version
+kubectl rollout undo <deployments/deployment-name> --to-revision <rv-no> # go to pervious version
+watch -d kubectl get replicasets
+
 ```
 
 <!-- links -->
