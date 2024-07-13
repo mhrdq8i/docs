@@ -80,6 +80,14 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![kube-api-pods]
 
+### Static Pods
+
+![static-pods-1]
+![static-pods-2]
+
+[static-pods-1]: ../../assets/kuber/kinpic/S04-static-pod-1.png
+[static-pods-2]: ../../assets/kuber/kinpic/S04-static-pod-2.png
+
 ### Deployment
 
 ![deployment]
