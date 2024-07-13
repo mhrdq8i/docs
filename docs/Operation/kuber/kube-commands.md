@@ -114,16 +114,22 @@ kubectl cordon <node-name> ;set unscheduled label to node
 kubectl uncordon <node-name> ;Remove unscheduled label from node
 ```
 
-## Application Lifecycle summarize commands
+## Application Lifecycle Commands
 
 ```bash
 kubectl create -f <deployment-filename.yml>
+kubectl replace -f <deployment-filename.yml>
+kubectl apply -f <deployment-filename.yml> # both create & replace
 kubectl get <deployment-name>
-kubectl apply -f <deployment-filename.yml>
 kubectl set image <deployment-name> <image=imagename:imagetag>
-kubectl rollout status <deployment-name>
-kubectl rollout history <deployment-name>
-kubectl rollout undo <deployment-name>
+```
+
+### Rollout
+
+```bash
+kubectl rollout status <deployments/deployment-name>
+kubectl rollout history <deployments/deployment-name>
+kubectl rollout undo <deployments/deployment-name>
 ```
 
 <!-- links -->

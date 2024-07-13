@@ -140,6 +140,22 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![labels-selector-4]
 
+## Rollout & Versioning
+
+![rollout-versioning]
+
+### Deployment Strategy
+
+![rollout-versioning-deploymet-strategy]
+
+### Upgrade
+
+![deployment-update-strategy]
+
+### Rollback
+
+![deployment-rollback-strategy]
+
 ## T-Shoot and Debug
 
 ### K8S debug flowchart
@@ -195,3 +211,8 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 [labels-selector-2]: ../../assets/kuber/kinpic/S03-labels-selectors-2.png
 [labels-selector-3]: ../../assets/kuber/kinpic/S03-labels-selectors-3.png
 [labels-selector-4]: ../../assets/kuber/kinpic/S03-labels-selectors-4.png
+
+[rollout-versioning]: ../../assets/kuber/kinpic/S04-rollout-versioning.png
+[rollout-versioning-deploymet-strategy]: ../../assets/kuber/kinpic/S04-rollout-versioning-deploymet-strategy.png
+[deployment-update-strategy]: ../../assets/kuber/kinpic/S04-deployment-update-strategy.png
+[deployment-rollback-strategy]: ../../assets/kuber/kinpic/S04-deployment-rollback-strategy.png
