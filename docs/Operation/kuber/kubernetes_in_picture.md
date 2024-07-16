@@ -168,6 +168,14 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ## T-Shoot and Debug
 
+### Diagnostic Probes
+
+![diagnostic-probes-1]
+
+### Diagnostic Probes Flow
+
+![diagnostic-probes-2]
+
 ### K8S debug flowchart
 
 ![k-debug-flowchart]
@@ -229,3 +237,5 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 [pod-cntnr-envs]: ../../assets/kuber/kinpic/S05-environment-variables.png
 [pod-config-methods]: ../../assets/kuber/kinpic/S05-config-map-methods.png
+[diagnostic-probes-1]: ../../assets/kuber/kinpic/S05-k8s-probes-1.png
+[diagnostic-probes-2]: ../../assets/kuber/kinpic/S05-k8s-probes-2.png
