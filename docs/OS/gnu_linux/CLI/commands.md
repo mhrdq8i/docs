@@ -623,6 +623,21 @@ date +"YEAR: %Y - Month: %m - Day: %d"
 ldconfig -p | grep <libname>
 ```
 
+## Set and Get from Clipboard
+
+```bash
+sudo apt install xclip
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+source ~/.bashrc
+```
+
+Test bpcopy command
+
+```bash
+echo 'go to my clipboard' | pbcopy
+```
+
 <!-- external link -->
 [90LinuxCommandsfrequentlyusedbyLinuxSysadmins]: https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
