@@ -547,6 +547,8 @@ Create a new CERT file via openssl
 
 ```bash
 openssl [key_type [genrsa]] -out /path/to/dir/self_priv_key.key 2048
+or
+openssl genpkey -algorithm RSA -out /path/to/dir/self_priv_key.key 2048
 ```
 
 ### Create Self-Sign Cert with Private-Key
@@ -559,6 +561,15 @@ openssl req -x509 -new -days 3650 -key /path/to/dir/self_priv_key.key -out /path
 
 ```bash
 openssl x509 -in made-cert.crt -text -noout
+```
+
+### Create a self-sign Kubernetes ApiServer certificate
+
+- The private-key has been created before
+- we must use kubernetes valid CA (-CA ca.crt -CAkey ca.key)
+
+```bash
+openssl req -x509 -key /etc/kubernetes/ssl/apiserver.key -out /etc/kubernetes/ssl/apiserver.crt -days 365 -CA ca.crt -CAkey ca.key -subj "/CN=kubernetes" -addext "subjectAltName=DNS:kubernetes,DNS:kubernetes.default,DNS:kubernetes.default.svc,DNS:kubernetes.default.svc.cluster.local,DNS:lb-apiserver.kubernetes.local,DNS:localhost,DNS:node1,DNS:node1.cluster.local,DNS:node2,DNS:node2.cluster.local,DNS:node3,DNS:node3.cluster.local,IP:10.233.0.1,IP:172.16.2.10,IP:192.168.1.101,IP:127.0.0.1,IP:192.168.1.102,IP:192.168.1.103,IP:192.168.1.10"
 ```
 
 ## curl
@@ -610,6 +621,21 @@ date +"YEAR: %Y - Month: %m - Day: %d"
 
 ```bash
 ldconfig -p | grep <libname>
+```
+
+## Set and Get from Clipboard
+
+```bash
+sudo apt install xclip
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+source ~/.bashrc
+```
+
+Test bpcopy command
+
+```bash
+echo 'go to my clipboard' | pbcopy
 ```
 
 <!-- external link -->
