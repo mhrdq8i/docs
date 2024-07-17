@@ -561,6 +561,12 @@ openssl req -x509 -new -days 3650 -key /path/to/dir/self_priv_key.key -out /path
 openssl x509 -in made-cert.crt -text -noout
 ```
 
+### Create a self-sign Kubernets ApiServer certificate
+
+```bash
+openssl req -x509 -key /etc/kubernetes/ssl/apiserver.key -out /etc/kubernetes/ssl/apiserver.crt -days 3650   -subj "/CN=kubernetes"   -addext "subjectAltName=DNS:kubernetes,DNS:kubernetes.default,DNS:kubernetes.default.svc,DNS:kubernetes.default.svc.cluster.local,DNS:lb-apiserver.kubernetes.local,DNS:localhost,DNS:node1,DNS:node1.cluster.local,DNS:node2,DNS:node2.cluster.local,DNS:node3,DNS:node3.cluster.local,IP:10.233.0.1,IP:192.168.1.101,IP:127.0.0.1,IP:192.168.1.102,IP:192.168.1.103,IP:192.168.1.10"
+```
+
 ## curl
 
 A ton of curl examples [is here][curl-https-request]
