@@ -166,6 +166,29 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![pod-config-methods]
 
+## Security
+
+### TLS Certificates
+
+![apiserver-base-tls]
+
+### Certification Types
+
+![certs-types]
+
+### Client Certificates
+
+![client-certificates]
+
+### All Services Certificates
+
+![all-service-certs]
+
+### ETCD Peers Cluster Certificates
+
+![etcd-peers-certs]
+![etcd-peers-certs-2]
+
 ## T-Shoot and Debug
 
 ### Diagnostic Probes
@@ -239,3 +262,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 [pod-config-methods]: ../../assets/kuber/kinpic/S05-config-map-methods.png
 [diagnostic-probes-1]: ../../assets/kuber/kinpic/S05-k8s-probes-1.png
 [diagnostic-probes-2]: ../../assets/kuber/kinpic/S05-k8s-probes-2.png
+
+[apiserver-base-tls]: ../../assets/kuber/kinpic/S07-security-tls-certs.png
+[certs-types]: ../../assets/kuber/kinpic/S07-security-cert-types.png
+[all-service-certs]: ../../assets/kuber/kinpic/S07-security-services-certs.png
+[client-certificates]: ../../assets/kuber/kinpic/S07-security-client-certs.png
+[etcd-peers-certs]: ../../assets/kuber/kinpic/S07-etcd-peers-cluster.png
+[etcd-peers-certs-2]: ../../assets/kuber/kinpic/S07-security-etcd-peers-certs.png
