@@ -189,6 +189,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 ![etcd-peers-certs]
 ![etcd-peers-certs-2]
 
+### KubeConfig File
+
+![kube-config-file]
+
 ## T-Shoot and Debug
 
 ### Diagnostic Probes
@@ -269,3 +273,4 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 [client-certificates]: ../../assets/kuber/kinpic/S07-security-client-certs.png
 [etcd-peers-certs]: ../../assets/kuber/kinpic/S07-etcd-peers-cluster.png
 [etcd-peers-certs-2]: ../../assets/kuber/kinpic/S07-security-etcd-peers-certs.png
+[kube-config-file]: ../../assets/kuber/kinpic/S07-security-kube-config-file.png

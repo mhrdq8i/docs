@@ -143,7 +143,6 @@
 ![lvm-image-3]
 ![lvm-image-4]
 
-
 ### Get more info about LVM
 
 Display and show Physical Volumes
@@ -187,6 +186,7 @@ lvextend -L [final-partition-size] /dev/VGname
 lvextend -L 99G /dev/ubuntu1804-vg/root
 resize2fs /dev/vg-name/lv-name
 ```
+
 ### Create a new Logical Volume
 
 Create a new Logical Volume
@@ -213,6 +213,7 @@ sudo mount /dev/exists-vg/new_lv /mnt/new_dir
 Permanent mounting
 
 - Append this line of code to `/etc/fstab`
+
 ```bash
 /dev/exists-vg/new_lv   /mnt/dir   [ext4 | btrfs]   defaults   0   2
 ```
@@ -561,6 +562,12 @@ openssl req -x509 -new -days 3650 -key /path/to/dir/self_priv_key.key -out /path
 
 ```bash
 openssl x509 -in made-cert.crt -text -noout
+```
+
+### Open RSA PrivateKey file to show content
+
+```bash
+openssl rsa -in made-key.key -check
 ```
 
 ### Create a self-sign Kubernetes ApiServer certificate
