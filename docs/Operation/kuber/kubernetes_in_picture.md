@@ -193,6 +193,32 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![kube-config-file]
 
+## APIs
+
+### api (core group)
+
+![k8s-apis-api]
+
+### apis (named group)
+
+![k8s-apis-apis]
+
+## Authorization
+
+### RBAC Authorization
+
+![rbac]
+
+### Webhook Authorization
+
+![webhook]
+
+### RollBinding
+
+Relation between **RoleBinding**, **User** and **Namespace**
+
+![roll-binding-ns]
+
 ## T-Shoot and Debug
 
 ### Diagnostic Probes
@@ -274,3 +300,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 [etcd-peers-certs]: ../../assets/kuber/kinpic/S07-etcd-peers-cluster.png
 [etcd-peers-certs-2]: ../../assets/kuber/kinpic/S07-security-etcd-peers-certs.png
 [kube-config-file]: ../../assets/kuber/kinpic/S07-security-kube-config-file.png
+
+[k8s-apis-api]: ../../assets/kuber/kinpic/S08-security-APIs-api.png
+[k8s-apis-apis]: ../../assets/kuber/kinpic/S08-security-APIs-apis.png
+
+[rbac]: ../../assets/kuber/kinpic/S08-security-authorization-rbac.png
+[webhook]: ../../assets/kuber/kinpic/S08-security-authorization-webhook.png
+[roll-binding-ns]: ../../assets/kuber/kinpic/S08-security-authorization-rollbinding.png

@@ -151,9 +151,7 @@ kubectl rollout history <deployments/deployment-name>
 kubectl rollout undo <deployments/deployment-name> # go to pervious version
 kubectl rollout undo <deployments/deployment-name> --to-revision <rv-no> # go to pervious version
 watch -d kubectl get replicasets
-
 ```
-
 <!-- links -->
 [commands]: ../../assets/kuber/cheatsheet/cs-commands.jpg
 [cheatsheet]: ../../assets/kuber/cheatsheet/cs-CheatSheet.jpg
