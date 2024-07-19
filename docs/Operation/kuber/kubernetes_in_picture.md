@@ -219,6 +219,20 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![roll-binding-ns]
 
+## Network Policy
+
+### Ingress & Egress Direction
+
+![ingress-egress-direction]
+
+### Pods Default Connections
+
+![pod-default-con]
+
+### Close Ingress or Egress
+
+![close-ingress-egress]
+
 ## T-Shoot and Debug
 
 ### Diagnostic Probes
@@ -307,3 +321,7 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [rbac]: ../../assets/kuber/kinpic/S08-security-authorization-rbac.png
 [webhook]: ../../assets/kuber/kinpic/S08-security-authorization-webhook.png
 [roll-binding-ns]: ../../assets/kuber/kinpic/S08-security-authorization-rollbinding.png
+
+[ingress-egress-direction]: ../../assets/kuber/kinpic/S08-security-network-policy-1.png
+[pod-default-con]: ../../assets/kuber/kinpic/S08-security-network-policy-2.png
+[close-ingress-egress]: ../../assets/kuber/kinpic/S08-security-network-policy-3.png

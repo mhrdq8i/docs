@@ -93,6 +93,7 @@ kubectl get -n <ns-name> pods
 kubectl describe <ns-name>
 kubectl -n <ns-name> events
 kubectl get pods --all-namespaces
+kubectl config view --minify --output 'jsonpath={..namespace}' # get current ns
 ```
 
 ## ConfigMap
