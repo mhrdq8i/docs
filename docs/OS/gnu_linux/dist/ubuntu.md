@@ -69,3 +69,11 @@ Replace the value for the specific key
 gsettings set org.gnome.desktop.wm.keybindings key-name "[pattern]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right  "['<Super>Page_Down', '<Super><Alt>Right']"
 ```
+
+## snap
+
+### Set an alias for snap's apps
+
+```bash
+sudo snap alias [snap-app] [alias-for-snap-app]
+```
