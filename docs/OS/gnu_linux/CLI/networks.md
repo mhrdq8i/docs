@@ -379,6 +379,7 @@ src ip packet route FROM address
 -A read packet data
 
 ngrep -t -W byline port 8088 -d any
+tcpdump -i any -nn -s 0 -w k8s_port_6443.pcap port 6443 and host 172.16.2.10
 ```
 
 <!-- external links -->
