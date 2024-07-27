@@ -22,6 +22,12 @@ network:
       - 8.8.8.8
 ```
 
+**Note:** if your face to this warning "WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running" install openvswitch-switch package
+
+```bash
+sudo apt install -y openvswitch-switch
+```
+
 ## Get the list of installed packages
 
 ```bash
