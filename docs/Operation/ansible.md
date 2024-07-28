@@ -50,6 +50,14 @@ sudo pacman -S ansible-core
 
 ### Test for Correct Installation
 
+PingPong with ansible
+
 ```bash
-ansible all -m ping -u root
+ansible localhost -m ping -u root
+```
+
+Show file systems
+
+```bash
+ansible localhost -a "df -h" -u root
 ```
