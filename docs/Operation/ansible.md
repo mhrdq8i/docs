@@ -61,3 +61,21 @@ Show file systems
 ```bash
 ansible localhost -a "df -h" -u root
 ```
+
+Putting arguments into your command
+
+```bash
+ansible localhost -m apt -a "name=vim state=latest" -u root
+```
+
+Install vim with ansible
+
+```bash
+ansible localhost -m apt -a "name=vim state=latest" -u root --become
+```
+
+We can specify multiple hosts by separating them with colons
+
+```bash
+ansible server1:server2 -m ping -u root
+```
