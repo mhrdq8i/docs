@@ -219,6 +219,12 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![roll-binding-ns]
 
+## Storage
+
+### CSI vs CNI vs CRI
+
+![csi-cni-cri]
+
 ## Network Policy
 
 ### Ingress & Egress Direction
@@ -339,6 +345,8 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [ingress-egress-direction]: ../../assets/kuber/kinpic/S08-security-network-policy-1.png
 [pod-default-con]: ../../assets/kuber/kinpic/S08-security-network-policy-2.png
 [close-ingress-egress]: ../../assets/kuber/kinpic/S08-security-network-policy-3.png
+
+[csi-cni-cri]: ../../assets/kuber/kinpic/S09-storage-csi-cri-cni.png
 
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
