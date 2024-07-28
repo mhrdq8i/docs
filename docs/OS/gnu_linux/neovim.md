@@ -10,7 +10,12 @@ sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 ```
 
-Then add this to your shell config (`~/.bashrc`, `~/. zshrc`, ...):
+Then add this to your shell config (`~/.bashrc`, `~/. zshrc`, ...)
+or create soft link
+
+```bash
+sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
+```
 
 **Note:** Be careful to have installed last version of 'nvim'
 
