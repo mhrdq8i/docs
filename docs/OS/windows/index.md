@@ -52,3 +52,9 @@ netstat -ano | findstr "desire-port-number"
 net stop hns
 net start hns
 ```
+
+## watch open ports and find yours
+
+```powershell
+netstat -na | findstr "your_port"
+```
