@@ -229,9 +229,23 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![pod-default-con]
 
-### Close Ingress or Egress
+### Close Ingress or Egress Traffic
 
 ![close-ingress-egress]
+
+## Ingress Service
+
+### Ingress Schema
+
+![ingress-01]
+
+### Ingress Schema with External LoadBalancer
+
+![ingress-02]
+
+### Ingress Types
+
+![ingress-03]
 
 ## T-Shoot and Debug
 
@@ -325,3 +339,7 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [ingress-egress-direction]: ../../assets/kuber/kinpic/S08-security-network-policy-1.png
 [pod-default-con]: ../../assets/kuber/kinpic/S08-security-network-policy-2.png
 [close-ingress-egress]: ../../assets/kuber/kinpic/S08-security-network-policy-3.png
+
+[ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
+[ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
+[ingress-03]: ../../assets/kuber/kinpic/S11-ingress-3.png
