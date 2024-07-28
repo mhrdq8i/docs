@@ -79,3 +79,26 @@ We can specify multiple hosts by separating them with colons
 ```bash
 ansible server1:server2 -m ping -u root
 ```
+
+## Best Practice Ansible Project Structre
+
+```bash
+.
+├── inventory
+│   └── hosts
+├── prjct-name.yml
+└── roles
+    └── prjct-name
+        ├── defaults
+        │   └── main.yml
+        ├── files
+        ├── handlers
+        │   └── main.yml
+        ├── meta
+        │   └── main.yml
+        ├── tasks
+        │   └── main.yml
+        ├── templates
+        └── vars
+            └── main.yml
+```
