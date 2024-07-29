@@ -225,6 +225,10 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![csi-cni-cri]
 
+### Mount Volumes
+
+![mount-volumes]
+
 ## Network Policy
 
 ### Ingress & Egress Direction
@@ -347,6 +351,7 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [close-ingress-egress]: ../../assets/kuber/kinpic/S08-security-network-policy-3.png
 
 [csi-cni-cri]: ../../assets/kuber/kinpic/S09-storage-csi-cri-cni.png
+[mount-volumes]: ../../assets/kuber/kinpic/S09-storage-mount-volumes.png
 
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
