@@ -102,3 +102,18 @@ ansible server1:server2 -m ping -u root
         └── vars
             └── main.yml
 ```
+
+- **inventories:** Contains information about your managed hosts and groups.
+- **hosts:** Defines host names, IP addresses, and group memberships.
+- **group_vars:** Holds variables shared by groups of hosts.
+
+---
+
+- **prjct-name.yml:** Your main playbook, orchestrating the execution of roles.
+- **defaults:** Contains default variables for the role.
+- **files:** Stores static files to be copied to remote hosts.
+- **handlers:** Defines actions to be taken in response to certain changes.
+- **meta:** Contains metadata about the role, including dependencies.
+- **tasks:** Contains the main tasks to be executed by the role.
+- **templates:** Stores Jinja2 templates for dynamic file generation.
+- **vars:** Contains additional variables specific to the role.

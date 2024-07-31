@@ -62,7 +62,7 @@ kubectl exec -it <pod-name> -- bash
 kubectl get pods --selector key=value
 ```
 
-## Resource
+## Resource Modification
 
 ```bash
 kubectl create -f <pod_file_name.yml>
@@ -70,7 +70,11 @@ kubectl replace -f <pod_file_name.yml>
 kubectl get rs -o wide
 kubectl apply -f <file-name.yml>
 kubectl delete -f <manifest-filename.yml>
+```
 
+## Explain
+
+```bash
 kubectl explain <config-kind>
 kubectl explain resourcequota
 kubectl explain resourcequota.spec
@@ -81,6 +85,7 @@ Update a resource
 
 ```bash
 kubectl edit <unit-type> <unit-name>
+kubectl scale --replicas=6 deployment <deployment-name>
 ```
 
 ## Namespace
