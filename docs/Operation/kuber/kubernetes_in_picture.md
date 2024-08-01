@@ -32,6 +32,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![k-trafficrouting]
 
+## Kubernetes Terminology
+
+![kubernetes-terminology]
+
 ## Controller Plan Components
 
 ### Master Node Components
@@ -373,3 +377,5 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
 [ingress-03]: ../../assets/kuber/kinpic/S11-ingress-3.png
+
+[kubernetes-terminology]: ../../assets/kuber/kinpic/kubernetes-terminology.png
