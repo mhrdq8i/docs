@@ -229,6 +229,20 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![mount-volumes]
 
+## PV & PVC
+
+![pv-pvc-pod]
+
+## Storage Class
+
+### Static Provisioning
+
+![storage-class-static-provisioning]
+
+### Dynamic Provisioning
+
+![storage-class-dynamic-provisioning]
+
 ## Network Policy
 
 ### Ingress & Egress Direction
@@ -352,6 +366,9 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 [csi-cni-cri]: ../../assets/kuber/kinpic/S09-storage-csi-cri-cni.png
 [mount-volumes]: ../../assets/kuber/kinpic/S09-storage-mount-volumes.png
+[pv-pvc-pod]: ../../assets/kuber/kinpic/S09-storage-pv-pvc-pod.png
+[storage-class-static-provisioning]: ../../assets/kuber/kinpic/S09-storage-class-static-provisioning.png
+[storage-class-dynamic-provisioning]: ../../assets/kuber/kinpic/S09-storage-class-dynamic-provisioning.png
 
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
