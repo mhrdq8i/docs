@@ -308,27 +308,54 @@ tune2fs -l /dev/sda2
 
 ## Find
 
+Some ***lovely find*** command examples
+
+### search normal files
+
 ```bash
-# search normal files:
 find /root -type f -iname pom.xml
+```
 
-# search socket files:
+### search socket files
+
+```bash
 find / -type s
+```
 
-# search suid files:
+### search suid files
+
+```bash
 find /usr/bin -perm -4000
+```
 
-# search sgid files:
+### search sgid files
+
+```bash
 find /usr/bin -perm -2000
+```
 
-# search sticky files:
+### search sticky files
+
+```bash
 find /usr/bin -perm -1000
+```
 
-# exclude
+### exclude
+
+```bash
 find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
+```
 
-# Delete old 10 days files:
-find /path/to/base/dir/\\\* -type d -ctime +10 -exec rm -rf {} \;
+### Delete old 10 days files
+
+```bash
+find /path/to/base/dir/\* -type d -ctime +10 -exec rm -rf {} \;
+```
+
+### Rename file extension recursively
+
+```bash
+find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
 ```
 
 ## Users and Groups
