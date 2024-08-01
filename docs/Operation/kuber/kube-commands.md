@@ -4,7 +4,7 @@ Kubernetes [commands] and [cheatsheet]
 
 ## Kubectl
 
-Version and Info
+### Version and Info
 
 ```bash
 kubectl version
@@ -14,7 +14,7 @@ kubectl cluster-info dump > cluster-info.dump
 
 ## Nodes
 
-Get All Nodes
+### Get All Nodes
 
 ```bash
 kubectl get nodes
@@ -22,25 +22,25 @@ kubectl get nodes -o wide
 kubectl get nodes -o wide -w/--watch
 ```
 
-Describe Nodes
+### Describe Nodes
 
 ```bash
 kubectl describe node <node-name> #describe node details including limits
 ```
 
-Set label for a node
+### Set label for a node
 
 ```bash
 kubectl label node <node-name> kubernetes.io/role=node
 kubectl label node <node-name> label_key=label_value
-kubectl label node <node-name> label_key- ;"remove added label from node"
+kubectl label node <node-name> label_key- ; # remove added label from node"
 ```
 
-Taint
+### Taint
 
 ```bash
-kubectl taint node <node-name> taint_label_key=taint_label_value ;"add taint label to node"
-kubectl taint node <node-name> taint_label_key- ;"remove added taint label to node"
+kubectl taint node <node-name> taint_label_key=taint_label_value ; # add taint label to node"
+kubectl taint node <node-name> taint_label_key- ; # remove added taint label to node"
 ```
 
 ## Pods
@@ -81,7 +81,7 @@ kubectl explain resourcequota.spec
 kubectl explain resourcequota.spec.hard
 ```
 
-Update a resource
+### Update a resource
 
 ```bash
 kubectl edit <unit-type> <unit-name>
