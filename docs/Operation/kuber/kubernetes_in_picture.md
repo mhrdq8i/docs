@@ -247,6 +247,17 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![storage-class-dynamic-provisioning]
 
+## Headless Services
+
+### Headless Service with Pod
+
+![headless-services-1]
+
+### Headless Service with Deployment
+
+![headless-services-2]
+
+
 ## Network Policy
 
 ### Ingress & Egress Direction
@@ -373,6 +384,8 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [pv-pvc-pod]: ../../assets/kuber/kinpic/S09-storage-pv-pvc-pod.png
 [storage-class-static-provisioning]: ../../assets/kuber/kinpic/S09-storage-class-static-provisioning.png
 [storage-class-dynamic-provisioning]: ../../assets/kuber/kinpic/S09-storage-class-dynamic-provisioning.png
+
+[headless-services-1]: ../../assets/kuber/kinpic/S10-headless-service-1.png
 
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
