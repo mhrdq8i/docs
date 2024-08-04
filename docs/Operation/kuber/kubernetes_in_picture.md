@@ -89,9 +89,6 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 ![static-pods-1]
 ![static-pods-2]
 
-[static-pods-1]: ../../assets/kuber/kinpic/S04-static-pod-1.png
-[static-pods-2]: ../../assets/kuber/kinpic/S04-static-pod-2.png
-
 ### Deployment
 
 ![deployment]
@@ -253,10 +250,9 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![headless-services-1]
 
-### Headless Service with Deployment
+## StateFulSets Dedicated Storage
 
-![headless-services-2]
-
+![StateFulSet-storage-dedicated-1]
 
 ## Network Policy
 
@@ -301,6 +297,9 @@ Relation between **RoleBinding**, **User** and **Namespace**
 ![k-debug-flowchart]
 
 <!-- links -->
+[static-pods-1]: ../../assets/kuber/kinpic/S04-static-pod-1.png
+[static-pods-2]: ../../assets/kuber/kinpic/S04-static-pod-2.png
+
 [k-debug-flowchart]: ../../assets/kuber/cheatsheet/cs-k8s-debug-flowchart.png
 [k-cheatsheet]: ../../assets/kuber/cheatsheet/cs-CheatSheet.jpg
 [k-commands]: ../../assets/kuber/cheatsheet/cs-commands.jpg
@@ -390,5 +389,7 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
 [ingress-03]: ../../assets/kuber/kinpic/S11-ingress-3.png
+
+[StateFulSet-storage-dedicated-1]: ../../assets/kuber/kinpic/S10-StateFulSet-storage-dedicated-storage.png
 
 [kubernetes-terminology]: ../../assets/kuber/kinpic/kubernetes-terminology.png
