@@ -254,6 +254,8 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![StateFulSet-storage-dedicated-1]
 
+![StateFulSet-storage-dedicated-2]
+
 ## Network Policy
 
 ### Ingress & Egress Direction
@@ -390,6 +392,7 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
 [ingress-03]: ../../assets/kuber/kinpic/S11-ingress-3.png
 
-[StateFulSet-storage-dedicated-1]: ../../assets/kuber/kinpic/S10-StateFulSet-storage-dedicated-storage.png
+[StateFulSet-storage-dedicated-1]: ../../assets/kuber/kinpic/S10-statefullset-storage-dedicated-storage-1.png
+[StateFulSet-storage-dedicated-2]: ../../assets/kuber/kinpic/S10-statefullset-storage-dedicated-storage-2.png
 
 [kubernetes-terminology]: ../../assets/kuber/kinpic/kubernetes-terminology.png
