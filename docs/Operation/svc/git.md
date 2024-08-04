@@ -114,6 +114,12 @@ git checkout master
 ```bash
 git checkout -b <New_Branch>
 ```
+- checkout via origin branch
+
+```bash
+git branch -a
+git checkout -b <branch-name> origin/<branch-name>
+```
 
 - checkout over tag number:
 
