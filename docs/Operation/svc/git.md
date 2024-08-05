@@ -114,6 +114,7 @@ git checkout master
 ```bash
 git checkout -b <New_Branch>
 ```
+
 - checkout via origin branch
 
 ```bash
@@ -220,6 +221,22 @@ Difference between `git reset` & `git revert`
 ```bash
 git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 ```
+
+### git rebase
+
+Delete an old commit
+
+```bash
+git rebase --interactive <commit-hash-before-target-commit>
+```
+
+Then use keyword `drop` inside the target commit hash and save the file
+
+```bash
+git push -f origin branch-name
+```
+
+**Note**: the `-f` is a required parameter for this step
 
 ### git [merge - rebase - merge+squash]
 
