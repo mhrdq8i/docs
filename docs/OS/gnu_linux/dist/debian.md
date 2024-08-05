@@ -1,18 +1,28 @@
 # Debian
 
-## Configure Static IP address
+## Configure Debian Network
+
+### Set Static IP address, Gateway and DNS
 
 ```bash
 sudo cat >> /etc/network/interfaces << EOF
 iface ens33 inet static
-   address 172.22.132.xxx
-   netmask 255.255.255.0
-   gateway 172.22.132.1
-   # dns-servernames 10.0.5.55 10.0.5.94
+   address  172.22.132.xxx
+   netmask  255.255.255.0
+   gateway  172.22.132.1
+   dns      1.1.1.1
+   hostname debian-host
 EOF
-/sbin/ifup <interface-name>
-systemctl restart networking
 ```
+
+Apply your changes
+
+```bash
+/sbin/ifup <interface-name>
+systemctl   restart networking
+```
+
+Alternative way to set DND
 
 ```bash
 cat >> /etc/resolve.conf << EOF
