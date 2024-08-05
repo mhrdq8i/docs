@@ -270,6 +270,16 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![close-ingress-egress]
 
+## Network In More Detail
+
+### Components Ports Numbers
+
+![components-ports]
+
+### Call Resources (Service, Pod) via DNS - FQDN
+
+![k8s-dns-call-pod-svc]
+
 ## Ingress Service
 
 ### Ingress Schema
@@ -388,11 +398,15 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 [headless-services-1]: ../../assets/kuber/kinpic/S10-headless-service-1.png
 
+[StateFulSet-storage-dedicated-1]: ../../assets/kuber/kinpic/S10-statefullset-storage-dedicated-storage-1.png
+[StateFulSet-storage-dedicated-2]: ../../assets/kuber/kinpic/S10-statefullset-storage-dedicated-storage-2.png
+
+[components-ports]: ../../assets/kuber/kinpic/S10-network-components-ports.png
+
+[k8s-dns-call-pod-svc]: ../../assets/kuber/kinpic/S10-network-dns-svc-pod.png
+
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
 [ingress-03]: ../../assets/kuber/kinpic/S11-ingress-3.png
-
-[StateFulSet-storage-dedicated-1]: ../../assets/kuber/kinpic/S10-statefullset-storage-dedicated-storage-1.png
-[StateFulSet-storage-dedicated-2]: ../../assets/kuber/kinpic/S10-statefullset-storage-dedicated-storage-2.png
 
 [kubernetes-terminology]: ../../assets/kuber/kinpic/kubernetes-terminology.png
