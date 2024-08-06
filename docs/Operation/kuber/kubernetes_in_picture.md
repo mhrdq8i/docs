@@ -290,9 +290,13 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![ingress-02]
 
-### Ingress Types
+### Ingress Controller + Ingress Resource
 
 ![ingress-03]
+
+### Requirement Resource Foreach Ingress Controller
+
+![ingres-controller-resources]
 
 ## T-Shoot and Debug
 
@@ -408,5 +412,6 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [ingress-01]: ../../assets/kuber/kinpic/S11-ingress-1.png
 [ingress-02]: ../../assets/kuber/kinpic/S11-ingress-2.png
 [ingress-03]: ../../assets/kuber/kinpic/S11-ingress-3.png
+[ingres-controller-resources]: ../../assets/kuber/kinpic/S11-ingress-4.png
 
 [kubernetes-terminology]: ../../assets/kuber/kinpic/kubernetes-terminology.png
