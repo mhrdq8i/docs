@@ -78,6 +78,14 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ![kuber-proxy]
 
+## Kubernetes Release Strategy
+
+![kube-components]
+
+![cluster-versioning]
+
+![Update-patch-policy]
+
 ## Workloads
 
 ### Pods
@@ -415,3 +423,6 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [ingres-controller-resources]: ../../assets/kuber/kinpic/S11-ingress-4.png
 
 [kubernetes-terminology]: ../../assets/kuber/kinpic/kubernetes-terminology.png
+
+[cluster-versioning]: ../../assets/kuber/kinpic/S05-k8s-cluster-versioning.png
+[Update-patch-policy]: ../../assets/kuber/kinpic/S05-k8s-version-update-support.png
