@@ -67,11 +67,17 @@ git config --global credential.helper store
 
 ### git add
 
-- add file to stage except one
+Add file to stage except one
 
 ```bash
 git add --all -- :!main/dont_check_main.txt
 git add -- . :!main/dont_check_main.txt
+```
+
+Add a new line at EOF
+
+```bash
+git add --renormalize <file-name>
 ```
 
 ### git clone
