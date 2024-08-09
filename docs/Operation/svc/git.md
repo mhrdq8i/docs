@@ -1,17 +1,5 @@
 # Git
 
-## Git 3 level concept
-
-### some example about this concept
-
-![git-concept-1]
-![git-concept-2]
-![git-concept-3]
-![git-concept-4]
-![git-concept-5]
-![git-pictorial]
-![git-workflow]
-
 ## Git Configuration
 
 ### git config
@@ -217,11 +205,6 @@ git reset --hard <commit-id>
 git revert <commit-id>
 ```
 
-Difference between `git reset` & `git revert`
-
-![git-reset-revert-1]
-![git-reset-revert-2]
-
 ### git tag
 
 ```bash
@@ -249,24 +232,3 @@ git push -f origin branch-name
 ```
 
 **Note**: the `-f` is a required parameter for this step
-
-### git [merge - rebase - merge+squash]
-
-![git-merge-rebase-1]
-![git-merge-rebase-2]
-![git-merge-squash-3]
-
-<!-- image links -->
-[git-concept-1]: ../../assets/svc/git-3-level-concept-1.png
-[git-concept-2]: ../../assets/svc/git-3-level-concept-2.png
-[git-concept-3]: ../../assets/svc/git-3-level-concept-3.png
-[git-concept-4]: ../../assets/svc/git-3-level-concept-4.png
-[git-concept-5]: ../../assets/svc/git-3-level-concept-5.png
-[git-pictorial]: ../../assets/svc/git-a-pictorial-walkthrough.gif
-[git-workflow]: ../../assets/svc/git-a-pictorial-walkthrough.gif
-[git-pull-fetch]: ../../assets/svc/git-pull-fetch.png
-[git-reset-revert-1]: ../../assets/svc/git-reset-revert-1.png
-[git-reset-revert-2]: ../../assets/svc/git-reset-revert-2.png
-[git-merge-rebase-1]: ../../assets/svc/git-merge-rebase-1.png
-[git-merge-rebase-2]: ../../assets/svc/git-merge-rebase-2.png
-[git-merge-squash-3]: ../../assets/svc/git-merge-squash.jpeg

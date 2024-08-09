@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
         "Kustomize"
-    ]
+    ],
+    "files.autoSave": "afterDelay",
+    "files.insertFinalNewline": true
 }
