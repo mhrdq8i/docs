@@ -224,6 +224,12 @@ git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 
 ### git rebase
 
+Get the list of last commits
+
+```bash
+git log --pretty=oneline
+```
+
 Delete an old commit
 
 ```bash
