@@ -1,4 +1,4 @@
-# WSA
+# WSL
 
 ## Windows Subsystem for Linux
 
