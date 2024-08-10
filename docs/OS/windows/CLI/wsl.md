@@ -11,8 +11,8 @@
 ### Download
 
   - Open the "[Microsoft Store Ubuntu]" page and get the Ubuntu *product ID*
-  - Open the https://store.rg-adguard.net/ and follow [this instructions]
-  - You also use another dist like [Apline], [Arch], [Fedora] and ... 
+  - Open the https://store.rg-adguard.net and follow [this instructions]
+  - You also use another dist like [Alpine], [Arch], [Fedora] and ... 
 
 ### Pre-Configuration Steps
 
