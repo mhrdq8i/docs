@@ -1,4 +1,4 @@
-# RUN apps from run app
+# Run in Run
 
 ## List of windows useful commands according to [webnots website][webnots-website]
 
