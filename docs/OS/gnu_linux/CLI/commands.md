@@ -497,11 +497,36 @@ tar cf - directory-name | gzip > archive-name.tar.gz
 tar cf - directory-name | bzip2 > archive-name.tar.gz
 ```
 
-## systemctl
+## systemd
+
+- Get the list of services(units)
 
 ```bash
-# Get the list of services(units):
 systemctl list-units --type=service
+```
+
+- Get the list of unit files
+ 
+```bash
+sudo systemctl list-unit-files --type=service
+```
+
+- Add service to startup
+ 
+```bash
+sudo systemctl enable <service-name>
+```
+
+- Mask service to prevent start
+ 
+```bash
+sudo systemctl mask <service-name>
+```
+
+- UnMask service to prevent start
+ 
+```bash
+sudo systemctl unmask <service-name>
 ```
 
 ## grep
