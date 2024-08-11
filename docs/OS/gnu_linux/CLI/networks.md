@@ -65,7 +65,7 @@ Host [name]
     HostName [ip-or-hostname]
     Port [port_number]
     PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa.hub
+    IdentityFile ~/.ssh/id_rsa
 ```
 
 ### ssh 2 ssh
