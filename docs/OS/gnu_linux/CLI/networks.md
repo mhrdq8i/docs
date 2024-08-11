@@ -64,6 +64,7 @@ To enable a password-less connection
 Host [name]
     HostName [ip-or-hostname]
     Port [port_number]
+    User [user]
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa
 ```
