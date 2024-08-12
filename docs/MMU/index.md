@@ -107,7 +107,7 @@
 
 <img src="../assets/mm/memory-layout-in-c-2.jpg" alt="MMU Layout in C">
 
-<img src="../assets/mm/memory-layout-section.jpg" alt="Hirarchy MMU Layout" width="500" height="600">
+<img src="../assets/mm/memory-layout-section.jpg" alt="Hirarchy MMU Layout">
 
 </details>
 
