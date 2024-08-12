@@ -1,4 +1,4 @@
-# All Kubernetes Commands
+# Kubernetes Commands
 
 Kubernetes [commands] and [cheatsheet]
 
@@ -33,15 +33,17 @@ kubectl describe node <node-name> #describe node details including limits
 ```bash
 kubectl label node <node-name> kubernetes.io/role=node
 kubectl label node <node-name> label_key=label_value
-kubectl label node <node-name> label_key- ; # remove added label from node"
+kubectl label node <node-name> label_key- # remove added label from node"
 ```
 
 ### Taint
 
 ```bash
-kubectl taint node <node-name> taint_label_key=taint_label_value ; # add taint label to node"
-kubectl taint node <node-name> taint_label_key- ; # remove added taint label to node"
+kubectl taint node <node-name> taint_label_key=taint_label_value:TaintEffect # add taint label to node"
+kubectl taint node <node-name> taint_label_key- # remove added taint label to node"
 ```
+
+**TaintEffect:** [NoSchedule, PreferNoSchedule or NoExecute]
 
 ## Pods
 
