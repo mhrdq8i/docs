@@ -99,14 +99,12 @@
 ```
 
 <details>
-        <summary>
-                Get More View
-        </summary>
+  <summary>
+    Get More View
+  </summary>
 
 <img src="../assets/mm/memory-layout-in-c.png">
-
 <img src="../assets/mm/memory-layout-in-c-2.jpg">
-
 <img src="../assets/mm/memory-layout-section.jpg">
 
 </details>

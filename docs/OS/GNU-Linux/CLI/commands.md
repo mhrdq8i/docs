@@ -137,15 +137,21 @@
 ## LVM
 
 <details>
-<summary>Knowing LVM's concept through some images</summary>
-<p>
-
-![lvm-image-1]
-![lvm-image-2]
-![lvm-image-3]
-![lvm-image-4]
-
-</p>
+  <summary>
+    Knowing LVM's concept through some images
+  </summary>
+  <table>
+      <tr>
+          <td>
+              <div><img src=" ../../../assets/gnu_linux/lvm1.png"></div>
+              <div><img src=" ../../../assets/gnu_linux/lvm3.png"></div>
+          </td>
+          <td>
+              <div><img src=" ../../../assets/gnu_linux/lvm4.png"></div>
+              <div><img src=" ../../../assets/gnu_linux/lvm2.png" ></div>
+          </td>
+      </tr>
+  </table>
 </details>
 
 ### Get more info about LVM
@@ -707,7 +713,3 @@ echo 'go to my clipboard' | pbcopy
 <!-- external link -->
 [90LinuxCommandsfrequentlyusedbyLinuxSysadmins]: https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
-[lvm-image-1]: ../../../assets/gnu_linux/lvm1.png
-[lvm-image-2]: ../../../assets/gnu_linux/lvm2.png
-[lvm-image-3]: ../../../assets/gnu_linux/lvm3.png
-[lvm-image-4]: ../../../assets/gnu_linux/lvm4.png
