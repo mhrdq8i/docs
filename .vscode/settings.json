@@ -3,5 +3,9 @@
         "Kustomize"
     ],
     "files.autoSave": "afterDelay",
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "editor.fontFamily": "'JetbrainsMono NF Light', 'SauceCodePro Nerd Font Mono', 'Mononoki Nerd Font Mono'",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontFamily": "'Mononoki Nerd Font Mono'",
+    "terminal.integrated.fontSize": 13
 }
