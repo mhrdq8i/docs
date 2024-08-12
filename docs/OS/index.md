@@ -10,6 +10,5 @@ I've covered [Windows] on the Desktop side.
 
 <!-- links -->
 
-[GNU/Linux]: gnu_linux
 [UNIX]: unix/index.md
 [Windows]: windows/index.md

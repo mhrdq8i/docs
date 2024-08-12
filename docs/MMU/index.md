@@ -98,11 +98,16 @@
 +--------------------+
 ```
 
-## Get More View
+<details>
+        <summary>
+                Get More View
+        </summary>
 
 ![Memory Layout in C 1](../assets/mm/memory-layout-in-c.png)
 ![Memory Layout in C 2](../assets/mm/memory-layout-in-c-2.jpg)
 ![Memory Layout Section](../assets/mm/memory-layout-section.jpg)
+
+</details>
 
 ## External Resources
 
