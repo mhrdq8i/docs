@@ -8,10 +8,12 @@ htop
 bpytop
 ps -aux
 ```
+
 ### Find Zombie Process
 
 ```bash
-ps aux | awk '{if ($8 == "Z") print $2}'                                                                                                                                                                      ```
+ps aux | awk '{if ($8 == "Z") print $2}'
+```
 
 ## Mainboard
 
@@ -61,6 +63,7 @@ sudo lshw -short -C disk
 
 sudo hwinfo --disk
 ```
+
 ### Online
 
 ```bash
@@ -73,6 +76,7 @@ dstat
 sudo apt-get install read-edid
 sudo get-edid | parse-edid
 ```
+
 ## Get serial and Info
 
 Get the hardware serial number and info

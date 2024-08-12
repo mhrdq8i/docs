@@ -136,12 +136,17 @@
 
 ## LVM
 
-### Knowing LVM's concept through some images
+<details>
+<summary>Knowing LVM's concept through some images</summary>
+<p>
 
 ![lvm-image-1]
 ![lvm-image-2]
 ![lvm-image-3]
 ![lvm-image-4]
+
+</p>
+</details>
 
 ### Get more info about LVM
 
@@ -506,25 +511,25 @@ systemctl list-units --type=service
 ```
 
 - Get the list of unit files
- 
+
 ```bash
 sudo systemctl list-unit-files --type=service
 ```
 
 - Add service to startup
- 
+
 ```bash
 sudo systemctl enable <service-name>
 ```
 
 - Mask service to prevent start
- 
+
 ```bash
 sudo systemctl mask <service-name>
 ```
 
 - UnMask service to prevent start
- 
+
 ```bash
 sudo systemctl unmask <service-name>
 ```
