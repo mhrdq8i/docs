@@ -103,11 +103,11 @@
                 Get More View
         </summary>
 
-<img src="../assets/mm/memory-layout-in-c.png" alt="MMU Layout" width="50%" height="50%">
+<img src="../assets/mm/memory-layout-in-c.png">
 
-<img src="../assets/mm/memory-layout-in-c-2.jpg" alt="MMU Layout in C">
+<img src="../assets/mm/memory-layout-in-c-2.jpg">
 
-<img src="../assets/mm/memory-layout-section.jpg" alt="Hirarchy MMU Layout">
+<img src="../assets/mm/memory-layout-section.jpg">
 
 </details>
 
