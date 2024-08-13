@@ -1,4 +1,4 @@
-## Bash
+# Bash
 
  [Move & erasing through the opened shell][MoveEraseShell]
 

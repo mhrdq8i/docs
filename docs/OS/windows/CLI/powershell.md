@@ -38,7 +38,7 @@ Temporary
 Set-Alias -Name tf -Value terrafrom
 ```
 
-Permanently
+Set powershell profile config `C:\Users\<YourUsername>\Documents\PowerShell\profile.ps1`
 
 ```powershell
 notepad++ C:\Users\mehrdad\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1

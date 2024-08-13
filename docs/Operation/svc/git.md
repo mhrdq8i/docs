@@ -4,20 +4,20 @@
 
 ### git config
 
-- Exclude files permission from all local changes
+Exclude files permission from all local changes
 
 ```bash
 global: git config --global core.fileMode false
 local:  git config core.fileMode false
 ```
 
-- Update git config
+Update git config
 
 ```bash
 git config --unset core.bare
 ```
 
-- Change git default editor
+Change git default editor
 
 ```bash
 git config --global core.editor "vim"
@@ -25,7 +25,7 @@ git config --global core.editor "vim"
 
 ### Skip SSL C.A
 
-- skip unable to access `https://your.host/your-git/your-repor.git/` SSL certificate problem: self signed certificate
+Skip unable to access `https://your.host/your-git/your-repor.git/` SSL certificate problem: self signed certificate
 
 ```bash
 git config --global http.sslVerify false
@@ -33,7 +33,7 @@ git config --global http.sslVerify false
 
 ### Specified Keys
 
-- Add github to your hosts `~/.ssh/config`
+Add github to your hosts `~/.ssh/config`
 
 ```shell
 Host github
@@ -70,13 +70,13 @@ git add --renormalize <file-name>
 
 ### git clone
 
-- clone and checkout simultaneously:
+Clone and checkout simultaneously
 
 ```bash
 git clone -b <branch name> address
 ```
 
-- Clone repo
+Clone repo
 
 ```bash
 git clone --mirror git@github.com/fernandoaleman/app.git app/.git
@@ -84,7 +84,7 @@ git clone --mirror git@github.com/fernandoaleman/app.git app/.git
 
 ### git log
 
-- git log arguments
+Git log arguments
 
 ```bash
 git log --pretty=oneline
@@ -97,38 +97,38 @@ git log --graph --oneline --decorate --all
 
 ### git checkout
 
-- Checkout master branch
+Checkout master branch
 
 ```bash
 git checkout master
 ```
 
-- Create new branch and switch to it
+Create new branch and switch to it
 
 ```bash
 git checkout -b <New_Branch>
 ```
 
-- checkout via origin branch
+Checkout via origin branch
 
 ```bash
 git branch -a
 git checkout -b <branch-name> origin/<branch-name>
 ```
 
-- checkout over tag number:
+Checkout over tag number
 
 ```bash
 git checkout tags/4.3.87
 ```
 
-- check it up:
+Check it up
 
 ```bash
 git branch
 ```
 
-- go to last 3 commit:
+Go to last 3 commit
 
 ```bash
 git checkout HEAD~3
@@ -136,20 +136,20 @@ git checkout HEAD~3
 
 ### git remote
 
-- Add new remote repository
+Add new remote repository
 
 ```bash
 git remote add origin https://github.com/username/git-project-repo.git
 git remote add origin git@github.com:username/git-project-repo.git
 ```
 
-- Rename an existing repo
+Rename an existing repo
 
 ```bash
 git remote rename <old-name> <new-name>
 ```
 
-- Get the list of the remote repository
+Get the list of the remote repository
 
 ```bash
 git remote -v
@@ -157,19 +157,19 @@ git remote -v
 
 ### git branch
 
-- create new branch
+Create new branch
 
 ```bash
 git branch <new-branch>
 ```
 
-- rename a branch
+Rename a branch
 
 ```bash
 git branch -m <old> <new>
 ```
 
-- delete a branch
+Delete a branch
 
 ```bash
 git branch -d <branch_name>
@@ -177,13 +177,13 @@ git branch -d <branch_name>
 
 ### git switch
 
-- switch branch
+Switch branch
 
 ```bash
 git switch <existing-branch>
 ```
 
-- point head to hast commit
+Point head to last commit
 
 ```raw
 git switch -
@@ -191,7 +191,7 @@ git switch -
 
 ### git reset - git revert
 
-- git reset
+Git reset
 
 ```bash
 git reset --soft <commit-id>
@@ -199,7 +199,7 @@ git reset --mixed <commit-id>
 git reset --hard <commit-id>
 ```
 
-- gti revert
+Git revert
 
 ```bash
 git revert <commit-id>
@@ -232,3 +232,52 @@ git push -f origin branch-name
 ```
 
 **Note**: the `-f` is a required parameter for this step
+
+## Rebase & Merge Conflict, step by step guid
+
+Checkout to main branch
+
+```bash
+git rebase master
+```
+
+Give it the last changes from main branch of remote repository
+
+```bash
+git pull origin master
+```
+
+Check the branches and go to target branch
+
+```bash
+git branch -a
+git checkout target-branch
+```
+
+Give the last changes from main branch of local repository
+
+```bash
+git rebase master
+```
+
+**NOTE**: Git makes new temp branch and apply all changes to it until `git rebase --continue
+Apply changes and get status then add
+
+```bash
+git status
+git add .
+```
+
+Put temp branch changes to target-branch
+
+```bash
+git rebase --continue
+```
+
+Push to remove target-branch
+
+```bash
+git push -f origin target-branch
+```
+
+**NOTE**: You should solve the merge conflict manually by your TE or IDE if you have

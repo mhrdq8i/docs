@@ -38,12 +38,20 @@ kubectl label node <node-name> label_key- # remove added label from node"
 
 ### Taint
 
+add/del taint
+
 ```bash
 kubectl taint node <node-name> taint_label_key=taint_label_value:TaintEffect # add taint label to node"
 kubectl taint node <node-name> taint_label_key- # remove added taint label to node"
 ```
 
-**TaintEffect:** [NoSchedule, PreferNoSchedule or NoExecute]
+**TaintEffect**:     [NoSchedule, PreferNoSchedule or NoExecute]
+
+get node taint
+
+```bash
+kubectl describe node <node-name> | grep -i "Taints"
+```
 
 ## Pods
 
