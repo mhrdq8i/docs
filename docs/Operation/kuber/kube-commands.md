@@ -12,6 +12,16 @@ kubectl cluster-info
 kubectl cluster-info dump > cluster-info.dump
 ```
 
+### Top
+
+Check metric server exists
+
+```bash
+kubectl top nodes
+```
+
+If returned any values means 'metric server' is active and the other not.
+
 ## Nodes
 
 ### Get All Nodes
