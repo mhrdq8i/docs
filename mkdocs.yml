@@ -11,7 +11,8 @@ site_dir: public
 repo_url: https://github.com/mhrdq8i/docs
 edit_uri: blob/master/docs/
 
-extra_css: [extra.css]
+extra_css:
+  - assets/stylesheets/extra.css
 
 # Plugins
 plugins:

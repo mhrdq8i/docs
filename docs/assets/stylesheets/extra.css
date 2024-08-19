@@ -12,3 +12,12 @@
   /* Needed so that content doesn't overflow under right sidebar (and not be copyable) */
   overflow-wrap: break-word;
 }
+
+@font-face {
+  font-family: "Lekton Nerd Font Mono";
+  src: "assets/fonts/LektonNerdFontMono-Regular.ttf";
+}
+
+:root {
+  --md-code-font: "Lekton Nerd Font Mono";
+}
