@@ -75,7 +75,7 @@ theme:
     text: Roboto
     code: Fira Code
     # code: Roboto Mono
-  favicon: assets/img/favicon32.png
+  favicon: assets/img/favicon.ico
   icon:
     logo: logo
 
