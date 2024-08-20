@@ -22,21 +22,7 @@
   --md-code-font: "Lekton Nerd Font Mono";
 }
 
-
 /* General environment setup for pymdown.tabbed */
-html {
-  background-color: black;
-  height: 100%;
-}
-body {
-  font-size: 120%;
-  width: 100%;
-  padding: 1em 2em;
-  margin: 0 auto;
-  background-color: white;
-  height: 100%;
-}
-
 /* Tab style starts here */
 .tabbed-set {
   position: relative;
@@ -66,7 +52,7 @@ body {
 .tabbed-set .tabbed-content {
   width: 100%;
   display: none;
-  box-shadow: 0 -.05rem #ddd;
+  box-shadow: 0 -0.05rem #ddd;
 }
 
 .tabbed-set input {
@@ -74,20 +60,7 @@ body {
   opacity: 0;
 }
 
-.tabbed-set input:checked:nth-child(n+1) + label {
+.tabbed-set input:checked:nth-child(n + 1) + label {
   color: red;
   border-color: red;
-}
-
-@media screen {
-  .tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
-    order: 99;
-    display: block;
-  }
-}
-
-@media print {
-  .tabbed-content {
-    display: contents;
-  }
 }
