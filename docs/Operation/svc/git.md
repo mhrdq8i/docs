@@ -191,15 +191,27 @@ git switch -
 
 ### git reset - git revert
 
-Git reset
+#### Git reset
 
-```bash
-git reset --soft <commit-id>
-git reset --mixed <commit-id>
-git reset --hard <commit-id>
-```
+=== "Reset Soft"
 
-Git revert
+  ```bash
+  git reset --soft <commit-id>
+  ```
+
+=== "Reset Mixed"
+
+  ```bash
+  git reset --mixed <commit-id>
+  ```
+
+=== "Reset Hard"
+
+  ```bash
+  git reset --hard <commit-id>
+  ```
+
+#### Git revert
 
 ```bash
 git revert <commit-id>
@@ -281,3 +293,56 @@ git push -f origin target-branch
 ```
 
 **NOTE**: You should solve the merge conflict manually by your TE or IDE if you have
+
+---
+
+=== "Reset Soft"
+```bash
+git reset --soft <commit-id>
+```
+
+=== "Reset Mixed"
+```bash
+git reset --mixed <commit-id>
+```
+
+=== "Reset Hard"
+```bash
+git reset --hard <commit-id>
+```
+
+---
+
+2
+
+=== "Reset Soft"
+  ```bash
+  git reset --soft <commit-id>
+  ```
+
+=== "Reset Mixed"
+  ```bash
+  git reset --mixed <commit-id>
+  ```
+
+=== "Reset Hard"
+  ```bash
+  git reset --hard <commit-id>
+  ```
+
+---
+4
+
+=== "Reset Soft"
+    ```bash
+    git reset --soft <commit-id>
+    ```
+
+=== "Reset Mixed"
+    ```bash
+    git reset --mixed <commit-id>
+    ```
+=== "Reset Hard"
+    ```bash
+    git reset --hard <commit-id>
+    ```

@@ -127,8 +127,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+
 # nav:
 # - Home:
 #     - index.md
