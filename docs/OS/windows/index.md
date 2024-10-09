@@ -108,3 +108,13 @@ netstat -na | findstr "your_port"
 ```powershell
 netstat -nao
 ```
+
+## Chocolatey
+
+### Install Choco Package Manager (Chocolatey)
+
+- Follow the official [link] in **individual** mode
+
+<!-- links -->
+
+[link]: https://chocolatey.org/install#individual
