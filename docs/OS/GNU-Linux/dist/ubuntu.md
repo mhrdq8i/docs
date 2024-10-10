@@ -50,7 +50,7 @@ EOF
 ### via socks
 
 ```bash
-cat <<EOF | sudo tee /etc/apt/apt.conf.d/21proxy
+cat << EOF | sudo tee /etc/apt/apt.conf.d/21proxy
 Acquire::http::proxy "socks5h://localhost:9090";
 EOF
 ```
