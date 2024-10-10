@@ -19,7 +19,7 @@ Apply your changes
 
 ```bash
 /sbin/ifup <interface-name>
-systemctl   restart networking
+systemctl  restart networking
 ```
 
 Alternative way to set DND
