@@ -61,10 +61,17 @@ sudo vnstat --days --begin "2024-01-01 00:00" --end "2024-02-01 23:59"
 To enable a password-less connection
 
 ```bash
+Host proxy
+    HostName 172.20.238.8
+    Port 22
+    User mehrdad
+    IdentityFile ~/.ssh/id_rsa
+
 Host [name]
     HostName [ip-or-hostname]
     Port [port_number]
     User [user]
+    ProxyCommand ssh -W %h:%p proxy
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa
 ```
