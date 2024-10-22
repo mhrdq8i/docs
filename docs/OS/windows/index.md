@@ -115,6 +115,16 @@ netstat -nao
 
 - Follow the official [link] in **individual** mode
 
+## Battery
+
+Check the battery health status
+
+Run this command into the CMD
+
+```cmd
+powercfg /batteryreport
+```
+
 <!-- links -->
 
 [link]: https://chocolatey.org/install#individual
