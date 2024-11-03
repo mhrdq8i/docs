@@ -178,6 +178,14 @@ kubectl rollout undo <deployments/deployment-name> # go to pervious version
 kubectl rollout undo <deployments/deployment-name> --to-revision <rv-no> # go to pervious version
 watch -d kubectl get replicasets
 ```
+
+### watch and debug command
+
+```bash
+kubectl describe <resource> <resource-name>
+kubectl events --for pod/web-pod-13je7 --watch
+kubectl logs -f <resource-name>
+```
 <!-- links -->
 [commands]: ../../assets/kuber/cheatsheet/cs-commands.jpg
 [cheatsheet]: ../../assets/kuber/cheatsheet/cs-CheatSheet.jpg
