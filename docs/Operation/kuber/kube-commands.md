@@ -182,9 +182,10 @@ watch -d kubectl get replicasets
 ### watch and debug command
 
 ```bash
-kubectl describe <resource> <resource-name>
-kubectl events --for pod/web-pod-13je7 --watch
+kubectl describe <resource-type> <resource-name>
 kubectl logs -f <resource-name>
+kubectl events --for <resource-type>/<resource-name> --watch
+kubectl events --types=Warning,Normal
 ```
 <!-- links -->
 [commands]: ../../assets/kuber/cheatsheet/cs-commands.jpg
