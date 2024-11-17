@@ -316,6 +316,12 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![diagnostic-probes-2]
 
+### Probe LifeCycle
+
+![prob-life-cycle-1]
+![prob-life-cycle-2]
+![prob-life-cycle-3]
+
 ### K8S debug flowchart
 
 ![k-debug-flowchart]
@@ -382,6 +388,9 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [pod-config-methods]: ../../assets/kuber/kinpic/S05-config-map-methods.png
 [diagnostic-probes-1]: ../../assets/kuber/kinpic/S05-k8s-probes-1.png
 [diagnostic-probes-2]: ../../assets/kuber/kinpic/S05-k8s-probes-2.png
+[prob-life-cycle-1]: ../../assets/kuber/kinpic/porb-lifecycle-1.png
+[prob-life-cycle-2]: ../../assets/kuber/kinpic/porb-lifecycle-2.png
+[prob-life-cycle-3]: ../../assets/kuber/kinpic/porb-lifecycle-3.jpg
 
 [apiserver-base-tls]: ../../assets/kuber/kinpic/S07-security-tls-certs.png
 [certs-types]: ../../assets/kuber/kinpic/S07-security-cert-types.png

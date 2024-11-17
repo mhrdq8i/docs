@@ -576,5 +576,10 @@ Test bpcopy command
 echo 'go to my clipboard' | pbcopy
 ```
 
+## Great Cheat Sheet
+
+![linux-commands-cheat-sheet]
+
 <!-- external link -->
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
+[linux-commands-cheat-sheet]: ../../../assets/gnu_linux/chsh-1.jpg
