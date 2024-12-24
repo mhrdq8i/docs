@@ -9,12 +9,12 @@
   <table>
       <tr>
           <td>
-              <div><img src=" ../../../../assets/gnu_linux/lvm1.png"></div>
-              <div><img src=" ../../../../assets/gnu_linux/lvm3.png"></div>
+              <div><img src=" ../../../../../../assets/gnu_linux/lvm1.png"></div>
+              <div><img src=" ../../../../../../assets/gnu_linux/lvm3.png"></div>
           </td>
           <td>
-              <div><img src=" ../../../../assets/gnu_linux/lvm4.png"></div>
-              <div><img src=" ../../../../assets/gnu_linux/lvm2.png" ></div>
+              <div><img src=" ../../../../../../assets/gnu_linux/lvm4.png"></div>
+              <div><img src=" ../../../../../../assets/gnu_linux/lvm2.png" ></div>
           </td>
       </tr>
   </table>
@@ -582,4 +582,4 @@ echo 'go to my clipboard' | pbcopy
 
 <!-- external link -->
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
-[linux-commands-cheat-sheet]: ../../../assets/gnu_linux/chsh-1.jpg
+[linux-commands-cheat-sheet]: ../../../../assets/gnu_linux/chsh-1.jpg

@@ -1,5 +1,4 @@
-
-# DevOps
+# OPS
 
 I write all my tasks and jobs that I've ever done.
 
@@ -11,6 +10,6 @@ I also write provision tools such as [Ansible] and hashicorp tools like [Terrafo
 
 For containerization and orchestration I use [Docker] and [Kubernetes]
 
-[Git]: svc/git.md
-[Kubernetes]: kuber/cheatsheet.md
+[Git]: Version_Controller/git.md
+[Kubernetes]: kubernetes/cheatsheet.md
 [Docker]: docker/index.md
