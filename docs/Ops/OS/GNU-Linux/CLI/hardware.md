@@ -85,3 +85,16 @@ Get the hardware serial number and info
 cd /sys/class/dmi/id/
 cat /sys/class/dmi/id/board_serial
 ```
+
+## Modern Linux BOOT Process
+
+Bios/UEFI -> POST -> Bootloader --> Kernel --> Init Process
+
+<h4>
+  <details>
+    <summary>
+      Modern Linux BOOT Process
+    </summary>
+    <img src="../../../../assets/gnu_linux/post-bios-uefi-bootloader.jpg">
+</details>
+</h4>
