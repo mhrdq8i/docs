@@ -86,7 +86,7 @@ cd /sys/class/dmi/id/
 cat /sys/class/dmi/id/board_serial
 ```
 
-## Modern Linux BOOT Process
+## Linux Boot Process Overview
 
 Bios/UEFI -> POST -> Bootloader --> Kernel --> Init Process
 
