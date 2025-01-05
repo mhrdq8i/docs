@@ -98,15 +98,25 @@
 +--------------------+
 ```
 
+## Memory Section by Threads
+
+| Memory Region | Shared | Private |
+| - | - | - |
+| Code Segment (Text) | Yes | No |
+| Data Segment (**Initialized** global/static variables) <br> BSS (**Uninitialized** global/static variables) | Yes | No |
+| Heap | Yes| No |
+| Mapped Memory | Yes | No |
+| Thread-Local Storage (TLS) | No | Yes |
+| Stack | No | Yes |
+| Registers (CPU) | No| Yes |
+
 <details>
   <summary>
     Get More View
   </summary>
-
-<img src="../assets/mm/memory-layout-in-c.png">
-<img src="../assets/mm/memory-layout-in-c-2.jpg">
-<img src="../assets/mm/memory-layout-section.jpg">
-
+  <img src="../../assets/mm/memory-layout-in-c.png">
+  <img src="../../assets/mm/memory-layout-in-c-2.jpg">
+  <img src="../../assets/mm/memory-layout-section.jpg">
 </details>
 
 ## External Resources
