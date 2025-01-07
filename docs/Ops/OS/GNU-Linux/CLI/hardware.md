@@ -95,6 +95,6 @@ Bios/UEFI -> POST -> Bootloader --> Kernel --> Init Process
     <summary>
       Modern Linux BOOT Process
     </summary>
-    <img src="../../../../assets/gnu_linux/post-bios-uefi-bootloader.jpg">
+    <img src="../../../../../../../assets/gnu_linux/post-bios-uefi-bootloader.jpg">
 </details>
 </h4>
