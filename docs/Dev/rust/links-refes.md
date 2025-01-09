@@ -11,9 +11,10 @@
 - [enum Option][eo]
 - [ownership]
 
-### Rust by Examples
+### Other Official Links
 
-- [String][rbye-str]
+- [Rust by Example][rustbyexample]
+- [Nomicon][nomicon] The Rustonomicon is a documentation site that provides in-depth information about Rust's low-level details and advanced features.
 
 ## Non-Official Rust's Links
 
@@ -43,7 +44,8 @@
 [JonGjengset]: https://www.youtube.com/@jonhoo
 [Rustacean]: https://rustacean-station.org
 [wrbsuhu]:https://jyn.dev/bootstrapping-rust-in-2023
-[rbye-str]: https://doc.rust-lang.org/rust-by-example/std/str.html
+[rustbyexample]: https://doc.rust-lang.org/rust-by-example/index.html
+[nomicon]: https://doc.rust-lang.org/nomicon/
 [stack-only-copy]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#stack-only-data-copy
 [mwmp]: https://doc.rust-lang.org/book/ch05-03-method-syntax.html#methods-with-more-parameters
 [af]: https://doc.rust-lang.org/book/ch05-03-method-syntax.html#associated-functions
