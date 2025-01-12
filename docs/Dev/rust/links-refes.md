@@ -22,6 +22,7 @@
 
 - [rust-learning]
 - [awesome-rust]
+- [exercise-rust]
 
 ### Youtube & Podcasts
 
@@ -60,3 +61,4 @@
 [regui]: https://www.egui.rs
 [actix]: https://actix.rs
 [rinf]: https://github.com/cunarist/rinf
+[exercise-rust]: https://rust-exercises.com/
