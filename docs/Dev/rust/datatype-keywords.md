@@ -120,7 +120,7 @@ You can return early from a function by using the return keyword and specifying 
 
 ### Statements
 
- are instructions that perform some action and do not return a value.
+are instructions that perform some action and do not return a value.
 
 - Creating a variable and assigning a value to it with the _let_ keyword is a statement
 - The declaration statement in the program is called a defining declaration statement or definition for short
@@ -128,7 +128,7 @@ You can return early from a function by using the return keyword and specifying 
 
 ### Expressions
 
-  Expressions evaluate to a resultant value
+Expressions evaluate to a resultant value
 
 - Expressions can be part of _statements_, that equal to Expression Statement
 - Calling a function is an expression
@@ -154,7 +154,101 @@ Expressions do not include ending semicolons. If you add a semicolon to the end 
 
 > The `let y = 6` statement does not return a value, so there isn’t anything for _x_ to bind to. This is different from what happens in other languages, such as _C_ and _Ruby_, where the assignment returns the value of the assignment. In those languages, you can write `x = y = 6` and have both _x_ and _y_ have the value _6_ that is not the case in Rust
 
+## Complete List of Keywords
+
+### Strict Keywords (always reserved)
+
+These keywords can only be used in their designated contexts.
+
+- `as` Perform type casting or rename imports.
+- `async` Mark a function or block as asynchronous.
+- `await` Pause execution until a future completes.
+- `break` Exit a loop or match expression.
+- `const` Define constants or constant functions.
+- `continue` Skip to the next iteration of a loop.
+- `crate` Refer to the current crate or import the root module.
+- `dyn` Indicate dynamic dispatch for trait objects.
+- `else` Define the fallback branch of an if or if let expression.
+- `enum` Define an enumeration.
+- `extern` Link to external functions or crates.
+- `false` Boolean literal representing falsity.
+- `fn` Define a function.
+- `for` Iterate over an iterator or range.
+- `if` Conditional branching.
+- `impl` Implement functionality for a type.
+- `in` Used in for loops to specify the iterator.
+- `let` Bind a value to a variable.
+- `loop` Create an infinite loop.
+- `match` Pattern matching.
+- `mod` Define a module.
+- `move` Indicate that a closure takes ownership of its captured variables.
+- `mut` Declare mutability.
+- `pub` Make an item public.
+- `ref` Bind by reference in patterns.
+- `return` Return a value from a function.
+- `Self` Alias for the implementing type in traits or impl blocks.
+- `self` Refer to the current module or method receiver.
+- `static` Define a global variable or lifetime.
+- `struct` Define a structure.
+- `super` Refer to the parent module.
+- `trait` Define a trait.
+- `true` Boolean literal representing truth.
+- `type` Define a type alias.
+- `union` Define a union (unsafe Rust).
+- `unsafe` Mark code that bypasses Rust's safety guarantees.
+- `use` Import items into the current scope.
+- `where` Specify constraints on generic types.
+- `while` Loop while a condition is true.
+
+### Reserved Keywords (not currently used but reserved for future use)
+
+These keywords are reserved for potential future use and cannot be used as identifiers.
+
+- `abstract`
+- `become`
+- `box`
+- `do`
+- `final`
+- `macro`
+- `override`
+- `priv`
+- `try`
+- `typeof`
+- `unsized`
+- `virtual`
+- `yield`
+
+### Weak Keywords (context-dependent)
+
+These keywords have special meaning only in specific contexts and can otherwise be used as identifiers.
+
+- `default` Used in impl blocks to provide default implementations.
+- `macro_rules` Define a macro.
+- `union` Define a union (usable as an identifier outside of union definitions).
+- `dyn` Used for dynamic dispatch (usable as an identifier in other contexts).
+
+### Some Important Macros in Rust
+
+- `macro_rules!` Define a macro.
+- `cfg!` Conditional compilation.
+- `include!` Include a file at compile time.
+- `include_str!` Include a file as a string.
+- `include_bytes!` Include a file as a byte array.
+- `concat!` Concatenate literals.
+- `env!` Access environment variables at compile time.
+- `option_env!` Access environment variables optionally.
+- `format!` Format a string.
+- `panic!` Cause a panic.
+- `assert!` Assert a condition.
+- `assert_eq!` Assert equality.
+- `assert_ne!` Assert inequality.
+- `unreachable!` Mark code as unreachable.
+- `unimplemented!` Mark code as unimplemented.
+- `todo!` Mark code as a todo item.
+- `dbg!` Debug print a value.
+
 <!-- links -->
+
 [DTs]: https://doc.rust-lang.org/book/ch03-02-data-types.html#data-types
 [STs]: https://doc.rust-lang.org/book/ch03-02-data-types.html#scalar-types
 [Ints]: https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-types
