@@ -4,17 +4,22 @@
 
 ### Rust Book
 
-- [Stack-Only Data: Copy][stack-only-copy]
-- [Methods with More Parameters][mwmp]
-- [Associated Functions][af]
-- [Defining an Enum][dae]
-- [enum Option][eo]
-- [ownership]
+- [Rust Book]
+- [Async Book]
+
+### References
+
+- [The Rust Standard Library Docs]
+
+### Events
+
+- [Rust Blog]
+- [This Week in Rust]
 
 ### Other Official Links
 
-- [Rust by Example][rustbyexample]
-- [Nomicon][nomicon] The Rustonomicon is a documentation site that provides in-depth information about Rust's low-level details and advanced features.
+- [Rust by Example]
+- [Nomicon] The Rustonomicon is a documentation site that provides in-depth information about Rust's low-level details and advanced features.
 
 ## Non-Official Rust's Links
 
@@ -24,15 +29,27 @@
 - [awesome-rust]
 - [exercise-rust]
 
+### Practical
+
+- [Easy Rust]
+- [Comprehensive Rust 🦀]
+
+### Operation Systems in Rust
+
+- [Redox OS]
+- [Philipp Oppermann]
+
 ### Youtube & Podcasts
 
 - [Rustacean]
-- [Jon Gjengset][JonGjengset]
-- [timClicks]
+- [Jon Gjengset]
+- [tim Clicks]
+- [No Boilerplate]
+- [Code to the Moon]
 
 ### Articles & Papers
 
-- [Lifetime in Rust - Arian Eqbali][LifetimeRustArianEqbali]
+- [Lifetime in Rust - Arian Eqbali]
 - [Why is Rust's build system uniquely hard to use][wrbsuhu]
 - [Zero cost abstractions: Rust vs C++][zcbrcpp]
 - [An immediate mode GUI library written in Rust][regui]
@@ -41,24 +58,31 @@
 
 - [Actix]
 - [Rinf: Rust in Flutter][rinf]
+
 <!-- links -->
-[JonGjengset]: https://www.youtube.com/@jonhoo
+
+[The Rust Standard Library Docs]: https://doc.rust-lang.org/std/
+[Rust Book]: https://doc.rust-lang.org/book/
+[Rust by Example]: https://doc.rust-lang.org/rust-by-example/index.html
+[Nomicon]: https://doc.rust-lang.org/nomicon/
+[Jon Gjengset]: https://www.youtube.com/@jonhoo
 [Rustacean]: https://rustacean-station.org
-[wrbsuhu]:https://jyn.dev/bootstrapping-rust-in-2023
-[rustbyexample]: https://doc.rust-lang.org/rust-by-example/index.html
-[nomicon]: https://doc.rust-lang.org/nomicon/
-[stack-only-copy]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#stack-only-data-copy
-[mwmp]: https://doc.rust-lang.org/book/ch05-03-method-syntax.html#methods-with-more-parameters
-[af]: https://doc.rust-lang.org/book/ch05-03-method-syntax.html#associated-functions
-[dae]: https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#defining-an-enum
-[eo]: https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#the-option-enum-and-its-advantages-over-null-values
-[ownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
+[wrbsuhu]: https://jyn.dev/bootstrapping-rust-in-2023
 [rust-learning]: https://github.com/ctjhoa/rust-learning
 [awesome-rust]: https://github.com/rust-unofficial/awesome-rust/
 [zcbrcpp]: https://www.rottedfrog.co.uk/?p=24
-[timClicks]: https://www.youtube.com/@timClicks
-[LifetimeRustArianEqbali]: https://ariyan-eghbal.github.io/posts/rust_lifetimes/
+[tim Clicks]: https://www.youtube.com/@timClicks
+[Lifetime in Rust - Arian Eqbali]: https://ariyan-eghbal.github.io/posts/rust_lifetimes/
 [regui]: https://www.egui.rs
 [actix]: https://actix.rs
 [rinf]: https://github.com/cunarist/rinf
 [exercise-rust]: https://rust-exercises.com/
+[Easy Rust]: https://dhghomon.github.io/easy_rust/
+[Async Book]: https://rust-lang.github.io/async-book/
+[Redox OS]: https://www.redox-os.org/
+[Philipp Oppermann]: https://os.phil-opp.com/
+[Comprehensive Rust 🦀]: https://google.github.io/comprehensive-rust/
+[No Boilerplate]: https://www.youtube.com/c/NoBoilerplate
+[Rust Blog]: https://blog.rust-lang.org/
+[This Week in Rust]: https://this-week-in-rust.org/
+[Code to the Moon]: https://www.youtube.com/@codetothemoon
