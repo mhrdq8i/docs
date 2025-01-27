@@ -6,6 +6,7 @@
 
 ```bash
 sudo cat >> /etc/network/interfaces << EOF
+auto ens33
 iface ens33 inet static
    address  172.22.132.xxx
    netmask  255.255.255.0
@@ -14,6 +15,8 @@ iface ens33 inet static
    hostname debian-host
 EOF
 ```
+
+**Note:** The `auto` keyword ensures the interface is brought up on boot time.
 
 Apply your changes
 
