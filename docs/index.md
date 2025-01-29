@@ -1,6 +1,5 @@
-# [DocStack](index.md)
+# [DocStack](https://docs.geekfa.net/)
 
-Welcome to my _Documentation_ Platform
+My _Documentation_ Platform
 
-- [Dev](Dev/index.md)
-- [Ops](Ops/index.md)
+### [Dev](Dev/index.md)/[Ops](Ops/index.md)
