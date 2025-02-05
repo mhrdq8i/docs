@@ -141,8 +141,6 @@ These filesystems compress data to save space.
   - **Features**: Provides data integrity, snapshots, and compression.
   - **Use Case**: Suitable for high-performance storage solutions, though it's originally from Solaris but ported to Linux.
 
----
-
 ### Summary Table
 
 | **Filesystem** | **Type**       | **Purpose**                                     |
