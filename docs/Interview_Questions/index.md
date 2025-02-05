@@ -31,6 +31,8 @@ Most Frequently Asked Questions in DevOps Interview
 ## Kubernetes
 
 - [Service]
+- [CNI]
+- [Deployment]
 
 ## Ansible
 
@@ -73,6 +75,8 @@ Most Frequently Asked Questions in DevOps Interview
 <!-- kubernetes -->
 
 [Service]: kubernetes.md/#service
+[CNI]: kubernetes.md/#cni
+[Deployment]: kubernetes.md/#deployment
 
 <!-- nginx -->
 
