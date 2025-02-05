@@ -79,7 +79,6 @@ In Docker, **`shim`** and **`runc`** are components that play crucial roles in t
 Together, `runc` and `shim` enable Docker to provide a robust and flexible container runtime environment.
 
 ---
----
 
 ## Image Layers
 
