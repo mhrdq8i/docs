@@ -48,3 +48,44 @@ Examples include web applications, cloud services, and any task that involves tr
 - **I/O-bound:** Limited by input/output operations (disk, file access).
 - **Network-bound:** Limited by network speed and latency.
 
+---
+
+## Declarative and Imperative
+
+### Imperative
+
+Imperative programming is about how to do something. It gives the computer step-by-step instructions. Like telling someone exactly how to make a sandwich: take bread, add butter, then jam, etc.
+
+### Declarative
+
+Declarative is more about what you want, not how. It's like ordering a sandwich by just saying you want a peanut butter and jelly sandwich, without specifying each step. SQL is a good example here because you just say what data you want, not how to fetch it.
+
+### Key Characteristics
+
+#### Imperative
+
+- **State Changes:** Programs are sequences of statements that modify the program's state.
+- **Control Flow:** Uses loops, conditionals, and explicit instructions to control execution.
+- **Focus on "How":** Describes the exact steps to solve a problem.
+- **Examples:** C, Java, Python (when written imperatively), and assembly language.
+
+#### Declarative
+
+- **No Explicit State Changes:** The program describes the desired outcome, not the steps to achieve it.
+- **Focus on "What":** Specifies what needs to be done, not how.
+- **Higher Abstraction:** Often uses expressions, constraints, or rules.
+- **Examples:** SQL (for databases), HTML (for web page structure), functional programming languages (e.g., Haskell), and logic programming (e.g., Prolog).
+
+### Difference
+
+So the key difference is the level of detail in the instructions. **Imperative focuses on the process** and **declarative on the outcome**.
+
+### Examples
+
+Imperative examples could be languages like C, Python (with loops and conditionals), while declarative includes SQL, HTML.
+
+Also, state management. In imperative, you manage state changes explicitly. In declarative, the system handles state based on declarations.
+
+### Functional programming vs procedural
+
+Functional is more declarative, right? Because you describe what to compute without mutable state.
