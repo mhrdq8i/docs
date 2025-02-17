@@ -13,6 +13,7 @@ Automatic
 ```docker
 curl -sSL https://get.docker.com | sh
 ```
+
 Manual
 
 ```docker
@@ -131,7 +132,7 @@ docker save my_image•my_tag > my_image.tar.gz
 docker save my_image•my_tag --output my_image.tar
 
 # compress tar file to xz
-xz --compress my_image.tar 
+xz --compress my_image.tar
 ```
 
 Import/Export Container
@@ -258,7 +259,7 @@ You could use volumes mounted from data-only containers for portability.
 
 EXPOSE is a keyword in a Dockerfile that specifies a port number that the container listens on. When you use EXPOSE, you're telling Docker that your application listens on a specific port. This information is stored in the Docker image's configuration.
 
-It ***does not actually publish the ports*** or make them **accessible** from outside the container.
+It **_does not actually publish the ports_** or make them **accessible** from outside the container.
 
 When you `EXPOSE` a port in a Dockerfile, you're essentially documenting that the containerized application or service running inside the container is **expected** to listen on that port for incoming connections.
 
@@ -312,3 +313,79 @@ Output filter over columns
 ```docker
 docker images --format '{{.Repository}}:{{.Tag}}'
 ```
+
+### SHIM & RUNC
+
+In Docker, **`shim`** and **`runc`** are components that play crucial roles in the container lifecycle, but they serve different purposes. Here's a detailed explanation of their differences:
+
+### **1. `runc`**
+
+- **What is `runc`?**
+
+  - `runc` is a lightweight, standalone CLI tool for spawning and running containers according to the **Open Container Initiative (OCI)** specification.
+  - It is the reference implementation of the OCI runtime specification and is used by Docker (and other container runtimes) to create and manage containers.
+  - `runc` is responsible for the low-level tasks of setting up the container environment, such as namespaces, cgroups, and filesystem mounts.
+
+- **Key Responsibilities**:
+
+  - Creating and starting containers.
+  - Setting up isolation using Linux kernel features (namespaces, cgroups, etc.).
+  - Managing the container lifecycle (start, stop, pause, delete).
+  - Ensuring compliance with the OCI runtime specification.
+
+- **How Docker Uses `runc`**:
+
+  - Docker uses `runc` as its default container runtime to create and run containers.
+  - When you run a container with Docker, it delegates the actual container creation and execution to `runc`.
+
+- **Example**:
+  - When you run `docker run`, Docker prepares the container configuration (e.g., image, networking, volumes) and then calls `runc` to create and start the container.
+
+### **2. `containerd-shim` (or `shim`)**
+
+- **What is `shim`?**
+
+  - The `shim` is a lightweight process that sits between the container runtime (like `runc`) and the container manager (like Docker or Kubernetes).
+  - It acts as an intermediary to decouple the container lifecycle from the Docker daemon or other high-level managers.
+  - Each container has its own `shim` process.
+
+- **Key Responsibilities**:
+
+  - Managing the lifecycle of a single container.
+  - Keeping the container running even if the Docker daemon is restarted or crashes.
+  - Handling I/O streams (stdin, stdout, stderr) for the container.
+  - Reporting the container's exit status back to the container manager.
+
+- **Why is `shim` Needed?**
+
+  - Without the `shim`, if the Docker daemon crashes or is restarted, all running containers would also stop. The `shim` ensures that containers continue running independently of the Docker daemon.
+  - It also allows Docker to upgrade or restart without affecting running containers.
+
+- **How Docker Uses `shim`**:
+  - When Docker starts a container, it creates a `shim` process for that container.
+  - The `shim` then invokes `runc` to create and start the container.
+  - The `shim` _remains running as long as the container is running_, acting as a bridge between the container and Docker.
+
+### **Key Differences Between `shim` and `runc`**
+
+| Aspect                  | `runc`                                                                       | `shim`                                                                                     |
+| ----------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Purpose**             | Low-level container runtime for creating and running containers.             | Intermediary process to manage container lifecycle and decouple it from the Docker daemon. |
+| **Role**                | Implements the OCI specification to create and run containers.               | Manages the container process and ensures it runs independently of the Docker daemon.      |
+| **Lifecycle**           | Used to start, stop, and delete containers.                                  | Keeps the container running and handles I/O streams.                                       |
+| **Dependency**          | Directly interacts with the Linux kernel to set up namespaces, cgroups, etc. | Depends on `runc` to create the container but manages it afterward.                        |
+| **Number of Instances** | One `runc` process per container creation.                                   | One `shim` process per running container.                                                  |
+
+### **How They Work Together**
+
+1. When you run a container with Docker, the Docker daemon prepares the container configuration.
+2. Docker calls `containerd`, which then invokes `containerd-shim`.
+3. The `shim` process calls `runc` to create and start the container.
+4. Once the container is running, `runc` **_exits_**, but the `shim` **_remains_** active to manage the container's lifecycle and I/O.
+
+### **Summary**
+
+- **`runc`**: The low-level runtime that creates and runs containers.
+- **`shim`**: A helper process that ensures containers run independently of the Docker daemon and manages their lifecycle.
+
+Together, `runc` and `shim` enable Docker to provide a robust and flexible container runtime environment.
