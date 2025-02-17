@@ -62,14 +62,14 @@ Declarative is more about what you want, not how. It's like ordering a sandwich 
 
 ### Key Characteristics
 
-#### Imperative
+#### Impr
 
 - **State Changes:** Programs are sequences of statements that modify the program's state.
 - **Control Flow:** Uses loops, conditionals, and explicit instructions to control execution.
 - **Focus on "How":** Describes the exact steps to solve a problem.
 - **Examples:** C, Java, Python (when written imperatively), and assembly language.
 
-#### Declarative
+#### Dec
 
 - **No Explicit State Changes:** The program describes the desired outcome, not the steps to achieve it.
 - **Focus on "What":** Specifies what needs to be done, not how.
