@@ -29,7 +29,7 @@ Indexing is the core process that enables fast searching. During indexing, the t
 
   Example:
 
-  ```
+  ```csv
   Term      | Documents
   --------- | -----------
   elastic   | [doc1, doc2]
