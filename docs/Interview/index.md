@@ -2,6 +2,11 @@
 
 Most Frequently Asked Questions in DevOps Interview
 
+## HR
+
+- [AZenglish]
+- [Note & Tips]
+
 ## SWE
 
 ## Linux
@@ -49,7 +54,13 @@ Most Frequently Asked Questions in DevOps Interview
 
 <!-- ----- links ----- -->
 
+<!-- Note and Tips -->
+
+[AZenglish]: AZenglish.md/#azenglish
+[Note & Tips]: AZenglish.md/#body-language-tips
+
 <!-- linux -->
+
 [File Systems]: linux.md/#file-systems
 
 <!-- kernel -->
