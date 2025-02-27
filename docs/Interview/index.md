@@ -5,7 +5,7 @@ Most Frequently Asked Questions in DevOps Interview
 ## HR
 
 - [AZenglish]
-- [Note & Tips]
+  - [Note & Tips]
 
 ## SWE
 
