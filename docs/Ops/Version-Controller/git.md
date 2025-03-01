@@ -300,12 +300,12 @@ git push -f origin target-branch
     <summary>
       Toggle menu
     </summary>
-    <img src="../../../assets/svc/git-commands-00.jpg">
-    <img src="../../../assets/svc/git-commands-01.jpg">
-    <img src="../../../assets/svc/git-commands-02.jpg">
-    <img src="../../../assets/svc/git-commands-03.jpg">
-    <img src="../../../assets/svc/git-commands-04.jpg">
-    <img src="../../../assets/svc/git-commands-05.jpg">
-    <img src="../../../assets/svc/git-commands-06.jpg">
-    <img src="../../../assets/svc/git-commands-07.jpg">
+    <img src="../../assets/svc/git-commands-00.jpg">
+    <img src="../../assets/svc/git-commands-01.jpg">
+    <img src="../../assets/svc/git-commands-02.jpg">
+    <img src="../../assets/svc/git-commands-03.jpg">
+    <img src="../../assets/svc/git-commands-04.jpg">
+    <img src="../../assets/svc/git-commands-05.jpg">
+    <img src="../../assets/svc/git-commands-06.jpg">
+    <img src="../../assets/svc/git-commands-07.jpg">
 </details>

@@ -227,7 +227,26 @@ httP {
     }
 }
 ```
+
+## Hardening CheatSheet
+
+- Core configuration: server, location, and upstream blocks
+- Load balancing: round-robin, least_conn, and IP hash strategies
+- Caching and compression: proxy_cache and gzip
+- SSL/TLS: enabling HTTPS and managing certificates
+- Logging and monitoring: access_log and stub_status
+
+<h4>
+  <details>
+    <summary>
+      Hardening CheatSeet
+    </summary>
+    <img src="../../../assets/nginx/nginx-hardening-cheatsheet.jpg">
+</details>
+</h4>
+
 <!-- links -->
+
 [bust]: https://www.nginx.com/blog/rate-limiting-nginx
 [Certbot]: https://certbot.eff.org
 [CertbotDocs]: https://certbot.eff.org/docs
