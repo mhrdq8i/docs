@@ -67,13 +67,17 @@ Get the list of shortkeys
 
 ```bash
 gsettings list-recursively org.gnome.desktop.wm.keybindings
+or
+gsettings list-recursively org.gnome.desktop.wm.keybindings | grep switch-to-workspace
 ```
 
 Replace the value for the specific key
 
 ```bash
 gsettings set org.gnome.desktop.wm.keybindings key-name "[pattern]"
+
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right  "['<Super>Page_Down', '<Super><Alt>Right']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left   "['<Super>Page_Up', '<Super><Alt>Left']"
 ```
 
 ## snap
