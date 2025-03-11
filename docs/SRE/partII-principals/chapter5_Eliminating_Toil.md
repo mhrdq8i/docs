@@ -1,6 +1,6 @@
 # Part II Chapter 5 - Eliminating Toils
 
-## **Chapter 5: Eliminating Toil - Recap**
+## Recap
 
 ### Review
 
@@ -20,37 +20,43 @@ Also, the chapter might touch on the importance of **measuring toil**. How do yo
 
 **More time for engineers to work on projects that improve system reliability, scalability, or efficiency**. Higher job satisfaction as engineers engage in more challenging and creative work rather than repetitive tasks.
 
-There are **specific frameworks or methodologies mentioned**. Maybe the ***50% rule***, where SREs should spend no more than 50% of their time on toil, allowing the rest for project work. That could be part of the chapter's recommendations.
+There are **specific frameworks or methodologies mentioned**. Maybe the **_50% rule_**, where SREs should spend no more than 50% of their time on toil, allowing the rest for project work. That could be part of the chapter's recommendations.
 
 Also, the chapter might discuss the difference between toil and other types of work. For example, not all operational work is toil. Some operational tasks are necessary and can't be automated, but **toil specifically refers to the repetitive, low-value tasks**.
 
 ### Definitions
 
-**1. Definition of Toil:**
+#### **1. Definition of Toil:**
+
 Toil is defined as manual, repetitive, automatable work that lacks enduring value. It scales with system growth, consuming engineers' time without contributing to innovation or system improvement.
 
-**2. Impact of Toil:**
+#### **2. Impact of Toil:**
+
 Toil hinders productivity and innovation by diverting engineers from strategic tasks. As systems scale, toil increases linearly, creating inefficiencies and reducing job satisfaction.
 
-**3. Strategies for Elimination:**
+#### **3. Strategies for Elimination:**
 
 - **Automation:** Prioritize automating repetitive tasks (e.g., deployments, log analysis) to free up engineering time.
 - **System Design:** Build self-healing systems, robust monitoring, and proactive alerting to minimize manual intervention.
 - **Cost-Benefit Analysis:** Assess whether automating a task justifies the initial investment versus long-term time savings.
 
-**4. Cultural Practices:**
+#### **4. Cultural Practices:**
 
 - **50% Rule:** Encourage teams to limit toil to ≤50% of their time, reserving the rest for project work.
 - **Metrics:** Track toil via time logs, task categorization, or surveys to prioritize automation efforts.
 
-**5. Differentiation from Operational Work:**
+#### **5. Differentiation from Operational Work:**
+
 Not all ops work is toil. Necessary operational tasks (e.g., incident response) are distinct from low-value, repetitive toil.
 
-**6. Outcomes:**
+#### **6. Outcomes:**
+
 Reducing toil boosts productivity, fosters innovation, and improves engineer morale by enabling focus on high-impact projects (e.g., reliability, scalability).
 
-**7. Examples:**
+#### **7. Examples:**
+
 Case studies from Google illustrate automation of scaling operations, deployment pipelines, and log analysis, demonstrating measurable efficiency gains.
 
-**Conclusion:**
+### **Conclusion:**
+
 Eliminating toil is central to SRE philosophy, ensuring engineering efforts drive long-term value and system resilience.
