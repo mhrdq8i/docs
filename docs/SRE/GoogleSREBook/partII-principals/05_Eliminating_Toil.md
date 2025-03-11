@@ -1,4 +1,4 @@
-# Part II Chapter 5 - Eliminating Toils
+# 05 Eliminating Toils
 
 ## Recap
 
