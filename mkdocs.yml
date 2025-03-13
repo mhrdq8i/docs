@@ -95,11 +95,13 @@ extra:
 # Extensions
 markdown_extensions:
   - abbr
-  - admonition
   - attr_list
   - def_list
   - footnotes
   - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - toc:
       permalink: true
   - pymdownx.arithmatex:
