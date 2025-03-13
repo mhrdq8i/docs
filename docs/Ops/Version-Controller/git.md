@@ -256,7 +256,6 @@ would be:
   <img src="../../docs/assets/svc/git-rebase-1.jpg">
 </details>
 
-
 Delete an old commit
 
 ```bash
@@ -276,7 +275,7 @@ git push -f origin branch-name
 Checkout to main branch
 
 ```bash
-git rebase master
+git checkout master
 ```
 
 Give it the last changes from main branch of remote repository
@@ -292,7 +291,7 @@ git branch -a
 git checkout target-branch
 ```
 
-Give the last changes from main branch of local repository
+Give the last changes **from main branch of local repository**
 
 ```bash
 git rebase master
@@ -306,7 +305,7 @@ git status
 git add .
 ```
 
-Put temp branch changes to target-branch
+Put temp branch changes to **target-branch**
 
 ```bash
 git rebase --continue
