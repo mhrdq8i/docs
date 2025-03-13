@@ -121,9 +121,9 @@ ws# Memory Management
 
 ??? example "Expand to show alternate icon sets"
 
-  ===
+    === ":octicons-mark-github-16: Octicons"
 
-    ![pic1](../../assets/mm/memory-layout-section.jpg)
+      ![pic1](../../assets/mm/memory-layout-section.jpg)
 
 ## External Resources
 
