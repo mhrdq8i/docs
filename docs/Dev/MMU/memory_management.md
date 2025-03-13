@@ -112,9 +112,9 @@ ws# Memory Management
 
 ??? example "Expand to show alternate icon sets"
 
-    ![pic1](../../assets/mm/memory-layout-in-c.png)
-    ![pic2](../../assets/mm/memory-layout-in-c-2.jpg)
-    ![pic3](../../assets/mm/memory-layout-section.jpg)
+  ![pic1](../../assets/mm/memory-layout-in-c.png)
+  ![pic2](../../assets/mm/memory-layout-in-c-2.jpg)
+  ![pic3](../../assets/mm/memory-layout-section.jpg)
 
 ## External Resources
 
