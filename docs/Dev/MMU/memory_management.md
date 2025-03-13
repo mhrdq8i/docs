@@ -110,7 +110,7 @@ ws# Memory Management
 | Stack                                                                                                       | No     | Yes     |
 | Registers (CPU)                                                                                             | No     | Yes     |
 
-??? example "Expand to show alternate icon sets"
+??? Expand to show more images
 
   ![pic1](../../assets/mm/memory-layout-in-c.png)
   ![pic2](../../assets/mm/memory-layout-in-c-2.jpg)
