@@ -1,7 +1,4 @@
 {
-  "docker.environment": {
-    "DOCKER_HOST": "tcp://172.16.2.2:2375"
-  },
   "cSpell.words": [
     "Kompose",
     "Kustomize"
