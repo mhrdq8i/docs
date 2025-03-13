@@ -110,7 +110,7 @@ ws# Memory Management
 | Stack                                                                                                       | No     | Yes     |
 | Registers (CPU)                                                                                             | No     | Yes     |
 
-??? Expand to show more images
+??? "Expand to show more images"
 
     ![pic1](../../assets/mm/memory-layout-in-c.png)
     ![pic2](../../assets/mm/memory-layout-in-c-2.jpg)
