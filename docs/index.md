@@ -2,7 +2,7 @@
 
 My _Documentation_ Platform
 
-**The main section is:** [Dev](Dev/index.md)&[Ops](Ops/index.md)
+**The main section is:** [Dev](Dev/index.md) & [Ops](Ops/index.md)
 
 I also write down Software Engineering concepts and methods that I faced them before, in section [SWE](SWE/index.md)
 

@@ -48,4 +48,3 @@
               example: fontawesome/solid/flask
               quote: fontawesome/solid/quote-left
         ```
-
