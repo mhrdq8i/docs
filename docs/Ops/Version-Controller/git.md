@@ -253,7 +253,7 @@ would be:
   <summary>
     Get more view of "git rebase"
   </summary>
-  <img src="../../docs/assets/svc/git-rebase-1.jpg">
+  <img src="../../../../docs/assets/svc/git-rebase-1.jpg">
 </details>
 
 Delete an old commit
