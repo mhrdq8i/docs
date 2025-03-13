@@ -195,21 +195,21 @@ git switch -
 
 === "Reset Soft"
 
-  ```bash
-  git reset --soft <commit-id>
-  ```
+```bash
+git reset --soft <commit-id>
+```
 
 === "Reset Mixed"
 
-  ```bash
-  git reset --mixed <commit-id>
-  ```
+```bash
+git reset --mixed <commit-id>
+```
 
 === "Reset Hard"
 
-  ```bash
-  git reset --hard <commit-id>
-  ```
+```bash
+git reset --hard <commit-id>
+```
 
 #### Git revert
 
@@ -225,11 +225,37 @@ git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 
 ### git rebase
 
-Get the list of last commits
+Reapply commits on top of another base tip
 
 ```bash
-git log --pretty=oneline
+git rebase master topic
 ```
+
+```
+Assume the following history exists and the current branch is "topic":
+              A---B---C topic
+            /
+        D---E---F---G master
+
+From this point, the result of either of the following commands:
+
+    git rebase master
+    git rebase master topic
+
+would be:
+
+                      A'--B'--C' topic
+                    /
+        D---E---F---G master
+```
+
+<details>
+  <summary>
+    Get more view of "git rebase"
+  </summary>
+  <img src="../../docs/assets/svc/git-rebase-1.jpg">
+</details>
+
 
 Delete an old commit
 
