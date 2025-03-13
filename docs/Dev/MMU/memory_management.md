@@ -100,30 +100,21 @@ ws# Memory Management
 
 ## Memory Section by Threads
 
-| Memory Region | Shared | Private |
-| - | - | - |
-| Code Segment (Text) | Yes | No |
-| Data Segment (**Initialized** global/static variables) <br> BSS (**Uninitialized** global/static variables) | Yes | No |
-| Heap | Yes| No |
-| Mapped Memory | Yes | No |
-| Thread-Local Storage (TLS) | No | Yes |
-| Stack | No | Yes |
-| Registers (CPU) | No| Yes |
-
-<details>
-  <summary>
-    Get More View
-  </summary>
-  <img src="../../../../assets/mm/memory-layout-in-c.png">
-  <img src="../../../../assets/mm/memory-layout-in-c-2.jpg">
-  <img src="../../../../assets/mm/memory-layout-section.jpg">
-</details>
+| Memory Region                                                                                               | Shared | Private |
+| ----------------------------------------------------------------------------------------------------------- | ------ | ------- |
+| Code Segment (Text)                                                                                         | Yes    | No      |
+| Data Segment (**Initialized** global/static variables) <br> BSS (**Uninitialized** global/static variables) | Yes    | No      |
+| Heap                                                                                                        | Yes    | No      |
+| Mapped Memory                                                                                               | Yes    | No      |
+| Thread-Local Storage (TLS)                                                                                  | No     | Yes     |
+| Stack                                                                                                       | No     | Yes     |
+| Registers (CPU)                                                                                             | No     | Yes     |
 
 ??? example "Expand to show alternate icon sets"
 
-    === ":octicons-mark-github-16: Octicons"
-
-      ![pic1](../../assets/mm/memory-layout-section.jpg)
+    ![pic1](../../assets/mm/memory-layout-in-c.png)
+    ![pic2](../../assets/mm/memory-layout-in-c-2.jpg)
+    ![pic3](../../assets/mm/memory-layout-section.jpg)
 
 ## External Resources
 
@@ -135,6 +126,7 @@ ws# Memory Management
 - [Memory Layout in C][ML-in-C]
 
 <!-- external links -->
+
 [MM-in-OS]: https://www.geeksforgeeks.org/memory-management-in-operating-system/
 [ML-of-C-Programs]: https://www.geeksforgeeks.org/memory-layout-of-c-program
 [MS-in-8086-MP]: https://www.geeksforgeeks.org/memory-segmentation-8086-microprocessor
