@@ -36,14 +36,14 @@ Toil hinders productivity and innovation by diverting engineers from strategic t
 
 #### **3. Strategies for Elimination:**
 
-- **Automation:** Prioritize automating repetitive tasks (e.g., deployments, log analysis) to free up engineering time.
-- **System Design:** Build self-healing systems, robust monitoring, and proactive alerting to minimize manual intervention.
-- **Cost-Benefit Analysis:** Assess whether automating a task justifies the initial investment versus long-term time savings.
+-   **Automation:** Prioritize automating repetitive tasks (e.g., deployments, log analysis) to free up engineering time.
+-   **System Design:** Build self-healing systems, robust monitoring, and proactive alerting to minimize manual intervention.
+-   **Cost-Benefit Analysis:** Assess whether automating a task justifies the initial investment versus long-term time savings.
 
 #### **4. Cultural Practices:**
 
-- **50% Rule:** Encourage teams to limit toil to ≤50% of their time, reserving the rest for project work.
-- **Metrics:** Track toil via time logs, task categorization, or surveys to prioritize automation efforts.
+-   **50% Rule:** Encourage teams to limit toil to ≤50% of their time, reserving the rest for project work.
+-   **Metrics:** Track toil via time logs, task categorization, or surveys to prioritize automation efforts.
 
 #### **5. Differentiation from Operational Work:**
 

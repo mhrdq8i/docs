@@ -20,9 +20,9 @@ Also, the chapter might discuss the **importance of communication between SREs a
 
 Chapter 3 includes sections like **"Managing Risk"**, **"Defining and Using Error Budgets"**, **"Risk Tolerance"**.
 
-- In **"Managing Risk"** they probably talk about the inevitability of failure and the need for SREs to manage rather than eliminate risk.
-- **"Defining and Using Error Budgets"** explains how error budgets work as a tool to balance reliability and development velocity.
-- **"Risk Tolerance"** discusses setting appropriate SLOs based on business needs. The summary would tie these together.
+-   In **"Managing Risk"** they probably talk about the inevitability of failure and the need for SREs to manage rather than eliminate risk.
+-   **"Defining and Using Error Budgets"** explains how error budgets work as a tool to balance reliability and development velocity.
+-   **"Risk Tolerance"** discusses setting appropriate SLOs based on business needs. The summary would tie these together.
 
 So putting it all together, the chapter explains that SREs **embrace risk by quantifying it through SLOs and error budgets**, allowing teams to take calculated risks while maintaining an acceptable level of reliability. **It emphasizes balancing feature development with system stability**, using error budgets as a control mechanism, and fostering a culture that learns from failures without blame.
 
@@ -33,22 +33,22 @@ So putting it all together, the chapter explains that SREs **embrace risk by qua
 
 2. **Service Level Objectives (SLOs) and Error Budgets:**
 
-   - **SLOs** define acceptable reliability targets (e.g., 99.9% uptime).
-   - **Error budgets** represent the allowable margin for failure (e.g., 0.1% downtime). Teams can deploy new features while within the budget but must prioritize reliability if the budget is exhausted.
-   - This balance ensures innovation without compromising critical system stability.
+    - **SLOs** define acceptable reliability targets (e.g., 99.9% uptime).
+    - **Error budgets** represent the allowable margin for failure (e.g., 0.1% downtime). Teams can deploy new features while within the budget but must prioritize reliability if the budget is exhausted.
+    - This balance ensures innovation without compromising critical system stability.
 
 3. **Risk Tolerance:**
 
-   - SLOs align with business and user needs. Critical services (e.g., user-facing apps) have stricter SLOs, while internal tools may tolerate higher risk.
-   - Teams avoid over-engineering for reliability (which stifles innovation) or under-engineering (leading to frequent outages).
+    - SLOs align with business and user needs. Critical services (e.g., user-facing apps) have stricter SLOs, while internal tools may tolerate higher risk.
+    - Teams avoid over-engineering for reliability (which stifles innovation) or under-engineering (leading to frequent outages).
 
 4. **Trade-offs Between Reliability and Development:**
    Error budgets guide decisions: teams push releases when budgets are healthy and focus on stability when budgets are depleted. This fosters collaboration between SREs and product teams.
 
 5. **Learning from Failure:**
 
-   - **Post-mortems** analyze incidents without blame, focusing on systemic improvements.
-   - Systems are designed to handle failures gracefully (e.g., redundancy, graceful degradation).
+    - **Post-mortems** analyze incidents without blame, focusing on systemic improvements.
+    - Systems are designed to handle failures gracefully (e.g., redundancy, graceful degradation).
 
 6. **Reducing Toil:**
    Automation minimizes repetitive manual tasks, freeing SREs to focus on engineering solutions that mitigate risk and enhance reliability.

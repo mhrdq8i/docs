@@ -30,45 +30,45 @@ Service Level Objectives (SLOs) are internal targets that define acceptable leve
 
 #### **2. Key Components**
 
-- **SLIs (Service Level Indicators):** Quantifiable measures of service performance (e.g., 99th percentile latency, error rates).
-- **SLOs:** Targets for SLIs (e.g., "99.9% of requests under 300ms").
-- **SLAs (Service Level Agreements):** External commitments derived from SLOs, often tied to business consequences.
+-   **SLIs (Service Level Indicators):** Quantifiable measures of service performance (e.g., 99th percentile latency, error rates).
+-   **SLOs:** Targets for SLIs (e.g., "99.9% of requests under 300ms").
+-   **SLAs (Service Level Agreements):** External commitments derived from SLOs, often tied to business consequences.
 
 #### **3. Error Budgets**
 
-- The "error budget" represents the allowable margin for errors or downtime without violating the SLO (e.g., 0.1% allowable failure in a 99.9% uptime SLO).
-- Teams use error budgets to prioritize work:
-  - **Under budget:** Focus on feature launches and innovation.
-  - **Exhausted budget:** Prioritize reliability improvements (e.g., reducing technical debt).
+-   The "error budget" represents the allowable margin for errors or downtime without violating the SLO (e.g., 0.1% allowable failure in a 99.9% uptime SLO).
+-   Teams use error budgets to prioritize work:
+    -   **Under budget:** Focus on feature launches and innovation.
+    -   **Exhausted budget:** Prioritize reliability improvements (e.g., reducing technical debt).
 
 #### **4. Setting Effective SLOs**
 
-- **User-Centric Metrics:** Align with user journeys (e.g., "checkout process completes within 2 seconds").
-- **Realism:** Avoid overly strict or lenient targets; collaborate with stakeholders to define achievable goals.
-- **Review and Adapt:** Regularly update SLOs as services evolve and user expectations shift.
+-   **User-Centric Metrics:** Align with user journeys (e.g., "checkout process completes within 2 seconds").
+-   **Realism:** Avoid overly strict or lenient targets; collaborate with stakeholders to define achievable goals.
+-   **Review and Adapt:** Regularly update SLOs as services evolve and user expectations shift.
 
 #### **5. Monitoring and Alerting**
 
-- Instrument systems to track SLIs in real time.
-- Set actionable alerts based on SLO thresholds (e.g., alerting when error rates approach the budget limit).
-- Avoid "alert fatigue" by focusing on meaningful, actionable signals.
+-   Instrument systems to track SLIs in real time.
+-   Set actionable alerts based on SLO thresholds (e.g., alerting when error rates approach the budget limit).
+-   Avoid "alert fatigue" by focusing on meaningful, actionable signals.
 
 #### **6. Cultural Impact**
 
-- SLOs foster collaboration between SREs, developers, and business teams by providing a shared language.
-- Encourage data-driven decisions, reducing debates about prioritization.
-- Promote a culture of accountability and continuous improvement through post-mortems and iterative adjustments.
+-   SLOs foster collaboration between SREs, developers, and business teams by providing a shared language.
+-   Encourage data-driven decisions, reducing debates about prioritization.
+-   Promote a culture of accountability and continuous improvement through post-mortems and iterative adjustments.
 
 #### **7. Practical Considerations**
 
-- **Latency:** Measure percentiles (e.g., 99th) to capture tail latency.
-- **Availability:** Define what constitutes "success" (e.g., HTTP 200 responses).
-- **Burn Rate:** Track how quickly the error budget is consumed to preempt SLO violations.
+-   **Latency:** Measure percentiles (e.g., 99th) to capture tail latency.
+-   **Availability:** Define what constitutes "success" (e.g., HTTP 200 responses).
+-   **Burn Rate:** Track how quickly the error budget is consumed to preempt SLO violations.
 
 #### **8. Challenges**
 
-- Avoid conflating SLOs with perfection; focus on "good enough" reliability.
-- Ensure SLOs are measurable, specific, and tied to user impact.
+-   Avoid conflating SLOs with perfection; focus on "good enough" reliability.
+-   Ensure SLOs are measurable, specific, and tied to user impact.
 
 ### **Conclusion**
 
