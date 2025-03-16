@@ -16,6 +16,14 @@ System Design Acronyms
 
     ![pic1](../assets/swe/system_design_01)
 
+## CAP Theorem
+
+CAP Theorem
+
+??? "Expand to show image"
+
+    ![pic1](../assets/swe/CAP_01)
+
 ## CheatSheet
 
 System Design CheatSheet
