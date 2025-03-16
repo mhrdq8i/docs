@@ -129,8 +129,6 @@ For more advanced load-balancing requirements, you can use an **Ingress controll
 | **IPVS Mode**        | Round-Robin (rr)  | Supports multiple algorithms like lc, wrr, wlc, etc.            |
 | **Session Affinity** | None              | Can be set to ClientIP for sticky sessions.                     |
 
----
-
 ### **Conclusion**
 
 By default, Kubernetes uses a **round-robin** algorithm for load balancing traffic to pods behind a Service. This behavior can be customized using session affinity or by switching to advanced networking modes like IPVS, which support additional algorithms. For more complex use cases, external proxies or Ingress controllers can provide fine-grained control over load-balancing behavior.
@@ -147,45 +145,45 @@ The **CNI specification** defines a standard interface for container runtimes (l
 
 There is no fixed number of CNI plugins for Kubernetes because new plugins are continuously being developed, and existing ones are updated or deprecated over time. However, some of the most popular and widely used CNI plugins in the Kubernetes ecosystem include:
 
-1. **Calico**
+### 1. **Calico**
 
-    - Provides robust networking and network policy enforcement.
-    - Uses **BGP** for efficient routing and supports advanced security features.
-    - Works in **_L3_** network stack.
-    - Popular for production-grade Kubernetes clusters.
+  - Provides robust networking and network policy enforcement.
+  - Uses **BGP** for efficient routing and supports advanced security features.
+  - Works in **_L3_** network stack.
+  - Popular for production-grade Kubernetes clusters.
 
-2. **Flannel**
+### 2. **Flannel**
 
-    - A simple **overlay** network solution that satisfies the basic networking requirements of Kubernetes.
-    - Supports multiple backends like _VXLAN_, _UDP_, and _host-gw_.
-    - Ideal for smaller clusters or environments where simplicity is prioritized.
+  - A simple **overlay** network solution that satisfies the basic networking requirements of Kubernetes.
+  - Supports multiple backends like _VXLAN_, _UDP_, and _host-gw_.
+  - Ideal for smaller clusters or environments where simplicity is prioritized.
 
-3. **Cilium**
+### 3. **Cilium**
 
-    - Leverages **eBPF** for _high-performance networking_ and advanced security features.
-    - Supports **_L7_** network policies and integrates well with service meshes.
-    - Suitable for large-scale, high-performance environments.
+  - Leverages **eBPF** for _high-performance networking_ and advanced security features.
+  - Supports **_L7_** network policies and integrates well with service meshes.
+  - Suitable for large-scale, high-performance environments.
 
-4. **Weave Net**
+### 3. **Weave Net**
 
-    - An easy-to-use networking solution that creates a virtual network for containers.
-    - Automatically sets up an overlay network with encryption and DNS support.
-    - Suitable for small to medium-sized clusters.
+  - An easy-to-use networking solution that creates a virtual network for containers.
+  - Automatically sets up an overlay network with encryption and DNS support.
+- Suitable for small to medium-sized clusters.
 
-5. **Canal**
+### 4. **Canal**
 
-    - Combines Flannel for networking and Calico for network policies.
-    - Provides a hybrid solution for clusters that need both simple networking and advanced policy enforcement.
+  - Combines Flannel for networking and Calico for network policies.
+  - Provides a hybrid solution for clusters that need both simple networking and advanced policy enforcement.
 
-6. **Multus**
+### 5. **Multus**
 
-    - Allows pods to have multiple network interfaces, enabling multi-networking use cases.
-    - Often used in conjunction with other CNI plugins to provide additional network interfaces.
+  - Allows pods to have multiple network interfaces, enabling multi-networking use cases.
+  - Often used in conjunction with other CNI plugins to provide additional network interfaces.
 
-7. **Kube-Router**
+### 6. **Kube-Router**
 
-    - Combines networking, network policy, and service proxy functionality into a single lightweight solution.
-    - Focuses on performance and simplicity.
+  - Combines networking, network policy, and service proxy functionality into a single lightweight solution.
+  - Focuses on performance and simplicity.
 
 ### Conclusion
 
