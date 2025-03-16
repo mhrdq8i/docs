@@ -10,21 +10,21 @@ Here's how Kubernetes Service load balances the input traffic:
 
 1. **Service Types**:
 
-   - **ClusterIP**: This is the default Service type. It exposes the Service on a cluster-internal IP address, which is only accessible from within the cluster.
+    - **ClusterIP**: This is the default Service type. It exposes the Service on a cluster-internal IP address, which is only accessible from within the cluster.
 
-   - **NodePort**: This type of Service exposes the Service on each Node's IP address at a static port. This makes the Service accessible from outside the cluster.
+    - **NodePort**: This type of Service exposes the Service on each Node's IP address at a static port. This makes the Service accessible from outside the cluster.
 
-   - **LoadBalancer**: This type of Service provisions a load balancer for the Service, typically in cloud environments, and assigns a publicly accessible IP address to the Service.
+    - **LoadBalancer**: This type of Service provisions a load balancer for the Service, typically in cloud environments, and assigns a publicly accessible IP address to the Service.
 
-   - **ExternalName**: This type of Service maps the Service to an external DNS name, without any proxy or load balancing.
+    - **ExternalName**: This type of Service maps the Service to an external DNS name, without any proxy or load balancing.
 
 2. **Load Balancing Mechanisms**:
 
-   - **Kube-proxy**: Kube-proxy is a component that runs on each Node and is responsible for implementing the Service abstraction. It uses various load balancing mechanisms, such as iptables or IPVS, to distribute the traffic to the appropriate Pods.
+    - **Kube-proxy**: Kube-proxy is a component that runs on each Node and is responsible for implementing the Service abstraction. It uses various load balancing mechanisms, such as iptables or IPVS, to distribute the traffic to the appropriate Pods.
 
-   - **Ingress**: Ingress is a Kubernetes resource that provides advanced routing and load balancing capabilities. Ingress controllers, such as NGINX Ingress Controller or Traefik, are responsible for load balancing the incoming traffic to the appropriate Services.
+    - **Ingress**: Ingress is a Kubernetes resource that provides advanced routing and load balancing capabilities. Ingress controllers, such as NGINX Ingress Controller or Traefik, are responsible for load balancing the incoming traffic to the appropriate Services.
 
-   - **Cloud Load Balancers**: When using the `LoadBalancer` Service type, Kubernetes provisions a load balancer in the cloud environment (e.g., AWS Elastic Load Balancing, Google Cloud Load Balancing) and assigns a public IP address to the Service.
+    - **Cloud Load Balancers**: When using the `LoadBalancer` Service type, Kubernetes provisions a load balancer in the cloud environment (e.g., AWS Elastic Load Balancing, Google Cloud Load Balancing) and assigns a public IP address to the Service.
 
 The load balancing mechanism used by a Kubernetes Service depends on the Service type and the underlying infrastructure. For example:
 
@@ -55,21 +55,21 @@ The load-balancing behavior can vary depending on the type of Service:
 
 - **ClusterIP**:
 
-  - The most common Service type, which exposes the Service only within the cluster.
-  - Uses round-robin by default for load balancing traffic to pods.
+    - The most common Service type, which exposes the Service only within the cluster.
+    - Uses round-robin by default for load balancing traffic to pods.
 
-- **NodePort**:
+- NodePort**:
 
-  - Exposes the Service on a specific port on each node's IP address.
-  - Also uses round-robin for load balancing traffic to pods.
+    - Exposes the Service on a specific port on each node's IP address.
+    -   Also uses round-robin for load balancing traffic to pods.
 
 - **LoadBalancer**:
 
-  - Exposes the Service externally using a cloud provider's load balancer (e.g., AWS ELB, GCP Load Balancer).
-  - The external load balancer may have its own load-balancing algorithm, but internally within the cluster, Kubernetes still uses round-robin.
+    - Exposes the Service externally using a cloud provider's load balancer (e.g., AWS ELB, GCP Load Balancer).
+    - The external load balancer may have its own load-balancing algorithm, but internally within the cluster, Kubernetes still uses round-robin.
 
 - **ExternalName**:
-  - Maps the Service to an external DNS name and does not involve load balancing.
+    - Maps the Service to an external DNS name and does not involve load balancing.
 
 #### **b. kube-proxy Mode**
 
@@ -77,23 +77,23 @@ Kubernetes uses `kube-proxy` to implement Service load balancing. The behavior o
 
 - **Userspace Mode** (Deprecated):
 
-  - In this mode, `kube-proxy` runs as a userspace process and manually forwards packets between the Service and pods.
-  - Uses round-robin for load balancing.
+    - In this mode, `kube-proxy` runs as a userspace process and manually forwards packets between the Service and pods.
+    - Uses round-robin for load balancing.
 
 - **iptables Mode** (Default in most clusters):
 
-  - In this mode, `kube-proxy` configures iptables rules to redirect traffic to the appropriate pod.
-  - Still uses round-robin as the default algorithm, but it is implemented at the kernel level for better performance.
+    - In this mode, `kube-proxy` configures iptables rules to redirect traffic to the appropriate pod.
+    - Still uses round-robin as the default algorithm, but it is implemented at the kernel level for better performance.
 
 - **IPVS Mode**:
-  - IPVS (IP Virtual Server) is an advanced load-balancing solution that provides more efficient and scalable load balancing compared to iptables.
-  - Supports multiple algorithms, including:
-    - **rr (Round-Robin)** (default)
-    - **lc (Least Connections)**
-    - **dh (Destination Hashing)**
-    - **sh (Source Hashing)**
-    - **wrr (Weighted Round-Robin)**
-    - **wlc (Weighted Least Connections)**
+    - IPVS (IP Virtual Server) is an advanced load-balancing solution that provides more efficient and scalable load balancing compared to iptables.
+    - Supports multiple algorithms, including:
+        - **rr (Round-Robin)** (default)
+        - **lc (Least Connections)**
+        - **dh (Destination Hashing)**
+        - **sh (Source Hashing)**
+        - **wrr (Weighted Round-Robin)**
+        - **wlc (Weighted Least Connections)**
 
 If your cluster is configured to use IPVS, you can specify a different algorithm using the `service.spec.sessionAffinityConfig.clientIP` or other configuration options.
 
@@ -103,11 +103,11 @@ Kubernetes allows you to configure **session affinity** for Services, which can 
 
 - **None** (Default):
 
-  - No session affinity; each request is distributed using the default round-robin algorithm.
+    - No session affinity; each request is distributed using the default round-robin algorithm.
 
 - **ClientIP**:
-  - Ensures that requests from the same client IP are routed to the same pod for the duration of a session.
-  - This overrides the default round-robin behavior and is useful for stateful applications.
+    - Ensures that requests from the same client IP are routed to the same pod for the duration of a session.
+    - This overrides the default round-robin behavior and is useful for stateful applications.
 
 You can enable session affinity by setting the `service.spec.sessionAffinity` field to `ClientIP` in the Service definition.
 
@@ -119,8 +119,6 @@ For more advanced load-balancing requirements, you can use an **Ingress controll
 - **Weighted Round-Robin**
 - **IP Hashing**
 - **URL Hashing**
-
----
 
 ### Summary Table
 
@@ -137,8 +135,6 @@ For more advanced load-balancing requirements, you can use an **Ingress controll
 
 By default, Kubernetes uses a **round-robin** algorithm for load balancing traffic to pods behind a Service. This behavior can be customized using session affinity or by switching to advanced networking modes like IPVS, which support additional algorithms. For more complex use cases, external proxies or Ingress controllers can provide fine-grained control over load-balancing behavior.
 
----
-
 ## CNI
 
 ### How many CNI does Kubernetes have?
@@ -153,51 +149,49 @@ There is no fixed number of CNI plugins for Kubernetes because new plugins are c
 
 1. **Calico**
 
-   - Provides robust networking and network policy enforcement.
-   - Uses **BGP** for efficient routing and supports advanced security features.
-   - Works in **_L3_** network stack.
-   - Popular for production-grade Kubernetes clusters.
+    - Provides robust networking and network policy enforcement.
+    - Uses **BGP** for efficient routing and supports advanced security features.
+    - Works in **_L3_** network stack.
+    - Popular for production-grade Kubernetes clusters.
 
 2. **Flannel**
 
-   - A simple **overlay** network solution that satisfies the basic networking requirements of Kubernetes.
-   - Supports multiple backends like _VXLAN_, _UDP_, and _host-gw_.
-   - Ideal for smaller clusters or environments where simplicity is prioritized.
+    - A simple **overlay** network solution that satisfies the basic networking requirements of Kubernetes.
+    - Supports multiple backends like _VXLAN_, _UDP_, and _host-gw_.
+    - Ideal for smaller clusters or environments where simplicity is prioritized.
 
 3. **Cilium**
 
-   - Leverages **eBPF** for _high-performance networking_ and advanced security features.
-   - Supports **_L7_** network policies and integrates well with service meshes.
-   - Suitable for large-scale, high-performance environments.
+    - Leverages **eBPF** for _high-performance networking_ and advanced security features.
+    - Supports **_L7_** network policies and integrates well with service meshes.
+    - Suitable for large-scale, high-performance environments.
 
 4. **Weave Net**
 
-   - An easy-to-use networking solution that creates a virtual network for containers.
-   - Automatically sets up an overlay network with encryption and DNS support.
-   - Suitable for small to medium-sized clusters.
+    - An easy-to-use networking solution that creates a virtual network for containers.
+    - Automatically sets up an overlay network with encryption and DNS support.
+    - Suitable for small to medium-sized clusters.
 
 5. **Canal**
 
-   - Combines Flannel for networking and Calico for network policies.
-   - Provides a hybrid solution for clusters that need both simple networking and advanced policy enforcement.
+    - Combines Flannel for networking and Calico for network policies.
+    - Provides a hybrid solution for clusters that need both simple networking and advanced policy enforcement.
 
 6. **Multus**
 
-   - Allows pods to have multiple network interfaces, enabling multi-networking use cases.
-   - Often used in conjunction with other CNI plugins to provide additional network interfaces.
+    - Allows pods to have multiple network interfaces, enabling multi-networking use cases.
+    - Often used in conjunction with other CNI plugins to provide additional network interfaces.
 
 7. **Kube-Router**
 
-   - Combines networking, network policy, and service proxy functionality into a single lightweight solution.
-   - Focuses on performance and simplicity.
+    - Combines networking, network policy, and service proxy functionality into a single lightweight solution.
+    - Focuses on performance and simplicity.
 
 ### Conclusion
 
 While Kubernetes does not have a fixed number of CNI plugins, there are dozens of CNI-compatible plugins available in the ecosystem. The exact number depends on how you count them, but the most commonly used ones include **Calico**, **Flannel**, **Cilium**, **Weave Net**, **Canal**, **Multus**, and others. Additionally, the official CNI project provides a set of foundational plugins that can be used to build custom networking solutions.
 
 If you're looking for a specific CNI plugin, the choice depends on your use case, such as _performance requirements_, _network policy_ needs, or _multi-networking_ capabilities.
-
----
 
 ## Deployment
 
@@ -245,11 +239,11 @@ Example:
 
 ```yaml
 spec:
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
+    strategy:
+        type: RollingUpdate
+        rollingUpdate:
+            maxUnavailable: 1
+            maxSurge: 1
 ```
 
 This default strategy ensures high availability and smooth updates for applications running in Kubernetes.
