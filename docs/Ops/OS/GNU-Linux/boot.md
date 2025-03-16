@@ -2,4 +2,5 @@
 
 ## Linux Boot Process Flow
 
-![lbpf](../../../assets/gnu_linux/boot_process.gif)
+![lbpf1](../../../assets/gnu_linux/boot_process_01)
+![lbpf2](../../../assets/gnu_linux/boot_process_02)
