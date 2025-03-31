@@ -44,7 +44,7 @@ Most Frequently Asked Questions in DevOps Interview
 ## Nginx
 
 - [Proxy-ProxyHeader]
-- [X-Forwarded-For and X-Real-IP]
+- [X-Forwarded-\[For \| Proto\] and X-Real-IP]
 
 ## HAProxy
 
@@ -92,7 +92,7 @@ Most Frequently Asked Questions in DevOps Interview
 <!-- nginx -->
 
 [Proxy-ProxyHeader]: nginx.md/#proxy-proxyheader
-[X-Forwarded-For and X-Real-IP]: nginx.md/#x-forwarded-for-and-x-real-ip
+[X-Forwarded-\[For \| Proto\] and X-Real-IP]: nginx.md/#x-forwarded-for-and-x-real-ip
 
 <!-- gitlab -->
 
