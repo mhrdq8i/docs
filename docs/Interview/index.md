@@ -44,7 +44,10 @@ Most Frequently Asked Questions in DevOps Interview
 ## Nginx
 
 - [Proxy-ProxyHeader]
-- [X-Forwarded-\[For \| Proto\] and X-Real-IP]
+- [X-Forwarded-For (XFF)]
+- [X-Real-IP]
+- [X-Forwarded-Proto (XFP)]
+- [X-Forwarded-Host (XFH)]
 
 ## HAProxy
 
@@ -92,7 +95,10 @@ Most Frequently Asked Questions in DevOps Interview
 <!-- nginx -->
 
 [Proxy-ProxyHeader]: nginx.md/#proxy-proxyheader
-[X-Forwarded-\[For \| Proto\] and X-Real-IP]: nginx.md/#x-forwarded-for-and-x-real-ip
+[X-Forwarded-For (XFF)]: nginx.md/#1-x-forwarded-for-xff
+[X-Real-IP]: nginx.md/#2-x-real-ip
+[X-Forwarded-Proto (XFP)]: nginx.md/#3-x-forwarded-proto-xfp
+[X-Forwarded-Host (XFH)]: nginx.md/#4-x-forwarded-host-xfh
 
 <!-- gitlab -->
 

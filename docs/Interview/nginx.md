@@ -30,7 +30,7 @@ In summary, **proxy headers** are used to pass information about the _original c
 
 The **X-Forwarded-For (XFF)**, **X-Forwarded-Proto (XFP)**, **X-Forwarded-Host (XFH)**, and **X-Real-IP** HTTP headers are _non-standard headers_ used to transmit client-side information (IP address, protocol, and host) when requests pass through proxies, load balancers, or reverse proxies. These headers help backend servers understand the original client’s details, which might otherwise be obscured by intermediaries. Below is a detailed explanation of each header:
 
-### **1. X-Forwarded-For (XFF)**
+### 1. X-Forwarded-For (XFF)
 
 - **Purpose**: Identifies the **original IP address** of the client connecting through a proxy or load balancer.
 - **Syntax**: A comma-separated list of IP addresses, where the **leftmost IP** is the client’s original IP, followed by each subsequent proxy that forwarded the request.
@@ -42,7 +42,7 @@ The **X-Forwarded-For (XFF)**, **X-Forwarded-Proto (XFP)**, **X-Forwarded-Host (
   - The backend server can use the first IP (client’s IP) for logging, geolocation, or access control.
 - **Security Note**: Malicious clients can spoof this header, so servers should **only trust these headers from trusted proxies**.
 
-### **2. X-Real-IP**
+### 2. X-Real-IP
 
 - **Purpose**: Provides the **original client’s IP address** as seen by the _first proxy_ in the chain.
 - **Syntax**: A single IP address (no list).
@@ -55,7 +55,7 @@ The **X-Forwarded-For (XFF)**, **X-Forwarded-Proto (XFP)**, **X-Forwarded-Host (
   - Some setups use `X-Real-IP` alongside `X-Forwarded-For` for backward compatibility.
   - Avoids ambiguity when only the client’s IP is needed.
 
-### **3. X-Forwarded-Proto (XFP)**
+### 3. X-Forwarded-Proto (XFP)
 
 - **Purpose**: Indicates the **protocol** (HTTP or HTTPS) used by the client to connect to the _first proxy_.
 - **Syntax**:
@@ -66,7 +66,7 @@ The **X-Forwarded-For (XFF)**, **X-Forwarded-Proto (XFP)**, **X-Forwarded-Host (
   - Allows the backend to construct URLs with the correct protocol (e.g., for redirects or HSTS compliance).
   - Example: A proxy might receive HTTPS traffic but send HTTP to the backend; this header ensures the backend knows the original protocol.
 
-### **4. X-Forwarded-Host (XFH)**
+### 4. X-Forwarded-Host (XFH)
 
 - **Purpose**: Transmits the **original Host header** sent by the client to the _first proxy_.
 - **Syntax**:
@@ -77,7 +77,7 @@ The **X-Forwarded-For (XFF)**, **X-Forwarded-Proto (XFP)**, **X-Forwarded-Host (
   - The backend can use this to serve content based on the original domain (e.g., `example.com` vs. `subdomain.example.com`).
   - Ensures proper routing and content delivery when the proxy handles multiple hosts.
 
-### **Key Considerations**
+### Key Considerations
 
 1. **Security Risks**:
 
@@ -94,7 +94,7 @@ The **X-Forwarded-For (XFF)**, **X-Forwarded-Proto (XFP)**, **X-Forwarded-Host (
    - These headers are **not part of the official HTTP specification** (RFC 7239 defines `Forwarded`, a standardized header).
    - However, they are widely adopted in practice.
 
-### **Example Scenario**
+### Example Scenario
 
 Imagine a client accesses `https://example.com` through a reverse proxy (Proxy A) and a load balancer (Proxy B):
 
@@ -114,7 +114,7 @@ Imagine a client accesses `https://example.com` through a reverse proxy (Proxy A
   - Uses `X-Forwarded-Proto` to ensure secure redirects.
   - Uses `X-Forwarded-Host` to serve `example.com` content.
 
-### **Alternatives & Best Practices**
+### Alternatives & Best Practices
 
 - **RFC 7239 `Forwarded` Header**: A standardized header that combines all three (IP, protocol, host) into a single field. Example:
   `Forwarded: for=192.168.2.1; proto=https; host=example.com`.
