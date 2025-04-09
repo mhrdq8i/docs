@@ -125,6 +125,18 @@ ws# Memory Management
 - [Memory Management on C programming][MM-in-C]
 - [Memory Layout in C][ML-in-C]
 
+### How Does C Code Become Assembly
+
+The compiler does a lot of stuff to **[translate C code to assembly]**
+
+- Choose assembly instructions to implement C oeprations
+- Implement C conditionals and loops using jumps and branches
+- Choose registers and memory locations to store data
+- Move data among the registers and memory to satifisy dependecies
+- Coordinate function calls
+- Try to make the assembly fast.
+
+
 <!-- external links -->
 
 [MM-in-OS]: https://www.geeksforgeeks.org/memory-management-in-operating-system/
@@ -133,3 +145,4 @@ ws# Memory Management
 [code-segment-data-bss]: https://wahyu-ehs.medium.com/c-memory-division-text-code-segment-data-and-bss-ef7d76831d8b
 [MM-in-C]: https://wahyu-ehs.medium.com/memory-management-on-c-programming-ce30135cfbcb
 [ML-in-C]: https://www.javatpoint.com/memory-layout-in-c
+[translate C code to assembly]: https://www.xta0.me/2021/07/13/MIT-6172-5.html
