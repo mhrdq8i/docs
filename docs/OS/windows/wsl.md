@@ -1,20 +1,31 @@
 # WSL
 
-## Windows Subsystem for Linux
+Windows-Subsystem-Linux
 
-### Activa WSL services
+## Active Requirement Services
 
-- win + r
-- optionalfeatures
-- check Windows Subsystem for Linux
+### UI mode
 
-### Download
+-   win + r
+-   optionalfeatures
+-   check Windows Subsystem for Linux
+-   check Virtual Machine Platform
 
-- Open the "[Microsoft Store Ubuntu]" page and get the Ubuntu _product ID_
-- Open the https://store.rg-adguard.net and follow [this instructions]
-- You also use another dist like [Alpine], [Arch], [Fedora] and ...
+### CLI mode
 
-### Pre-Configuration Steps
+Check the requirement service first
+
+```powershell
+"Microsoft-Windows-Subsystem-Linux", "VirtualMachinePlatform" | ForEach-Object { Get-WindowsOptionalFeature -Online -FeatureName $_ | Select-Object FeatureName, State }
+```
+
+Enable them
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName @("Microsoft-Windows-Subsystem-Linux", "VirtualMachinePlatform") -All -NoRestart
+```
+
+### Pre-Configuration (if need)
 
 Windows Hyper-V must be enabled except this one
 
@@ -28,18 +39,104 @@ Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
 bcdedit /set hypervisorlaunchtype off
 ```
 
+### Download
+
+-   Open the "[Microsoft Store Ubuntu]" page and get the Ubuntu _product ID_
+-   Open the https://store.rg-adguard.net and follow [this instructions]
+-   You also use another dist like [Alpine], [Arch], [Fedora] and ...
+
+### Install Manually
+
+Here's how to manually install the Ubuntu WSL distribution you've downloaded:
+
+1. **Unblock the File** (if downloaded from web):
+
+    ```powershell
+    Unblock-File -Path .\Ubuntu_2404.xx.x.appx
+    ```
+
+2. **Install via PowerShell**:
+
+    ```powershell
+    Add-AppxPackage .\Ubuntu_2404.xx.x.appx
+    ```
+
+3. **Launch Ubuntu**:
+
+    - From Start Menu: Search for "Ubuntu 24.04"
+    - Or via PowerShell:
+
+        ```powershell
+        ubuntu2404.exe
+        ```
+
+### Post-Installation Setup
+
+1. **Initialize User Account**:
+
+    ```powershell
+    ubuntu2404.exe config --default-user yourusername
+    ```
+
+2. **Switch to WSL2** (if needed):
+
+    ```powershell
+    wsl --set-version Ubuntu-24.04 2
+    ```
+
+3. **Update Packages**:
+
+    ```bash
+    sudo apt update && sudo apt full-upgrade -y
+    ```
+
+### Recommended Folder Structure
+
+```powershell
+C:\Users\YourName\
+├── WSL/
+│   ├── Ubuntu-24.04/  ← WSL virtual disk here
+│   └── Downloads/     ← Store .appx/.tar.gz files here
+```
+
+### Install and Update from CLI
+
+Get the list of available linux distributions
+
+```powershell
+wsl --list --online
+```
+
+Install your favorite distro
+
+```powershell
+wsl --install --distribution <name-of-dist>
+```
+
+Update new version of WSL
+
+```powershell
+wsl --update
+```
+
+### Delete the Installed Dist
+
+```powershell
+wsl --unregister <dist-name>
+```
+
+### Set Default Distro
+
+```powershell
+wsl --set-default <dist-name>
+```
+
 ### Restart Network
 
 ```pwsh
 net stop wslservice
 net start wslservice
 ```
-
-### WSL Commands
-
-- **wsl --install --distribution <name-of-dist>**: install your favorite distro
-- **wsl --update**: update new version of WSL
-- **wsl --list --online**: list of linux distributions
 
 ### Important Note
 
