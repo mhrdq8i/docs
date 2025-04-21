@@ -1,4 +1,4 @@
-# Database Scaling
+# Scaling
 
 Sequences
 

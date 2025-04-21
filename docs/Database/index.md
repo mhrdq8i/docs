@@ -4,7 +4,7 @@
 - [Normalizing]
 - [Postgresql]
 - [Write Ahead Log]
-- [Column Oriented DB]
+- [Column Oriented DBs]
 
 <!-- links -->
 
@@ -12,4 +12,4 @@
 [Normalizing]: normalizing.md
 [Postgresql]: postgres.md
 [Write Ahead Log]: wal.md
-[Column Oriented DB]: column-oriented-db.md
+[Column Oriented DBs]: column-oriented-db.md

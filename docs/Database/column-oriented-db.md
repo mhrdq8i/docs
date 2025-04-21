@@ -1,4 +1,4 @@
-# Column-Oriented Databases
+# Column-Oriented DBs
 
 ## Definition
 

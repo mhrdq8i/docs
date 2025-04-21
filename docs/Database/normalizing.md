@@ -1,5 +1,5 @@
 
-# Database Normalization
+# Normalization
 
 Database Normalization is a process of organizing database tables to minimize data redundancy and improve data integrity. Let me explain the key concepts and normal forms:
 
@@ -55,4 +55,3 @@ Order_ID | Customer_ID | Product_ID | Order_Date
 - When read performance is more critical than write performance
 - In data warehousing scenarios
 - When the data structure is relatively stable and won't change often
-
