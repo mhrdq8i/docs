@@ -4,15 +4,15 @@
 
 ### Activa WSL services
 
--   win + r
--   optionalfeatures
--   check Windows Subsystem for Linux
+- win + r
+- optionalfeatures
+- check Windows Subsystem for Linux
 
 ### Download
 
--   Open the "[Microsoft Store Ubuntu]" page and get the Ubuntu _product ID_
--   Open the https://store.rg-adguard.net and follow [this instructions]
--   You also use another dist like [Alpine], [Arch], [Fedora] and ...
+- Open the "[Microsoft Store Ubuntu]" page and get the Ubuntu _product ID_
+- Open the https://store.rg-adguard.net and follow [this instructions]
+- You also use another dist like [Alpine], [Arch], [Fedora] and ...
 
 ### Pre-Configuration Steps
 
@@ -40,6 +40,12 @@ net start wslservice
 - **wsl --install --distribution <name-of-dist>**: install your favorite distro
 - **wsl --update**: update new version of WSL
 - **wsl --list --online**: list of linux distributions
+
+### Important Note
+
+Unfortunately when you set your region to `Iran` WSL can't to connect to microsoft store server and download the distro that you selected, as well as it doesn't give you an appropriate error message.
+
+<!-- links -->
 
 [Microsoft Store Ubuntu]: https://apps.microsoft.com/detail/9pdxgncfsczv?rtc=1&hl=en-us&gl=US
 [this instructions]: https://allthings.how/how-to-download-windows-subsystem-for-android-without-microsoft-store-msixbundle/
