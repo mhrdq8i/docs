@@ -6,20 +6,26 @@
 
 Exclude files permission from all local changes
 
-```bash
-global: git config --global core.fileMode false
-local:  git config core.fileMode false
-```
+=== global
+
+        ```sh
+        global: git config --global core.fileMode false
+        ```
+=== local
+
+        ```sh
+        local:  git config --local core.fileMode false
+        ```
 
 Update git config
 
-```bash
+```sh
 git config --unset core.bare
 ```
 
 Change git default editor
 
-```bash
+```sh
 git config --global core.editor "vim"
 ```
 
@@ -27,7 +33,7 @@ git config --global core.editor "vim"
 
 Skip unable to access `https://your.host/your-git/your-repor.git/` SSL certificate problem: self signed certificate
 
-```bash
+```sh
 git config --global http.sslVerify false
 ```
 
@@ -43,7 +49,7 @@ Host github
 
 ### store username pass
 
-```bash
+```sh
 git config --global credential.helper store
 ```
 
@@ -67,14 +73,14 @@ git config --global credential.helper store
 
 Add file to stage except one
 
-```bash
+```sh
 git add --all -- :!main/dont_check_main.txt
 git add -- . :!main/dont_check_main.txt
 ```
 
 Add a new line at EOF
 
-```bash
+```sh
 git add --renormalize <file-name>
 ```
 
@@ -82,13 +88,13 @@ git add --renormalize <file-name>
 
 Clone and checkout simultaneously
 
-```bash
+```sh
 git clone -b <branch name> address
 ```
 
 Clone repo
 
-```bash
+```sh
 git clone --mirror git@github.com/fernandoaleman/app.git app/.git
 ```
 
@@ -96,7 +102,7 @@ git clone --mirror git@github.com/fernandoaleman/app.git app/.git
 
 Git log arguments
 
-```bash
+```sh
 git log --pretty=oneline
 git log --pretty=format:"%h - %an, %ar : %s"
 git log --max-count 3
@@ -109,38 +115,38 @@ git log --graph --oneline --decorate --all
 
 Checkout master branch
 
-```bash
+```sh
 git checkout master
 ```
 
 Create new branch and switch to it
 
-```bash
+```sh
 git checkout -b <New_Branch>
 ```
 
 Checkout via origin branch
 
-```bash
+```sh
 git branch -a
 git checkout -b <branch-name> origin/<branch-name>
 ```
 
 Checkout over tag number
 
-```bash
+```sh
 git checkout tags/4.3.87
 ```
 
 Check it up
 
-```bash
+```sh
 git branch
 ```
 
 Go to last 3 commit
 
-```bash
+```sh
 git checkout HEAD~3
 ```
 
@@ -148,20 +154,26 @@ git checkout HEAD~3
 
 Add new remote repository
 
-```bash
-git remote add origin https://github.com/username/git-project-repo.git
-git remote add origin git@github.com:username/git-project-repo.git
-```
+=== HTTPS
+
+        ```sh
+        git remote add origin https://github.com/username/git-project-repo.git
+        ```
+=== SSH
+
+        ```sh
+        git remote add origin git@github.com:username/git-project-repo.git
+        ```
 
 Rename an existing repo
 
-```bash
+```sh
 git remote rename <old-name> <new-name>
 ```
 
 Get the list of the remote repository
 
-```bash
+```sh
 git remote -v
 ```
 
@@ -169,19 +181,19 @@ git remote -v
 
 Create new branch
 
-```bash
+```sh
 git branch <new-branch>
 ```
 
 Rename a branch
 
-```bash
+```sh
 git branch -m <old> <new>
 ```
 
 Delete a branch
 
-```bash
+```sh
 git branch -d <branch_name>
 ```
 
@@ -189,13 +201,13 @@ git branch -d <branch_name>
 
 Switch branch
 
-```bash
+```sh
 git switch <existing-branch>
 ```
 
 Point head to last commit
 
-```raw
+```sh
 git switch -
 ```
 
@@ -205,19 +217,19 @@ git switch -
 
 === "Soft"
 
-    ```bash
+    ```sh
     git reset --soft <commit-id>
     ```
 
 === "Mixed"
 
-    ```bash
+    ```sh
     git reset --mixed <commit-id>
     ```
 
 === "Hard"
 
-    ```bash
+    ```sh
     git reset --hard <commit-id>
     ```
 
@@ -227,7 +239,7 @@ git switch -
 
 #### Git revert
 
-```bash
+```sh
 git revert <commit-id>
 ```
 
@@ -237,7 +249,7 @@ git revert <commit-id>
 
 ### git tag
 
-```bash
+```sh
 git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 ```
 
@@ -245,7 +257,7 @@ git tag -a v1.0 8489c03c1 -m "version 1.0 is released"
 
 Reapply commits on top of another base tip
 
-```bash
+```sh
 git rebase master topic
 ```
 
@@ -273,13 +285,13 @@ would be:
 
 Delete an old commit
 
-```bash
+```sh
 git rebase --interactive <commit-hash-before-target-commit>
 ```
 
 Then use keyword `drop` inside the target commit hash and save the file
 
-```bash
+```sh
 git push -f origin branch-name
 ```
 
@@ -296,46 +308,46 @@ git push -f origin branch-name
 
 Checkout to main branch
 
-```bash
+```sh
 git checkout master
 ```
 
 Give it the last changes from main branch of remote repository
 
-```bash
+```sh
 git pull origin master
 ```
 
 Check the branches and go to target branch
 
-```bash
+```sh
 git branch -a
 git checkout target-branch
 ```
 
 Give the last changes **from main branch of local repository**
 
-```bash
+```sh
 git rebase master
 ```
 
 **NOTE**: Git makes new temp branch and apply all changes to it until `git rebase --continue
 Apply changes and get status then add
 
-```bash
+```sh
 git status
 git add .
 ```
 
 Put temp branch changes to **target-branch**
 
-```bash
+```sh
 git rebase --continue
 ```
 
 Push to remove target-branch
 
-```bash
+```sh
 git push -f origin target-branch
 ```
 

@@ -4,7 +4,7 @@
 
 ### Install and configure the necessary dependencies
 
-```bash
+```sh
 sudo yum install -y curl policycoreutils-python openssh-server
 sudo systemctl enable sshd
 sudo systemctl start sshd
@@ -18,14 +18,14 @@ sudo systemctl start postfix
 
 ### Add the GitLab package repository and install the package
 
-```bash
+```sh
 curl <https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh> | sudo bash
 sudo EXTERNAL_URL="<https://gitlab.example.com>" yum install -y gitlab-ce
 ```
 
 ### Run Gitlab
 
-```bash
+```sh
 sudo gitlab-ctl reconfigure
 sudo gitlab-ctl start
 ```
@@ -36,19 +36,19 @@ sudo gitlab-ctl start
 
 ### reconfigure gitlab setting
 
-```bash
+```sh
 sudo gitlab-ctl reconfigure
 ```
 
 ### Restart user password
 
-```bash
+```sh
 gitlab-rake "gitlab:password:reset"
 ```
 
 ## Initiate gitlab runner
 
-```bash
+```sh
  gitlab-runner start
  gitlab-runner register
 ```
