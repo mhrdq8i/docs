@@ -29,14 +29,14 @@ develop and master
 hotfix-\*
 ```
 
-## Creating a feature branch
+??? Creating a feature branch
 
-![gitflow-feature](../../assets/svc/gitflow-feature.png)
+    ![gitflow-feature](../../assets/svc/gitflow-feature.png)
 
-## Creating a release branch
+??? Creating a release branch
 
-![gitflow-release](../../assets/svc/gitflow-release.png)
+    ![gitflow-release](../../assets/svc/gitflow-release.png)
 
-## Creating a Hotfix branch
+??? Creating a Hotfix branch
 
-![gitflow-hotfix](../../assets/svc/gitflow-hotfix.png)
+    ![gitflow-hotfix](../../assets/svc/gitflow-hotfix.png)
