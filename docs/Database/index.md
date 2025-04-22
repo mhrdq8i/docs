@@ -2,8 +2,8 @@
 
 - [Column Oriented DBs]
 - [Normalizing]
-- [Oracle Scaling]
 - [Postgresql]
+- [Scale Oracle DB]
 - [Scaling]
 - [Write Ahead Log]
 
@@ -14,4 +14,4 @@
 [Postgresql]: postgres.md
 [Write Ahead Log]: wal.md
 [Column Oriented DBs]: column-oriented-db.md
-[Oracle Scaling]: scale_oracle_db.md
+[Scale Oracle DB]: scale_oracle_db.md
