@@ -211,9 +211,10 @@ git reset --mixed <commit-id>
 git reset --hard <commit-id>
 ```
 
-??? All git reset options
+??? "All git reset options"
 
     ![gitreset_options](../../assets/svc/git-reset.png)
+
 
 #### Git revert
 
