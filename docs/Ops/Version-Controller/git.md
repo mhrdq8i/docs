@@ -224,7 +224,7 @@ git switch -
 ??? "All git reset options"
 
     ![git_reset_options](../../assets/svc/git-reset.png)
-
+    ![x](../../assets/svc/git-3-level-concept-4.png)
 
 #### Git revert
 
@@ -232,7 +232,7 @@ git switch -
 git revert <commit-id>
 ```
 
-??? git revert
+??? "git revert"
 
     ![git-revert](../../assets/svc/git-reset-revert-2.png)
 
