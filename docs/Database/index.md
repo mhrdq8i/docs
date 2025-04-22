@@ -1,10 +1,11 @@
 # Index of Titles
 
-- [Scaling]
-- [Normalizing]
-- [Postgresql]
-- [Write Ahead Log]
 - [Column Oriented DBs]
+- [Normalizing]
+- [Oracle Scaling]
+- [Postgresql]
+- [Scaling]
+- [Write Ahead Log]
 
 <!-- links -->
 
@@ -13,3 +14,4 @@
 [Postgresql]: postgres.md
 [Write Ahead Log]: wal.md
 [Column Oriented DBs]: column-oriented-db.md
+[Oracle Scaling]: scale_oracle_db.md
