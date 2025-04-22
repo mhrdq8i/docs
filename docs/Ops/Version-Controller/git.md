@@ -49,9 +49,19 @@ git config --global credential.helper store
 
 ## Git Commands
 
+### Git 3 level concept
+
+??? git three level concept
+
+    ![pic1](../../assets/svc/git-3-level-concept-1.png)
+    ![pic2](../../assets/svc/git-3-level-concept-2.png)
+    ![pic3](../../assets/svc/git-3-level-concept-3.png)
+
 ### git fetch
 
-![git-pull-fetch]
+??? "git fetch/pull"
+
+    ![git-pull-fetch]
 
 ### git add
 
@@ -215,12 +225,15 @@ git reset --hard <commit-id>
 
     ![gitreset_options](../../assets/svc/git-reset.png)
 
-
 #### Git revert
 
 ```bash
 git revert <commit-id>
 ```
+
+??? git revert
+
+    ![git-revert](../../assets/svc/git-reset-revert-2.png)
 
 ### git tag
 
@@ -273,6 +286,13 @@ git push -f origin branch-name
 **Note**: the `-f` is a required parameter for this step
 
 ## Rebase & Merge Conflict, step by step guid
+
+### git merge vs git rebase
+
+??? "git merge / git rebase"
+
+    ![git-merge-rebase-1](../../assets/svc/git-merge-rebase-1.png)
+    ![git-merge-rebase-2](../../assets/svc/git-merge-rebase-2.png)
 
 Checkout to main branch
 
