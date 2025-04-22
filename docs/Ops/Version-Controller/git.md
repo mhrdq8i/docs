@@ -205,21 +205,21 @@ git switch -
 
 === "Reset Soft"
 
-```bash
-git reset --soft <commit-id>
-```
+    ```bash
+    git reset --soft <commit-id>
+    ```
 
 === "Reset Mixed"
 
-```bash
-git reset --mixed <commit-id>
-```
+    ```bash
+    git reset --mixed <commit-id>
+    ```
 
 === "Reset Hard"
 
-```bash
-git reset --hard <commit-id>
-```
+    ```bash
+    git reset --hard <commit-id>
+    ```
 
 ??? "All git reset options"
 
