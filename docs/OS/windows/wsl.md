@@ -6,10 +6,10 @@ Windows-Subsystem-Linux
 
 ### UI mode
 
--   win + r
--   optionalfeatures
--   check Windows Subsystem for Linux
--   check Virtual Machine Platform
+- win + r
+- optionalfeatures
+- check Windows Subsystem for Linux
+- check Virtual Machine Platform
 
 ### CLI mode
 
@@ -41,9 +41,9 @@ bcdedit /set hypervisorlaunchtype off
 
 ### Download
 
--   Open the "[Microsoft Store Ubuntu]" page and get the Ubuntu _product ID_
--   Open the https://store.rg-adguard.net and follow [this instructions]
--   You also use another dist like [Alpine], [Arch], [Fedora] and ...
+- Open the "[Microsoft Store Ubuntu]" page and get the Ubuntu _product ID_
+- Open the https://store.rg-adguard.net and follow [this instructions]
+- You also use another dist like [Alpine], [Arch], [Fedora] and ...
 
 ### Install Manually
 

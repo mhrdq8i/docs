@@ -57,7 +57,7 @@ git config --global credential.helper store
 
 ### Git 3 level concept
 
-??? git three level concept
+??? "git three level concept"
 
     ![pic1](../../assets/svc/git-3-level-concept-1.png)
     ![pic2](../../assets/svc/git-3-level-concept-2.png)

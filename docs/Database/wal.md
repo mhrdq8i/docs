@@ -20,7 +20,7 @@ The Write Ahead Log (WAL) is a data logging mechanism used in databases, storage
 
 ??? "Expand to show ACID visualized schema"
 
-      ![pic1](../../assets/database/ACID)
+      ![pic1](../assets/database/ACID.png)
 
 1. Durability Guarantee:
 
