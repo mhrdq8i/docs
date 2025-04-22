@@ -249,12 +249,9 @@ would be:
         D---E---F---G master
 ```
 
-<details>
-  <summary>
-    Get more view of "git rebase"
-  </summary>
-  <img src="../../../../docs/assets/svc/git-rebase-1.jpg">
-</details>
+??? "Get more view of 'git rebase'"
+
+    ![pic1](../../assets/svc/git-rebase-1.jpg)
 
 Delete an old commit
 
