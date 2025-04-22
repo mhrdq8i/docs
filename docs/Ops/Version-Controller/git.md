@@ -6,16 +6,16 @@
 
 Exclude files permission from all local changes
 
-=== global
+=== "global"
 
-        ```sh
-        global: git config --global core.fileMode false
-        ```
-=== local
+    ```sh
+    git config --global core.fileMode false
+    ```
+=== "local"
 
-        ```sh
-        local:  git config --local core.fileMode false
-        ```
+    ```sh
+    git config --local core.fileMode false
+    ```
 
 Update git config
 
@@ -41,7 +41,7 @@ git config --global http.sslVerify false
 
 Add github to your hosts `~/.ssh/config`
 
-```shell
+```sh
 Host github
   HostName github.com
   IdentityFile ~/.ssh/id_rsa_home
@@ -154,16 +154,17 @@ git checkout HEAD~3
 
 Add new remote repository
 
-=== HTTPS
+=== "HTTPS"
 
-        ```sh
-        git remote add origin https://github.com/username/git-project-repo.git
-        ```
-=== SSH
+    ```sh
+    git remote add origin https://github.com/username/git-project-repo.git
+    ```
 
-        ```sh
-        git remote add origin git@github.com:username/git-project-repo.git
-        ```
+=== "SSH"
+
+    ```sh
+    git remote add origin git@github.com:username/git-project-repo.git
+    ```
 
 Rename an existing repo
 
