@@ -223,8 +223,8 @@ git switch -
 
 ??? "All git reset options"
 
+    ![git_reset_options-0](../../assets/svc/git-reset-0.png)
     ![git_reset_options](../../assets/svc/git-reset.png)
-    ![x](../../assets/svc/git-3-level-concept-4.png)
 
 #### Git revert
 
