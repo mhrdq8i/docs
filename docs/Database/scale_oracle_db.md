@@ -35,10 +35,6 @@ CREATE INDEX idx_user_age_city ON users(age, city);
 
 Enable and configure query result caching through Oracle’s initialization parameters.
 
-??? "Caching Strategies"
-
-    ![pic1](../assets/database/caching_strategies.jpg)
-
 ### A. Database-Level Caching
 
 **Oracle Query Result Cache:** Oracle supports query result caching, which stores the outcome of a query in memory. When the same query is executed and the underlying data hasn't changed, Oracle returns the cached result instead of re-executing the query.
