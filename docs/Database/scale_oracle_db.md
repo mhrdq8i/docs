@@ -51,7 +51,7 @@ Use systems like **Redis** or **Memcached** to cache query results outside the d
 
 Combining database-level caching with application-level caching can further optimize performance.
 
-## 4. Database Partitioning¶
+## 4. Database Partitioning
 
 ### Definition
 
@@ -89,3 +89,20 @@ Database replication is the process of copying and distributing data from one da
 - Improve Performance and Load Distribution
   - Read Scaling
   - Reduced Query Latency
+
+## 5. Normalizing
+
+If necessary
+
+### Difinition
+
+Normalization is a database design process that organizes data into structured, related tables to minimize data redundancy and dependency.
+
+### Goals
+
+- Reduce Data Redundancy
+  - Eliminate Duplication
+- Improves query performance in many cases
+- Improve Data Integrity and Consistency
+- Enhance Maintainability
+- Optimize Storage Utilization and Efficient Use of Storage
