@@ -61,7 +61,7 @@ git config --global credential.helper store
 
 ??? "git fetch/pull"
 
-    ![git-pull-fetch]
+    ![git-pull-fetch](../../assets/svc/git-pull-fetch.png)
 
 ### git add
 
@@ -223,7 +223,8 @@ git switch -
 
 ??? "All git reset options"
 
-    ![gitreset_options](../../assets/svc/git-reset.png)
+    ![git_reset_options](../../assets/svc/git-reset.png)
+
 
 #### Git revert
 
