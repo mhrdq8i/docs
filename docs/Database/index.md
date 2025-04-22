@@ -8,7 +8,7 @@
 
 <!-- links -->
 
-[Scaling]: database-scaling.md
+[Scaling]: scaling.md
 [Normalizing]: normalizing.md
 [Postgresql]: postgres.md
 [Write Ahead Log]: wal.md
