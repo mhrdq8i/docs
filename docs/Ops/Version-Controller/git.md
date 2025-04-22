@@ -211,6 +211,10 @@ git reset --mixed <commit-id>
 git reset --hard <commit-id>
 ```
 
+??? All git reset options
+
+    ![gitreset_options](../../assets/svc/git-reset.png)
+
 #### Git revert
 
 ```bash
@@ -318,16 +322,13 @@ git push -f origin target-branch
 
 ## Some Important GIT Commands
 
-  <details>
-    <summary>
-      Toggle menu
-    </summary>
-    <img src="../../assets/svc/git-commands-00.jpg">
-    <img src="../../assets/svc/git-commands-01.jpg">
-    <img src="../../assets/svc/git-commands-02.jpg">
-    <img src="../../assets/svc/git-commands-03.jpg">
-    <img src="../../assets/svc/git-commands-04.jpg">
-    <img src="../../assets/svc/git-commands-05.jpg">
-    <img src="../../assets/svc/git-commands-06.jpg">
-    <img src="../../assets/svc/git-commands-07.jpg">
-</details>
+??? Toggle menu
+
+    ![pic0](../../assets/svc/git-commands-00.jpg)
+    ![pic1](../../assets/svc/git-commands-01.jpg)
+    ![pic2](../../assets/svc/git-commands-02.jpg)
+    ![pic3](../../assets/svc/git-commands-03.jpg)
+    ![pic4](../../assets/svc/git-commands-04.jpg)
+    ![pic5](../../assets/svc/git-commands-05.jpg)
+    ![pic6](../../assets/svc/git-commands-06.jpg)
+    ![pic7](../../assets/svc/git-commands-07.jpg)
