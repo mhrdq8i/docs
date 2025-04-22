@@ -203,19 +203,19 @@ git switch -
 
 #### Git reset
 
-=== "Reset Soft"
+=== "Soft"
 
     ```bash
     git reset --soft <commit-id>
     ```
 
-=== "Reset Mixed"
+=== "Mixed"
 
     ```bash
     git reset --mixed <commit-id>
     ```
 
-=== "Reset Hard"
+=== "Hard"
 
     ```bash
     git reset --hard <commit-id>
