@@ -40,18 +40,18 @@ psql -U pg_user -p pg_port(5432) -d pg_db_name
 
 ### Connect from the other host
 
-1. Find the line `#listen_addresses = 'localhost'` and change it to: `#listen_addresses = '*localhost*'`
+1. Find the line `#listen_addresses = 'localhost'` and change it to: `listen_addresses = '*'`
 
     ```sh
     sudo vim /etc/postgresql/[version]/main/postgresql.conf
     ```
 
-2. change interface listener for all connection
+2. change interface listener for all connections
 
-```txt
-host    all             all             0.0.0.0/0               md5
-```
+    ```sh
+    sudo vim /etc/postgresql/[version]/main/pg_hba.conf
+    ```
 
-```sh
-sudo nano /etc/postgresql/[version]/main/pg_hba.conf
-```
+    ```txt
+    host      all     all      0.0.0.0/0          md5
+    ```
