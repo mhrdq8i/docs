@@ -11,13 +11,13 @@ sudo apt update
 sudo apt install postgresql postgresql-client postgresql-contrib
 ```
 
-Start Postgres service
+Start the Postgres service
 
 ```sh
 sudo service postgresql start
 ```
 
-### Connect to postgresql via pgsql (localhost)
+### Connect to PostgreSQL via pgsql (localhost)
 
 Create a PostgreSQL user and database
 
@@ -32,10 +32,31 @@ GRANT ALL PRIVILEGES ON DATABASE database_name TO your_username;
 \q
 ```
 
-Check your database
+Check your database username and connection
 
-```bash
-psql -U pg_user -p pg_port(5432) -d pg_db_name
+```sh
+psql --username pg_user --host pg_hostname --port pg_port --dbname pg_dbname
+```
+
+### PG commands
+
+```postgres
+\l
+get the list of databases
+
+\d
+get the list of tables
+
+\connect DBNAME
+connect to the existing DB
+```
+
+#### Change PG password
+
+```postgres
+\password postgres
+OR
+ALTER USER user_name PASSWORD 'new_password';
 ```
 
 ### Connect from the other host
@@ -46,7 +67,7 @@ psql -U pg_user -p pg_port(5432) -d pg_db_name
     sudo vim /etc/postgresql/[version]/main/postgresql.conf
     ```
 
-2. change interface listener for all connections
+2. Change the interface listener for all connections
 
     ```sh
     sudo vim /etc/postgresql/[version]/main/pg_hba.conf
