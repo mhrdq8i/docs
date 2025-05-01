@@ -5,6 +5,7 @@
 ??? "Expand to show Database Scaling Cheatsheet"
 
       ![pic1](../../assets/database/db_scaling.jpg)
+      ![pic2](../../assets/database/db_scale.png)
 
 ## Sequences
 
