@@ -183,60 +183,6 @@ tune2fs -l /dev/sda2
 5. sudo chroot /mnt
 ```
 
-## Find
-
-Some ***lovely find*** command examples
-
-### search normal files
-
-```bash
-find /root -type f -iname pom.xml
-```
-
-### search socket files
-
-```bash
-find / -type s
-```
-
-### search suid files
-
-```bash
-find /usr/bin -perm -4000
-```
-
-### search sgid files
-
-```bash
-find /usr/bin -perm -2000
-```
-
-### search sticky files
-
-```bash
-find /usr/bin -perm -1000
-```
-
-### exclude
-
-```bash
-find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
-```
-
-### Delete old 10 days files
-
-```bash
-find /path/to/base/dir/\* -type d -ctime +10 -exec rm -rf {} \;
-```
-
-### Rename file extension recursively
-
-```bash
-find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
-```
-
-**Tips**: When we mentioned `%0` in Bash, We assumed you were referring to the special variable `$0`, which is commonly used in shell scripts. In fact `%0` is a pointer to `$0` variable.
-
 ## Users and Groups
 
 ### Users
@@ -581,5 +527,6 @@ echo 'go to my clipboard' | pbcopy
 ![linux-commands-cheat-sheet]
 
 <!-- external link -->
+
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
 [linux-commands-cheat-sheet]: ../../../../assets/gnu_linux/chsh-1.jpg
