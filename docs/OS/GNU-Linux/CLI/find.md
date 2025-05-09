@@ -1,4 +1,4 @@
-# 🔰 Linux find command crash course
+# 🔰 Find
 
 ## **_Lovely Find_** command options with examples
 
