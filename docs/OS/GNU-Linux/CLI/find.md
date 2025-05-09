@@ -238,7 +238,7 @@ find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
 
 **Tips**: When we mentioned `%0` in Bash, We assumed you were referring to the special variable `$0`, which is commonly used in shell scripts. In fact `%0` is a pointer to `$0` variable.
 
-### All above commands in Pic
+### Image of above commands
 
 ??? Toggle menu
 

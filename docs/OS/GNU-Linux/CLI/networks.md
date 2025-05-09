@@ -271,20 +271,6 @@ check the connection between two machines:
 telnet  <ip> <port>
 ```
 
-## nc (netcat)
-
-check port connection
-
-```bash
-nc -z -v -u -l <remote-ip-addr> <remote-port-number>
-```
-
-we cant also check our connection between two machines via `nc`:
-
-```bash
-nc  <ip> <port>
-```
-
 ## nmap
 
 Scan port on the host(s)
