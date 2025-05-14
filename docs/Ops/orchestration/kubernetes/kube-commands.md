@@ -188,5 +188,5 @@ kubectl events --for <resource-type>/<resource-name> --watch
 kubectl events --types=Warning,Normal
 ```
 <!-- links -->
-[commands]: ../../assets/kuber/cheatsheet/cs-commands.jpg
-[cheatsheet]: ../../assets/kuber/cheatsheet/cs-CheatSheet.jpg
+[commands]: ../../../assets/kuber/cheatsheet/cs-commands.jpg
+[cheatsheet]: ../../../assets/kuber/cheatsheet/cs-CheatSheet.jpg
