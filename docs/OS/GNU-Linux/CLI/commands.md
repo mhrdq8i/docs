@@ -377,6 +377,12 @@ or
 |
 ```
 
+grep mulitple items
+
+```sh
+pip list | grep -E "uvicorn|websockets"
+```
+
 ## sed
 
 ### sed switch
