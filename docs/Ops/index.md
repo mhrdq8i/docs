@@ -11,5 +11,5 @@ I also write provision tools such as [Ansible] and hashicorp tools like [Terrafo
 For containerization and orchestration I use [Docker] and [Kubernetes]
 
 [Git]: Version_Controller/git.md
-[Kubernetes]: orchestrators/kubernetes/cheatsheet.md
+[Kubernetes]: ./orchestration/kubernetes/cheatsheet.md
 [Docker]: containers/docker.md
