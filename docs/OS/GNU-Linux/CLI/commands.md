@@ -2,23 +2,12 @@
 
 ## LVM
 
-<details>
-  <summary>
-    Knowing LVM's concept through some images
-  </summary>
-  <table>
-      <tr>
-          <td>
-              <div><img src=" ../../../../../../assets/gnu_linux/lvm1.png"></div>
-              <div><img src=" ../../../../../../assets/gnu_linux/lvm3.png"></div>
-          </td>
-          <td>
-              <div><img src=" ../../../../../../assets/gnu_linux/lvm4.png"></div>
-              <div><img src=" ../../../../../../assets/gnu_linux/lvm2.png" ></div>
-          </td>
-      </tr>
-  </table>
-</details>
+??? "LV/VG/PV"
+
+    ![pic1](../../../assets/gnu_linux/lvm1.png)
+    ![pic2](../../../assets/gnu_linux/lvm2.png)
+    ![pic3](../../../assets/gnu_linux/lvm3.png)
+    ![pic4](../../../assets/gnu_linux/lvm4.png)
 
 ### Get more info about LVM
 
@@ -81,7 +70,7 @@ sudo mkfs.ext4 /dev/exists-vg/new-lv
 
 Temporary mounting
 
-- Mount it to wherever you want
+-   Mount it to wherever you want
 
 ```bash
 sudo mount /dev/exists-vg/new_lv /mnt/new_dir
@@ -89,7 +78,7 @@ sudo mount /dev/exists-vg/new_lv /mnt/new_dir
 
 Permanent mounting
 
-- Append this line of code to `/etc/fstab`
+-   Append this line of code to `/etc/fstab`
 
 ```bash
 /dev/exists-vg/new_lv   /mnt/dir   [ext4 | btrfs]   defaults   0   2
@@ -322,31 +311,31 @@ tar cf - directory-name | bzip2 > archive-name.tar.gz
 
 ## systemd
 
-- Get the list of services(units)
+-   Get the list of services(units)
 
 ```bash
 systemctl list-units --type=service
 ```
 
-- Get the list of unit files
+-   Get the list of unit files
 
 ```bash
 sudo systemctl list-unit-files --type=service
 ```
 
-- Add service to startup
+-   Add service to startup
 
 ```bash
 sudo systemctl enable <service-name>
 ```
 
-- Mask service to prevent start
+-   Mask service to prevent start
 
 ```bash
 sudo systemctl mask <service-name>
 ```
 
-- UnMask service to prevent start
+-   UnMask service to prevent start
 
 ```bash
 sudo systemctl unmask <service-name>
@@ -455,8 +444,8 @@ openssl rsa -in made-key.key -check
 
 ### Create a self-sign Kubernetes ApiServer certificate
 
-- The private-key has been created before
-- we must use kubernetes valid CA (-CA ca.crt -CAkey ca.key)
+-   The private-key has been created before
+-   we must use kubernetes valid CA (-CA ca.crt -CAkey ca.key)
 
 ```bash
 openssl req -x509 -key /etc/kubernetes/ssl/apiserver.key -out /etc/kubernetes/ssl/apiserver.crt -days 365 -CA ca.crt -CAkey ca.key -subj "/CN=kubernetes" -addext "subjectAltName=DNS:kubernetes,DNS:kubernetes.default,DNS:kubernetes.default.svc,DNS:kubernetes.default.svc.cluster.local,DNS:lb-apiserver.kubernetes.local,DNS:localhost,DNS:node1,DNS:node1.cluster.local,DNS:node2,DNS:node2.cluster.local,DNS:node3,DNS:node3.cluster.local,IP:10.233.0.1,IP:172.16.2.10,IP:192.168.1.101,IP:127.0.0.1,IP:192.168.1.102,IP:192.168.1.103,IP:192.168.1.10"
