@@ -2,12 +2,7 @@
 
 ## Add Operation Systems that I've worked with
 
-- [GNU/Linux]
+- GNU/Linux
 - Unix
-- [Windows]
+- Windows
 - Android
-
-<!-- links -->
-
-[GNU/Linux]: GNU-Linux/index.md
-[Windows]: windows/index.md

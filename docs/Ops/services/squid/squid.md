@@ -124,5 +124,5 @@ echo no_proxy
 **Note:** If you want to set squid proxy to your APT packages repository, see [this link][apt_proxy]
 
 <!-- links -->
-[ip_v4_forwarding]: ../../OS/GNU-Linux/CLI/networks.md#kernel-ip-forwarding
-[apt_proxy]: ../../OS/GNU-Linux/dist/ubuntu.md#set-apt-proxy
+[ip_v4_forwarding]: ../../../OS/GNU-Linux/CLI/networks.md#kernel-ip-forwarding
+[apt_proxy]: ../../../OS/GNU-Linux/dist/ubuntu.md#set-apt-proxy

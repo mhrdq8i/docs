@@ -4,24 +4,26 @@
 
 ### The two main configuration terms `Context` & `Directive`
 
-![nginx-main-context]
+??? "Watch these steps"
+
+    ![pic1](../../../assets/nginx/nginx-main-context.png)
 
 ### Context
 
-- Context is a section with the configuration where **directive** can be set for that given context.
-- Contexts are also **nested** and **inherit** from their parents
+-   Context is a section with the configuration where **directive** can be set for that given context.
+-   Contexts are also **nested** and **inherit** from their parents
 
 #### Example
 
-- In the below picture we have hierarchical context `http`, `server`, `location` and a single context `events`
+-   In the below picture we have hierarchical context `http`, `server`, `location` and a single context `events`
 
 ### Directive
 
-- A specific configuration option that gets set in the configuration files and consist of a key and value
+-   A specific configuration option that gets set in the configuration files and consist of a key and value
 
 #### Example
 
-- server_name `mydomain.com`
+-   server_name `mydomain.com`
 
 ## VirtualHost
 
@@ -113,7 +115,9 @@ http {
 
 ## Variables
 
-### ![nginx-uri-schema]
+??? "Nginx URI Schema Variables"
+
+    ![pic2](../../../assets/nginx/nginx-uri-schema.jpg)
 
 ```nginx
 http {
@@ -156,8 +160,8 @@ http {
 
 ## Rewrites & Redirects
 
-- **rewrite** pattern URI
-- **return** status URI
+-   **rewrite** pattern URI
+-   **return** status URI
 
 ```nginx
 http {
@@ -215,7 +219,7 @@ http {
 
 ### Error Log
 
- As the name suggests for anything that failed or didn't happen as expected.
+As the name suggests for anything that failed or didn't happen as expected.
 
 ### Access Log
 
@@ -227,20 +231,20 @@ Both of logs are located in `/var/log/nginx`
 
 We can also create custom log files or disable logging all together
 
-- **access_log**
-- **error_log**
+-   **access_log**
+-   **error_log**
 
 ### Access Log format
 
-- **Syntax:** access_log path `[format [buffer=size] [gzip[=level]] [flush=time] [if=condition]];` access_log off;
-- **Default:** access_log logs/access.log combined;
-- **Context:** http, server, location, if in location, limit_except
+-   **Syntax:** access_log path `[format [buffer=size] [gzip[=level]] [flush=time] [if=condition]];` access_log off;
+-   **Default:** access_log logs/access.log combined;
+-   **Context:** http, server, location, if in location, limit_except
 
 ### Error Log format
 
-- **Syntax:** error_log file [level];
-- **Default:** error_log logs/error.log error;
-- **Context:** main, http, server, location,mail, stream, if in location, limit_except
+-   **Syntax:** error_log file [level];
+-   **Default:** error_log logs/error.log error;
+-   **Context:** main, http, server, location,mail, stream, if in location, limit_except
 
 ### Example
 
@@ -332,9 +336,9 @@ http {
 
 ### Worker
 
-- **worker_process:** the number of nginx worker
-- **worker_connection:** the number of each worker can handle
-- **worker_process** \* **worker_connection** = max connection
+-   **worker_process:** the number of nginx worker
+-   **worker_connection:** the number of each worker can handle
+-   **worker_process** \* **worker_connection** = max connection
 
 ```nginx
 worker_processes 1024;
@@ -423,7 +427,7 @@ http {
 
 ### Add image filtering module
 
-```bash
+```sh
 --with-http_image_filter_module=dynamic
 --module-path=/etc/nginx/modules
 make
@@ -482,13 +486,9 @@ http {
   }
 }
 ```
+
 ## Validate Nginx Configuration
 
-```bash
+```sh
 sudo nginx -t
 ```
-
-<!-- image links -->
-
-[nginx-main-context]: ../../../assets/services/nginx/nginx-main-context.png
-[nginx-uri-schema]: ../../../assets/services/nginx/nginx-uri-schema.jpg

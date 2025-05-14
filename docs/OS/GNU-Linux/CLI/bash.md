@@ -15,4 +15,4 @@
 [The Linux Set Command]: https://linuxhint.com/the-linux-set-command/
 [Linux Set Command]: https://www.javatpoint.com/linux-set-command
 [set Command in Linux | Explained]: https://itslinuxfoss.com/set-command-linux-explained/
-[MoveEraseShell]: ../../../../assets/gnu_linux/shell/moving-erasing.png
+[MoveEraseShell]: ../../../assets/gnu_linux/shell/moving-erasing.png
