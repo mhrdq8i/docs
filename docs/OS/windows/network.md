@@ -1,61 +1,23 @@
-# Windows
+# Network
 
-## Enable/Disable HyperV
+## Ports
 
-### Enable
-
-```powershell
-bcdedit /set hypervisorlaunchtype auto
-```
-
-This command sets the hypervisor launch type to "auto", which ensures the hypervisor starts automatically on boot.
-
-### Disable
-
-```powershell
-bcdedit /set hypervisorlaunchtype off
-```
-
-## SSH on windows
-
-Copy public key from windows machine
-
-```powershell
-scp ~/.ssh/id_rsa.pub [linux_user]@[linux_IP/linux_hostname]:~/.ssh/authorized_keys
-```
-
-or
+### Find open ports and filter over them
 
 ```pwsh
-type $env:USERPROFILE\.ssh\id_rsa.pub | ssh {IP-ADDRESS-OR-FQDN} -l {USER} "cat >> .ssh/authorized_keys"
-```
-
-## Generalize Windows Server
-
-Open Run Menu:
-
-```powershell
-sysprep
-generalized
-shutdown
-```
-
-## Find open ports and filter over them
-
-```powershell
 netstat -ano | findstr "desire-port-number"
 ```
 
-## Restart `net` service to solve `nekoray` problem
+### Restart `net` service to solve `nekoray` problem
 
-```powershell
+```pwsh
 net stop hns
 net start hns
 ```
 
 ## NetStat
 
-```powershell
+```pwsh
 NETSTAT [-a] [-b] [-e] [-f] [-i] [-n] [-o] [-p proto] [-r] [-s] [-t] [-x] [-y] [interval]
 
   -a            Displays all connections and listening ports.
@@ -99,32 +61,34 @@ NETSTAT [-a] [-b] [-e] [-f] [-i] [-n] [-o] [-p proto] [-r] [-s] [-t] [-x] [-y] [
 
 ### Watch open ports and find yours
 
-```powershell
+```pwsh
 netstat -na | findstr "your_port"
 ```
 
 ### Watch open ports with process number
 
-```powershell
+```pwsh
 netstat -nao
 ```
 
-## Chocolatey
+## Route
 
-### Install Choco Package Manager (Chocolatey)
+### Show all routes
 
-- Follow the official [link] in **individual** mode
-
-## Battery
-
-Check the battery health status
-
-Run this command into the CMD
-
-```cmd
-powercfg /batteryreport
+```pwsh
+route print -4
 ```
 
-<!-- links -->
+### Add a new route
 
-[link]: https://chocolatey.org/install#individual
+How to access to the ZiTel anton
+
+```pwsh
+route add 192.168.0.254 mask 255.255.255.255 192.168.0.1
+```
+
+**Note:** I also have set another route on the access point
+
+??? "Anton access route"
+
+    ![pic1](../../assets/windwos/ZTOR.png)

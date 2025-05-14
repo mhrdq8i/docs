@@ -38,4 +38,4 @@ The Kernel NET stack consists of several key components:
 
 ### Simple Kernel Network Schema
 
-![](../../../../assets/gnu_linux/kernel/kernel_net_stack.png)
+![](../../../assets/gnu_linux/kernel/kernel_net_stack.png)
