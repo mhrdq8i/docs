@@ -13,28 +13,28 @@
 
 Display and show Physical Volumes
 
-```bash
+```sh
 pvs
 pvdisplay [-s] <pv-name>
 ```
 
 Display and show Volume Groups
 
-```bash
+```sh
 vgs
 vgdisplay [-s] <vg-name>
 ```
 
 Display and show Logical Volume
 
-```bash
+```sh
 lvs
 lvdisplay <lv-name>
 ```
 
 ### Steps to add a physical disk or new partition to LVM
 
-```bash
+```sh
 lsblk -f
 df -Th
 fdisk /dev/sda
@@ -57,14 +57,14 @@ resize2fs /dev/vg-name/lv-name
 
 Create a new Logical Volume
 
-```bash
+```sh
 sudo lvcreate -n <LV name> -l <LV-size> <VG name>
 sudo lvcreate -n new-lv    -l 100%FREE  vg-name
 ```
 
 Make a filesystem for it
 
-```bash
+```sh
 sudo mkfs.ext4 /dev/exists-vg/new-lv
 ```
 
@@ -72,7 +72,7 @@ Temporary mounting
 
 -   Mount it to wherever you want
 
-```bash
+```sh
 sudo mount /dev/exists-vg/new_lv /mnt/new_dir
 ```
 
@@ -80,19 +80,19 @@ Permanent mounting
 
 -   Append this line of code to `/etc/fstab`
 
-```bash
+```sh
 /dev/exists-vg/new_lv   /mnt/dir   [ext4 | btrfs]   defaults   0   2
 ```
 
 ### LVM snapshot
 
-```bash
+```sh
 lvcreate -v -L -s -n backup /dev/vg-name
 ```
 
 ### write a new partition on disk
 
-```bash
+```sh
 # Check the free space and partitions with mount point
 lsblk
 df -h
@@ -110,7 +110,7 @@ mkfs.ext4 /dev/sd{a..z}{1..n}
 
 ### Mount Option
 
-```bash
+```sh
 
 # Show mounted partitions
 fdisk -l
@@ -137,20 +137,20 @@ mount /dev/sd{a..z}{1..n} /xyz
 
 List of partitions and mounted path
 
-```bash
+```sh
 lsblk
 ```
 
 List of ID and UUID of devices
 
-```bash
+```sh
 blkid
 
 ```
 
 Get the list of a partition
 
-```bash
+```sh
 tune2fs -l /dev/sda2
 
 # Filesystem volume name
@@ -163,7 +163,7 @@ tune2fs -l /dev/sda2
 
 ### Change left root password
 
-```bash
+```sh
 # Mount chroot shell - change password
 1. Boot the Ubuntu Live CD.
 2. Press Ctrl-Alt-F1
@@ -186,7 +186,7 @@ tune2fs -l /dev/sda2
 
 #### Add user
 
-```bash
+```sh
 # Add a new user with home directory
 useradd -m mehrdad
 
@@ -202,7 +202,7 @@ groups mehrdad
 
 #### Changing owner
 
-```bash
+```sh
 # Change owner of file
 chown user_name file_name
 
@@ -215,7 +215,7 @@ sudo chown -R username:group <directory-name>
 
 #### Lock and Unlock an user
 
-```bash
+```sh
 # automatically
 usermod -L mehrdad
 usermod -U mehrdad
@@ -228,26 +228,26 @@ root:x:0:0:root:/root:/usr/sbin/nologin
 
 #### Kill user in another session
 
-```bash
+```sh
 ctrl + alt + f2
 pkill -9 -u USER || ps -fp $(pgrep -d, -u USERNAME)
 ```
 
 #### Grep all active users
 
-```bash
+```sh
 sudo cat /etc/passwd | egrep "bash$"
 ```
 
 #### check user exists
 
-```bash
+```sh
 getent passwd root
 ```
 
 ### Groups
 
-```bash
+```sh
 # Add a new group
 grpadd
 
@@ -264,7 +264,7 @@ chown :group_name file_name
 
 ### TAR
 
-```bash
+```sh
 # Create TAR file
 tar -cf file-name.tar file/directory
 
@@ -280,7 +280,7 @@ tar -xvf 1.tar.bz
 
 ### XZ
 
-```bash
+```sh
 # Add directory into the XZ compress file
 tar cf - directory-name | xz -z > archive-name.tar.xz
 
@@ -297,14 +297,14 @@ xz --compress images.tar
 
 ### GZ
 
-```bash
+```sh
 # Add directory into the GZ compress file
 tar cf - directory-name | gzip > archive-name.tar.gz
 ```
 
 ### BZIP2
 
-```bash
+```sh
 # Add directory into the BZ compress file
 tar cf - directory-name | bzip2 > archive-name.tar.gz
 ```
@@ -313,37 +313,37 @@ tar cf - directory-name | bzip2 > archive-name.tar.gz
 
 -   Get the list of services(units)
 
-```bash
+```sh
 systemctl list-units --type=service
 ```
 
 -   Get the list of unit files
 
-```bash
+```sh
 sudo systemctl list-unit-files --type=service
 ```
 
 -   Add service to startup
 
-```bash
+```sh
 sudo systemctl enable <service-name>
 ```
 
 -   Mask service to prevent start
 
-```bash
+```sh
 sudo systemctl mask <service-name>
 ```
 
 -   UnMask service to prevent start
 
-```bash
+```sh
 sudo systemctl unmask <service-name>
 ```
 
 ## grep
 
-```bash
+```sh
 # Reverse grep
 grep -v
 
@@ -366,17 +366,11 @@ or
 |
 ```
 
-grep mulitple items
-
-```sh
-pip list | grep -E "uvicorn|websockets"
-```
-
 ## sed
 
 ### sed switch
 
-```bash
+```sh
 - `s` (substitute match pattern)
 - `g` (global sub)
 - `3g` (after 3th character sub)
@@ -395,13 +389,13 @@ pip list | grep -E "uvicorn|websockets"
 
 ### force edit visudo
 
-```bash
+```sh
 pkexec visudo
 ```
 
 ## Monitor Resources
 
-```bash
+```sh
 top
 htop
 btop
@@ -418,7 +412,7 @@ Create a new CERT file via openssl
 
 ### Create a new PrivateKey
 
-```bash
+```sh
 openssl [key_type [genrsa]] -out /path/to/dir/self_priv_key.key 2048
 or
 openssl genpkey -algorithm RSA -out /path/to/dir/self_priv_key.key 2048
@@ -426,19 +420,19 @@ openssl genpkey -algorithm RSA -out /path/to/dir/self_priv_key.key 2048
 
 ### Create Self-Sign Cert with Private-Key
 
-```bash
+```sh
 openssl req -x509 -new -days 3650 -key /path/to/dir/self_priv_key.key -out /path/to/dir/self_sing_cert.crt
 ```
 
 ### Open CERT file to show content
 
-```bash
+```sh
 openssl x509 -in made-cert.crt -text -noout
 ```
 
 ### Open RSA PrivateKey file to show content
 
-```bash
+```sh
 openssl rsa -in made-key.key -check
 ```
 
@@ -447,7 +441,7 @@ openssl rsa -in made-key.key -check
 -   The private-key has been created before
 -   we must use kubernetes valid CA (-CA ca.crt -CAkey ca.key)
 
-```bash
+```sh
 openssl req -x509 -key /etc/kubernetes/ssl/apiserver.key -out /etc/kubernetes/ssl/apiserver.crt -days 365 -CA ca.crt -CAkey ca.key -subj "/CN=kubernetes" -addext "subjectAltName=DNS:kubernetes,DNS:kubernetes.default,DNS:kubernetes.default.svc,DNS:kubernetes.default.svc.cluster.local,DNS:lb-apiserver.kubernetes.local,DNS:localhost,DNS:node1,DNS:node1.cluster.local,DNS:node2,DNS:node2.cluster.local,DNS:node3,DNS:node3.cluster.local,IP:10.233.0.1,IP:172.16.2.10,IP:192.168.1.101,IP:127.0.0.1,IP:192.168.1.102,IP:192.168.1.103,IP:192.168.1.10"
 ```
 
@@ -455,7 +449,7 @@ openssl req -x509 -key /etc/kubernetes/ssl/apiserver.key -out /etc/kubernetes/ss
 
 A ton of curl examples [is here][curl-https-request]
 
-```bash
+```sh
 # download with curl
 curl -C - -L -O URL
 
@@ -471,7 +465,7 @@ curl -C - -L -O URL
 
 ## aria2
 
-```bash
+```sh
 aria2c -c -s 16 -x 16 -k 1M -j 1 -i dl.txt
 
 -c, --continue [true|false]
@@ -484,7 +478,7 @@ aria2c -c -s 16 -x 16 -k 1M -j 1 -i dl.txt
 
 ## Watch the OS installation date and time
 
-```bash
+```sh
 stat -c %w /
 ```
 
@@ -492,19 +486,19 @@ stat -c %w /
 
 > date +%<format-option\>
 
-```bash
+```sh
 date +"YEAR: %Y - Month: %m - Day: %d"
 ```
 
 ## Check for Installed Libraries
 
-```bash
+```sh
 ldconfig -p | grep <libname>
 ```
 
 ## Set and Get from Clipboard
 
-```bash
+```sh
 sudo apt install xclip
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
@@ -513,7 +507,7 @@ source ~/.bashrc
 
 Test bpcopy command
 
-```bash
+```sh
 echo 'go to my clipboard' | pbcopy
 ```
 
