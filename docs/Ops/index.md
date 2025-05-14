@@ -4,12 +4,12 @@ I write all my tasks and jobs that I've ever done.
 
 This section made from CI (Continuous Integration) to end of the CD (Continuous Delivery)
 
-The parts include mostly used source version controller [Git],  Server side services for load balancing, serving http, and some other services.
+The parts include mostly used source version controller [Git], Server side services for load balancing, serving http, and some other services.
 
 I also write provision tools such as [Ansible] and hashicorp tools like [Terraform], [Vagrant], [Packer] and [Vault].
 
 For containerization and orchestration I use [Docker] and [Kubernetes]
 
-[Git]: Version_Controller/git.md
+[Git]: ./Version-Controller/git.md
 [Kubernetes]: ./orchestration/kubernetes/cheatsheet.md
 [Docker]: containers/docker.md
