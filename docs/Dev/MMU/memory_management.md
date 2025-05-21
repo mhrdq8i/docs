@@ -136,7 +136,6 @@ The compiler does a lot of stuff to **[translate C code to assembly]**
 - Coordinate function calls
 - Try to make the assembly fast.
 
-
 <!-- external links -->
 
 [MM-in-OS]: https://www.geeksforgeeks.org/memory-management-in-operating-system/
