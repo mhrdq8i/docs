@@ -53,8 +53,8 @@ Remove-Item Alias:tf
 
 ## Disable `Bell` alert in terminal
 
-- open the `json` file in setting section
-- add this `key & value` to json file
+-   open the `json` file in setting section
+-   add this `key & value` to json file
 
 ```json
  "profiles":
@@ -71,27 +71,7 @@ Remove-Item Alias:tf
 Set-ExecutionPolicy RemoteSigned
 ```
 
-## Install oh-my-posh
-
-```powershell
-winget install JanDeDobbeleer.OhMyPosh -s winget
-```
-
-## Clone oh-my-posh Themes
-
-- git clone [**without-my-custom-theme**](https://github.com/JanDeDobbeleer/oh-my-posh.git)
-
-## Active Custom Theme
-
-notepad++ $profile
-
-```powershell
-oh-my-posh init pwsh --config C:\Users\mehrdad\oh-my-posh\themes\mehrdad.omp.json | Invoke-Expression
-```
-
 ## Fish-like Autosuggestion in Powershell
-
-### Installation
 
 I. First, install ´PSReadLine´ version 2.1.0
 
@@ -105,3 +85,40 @@ II. Then, initialize it with the command below(notepad $profile)
    Import-Module PSReadLine
    Set-PSReadLineOption -PredictionSource History
 ```
+
+## oh-my-posh
+
+### Installation
+
+```powershell
+winget install JanDeDobbeleer.OhMyPosh -s winget
+```
+
+### Clone oh-my-posh Themes
+
+-   git clone [**without-my-custom-theme**](https://github.com/JanDeDobbeleer/oh-my-posh.git)
+
+## Active Custom Theme
+
+Show the path of the current profile
+
+```pwsh
+echo $PROFILE
+```
+
+Open the active profile
+
+```pwsh
+notepad++ $profile
+```
+
+Edit these lines
+
+```pwsh
+oh-my-posh init pwsh --config C:\Users\mehrdad\oh-my-posh\themes\mehrdad.omp.json | Invoke-Expression
+```
+
+### Language Segment
+
+-   [Python](https://ohmyposh.dev/docs/segments/languages/python)
+-   [Rust](https://ohmyposh.dev/docs/segments/languages/rust)
