@@ -5,7 +5,7 @@
 ### Find open ports and filter over them
 
 ```pwsh
-netstat -ano | findstr "desire-port-number"
+netstat -ano -p TCP | findstr "LISTENING"
 ```
 
 ### Restart `net` service to solve `nekoray` problem
