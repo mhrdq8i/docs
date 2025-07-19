@@ -70,7 +70,7 @@ sudo mkfs.ext4 /dev/exists-vg/new-lv
 
 Temporary mounting
 
--   Mount it to wherever you want
+- Mount it to wherever you want
 
 ```sh
 sudo mount /dev/exists-vg/new_lv /mnt/new_dir
@@ -78,7 +78,7 @@ sudo mount /dev/exists-vg/new_lv /mnt/new_dir
 
 Permanent mounting
 
--   Append this line of code to `/etc/fstab`
+- Append this line of code to `/etc/fstab`
 
 ```sh
 /dev/exists-vg/new_lv   /mnt/dir   [ext4 | btrfs]   defaults   0   2
@@ -311,31 +311,31 @@ tar cf - directory-name | bzip2 > archive-name.tar.gz
 
 ## systemd
 
--   Get the list of services(units)
+- Get the list of services(units)
 
 ```sh
 systemctl list-units --type=service
 ```
 
--   Get the list of unit files
+- Get the list of unit files
 
 ```sh
 sudo systemctl list-unit-files --type=service
 ```
 
--   Add service to startup
+- Add service to startup
 
 ```sh
 sudo systemctl enable <service-name>
 ```
 
--   Mask service to prevent start
+- Mask service to prevent start
 
 ```sh
 sudo systemctl mask <service-name>
 ```
 
--   UnMask service to prevent start
+- UnMask service to prevent start
 
 ```sh
 sudo systemctl unmask <service-name>
@@ -365,6 +365,17 @@ or
 -e
 |
 ```
+
+### Remove the shared line from file 1
+
+```sh
+grep -Fxv -f file2.txt file1.txt > result.txt
+```
+
+- `-F` برای استفاده از متن ساده (بدون regex)
+- `-x` برای تطبیق کامل خط
+- `-v` برای نمایش خط‌هایی که در فایل دوم نیستند
+- `-f` file2.txt برای مقایسه با محتوای فایل دوم
 
 ## sed
 
@@ -438,8 +449,8 @@ openssl rsa -in made-key.key -check
 
 ### Create a self-sign Kubernetes ApiServer certificate
 
--   The private-key has been created before
--   we must use kubernetes valid CA (-CA ca.crt -CAkey ca.key)
+- The private-key has been created before
+- we must use kubernetes valid CA (-CA ca.crt -CAkey ca.key)
 
 ```sh
 openssl req -x509 -key /etc/kubernetes/ssl/apiserver.key -out /etc/kubernetes/ssl/apiserver.crt -days 365 -CA ca.crt -CAkey ca.key -subj "/CN=kubernetes" -addext "subjectAltName=DNS:kubernetes,DNS:kubernetes.default,DNS:kubernetes.default.svc,DNS:kubernetes.default.svc.cluster.local,DNS:lb-apiserver.kubernetes.local,DNS:localhost,DNS:node1,DNS:node1.cluster.local,DNS:node2,DNS:node2.cluster.local,DNS:node3,DNS:node3.cluster.local,IP:10.233.0.1,IP:172.16.2.10,IP:192.168.1.101,IP:127.0.0.1,IP:192.168.1.102,IP:192.168.1.103,IP:192.168.1.10"
