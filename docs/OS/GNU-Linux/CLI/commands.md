@@ -396,6 +396,45 @@ grep -Fxv -f file2.txt file1.txt > result.txt
 - `I` (case ignore flag)
 ```
 
+## comm
+
+### Compare two sorted files line by line
+
+Remove the sharing area from file one
+
+```sh
+comm -23 file1.txt file2.txt > result.txt
+```
+
+#### NOTE
+
+Files must be sorted before, if didn't use this command
+
+??? "Schema of comm 23"
+
+    ![pic1](../../../assets/gnu_linux/gnu_linux_comm.png)
+
+```sh
+comm -23 <(sort file1.txt) <(sort file2.txt) > result.txt
+```
+
+## dos2unix
+
+Cat the file to see the end-of-line characters
+
+```sh
+cat -A file1.txt
+```
+
+Convert `\r\n` to `\n`
+
+```sh
+dos2unix file1.txt
+```
+
+- `\r` = Carriage Return (بازگشت هد چاپگر به ابتدای خط)
+- `\n` = Line Feed (حرکت هد چاپگر به خط بعدی)
+
 ## sudoer
 
 ### force edit visudo
@@ -531,4 +570,3 @@ echo 'go to my clipboard' | pbcopy
 <!-- external link -->
 
 [curl-https-request]: https://reqbin.com/req/c-lfozgltr/curl-https-request
-[linux-commands-cheat-sheet]: ../../../assets/gnu_linux/chsh-1.jpg
