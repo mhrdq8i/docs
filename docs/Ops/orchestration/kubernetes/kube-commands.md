@@ -4,6 +4,14 @@ Kubernetes [commands] and [cheatsheet]
 
 ## Kubectl
 
+### Installation
+
+'x86/64' architecture
+
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
 ### Version and Info
 
 ```bash
@@ -55,7 +63,7 @@ kubectl taint node <node-name> taint_label_key=taint_label_value:TaintEffect # a
 kubectl taint node <node-name> taint_label_key- # remove added taint label to node"
 ```
 
-**TaintEffect**:     [NoSchedule, PreferNoSchedule or NoExecute]
+**TaintEffect**: [NoSchedule, PreferNoSchedule or NoExecute]
 
 get node taint
 
@@ -187,6 +195,8 @@ kubectl logs -f <resource-name>
 kubectl events --for <resource-type>/<resource-name> --watch
 kubectl events --types=Warning,Normal
 ```
+
 <!-- links -->
+
 [commands]: ../../../assets/kuber/cheatsheet/cs-commands.jpg
 [cheatsheet]: ../../../assets/kuber/cheatsheet/cs-CheatSheet.jpg
