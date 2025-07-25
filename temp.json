@@ -1,0 +1,16 @@
+{
+  "status": {
+    "code": 520,
+    "message": "Service Provider Error!"
+  },
+  "meta": {
+    "transactionId": "20250720170a4d5d94867320ea0002fc0ceb21ff486f43d3bdbea6cadb3bd02p"
+  },
+  "result": {
+    "data": null,
+    "status": {
+      "code": 1105,
+      "message": "User not found"
+    }
+  }
+}
