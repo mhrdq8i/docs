@@ -1,4 +1,6 @@
-# The SOLID Principles of Object-Oriented Design
+# SOLID Principles
+
+## The SOLID Principles of Object-Oriented Design
 
 In software engineering, **SOLID** is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible, and maintainable. These principles, introduced by Robert C. Martin (also known as "Uncle Bob"), guide developers in writing clean and scalable code. They are:
 
