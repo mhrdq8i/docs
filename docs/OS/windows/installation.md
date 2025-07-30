@@ -1,4 +1,6 @@
-# Install Windows the Arch Linux Way
+# Install Windows
+
+## Install Windows the Arch Linux Way
 
 ## [According from this link][docreflnk]
 
@@ -47,8 +49,11 @@ irm christitus.com/win | iex
 ## Install Windows 11 to Unsupported PC
 
 - [Link #1]
+- [Link #2]  It's better to disable "IRST"
 
 <!-- links -->
+
 [docreflnk]: https://christitus.com/install-windows-the-arch-linux-way
 [source]: https://www.youtube.com/watch?v=IJr2DcffquI
 [Link #1]: https://pureinfotech.com/install-windows-11-unsupported-pc/amp/
+[Link #2]: https://www.asus.com/support/faq/1044458/#A2
