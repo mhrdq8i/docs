@@ -4,8 +4,10 @@
 
 ??? "Expand to show Database Scaling Cheatsheet"
 
-      ![pic1](../assets/database/db_scaling.jpg)
-      ![pic2](../assets/database/db_scale.png)
+    ![pic1](../assets/database/scaling/db_scale1.png)
+    ![pic2](../assets/database/scaling/db_scale2.jpg)
+    ![pic3](../assets/database/scaling/db_scale3.png)
+    ![pic4](../assets/database/scaling/db_scale4.png)
 
 ## Sequences
 
@@ -50,9 +52,9 @@ def get_user(user_id):
 
 ### 4. Vertical Scaling (Scale Up)
 
--   Increase CPU
--   Add more RAM
--   Upgrade to faster storage (SSD/NVMe)
+- Increase CPU
+- Add more RAM
+- Upgrade to faster storage (SSD/NVMe)
 
 ```bash
 Initial: 2 CPU, 4GB RAM, HDD
@@ -416,47 +418,47 @@ Query: SELECT * FROM sales WHERE date = '2023-06-15'
 
 ### Key Benefits
 
--   Improved query performance
--   Easier maintenance
--   Better data lifecycle management
--   Improved backup/recovery options
--   Parallel query execution potential
+- Improved query performance
+- Easier maintenance
+- Better data lifecycle management
+- Improved backup/recovery options
+- Parallel query execution potential
 
 ### Common Pitfalls to Avoid
 
--   Over-partitioning
--   Wrong partition key selection
--   Not planning for growth
--   Ignoring maintenance overhead
--   Not considering query patterns
+- Over-partitioning
+- Wrong partition key selection
+- Not planning for growth
+- Ignoring maintenance overhead
+- Not considering query patterns
 
 ## Horizontal Scaling (Scaling Out)
 
 ### Definitions
 
--   The process of adding more machines to your existing system to handle increased load and distribute it across multiple servers
--   Instead of upgrading existing hardware (vertical scaling / scale up), you add more instances of servers
--   Distributes load across multiple servers while keeping data synchronized
+- The process of adding more machines to your existing system to handle increased load and distribute it across multiple servers
+- Instead of upgrading existing hardware (vertical scaling / scale up), you add more instances of servers
+- Distributes load across multiple servers while keeping data synchronized
 
 ### Key Components
 
 #### A. Load Balancer
 
--   A device/software that distributes incoming network traffic across multiple servers
--   Ensures no single server bears too much load
--   Provides failover if one server goes down
+- A device/software that distributes incoming network traffic across multiple servers
+- Ensures no single server bears too much load
+- Provides failover if one server goes down
 
 #### B. Replication (Read Path)
 
--   Process of copying data from one database server (master) to others (replicas)
--   Improves read performance and provides redundancy
--   Helps distribute database load across multiple servers
+- Process of copying data from one database server (master) to others (replicas)
+- Improves read performance and provides redundancy
+- Helps distribute database load across multiple servers
 
 #### C. Sharding (Write Path)
 
--   Technique of splitting database into smaller parts (shards)
--   Each shard contains unique portions of data
--   Improves write performance and handles large datasets
+- Technique of splitting database into smaller parts (shards)
+- Each shard contains unique portions of data
+- Improves write performance and handles large datasets
 
 ### Examples
 
