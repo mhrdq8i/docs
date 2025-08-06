@@ -164,7 +164,7 @@ session.commit()
 user.name  # triggers a SELECT again
 ```
 
-??? "view in image"
+??? "SQLAlchemy Entity Lifecycle"
 
       ![session_lifecycle](../assets/database/orm/session_lifecycle.png)
 
