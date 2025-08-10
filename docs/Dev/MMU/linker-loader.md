@@ -28,16 +28,18 @@ we have to understand some concept that related to this topic.
 
 ## There are some schemas for better understanding
 
-![Image-01]
-![Image-02]
-![Image-03]
-![Image-04]
-![Image-05]
-![Image-06]
-![Image-07]
-![Image-08]
-![Image-09]
-![Image-10]
+??? "Memory Management Schema"
+
+    ![Image-01]
+    ![Image-02]
+    ![Image-03]
+    ![Image-04]
+    ![Image-05]
+    ![Image-06]
+    ![Image-07]
+    ![Image-08]
+    ![Image-09]
+    ![Image-10]
 
 ## Functions of loader
 
