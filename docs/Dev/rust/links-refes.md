@@ -38,6 +38,7 @@
 
 - [Redox OS]
 - [Philipp Oppermann]
+- [Learn OS with Rust]
 
 ### Youtube & Podcasts
 
@@ -81,6 +82,7 @@
 [Async Book]: https://rust-lang.github.io/async-book/
 [Redox OS]: https://www.redox-os.org/
 [Philipp Oppermann]: https://os.phil-opp.com/
+[Learn OS with Rust]: https://rust-class.org/pages/classes.html
 [Comprehensive Rust 🦀]: https://google.github.io/comprehensive-rust/
 [No Boilerplate]: https://www.youtube.com/c/NoBoilerplate
 [Rust Blog]: https://blog.rust-lang.org/

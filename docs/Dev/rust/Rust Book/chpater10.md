@@ -10,7 +10,7 @@ is `Declaration` and `Initiation` in the same Statement.
 
 When a variable is initialized, memory is allocated for it, and the _assigned_ value is stored in that memory location.
 
-_Initialization_ is a __one-time process__ that occurs when the variable is created.
+_Initialization_ is a **one-time process** that occurs when the variable is created.
 
 In C++
 
@@ -91,7 +91,7 @@ mod my_module {
 
 Variable _assignment_, on the other hand, is the process of assigning a new value to an already existing variable.
 
-__Note:__ Assignment statement in Rust and doesn't return a value.
+**Note:** Assignment statement in Rust and doesn't return a value.
 
 ## Lifetimes
 
@@ -99,7 +99,7 @@ Lifetimes allow us to give the compiler enough information about borrowed values
 
 Every reference in Rust has a lifetime, which is the scope for which that reference is valid.
 
->The main aim of lifetimes is to prevent _dangling references_.
+> The main aim of lifetimes is to prevent _dangling references_.
 
 ### Invalid pattern for lifetime in rust
 
@@ -116,7 +116,7 @@ fn main() {
 }                         // ---------+
 ```
 
-Here, we’ve annotated the lifetime of r with 'a and the lifetime of x with 'b. As you can see, the inner 'b block is much smaller than the outer 'a lifetime block. At compile time, Rust compares the size of the two lifetimes and sees that r has a lifetime of  'a but that it refers to memory with a lifetime of  'b. The program is rejected because 'b is shorter than 'a: the subject of the reference doesn’t live as long as the reference.
+Here, we’ve annotated the lifetime of r with 'a and the lifetime of x with 'b. As you can see, the inner 'b block is much smaller than the outer 'a lifetime block. At compile time, Rust compares the size of the two lifetimes and sees that r has a lifetime of 'a but that it refers to memory with a lifetime of 'b. The program is rejected because 'b is shorter than 'a: the subject of the reference doesn’t live as long as the reference.
 
 ### Valid pattern for lifetime in rust
 
@@ -132,7 +132,7 @@ fn main() {
 }                         // ----------+
 ```
 
-Here, x  has the lifetime 'b, which in this case is larger than 'a. This means r can reference x because Rust knows that the reference in r will always be valid while x is valid.
+Here, x has the lifetime 'b, which in this case is larger than 'a. This means r can reference x because Rust knows that the reference in r will always be valid while x is valid.
 
 ### Generic Lifetime
 
@@ -148,7 +148,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 The generic lifetime 'a will get the concrete lifetime that is equal to the smaller of the lifetimes of _x_ and _y_.
 
->Lifetimes on function or method parameters are called __input lifetimes__, and lifetimes on return values are called __output lifetimes__.
+> Lifetimes on function or method parameters are called **input lifetimes**, and lifetimes on return values are called **output lifetimes**.
 
 ### Compiler Rules in Lifetimes
 
@@ -169,10 +169,3 @@ No _Runtime Type Information_ (RTTI): Rust does not include runtime type informa
 ## Traits
 
 _Implementations_ of a trait on any type that satisfies the trait bounds are called _blanket implementations_ and are extensively used in the Rust standard library
-
-## Links
-
-- [Learn OS with Rust][os-with-rust]
-
-<!-- links -->
-[os-with-rust]: https://rust-class.org/pages/classes.html
