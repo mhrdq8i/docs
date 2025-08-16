@@ -423,3 +423,122 @@
 - Explain trade-offs between cost, scale, and reliability
 - Take a leadership role in critical incidents
 - Help the team grow and develop the right culture.
+
+👌 خیلی خوب شد اینو پرسیدی.
+اگر بخوایم یک سطح بالاتر از **Senior/Lead SRE** صحبت کنیم، می‌ریم سراغ **Principal SRE یا Head of SRE**.
+اینجا مصاحبه‌ها دیگه **تکنیکال صرف نیست**، بلکه ترکیب **استراتژی سازمانی، معماری کلان، فرهنگ تیمی، و رهبری در مقیاس سازمان** هست.
+
+این سطح بیشتر دنبال اینه که فرد:
+
+- **جهت استراتژیک SRE در سازمان رو مشخص کنه**
+- تصمیم‌های **trade-off بین هزینه، سرعت، و قابلیت اطمینان** رو بگیره
+- با **مدیریت محصول و بیزینس** هم‌سطح حرف بزنه
+- و **اکوسیستم reliability** کل سازمان رو بسازه
+
+---
+
+# 🔹 Principal / Head of SRE Interview Questions (Executive-Level)
+
+## 🏗️ System Design & Strategy
+
+### How would you define an SRE strategy for a company moving from monolith to microservices?
+
+**(key points):**
+
+- Establish SLIs/SLOs for critical services early.
+- Introduce observability stack (metrics, logs, tracing).
+- Gradual migration with service ownership models.
+- Create platform teams for shared infra.
+- Prioritize automation to reduce operational toil.
+
+### How do you decide what availability target (SLO) a service should have?
+
+- Based on **business impact** of downtime (lost revenue, user trust).
+- Balance cost vs reliability (99.9% may cost ×3 more than 99.5%).
+- Use error budgets to align product/development with reliability.
+
+### How would you architect a system to handle a Black Friday scale event?
+
+- Capacity planning + load testing well in advance.
+- Auto-scaling + burstable capacity in cloud.
+- Queueing and rate limiting to protect downstream services.
+- Graceful degradation (recommendations off, checkout prioritized).
+- “Dark launch” new features to test infra capacity.
+
+## 📊 Organization-wide Reliability
+
+### How do you scale SRE practices across multiple teams?
+
+- Define clear service ownership.
+- Provide SRE platform/tools (CI/CD, monitoring, alerting).
+- Create reliability standards (SLI/SLO frameworks).
+- Run reliability reviews regularly.
+
+### How do you measure the success of an SRE organization?
+
+- Reduction in MTTR/MTTD.
+- Error budget burn rates.
+- % of toil vs engineering work (goal: <50% toil).
+- Deployment frequency & rollback safety.
+- Team satisfaction & burnout levels.
+
+### How do you balance innovation (fast feature delivery) with reliability?
+
+- Error budget policy: innovation allowed until budget is burned.
+- Shared accountability with product teams.
+- Canary releases and progressive rollouts.
+- Strong CI/CD + automated testing.
+
+## 🔄 Incident Management & Crisis Leadership
+
+### How do you run an incident management process for a large org?
+
+- Define clear roles: incident commander, scribe, comms lead.
+- Standardize incident severity levels.
+- Ensure fast comms with stakeholders and customers.
+- After-action reviews with blameless culture.
+- Automate common mitigations (auto-remediation).
+
+### How would you prepare an org for “unknown unknowns”?
+
+- Chaos engineering & game days.
+- Cross-team incident simulations.
+- Invest in observability and fast detection.
+- Build culture of learning from small failures.
+
+## ⚡ Cost, Risk, and Business Alignment
+
+### How do you explain the value of SRE to non-technical executives?
+
+- Link downtime to lost revenue and reputation.
+- Show how SRE reduces risk and accelerates safe delivery.
+- Use metrics: incidents reduced, faster recovery, customer satisfaction.
+
+### If the CTO asks to cut infra costs by 30% without hurting customer experience, how do you respond?
+
+- Review SLOs → maybe adjust slightly if business agrees.
+- Optimize infra usage (rightsizing, auto-scaling, spot instances).
+- Rationalize monitoring/alerting costs.
+- Propose phased approach, not drastic cuts.
+
+## 🧩 Culture & Leadership
+
+### How do you foster a blameless culture while still ensuring accountability?
+
+- Focus on “what” and “how” not “who”.
+- Encourage transparency in failures.
+- Accountability via ownership, not punishment.
+- Recognition for proactive reliability improvements.
+
+### How do you grow and retain top SRE talent?
+
+- Provide clear career paths (IC vs Manager tracks).
+- Give engineers time for automation and innovation, not just firefighting.
+- Invest in learning (chaos days, conferences, training).
+- Build psychologically safe environments.
+
+### This level of interview becomes much less command-line / debugging and much more focused on
+
+- Organizational vision and strategy
+- Business and product communication
+- Team management and SRE culture Focuses.
