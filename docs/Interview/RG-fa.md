@@ -1,140 +1,225 @@
-# SRE Junior Level Interview
+# 🎯 Junior SRE Interview Questions + Answers
 
-## 🔹 مفاهیم پایه سیستم‌عامل و شبکه
+## 🔹 Operating System & Linux
 
-### تفاوت بین process و thread چیست؟
+1. What does the `top` command show?
 
-- process یک برنامه در حال اجراست که حافظه و منابع مخصوص به خودش را دارد.
-- thread یک مسیر اجرایی داخل یک process است که منابع را با سایر threadهای همان process به اشتراک می‌گذارد.
+   **Answer:** Running processes, CPU usage, memory usage, and load average.
 
-### وقتی یک برنامه در لینوکس به حالت zombie یا defunct می‌رود یعنی چه و چه باید کرد؟
+2. What is the difference between a `hard link` and a `soft link`?
 
-- Zombie یعنی پردازش تمام شده ولی هنوز entry آن در جدول پردازش‌ها باقی مانده چون parent نتیجه را collect نکرده.
-- راه‌حل: معمولاً با `kill -9 <parent_pid>` یا ریستارت parent مشکل رفع می‌شود.
+   **Answer:**
 
-### تفاوت بین TCP و UDP چیست و چه کاربردهایی دارند؟
+   - A hard link points directly to the file’s inode;
+   - A soft link (symlink) is a shortcut pointing to the file path.
 
-- TCP اتصال‌گرا (connection-oriented) است، قابلیت اطمینان دارد، بسته‌ها را تضمین‌شده و به‌ترتیب می‌رساند (مثلاً وب، ایمیل).
-- UDP بدون اتصال (connectionless) است، سریع‌تر ولی غیرقابل اطمینان (مثلاً DNS، ویدئو استریمینگ، بازی آنلاین).
+3. What is the purpose of the `/etc/hosts` file?
 
-### وقتی یک وب‌سایت در مرورگر باز نمی‌شود، چه مراحلی برای عیب‌یابی شبکه انجام می‌دهید؟
+   **Answer:** Manual mapping of hostnames to IP addresses.
 
-1. بررسی اتصال اینترنت (`ping 8.8.8.8`)
-2. بررسی DNS (`dig`, `nslookup`)
-3. بررسی مسیر شبکه (`traceroute`)
-4. بررسی دسترسی به پورت (`telnet <host> 80` یا `curl -v`)
-5. چک کردن فایروال/پالیسی‌ها
+4. Difference between `systemctl start` and `systemctl enable`?
 
-### دستوراتی مثل `top`, `htop`, `netstat`, `ss`, `curl`, `ping`, `traceroute` چه کاربردی دارند؟
+   **Answer:**
 
-- `top/htop` → مشاهده مصرف CPU/RAM و پروسس‌ها
-- `netstat/ss` → مشاهده اتصال‌های شبکه و پورت‌ها
-- `curl` → ارسال درخواست HTTP برای تست سرویس‌ها
-- `ping` → تست دسترسی IP
-- `traceroute` → بررسی مسیر بسته‌ها در شبکه
+   - `start` runs the service immediately;
+   - `enable` makes it run automatically on boot.
 
-## 🔹 مفاهیم سرویس‌ها و مانیتورینگ
+5. Difference between process and thread?
 
-### SRE چیست و چه تفاوتی با DevOps یا SysAdmin دارد؟
+   **Answer:**
 
-- SRE تمرکزش روی **reliability، availability و performance** سرویس‌هاست.
-- SysAdmin بیشتر روی مدیریت سرورها تمرکز دارد.
-- DevOps بیشتر روی CICD و همکاری بین توسعه و عملیات.
+   - **Process** = independent program with its own memory space.
+   - **Thread** = unit of execution inside a process sharing the same memory.
 
-### تفاوت monitoring و observability چیست؟
+6. Difference between `kill -9` and `kill -15`?
 
-- Monitoring یعنی جمع‌آوری و بررسی داده‌ها (مثل متریک CPU یا خطاهای لاگ).
-- Observability یعنی توانایی فهمیدن وضعیت داخلی سیستم از روی خروجی‌ها (logs, metrics, traces).
+   **Answer:**
 
-### با مفاهیم SLI / SLO / SLA آشنا هستید؟
+   - `-15` is a graceful termination signal (can be handled);
+   - `-9` forces immediate kill (cannot be handled).
 
-- **SLI (Service Level Indicator):** معیار قابل اندازه‌گیری (مثل درصد درخواست‌های موفق).
-- **SLO (Service Level Objective):** هدف برای SLI (مثلاً 99.9% درخواست موفق).
-- **SLA (Service Level Agreement):** توافق قراردادی با مشتری درباره سطح سرویس (مثلاً جریمه در صورت کمتر از 99.5%).
+7. What does `df -h` show?
 
-#### وقتی CPU یا Memory یک سرویس ناگهان بالا می‌رود، چه اقداماتی انجام می‌دهید؟
+   **Answer:** Disk usage, total, used, and available space on partitions.
 
-1. مشاهده مصرف منابع (`top`, `htop`)
-2. بررسی پروسس‌های سنگین
-3. بررسی لاگ‌ها برای memory leak یا loop
-4. محدود کردن resource با cgroup/Kubernetes resource limit
-5. اگر لازم بود، scale کردن سرویس
+8. What is the difference between swap and RAM?
 
-### اگر در لاگ‌ها error 500 دیدید، چه مراحلی را برای پیدا کردن علت طی می‌کنید؟
+   **Answer:**
 
-1. بررسی زمان وقوع خطا در لاگ‌ها
-2. بررسی dependencyها (دیتابیس، سرویس‌های دیگر)
-3. بررسی منابع سیستم
-4. تست دستی endpoint با `curl`
-5. بررسی recent changes (کد، کانفیگ، دپلوی جدید)
+   - RAM is fast volatile memory;
+   - SWAP uses disk as backup memory, much slower.
 
-## 🔹 ابزارها و کانتینر
+9. Purpose of `/etc/resolv.conf`?
 
-### آیا تجربه کار با Docker دارید؟ یک کانتینر چگونه با سیستم‌عامل میزبان ارتباط برقرار می‌کند؟
+   **Answer:** Configures DNS servers used by the system.
 
-- کانتینر یک پردازش ایزوله‌شده روی کرنل میزبان است.
-- از namespaceها (برای جداسازی process, network, mount و …) و cgroups (برای محدود کردن منابع) استفاده می‌کند.
+## 🔹 Networking
 
-### تفاوت بین image و container چیست؟
+10. What does `ping` do?
 
-- image یک snapshot غیرقابل تغییر (read-only) است.
-- container یک instance اجرایی از image است که writable layer دارد.
+    **Answer:** Sends `ICMP` packets to check reachability and latency.
 
-### کوبرنتیز را می‌شناسید؟ یک پاد (Pod) چیست و CrashLoopBackOff یعنی چه؟
+11. Difference between TCP and UDP?
 
-- Pod کوچکترین واحد اجرایی در K8s است (یک یا چند کانتینر).
-- CrashLoopBackOff یعنی کانتینر بارها کرش می‌کند و K8s آن را ری‌استارت می‌کند. معمولاً ناشی از misconfiguration، dependency مشکل‌دار یا bug.
+    **Answer:**
 
-## 🔹 پشتیبانی و Incident Handling
+    - TCP is connection-oriented and reliable;
+    - UDP is connectionless and faster but unreliable.
 
-### اگر ساعت ۳ صبح یک alert بیاید که دیتابیس down است، اولین اقدام شما چیست؟
+12. If DNS is not working but the network is fine, what do you check?
 
-1. بررسی alert و صحت آن
-2. چک کردن وضعیت سرویس (`systemctl status`, `docker logs`, health check)
-3. بررسی منابع سیستم (CPU, RAM, Disk)
-4. تلاش برای restore سریع (restart service یا failover)
-5. اطلاع‌رسانی به تیم در صورت نیاز
+    **Answer:** Verify `/etc/resolv.conf`, test with `dig` or `nslookup`, check the DNS server.
 
-### فرق بین issue, incident, problem, outage چیست؟
+13. What is port 80 used for?
 
-- **Issue:** هرگونه مشکل گزارش شده.
-- **Incident:** اختلالی که روی سرویس تاثیر می‌گذارد.
-- **Problem:** علت ریشه‌ای یک یا چند incident.
-- **Outage:** قطع کامل یا جدی سرویس.
+    **Answer:** HTTP.
 
-### آیا تجربه نوشتن postmortem دارید یا می‌دانید چه چیزهایی باید در آن ذکر شود؟
+14. What is port 443 used for?
 
-- Postmortem گزارشی است برای تحلیل incident. شامل:
+    **Answer:** HTTPS (HTTP over TLS).
 
-  - توضیح اتفاق
-  - timeline دقیق
-  - تاثیر روی کاربران
-  - علت ریشه‌ای
-  - اقدامات انجام شده
-  - Action items برای جلوگیری از تکرار
+15. Difference between public IP and private IP?
 
-### اگر متوجه شوید که سرویس critical با مشکل روبرو شده اما هنوز alert ارسال نشده، چه کار می‌کنید؟
+    **Answer:**
 
-1. بررسی فوری سرویس و تاثیر آن
-2. مستندسازی و اطلاع‌رسانی به تیم
-3. رفع مشکل یا موقتاً stabilize کردن سرویس
-4. بعداً اضافه کردن یا بهبود alert مربوطه
+    - Public IP is routable on the internet;
+    - private IP is only used in local networks.
 
-## 🔹 مهارت‌های نرم (Soft Skills)
+16. What does NAT do?
 
-### چگونه با تیم توسعه (Developers) در حل مشکلات همکاری می‌کنید؟
+    **Answer:** Translates private IP addresses to public IPs for internet access.
 
-- با ارائه لاگ‌ها و داده‌های دقیق
-- توضیح واضح مشکل بدون سرزنش
-- پیشنهاد راه‌حل برای بهبود reliability
+17. If `ping` fails but `traceroute` shows a path, what’s the reason?
 
-### تجربه‌ای دارید که یک مشکل تکراری را اتوماسیون کرده باشید؟
+    **Answer:** `ICMP` may be blocked by a firewall.
 
-- مثلاً ریستارت دستی سرویس بعد از crash را با یک اسکریپت یا systemd unit اتوماسیون کردم.
+18. Difference between Layer 4 and Layer 7 load balancing?
 
-### وقتی چندین درخواست هم‌زمان دارید، چطور اولویت‌بندی می‌کنید؟
+    **Answer:**
 
-- بر اساس **تاثیر روی کاربران و سرویس‌های critical** اولویت می‌دهم.
-- موارد high-impact یا مربوط به SLA در اولویت هستند.
+    - L4 → based on IP/port (TCP/UDP).
+    - L7 → based on application data (HTTP headers, paths).
 
----
+## 🔹 Databases
+
+19. Difference between RDBMS and NoSQL?
+
+    **Answer:**
+
+    - **RDBMS** (MySQL, PostgreSQL) stores structured data with ACID compliance;
+    - **NoSQL** (MongoDB, Cassandra) handles unstructured data, scales horizontally.
+
+20. What is database replication?
+
+    **Answer:** Keeping identical copies of data across multiple servers for availability and redundancy.
+
+21. Difference between Backup and Snapshot?
+
+    **Answer:**
+
+    - **Backup** = copy of data stored elsewhere;
+    - **Snapshot** = point-in-time copy of a system/disk (usually in the same environment).
+
+## 🔹 Security
+
+22. Why is SSH key authentication better than passwords?
+
+    **Answer:** Stronger security, prevents brute-force, easier for automation.
+
+23. Difference between symmetric and asymmetric encryption?
+
+    **Answer:**
+
+    - **Symmetric** → same key for encryption/decryption (fast).
+    - **Asymmetric** → public/private keys (more secure, slower).
+
+24. Why is the Principle of Least Privilege important?
+
+    **Answer:** Reduces risk by limiting user and service permissions.
+
+## 🔹 Monitoring & Observability
+
+25. Difference between Metrics, Logs, and Traces?
+
+    **Answer:**
+
+    - **Metrics** → numeric time-series data (CPU, latency)
+    - **Logs** → textual events
+    - **Traces** → request path across distributed systems
+
+26. Difference between an Alert and a Notification?
+
+    **Answer:**
+
+    - **Alert** is triggered when a condition is violated;
+    - **Notification** is the delivery method to the team.
+
+27. Difference between Histogram and Gauge?
+    **Answer:**
+
+    - **Histogram** → distribution of values in buckets;
+    - **Gauge** → current value of a metric.
+
+28. What is a Canary Release?
+
+    **Answer:** Gradual rollout of a new version to a small subset of users to reduce risk.
+
+## 🔹 CI/CD & DevOps
+
+29. Difference between Continuous Integration and Continuous Deployment?
+
+    **Answer:**
+
+    - **CI** = automatically testing and building code.
+    - **CD** = automatically deploying code to production.
+
+30. If a build fails in GitLab CI or Jenkins, what’s your first step?
+
+    **Answer:** Check logs, identify the failing stage, rollback or apply a quick fix.
+
+31. What is Blue-Green Deployment?
+
+    **Answer:** Having two environments (blue & green) and switching traffic between them for zero-downtime deployment.
+
+## 🔹 Cloud & Infrastructure
+
+32. Difference between IaaS, PaaS, and SaaS?
+
+    **Answer:**
+
+    - **IaaS** → Infrastructure as a Service (VMs, storage).
+    - **PaaS** → Platform as a Service (Heroku, App Engine).
+    - **SaaS** → Software as a Service (Gmail, Slack).
+
+33. What is Auto Scaling?
+
+    **Answer:** Automatically adjusts the number of instances based on workload.
+
+34. Difference between Region and Availability Zone?
+
+    **Answer:**
+
+    - **Region** = geographic area (e.g., Europe West).
+    - **AZ** = independent datacenters within a region.
+
+## 🔹 SRE Culture
+
+35. Difference between SLA, SLO, and SLI?
+
+    **Answer:**
+
+    - **SLA** → agreement with customers
+    - **SLO** → internal service quality target
+    - **SLI** → numeric indicator (e.g., latency <200ms for 99% of requests)
+
+36. What is a Postmortem and why is it important?
+
+    **Answer:** A report after an incident including timeline, root causes, and corrective actions; ensures learning and prevention.
+
+37. What is an Error Budget?
+
+    **Answer:** Allowed amount of downtime/errors over a period, based on the SLO.
+
+38. What is Blameless Culture?
+
+    **Answer:** Focusing on learning and fixing issues instead of blaming individuals.
