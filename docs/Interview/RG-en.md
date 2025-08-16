@@ -304,3 +304,115 @@
 
 - **Definition**: Practice of intentionally injecting failures into systems.
 - **Goal**: test resilience and validate recovery processes before real outages happen.
+
+---
+
+# 🔹 Senior/Lead SRE Interview Questions (Advanced Level)
+
+## 🏗️ Architecture & Scalability
+
+### How would you design a highly available global system (e.g., an e-commerce site) that serves millions of users?
+
+**A (key points):**
+
+- Multi-region deployment (active-active or active-passive).
+- Load balancing with global traffic managers (GSLB, Anycast DNS).
+- Database replication across regions (read replicas, multi-master with conflict resolution).
+- CDN for static assets.
+- Caching layer (Redis, Memcached).
+- Graceful degradation under heavy load.
+
+### What’s the difference between consistency models (strong, eventual, causal)? When would you use each?
+
+- **Strong consistency:** Clients always read the latest write (banking).
+- **Eventual consistency:** Updates propagate over time (social feeds).
+- **Causal consistency:** Reads respect cause-effect order (chat systems).
+
+### How do you handle a “thundering herd” problem?
+
+- Add caching with randomized TTLs.
+- Use request coalescing (deduplicate identical requests).
+- Apply rate limiting/backpressure.
+- Queue requests with message brokers.
+
+## 🌐 Reliability & Trade-offs
+
+### How do you decide between active-active vs. active-passive architecture for a critical system?
+
+- **Active-active:** Higher availability, load distribution, complex conflict resolution.
+- **Active-passive:** Easier to manage, cheaper, but slower failover.
+- Decision depends on SLA requirements and budget.
+
+### How do you approach error budgets?
+
+- **Error budget** = SLO target − actual reliability.
+- If error budget is burned quickly → slow down releases, focus on reliability.
+- If error budget is underused → increase release velocity.
+
+#### In a system with 5 nines availability target (99.999%), what does that mean in downtime per year?
+
+- **99.999%** = \~5 minutes/year downtime allowed.
+- Implies extreme redundancy, automation, and very fast failover.
+
+## 📊 Observability at Scale
+
+### How do you design an observability stack for thousands of microservices?
+
+- Centralized logging (ELK/Loki/Cloud-native log storage).
+- Metrics with high retention and downsampling (Prometheus + Cortex/Thanos).
+- Distributed tracing (OpenTelemetry/Jaeger).
+- SLO-driven alerting (reduce noise).
+
+### How would you debug a performance regression in production when metrics look normal?
+
+- Use tracing to track request latency across services.
+- Compare baseline vs regression requests.
+- Check for hidden bottlenecks (thread pools, DB indexes, GC pauses).
+- Test with load replay (synthetic traffic).
+
+## 🔄 Incident Response at Scale
+
+### Imagine a global outage is caused by a bad config push. How do you manage the incident?
+
+1. Declare incident and assign roles (commander, communicator, investigator).
+2. Rollback config immediately.
+3. Communicate status to stakeholders/customers.
+4. Run postmortem: root cause, why rollback didn’t happen faster, fix processes.
+
+### How do you balance speed of incident response with risk of making it worse?
+
+- Use predefined runbooks for known failure modes.
+- Prefer safe rollbacks before risky fixes.
+- Separate mitigation (quick fix) from remediation (long-term fix).
+
+## ⚡ Cost & Efficiency
+
+### How do you optimize cloud infrastructure cost while maintaining reliability?
+
+- Rightsizing instances.
+- Auto-scaling down at off-peak.
+- Spot/preemptible instances for non-critical workloads.
+- Storage lifecycle policies (tiering).
+- Monitoring unused resources.
+
+### If management asks to cut infra costs by 20% without lowering SLOs, what strategies do you apply?
+
+- Identify overprovisioned clusters.
+- Consolidate workloads with bin-packing.
+- Review error budgets → maybe slightly relax SLOs.
+- Optimize DB queries and caching.
+
+## 🧩 Culture & Leadership
+
+### How do you enforce a blameless postmortem culture?
+
+- Focus on system/process failures, not individuals.
+- Encourage sharing failures openly.
+- Reward proactive prevention instead of heroics.
+
+### How do you mentor junior SREs?
+
+- Pair on incident handling.
+- Walk through troubleshooting thought processes.
+- Encourage writing runbooks and automation scripts.
+- Teach prioritization (impact vs urgency).
