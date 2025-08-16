@@ -542,3 +542,10 @@
 - Organizational vision and strategy
 - Business and product communication
 - Team management and SRE culture Focuses.
+
+## 📌 Summary
+
+- **Junior / Mid** → Implementation and troubleshooting
+- **Senior** → Distributed systems design and architecture
+- **Principal / Head** → Team and organization strategy, scaling culture and SRE tools
+- **Director / VP / CTO** → Leading the organization at the business level, budget, risk and global strategy
