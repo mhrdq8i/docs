@@ -416,3 +416,10 @@
 - Walk through troubleshooting thought processes.
 - Encourage writing runbooks and automation scripts.
 - Teach prioritization (impact vs urgency).
+
+### This level is typically for Lead SRE or Senior
+
+- Must be able to design complex systems
+- Explain trade-offs between cost, scale, and reliability
+- Take a leadership role in critical incidents
+- Help the team grow and develop the right culture.
