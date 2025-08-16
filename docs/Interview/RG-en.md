@@ -138,3 +138,169 @@
 
 - Based on **user and business impact**.
 - Issues affecting critical services or SLA violations come first.
+
+---
+
+# 🎯 SRE Interview Questions with Answers (Mid-level+)
+
+## 🖥️ OS & Performance
+
+### What’s the difference between load average and CPU usage, and how do you interpret them?
+
+- **CPU usage** shows the percentage of CPU time used.
+- **Load average** shows the average number of processes waiting for CPU, disk, or I/O over 1, 5, and 15 minutes.
+- High load with low CPU usage usually indicates I/O bottlenecks.
+
+### How do you detect memory leaks in a service?
+
+- Monitor memory usage over time (`top`, `htop`, Prometheus metrics).
+- Use tools like `valgrind`, `pmap`, `gperftools`, or `heapdump` depending on the language.
+- Check GC (garbage collection) logs in languages like Java/Python.
+
+### What does high IOwait indicate, and how would you troubleshoot it?
+
+- IOwait means CPU is idle but waiting for disk I/O.
+- **Causes**: slow disks, too many concurrent requests, database contention.
+- **Troubleshooting**: check `iostat`, `iotop`, disk latency, optimize queries, use faster storage (SSD/NVMe).
+
+### Difference between vertical scaling and horizontal scaling?
+
+- **Vertical:** Adding more resources (CPU/RAM) to a single machine. Easy but limited.
+- **Horizontal:** Adding more machines/instances. More scalable, but adds complexity (load balancing, consistency).
+
+## 🌐 Networking & Distributed Systems
+
+### How does DNS caching work at different levels?
+
+- **App-level cache** (e.g., browser cache).
+- **OS resolver cache** (`nscd`, `systemd-resolved`).
+- **Recursive resolver cache** (like 8.8.8.8).
+- **Authoritative DNS** has TTL that controls cache duration.
+
+### If latency increases between two microservices, how do you find the root cause?
+
+- Check metrics (latency, error rate) from monitoring.
+- Trace requests with distributed tracing (Jaeger, OpenTelemetry).
+- Use network tools (`mtr`, `tcpdump`).
+- Verify downstream dependencies (DB, API).
+
+### What are circuit breaker and retry patterns, and why are they important?
+
+- **Retry:** Automatically retry failed requests (with backoff).
+- **Circuit breaker:** Stops sending requests when failure rate is high, allowing system to recover.
+- Important in distributed systems to prevent cascading failures.
+
+### Explain CAP theorem with examples
+
+- **C (Consistency):** All nodes see the same data at the same time.
+- **A (Availability):** Every request receives a response.
+- **P (Partition tolerance):** System works despite network splits.
+- **Example CP**: HBase, ZooKeeper.
+- **Example AP**: Cassandra, DynamoDB.
+
+## 📊 Observability & Monitoring
+
+### Difference between metrics, logs, and traces?
+
+- **Metrics:** Aggregated numerical data (CPU, QPS, latency).
+- **Logs:** Event-based text records.
+- **Traces:** Track requests across services (useful in microservices).
+
+### What is cardinality in metrics, and why is it dangerous in Prometheus?
+
+- **Cardinality** = number of unique label combinations.
+- **High cardinality** (e.g., per-user metrics) causes high memory usage and slow queries.
+- **Rule**: Avoid unbounded labels (like user IDs, request IDs).
+
+### Difference between blackbox and whitebox monitoring?
+
+- **Blackbox:** Tests from outside (ping, HTTP check). Focus on availability.
+- **Whitebox:** Monitors internal metrics/logs. Focus on internal health.
+
+### How do you deal with alert fatigue?
+
+- Deduplicate and group alerts.
+- Prioritize by severity and business impact.
+- Use SLO-based alerting instead of raw metrics.
+- Regularly review and tune alert rules.
+
+## 🛠️ Containers / Kubernetes
+
+### Difference between Deployment, StatefulSet, and DaemonSet in K8s?
+
+- **Deployment:** Stateless workloads, easy scaling.
+- **StatefulSet:** Stateful apps (DBs, Kafka), keeps identity & stable storage.
+- **DaemonSet:** Ensures one pod runs on every node (e.g., logging/monitoring agents).
+
+### Why might a Pod stay in Pending state?
+
+- Not enough resources (CPU/RAM).
+- Node selectors/affinity rules not satisfied.
+- Missing PersistentVolume.
+- Scheduler can’t place it due to taints/tolerations.
+
+### When do you use HPA (Horizontal Pod Autoscaler), and what are its limitations?
+
+- **Use**: Auto-scale pods based on metrics (CPU, custom metrics).
+
+- **Limitations**:
+  - Scaling delay (reactive, not predictive).
+  - Doesn’t handle queue-based workloads well.
+  - Needs accurate metrics.
+
+### What is the role of kube-proxy?
+
+- Handles Service networking in K8s.
+- Maintains iptables/IPVS rules for load balancing traffic to pods.
+
+## ⚡ Incident Response & Reliability
+
+### Scenario: primary DB is down, replicas are healthy. What do you do?
+
+- Promote a replica to primary (manual or via failover tool like Patroni, Orchestrator).
+- Redirect traffic to new primary.
+- Investigate and fix the original primary before reintroducing it.
+
+### What metrics are critical for DB monitoring?
+
+- Connection count, query latency, slow queries.
+- Replication lag.
+- Buffer cache hit ratio.
+- Disk I/O and locks.
+
+### What are MTTR, MTTD, and MTBF, and why are they important?
+
+- **MTTR (Mean Time to Recovery):** Avg time to recover from failure.
+- **MTTD (Mean Time to Detect):** Avg time to detect a failure.
+- **MTBF (Mean Time Between Failures):** Avg time between failures.
+- They measure reliability and efficiency of incident response.
+
+### If rollback isn’t possible during a critical outage, what fallback strategies exist?
+
+- Feature flagging (disable problematic feature).
+- Graceful degradation (disable non-critical services).
+- Rate limiting or traffic shedding.
+- Serving cached/stale data.
+
+## 🧩 Automation & DevOps Practices
+
+### What is Infrastructure as Code (IaC), and why is it important? and it's tools?
+
+- Managing infra with code instead of manual config.
+- **Benefits**: repeatability, version control, automation.
+- **Tools**: Terraform, Ansible, Pulumi, CloudFormation.
+
+### What are the stages of a CI/CD pipeline, and how do they relate to SRE?
+
+- **Stages**: build → test → deploy → verify.
+- **SRE ensures reliability**: automated rollbacks, monitoring after deploys, canary releases.
+
+### What’s the difference between blue-green and canary deployment?
+
+- **Blue-green:** Two environments, switch all traffic at once.
+- **Canary:** Gradually shift traffic to new version, monitor errors, roll back if needed.
+
+### What is chaos engineering, and why is it useful?
+
+- **Definition**: Practice of intentionally injecting failures into systems.
+- **Goal**: test resilience and validate recovery processes before real outages happen.
