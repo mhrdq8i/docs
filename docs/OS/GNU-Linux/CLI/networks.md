@@ -285,6 +285,8 @@ See [nmap Cheat Sheet](../refs/nmap-cheat-sheet.pdf)
 
 close open port
 
+kill open port directly
+
 ```bash
 fuser -k -n tcp 80
 fuser -k -n udp 80
@@ -377,6 +379,6 @@ tcpdump -i any -nn -s 0 -w k8s_port_6443.pcap port 6443 and host 172.16.2.10
 ```
 
 <!-- external links -->
-[60-linux-networking-commands-scripts]: https://haydenjames.io/linux-networking-commands-scripts
 
+[60-linux-networking-commands-scripts]: https://haydenjames.io/linux-networking-commands-scripts
 [display-network-traffic]: https://askubuntu.com/questions/257263/how-to-display-network-traffic-in-the-terminal
