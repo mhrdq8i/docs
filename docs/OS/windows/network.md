@@ -8,6 +8,12 @@
 netstat -ano -p TCP | findstr "LISTENING"
 ```
 
+### Windows prot forward port 8000
+
+```pwsh
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8000 connectaddress=<dis-ip-addr> connectport=8000
+```
+
 ### Restart `net` service to solve `nekoray` problem
 
 ```pwsh
