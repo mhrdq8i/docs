@@ -548,12 +548,25 @@ ldconfig -p | grep <libname>
 
 ## Set and Get from Clipboard
 
-```sh
-sudo apt install xclip
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-source ~/.bashrc
-```
+
+=== "Bash/ZSH"
+
+    ```sh
+    sudo apt install xclip
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+    source ~/.bashrc
+    ```
+
+=== "Fish"
+
+    ```sh
+    sudo apt install xclip
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+    source ~/.config/fish/config.fish
+    ```
+
 
 Test bpcopy command
 
