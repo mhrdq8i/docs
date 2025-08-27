@@ -53,8 +53,8 @@ Remove-Item Alias:tf
 
 ## Disable `Bell` alert in terminal
 
--   open the `json` file in setting section
--   add this `key & value` to json file
+- open the `json` file in setting section
+- add this `key & value` to json file
 
 ```json
  "profiles":
@@ -88,6 +88,14 @@ II. Then, initialize it with the command below(notepad $profile)
 
 ## oh-my-posh
 
+## Installation Script
+
+Curl this file to install oh-my-posh with it's fonts and themes
+
+```powershell
+curl -o install-oh-my-posh.ps1 https://raw.githubusercontent.com/mhrdq8i/docs/master/docs/OS/windows/pwsh_scripts/install-oh-my-posh.ps1
+```
+
 ### Installation
 
 ```powershell
@@ -96,7 +104,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 
 ### Clone oh-my-posh Themes
 
--   git clone [**without-my-custom-theme**](https://github.com/JanDeDobbeleer/oh-my-posh.git)
+- git clone [**without-my-custom-theme**](https://github.com/JanDeDobbeleer/oh-my-posh.git)
 
 ## Active Custom Theme
 
@@ -120,5 +128,5 @@ oh-my-posh init pwsh --config C:\Users\mehrdad\oh-my-posh\themes\mehrdad.omp.jso
 
 ### Language Segment
 
--   [Python](https://ohmyposh.dev/docs/segments/languages/python)
--   [Rust](https://ohmyposh.dev/docs/segments/languages/rust)
+- [Python](https://ohmyposh.dev/docs/segments/languages/python)
+- [Rust](https://ohmyposh.dev/docs/segments/languages/rust)
