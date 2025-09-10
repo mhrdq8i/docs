@@ -140,7 +140,7 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ??? "Deployment"
 
-  ![deployment]
+    ![deployment]
 
 ### Daemon Set
 
