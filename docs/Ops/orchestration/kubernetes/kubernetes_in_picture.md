@@ -18,8 +18,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Road Map
 
-![k-roadmap]
-![k-rm]
+??? "K8S RoadMap"
+
+  ![k-roadmap]
+  ![k-rm]
 
 ### Helm Chart
 
@@ -57,8 +59,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Kube Control Manager
 
-![kube-controller]
-![kube-controller-components]
+??? "Kube Control Manager"
+
+  ![kube-controller]
+  ![kube-controller-components]
 
 #### Node Controller
 
@@ -72,8 +76,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Kubelet
 
-![kubelet-1]
-![kubelet-2]
+??? "Kubelet"
+
+  ![kubelet-1]
+  ![kubelet-2]
 
 ### Kube Proxy
 
@@ -81,11 +87,11 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ## Kubernetes Release Strategy
 
-![kube-components]
+??? "K8S Release Strategy"
 
-![cluster-versioning]
-
-![Update-patch-policy]
+  ![kube-components]
+  ![cluster-versioning]
+  ![Update-patch-policy]
 
 ## Workloads
 
@@ -95,8 +101,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Static Pods
 
-![static-pods-1]
-![static-pods-2]
+??? "Static Pods"
+
+  ![static-pods-1]
+  ![static-pods-2]
 
 ### Deployment
 
@@ -104,27 +112,35 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Daemon Set
 
-![S04-workload-daemonset-1]
-![S04-workload-daemonset-2]
-![S04-workload-daemonset-3]
+??? "Daemon Set"
+
+  ![S04-workload-daemonset-1]
+  ![S04-workload-daemonset-2]
+  ![S04-workload-daemonset-3]
 
 ## Services
 
-![S03-service-01]
-![S03-service-02]
-![S03-service-03]
+??? "K8S Services"
+
+  ![S03-service-01]
+  ![S03-service-02]
+  ![S03-service-03]
 
 ### Cluster IP
 
-![service-cluster-ip-1]
-![service-cluster-ip-2]
+??? "K8S Cluster IP"
+
+  ![service-cluster-ip-1]
+  ![service-cluster-ip-2]
 
 ### NodePort
 
-![service-node-port-1]
-![service-node-port-2]
-![service-node-port-3]
-![service-node-port-4]
+??? "NodePort"
+
+  ![service-node-port-1]
+  ![service-node-port-2]
+  ![service-node-port-3]
+  ![service-node-port-4]
 
 ## Load Balancer
 
@@ -196,8 +212,10 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### ETCD Peers Cluster Certificates
 
-![etcd-peers-certs]
-![etcd-peers-certs-2]
+??? "ETCD"
+
+  ![etcd-peers-certs]
+  ![etcd-peers-certs-2]
 
 ### KubeConfig File
 
@@ -261,9 +279,10 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ## StateFulSets Dedicated Storage
 
-![StateFulSet-storage-dedicated-1]
+??? "K8S StateFulSets Storage"
 
-![StateFulSet-storage-dedicated-2]
+  ![StateFulSet-storage-dedicated-1]
+  ![StateFulSet-storage-dedicated-2]
 
 ## Network Policy
 
@@ -317,11 +336,13 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ![diagnostic-probes-2]
 
-### Probe LifeCycle
+### Probes LifeCycle
 
-![prob-life-cycle-1]
-![prob-life-cycle-2]
-![prob-life-cycle-3]
+??? "K8S Probes"
+
+  ![prob-life-cycle-1]
+  ![prob-life-cycle-2]
+  ![prob-life-cycle-3]
 
 ### K8S debug flowchart
 
