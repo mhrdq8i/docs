@@ -114,9 +114,9 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ??? "Daemon Set"
 
-    ![S04-workload-daemonset-1]
-    ![S04-workload-daemonset-2]
-    ![S04-workload-daemonset-3]
+    ![S04-workload-daemonsets-1]
+    ![S04-workload-daemonsets-2]
+    ![S04-workload-daemonsets-3]
 
 ## Services
 
@@ -172,7 +172,7 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Deployment Strategy
 
-![rollout-versioning-deploymet-strategy]
+![rollout-versioning-deployment-strategy]
 
 ### Upgrade
 
@@ -186,7 +186,7 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### ENV variables
 
-![pod-cntnr-envs]
+![pod-canter-envs]
 
 ### Pod Config Methods
 
@@ -393,10 +393,10 @@ Relation between **RoleBinding**, **User** and **Namespace**
 [labels-selector-3]: ../../../assets/kuber/kinpic/S03-labels-selectors-3.png
 [labels-selector-4]: ../../../assets/kuber/kinpic/S03-labels-selectors-4.png
 [rollout-versioning]: ../../../assets/kuber/kinpic/S04-rollout-versioning.png
-[rollout-versioning-deploymet-strategy]: ../../../assets/kuber/kinpic/S04-rollout-versioning-deploymet-strategy.png
+[rollout-versioning-deployment-strategy]: ../../../assets/kuber/kinpic/S04-rollout-versioning-deploymet-strategy.png
 [deployment-update-strategy]: ../../../assets/kuber/kinpic/S04-deployment-update-strategy.png
 [deployment-rollback-strategy]: ../../../assets/kuber/kinpic/S04-deployment-rollback-strategy.png
-[pod-cntnr-envs]: ../../../assets/kuber/kinpic/S05-environment-variables.png
+[pod-canter-envs]: ../../../assets/kuber/kinpic/S05-environment-variables.png
 [pod-config-methods]: ../../../assets/kuber/kinpic/S05-config-map-methods.png
 [diagnostic-probes-1]: ../../../assets/kuber/kinpic/S05-k8s-probes-1.png
 [diagnostic-probes-2]: ../../../assets/kuber/kinpic/S05-k8s-probes-2.png
