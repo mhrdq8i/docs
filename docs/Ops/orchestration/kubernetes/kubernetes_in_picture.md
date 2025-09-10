@@ -147,7 +147,9 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 ??? "Daemon Set"
 
     ![S04-workload-daemonsets-1]
+
     ![S04-workload-daemonsets-2]
+
     ![S04-workload-daemonsets-3]
 
 ## Services
