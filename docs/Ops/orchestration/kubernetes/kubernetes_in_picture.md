@@ -6,15 +6,21 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Cluster Schema
 
-![k-cluster]
+??? "Cluster Schema"
+
+    ![k-cluster]
 
 ### ChestSheet
 
-![k-cheatsheet]
+??? "ChestSheet"
+
+    ![k-cheatsheet]
 
 ### Commands
 
-![k-commands]
+??? "Commands"
+
+    ![k-commands]
 
 ### Road Map
 
@@ -25,37 +31,53 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Helm Chart
 
-![k-helmchart]
+??? "Helm Chart"
+
+    ![k-helmchart]
 
 ### RollBack
 
-![k-rbac]
+??? "RollBack"
+
+    ![k-rbac]
 
 ### Traffic Routing
 
-![k-trafficrouting]
+??? "Traffic Routing"
+
+    ![k-trafficrouting]
 
 ## Kubernetes Terminology
 
-![kubernetes-terminology]
+??? "Kubernetes Terminology"
+
+    ![kubernetes-terminology]
 
 ## Controller Plan Components
 
 ### Master Node Components
 
-![kube-components]
+??? "Master Node Components"
+
+    ![kube-components]
 
 ### Cloud Controller
 
-![kc_cc_arch]
+??? "Cloud Controller"
+
+    ![kc_cc_arch]
 
 ### Kube API-Server
 
-![kube-api-server]
+??? "Kube API-Server"
+
+    ![kube-api-server]
 
 ### Kube Scheduler
 
-![kube-scheduler]
+??? "Kube Scheduler"
+
+    ![kube-scheduler]
 
 ### Kube Control Manager
 
@@ -66,11 +88,15 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 #### Node Controller
 
-![node-controller]
+??? "Node Controller"
+
+    ![node-controller]
 
 #### Replication Controller
 
-![replication-controller]
+??? "Replication Controller"
+
+    ![replication-controller]
 
 ## Node Components
 
@@ -83,7 +109,9 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Kube Proxy
 
-![kuber-proxy]
+??? "Kube Proxy"
+
+    ![kuber-proxy]
 
 ## Kubernetes Release Strategy
 
@@ -97,7 +125,9 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Pods
 
-![kube-api-pods]
+??? "Pods"
+
+    ![kube-api-pods]
 
 ### Static Pods
 
@@ -108,7 +138,9 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### Deployment
 
-![deployment]
+??? "Deployment"
+
+  ![deployment]
 
 ### Daemon Set
 
@@ -144,71 +176,104 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ## Load Balancer
 
-![service-load-balancer-1]
+??? "Load Balancer"
+
+    ![service-load-balancer-1]
 
 ## DNS
 
-![dns]
+??? "DNS"
+
+    ![dns]
 
 ## Labels and Selector
 
-![labels-selector-1]
+??? "Labels and Selector"
+
+    ![labels-selector-1]
 
 ### GroupBy App
 
-![labels-selector-2]
+???
+??? "GroupBy App"
+
+    ![labels-selector-2]
 
 ### GroupBy Type
 
-![labels-selector-3]
+??? "GroupBy Type"
+
+    ![labels-selector-3]
 
 ### Manifest Usage
 
-![labels-selector-4]
+??? "Manifest Usage"
+
+    ![labels-selector-4]
 
 ## Rollout & Versioning
 
-![rollout-versioning]
+??? "Rollout & Versioning"
+
+    ![rollout-versioning]
 
 ### Deployment Strategy
 
-![rollout-versioning-deployment-strategy]
+??? "Deployment Strategy"
+
+    ![rollout-versioning-deployment-strategy]
 
 ### Upgrade
 
-![deployment-update-strategy]
+??? "Upgrade"
+
+    ![deployment-update-strategy]
 
 ### Rollback
 
-![deployment-rollback-strategy]
+??? "Rollback"
+
+    ![deployment-rollback-strategy]
 
 ## Configs
 
 ### ENV variables
 
-![pod-canter-envs]
+??? "ENV variables"
+
+    ![pod-canter-envs]
 
 ### Pod Config Methods
 
-![pod-config-methods]
+??? "Pod Config Methods"
+
+    ![pod-config-methods]
 
 ## Security
 
 ### TLS Certificates
 
-![apiserver-base-tls]
+??? "TLS Certificates"
+
+    ![apiserver-base-tls]
 
 ### Certification Types
 
-![certs-types]
+??? "Certification Types"
+
+    ![certs-types]
 
 ### Client Certificates
 
-![client-certificates]
+??? "Client Certificates"
+
+    ![client-certificates]
 
 ### All Services Certificates
 
-![all-service-certs]
+??? "All Services Certificates"
+
+    ![all-service-certs]
 
 ### ETCD Peers Cluster Certificates
 
@@ -219,63 +284,87 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### KubeConfig File
 
-![kube-config-file]
+??? "KubeConfig File"
+
+    ![kube-config-file]
 
 ## APIs
 
 ### api (core group)
 
-![k8s-apis-api]
+??? "api (core group)"
+
+    ![k8s-apis-api]
 
 ### apis (named group)
 
-![k8s-apis-apis]
+??? "apis (named group)"
+
+    ![k8s-apis-apis]
 
 ## Authorization
 
 ### RBAC Authorization
 
-![rbac]
+??? "RBAC Authorization"
+
+    ![rbac]
 
 ### Webhook Authorization
 
-![webhook]
+??? "Webhook Authorization"
+
+    ![webhook]
 
 ### RollBinding
 
 Relation between **RoleBinding**, **User** and **Namespace**
 
-![roll-binding-ns]
+??? "RollBinding"
+
+    ![roll-binding-ns]
 
 ## Storage
 
 ### CSI vs CNI vs CRI
 
-![csi-cni-cri]
+??? "CSI vs CNI vs CRI"
+
+    ![csi-cni-cri]
 
 ### Mount Volumes
 
-![mount-volumes]
+??? "Mount Volumes"
+
+    ![mount-volumes]
 
 ## PV & PVC
 
-![pv-pvc-pod]
+??? "PV & PVC"
+
+    ![pv-pvc-pod]
 
 ## Storage Class
 
 ### Static Provisioning
 
-![storage-class-static-provisioning]
+??? "Static Provisioning"
+
+    ![storage-class-static-provisioning]
 
 ### Dynamic Provisioning
 
-![storage-class-dynamic-provisioning]
+??? "Dynamic Provisioning"
+
+    ![storage-class-dynamic-provisioning]
 
 ## Headless Services
 
 ### Headless Service with Pod
 
-![headless-services-1]
+??? "Headless Service with Pod"
+
+    ![headless-services-1]
 
 ## StateFulSets Dedicated Storage
 
@@ -288,53 +377,75 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ### Ingress & Egress Direction
 
-![ingress-egress-direction]
+??? "Ingress & Egress Direction"
+
+    ![ingress-egress-direction]
 
 ### Pods Default Connections
 
-![pod-default-con]
+??? "Pods Default Connections"
+
+    ![pod-default-con]
 
 ### Close Ingress or Egress Traffic
 
-![close-ingress-egress]
+??? "Close Ingress or Egress Traffic"
+
+    ![close-ingress-egress]
 
 ## Network In More Detail
 
 ### Components Ports Numbers
 
-![components-ports]
+??? "Components Ports Numbers"
+
+    ![components-ports]
 
 ### Call Resources (Service, Pod) via DNS - FQDN
 
-![k8s-dns-call-pod-svc]
+??? "Call Resources (Service, Pod) via DNS - FQDN"
+
+    ![k8s-dns-call-pod-svc]
 
 ## Ingress Service
 
 ### Ingress Schema
 
-![ingress-01]
+??? "Ingress Schema"
+
+    ![ingress-01]
 
 ### Ingress Schema with External LoadBalancer
 
-![ingress-02]
+??? "Ingress Schema with External LoadBalancer"
+
+    ![ingress-02]
 
 ### Ingress Controller + Ingress Resource
 
-![ingress-03]
+??? "Ingress Controller + Ingress Resource"
+
+    ![ingress-03]
 
 ### Requirement Resource Foreach Ingress Controller
 
-![ingres-controller-resources]
+??? "Requirement Resource Foreach Ingress Controller"
+
+    ![ingres-controller-resources]
 
 ## T-Shoot and Debug
 
 ### Diagnostic Probes
 
-![diagnostic-probes-1]
+??? "Diagnostic Probes"
+
+    ![diagnostic-probes-1]
 
 ### Diagnostic Probes Flow
 
-![diagnostic-probes-2]
+??? "Diagnostic Probes Flow"
+
+    ![diagnostic-probes-2]
 
 ### Probes LifeCycle
 
@@ -346,7 +457,9 @@ Relation between **RoleBinding**, **User** and **Namespace**
 
 ### K8S debug flowchart
 
-![k-debug-flowchart]
+??? "K8S debug flowchart"
+
+    ![k-debug-flowchart]
 
 <!-- links -->
 
