@@ -343,6 +343,10 @@ sudo systemctl unmask <service-name>
 
 ## grep
 
+??? "GREP CheatSheet"
+
+    ![grep-cheatsheet](../../../assets/gnu_linux/grep.jpg)
+
 ```sh
 # Reverse grep
 grep -v
@@ -382,18 +386,18 @@ grep -Fxv -f file2.txt file1.txt > result.txt
 ### sed switch
 
 ```sh
-- `s` (substitute match pattern)
-- `g` (global sub)
-- `3g` (after 3th character sub)
-- `-e` (selected items)
-- `&` (same characters)
-- `-i` (save to file)
-- `-r` (extended regex)
-- `#line number` (each line that you want to apply sed)
-- `# !` (each line that you don't want to apply sed)
-- `d` (delete matched pattern)
-- `-p` (print matched pattern)
-- `I` (case ignore flag)
+- s (substitute match pattern)
+- g (global sub)
+- 3g (after 3th character sub)
+- -e (selected items)
+- & (same characters)
+- -i (save to file)
+- -r (extended regex)
+- #linenumber (each line that you want to apply sed)
+- #` (each line that you don't want to apply sed)
+- d (delete matched pattern)
+- -p (print matched pattern)
+- I (case ignore flag)
 ```
 
 ## comm
@@ -503,7 +507,7 @@ A ton of curl examples [is here][curl-https-request]
 # download with curl
 curl -C - -L -O URL
 
-# Explain argumets
+# Explain arguments
 -C, --continue-at <offset>
       Continue/Resume a previous file transfer at the given offset.
 -L, --location
@@ -558,8 +562,6 @@ ldconfig -p | grep <libname>
     ```
 
 === "Fish"
-
-    [![Sticky navigation tabs disabled]][Sticky navigation tabs disabled]
 
     ```sh
     sudo apt install xclip

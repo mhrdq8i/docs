@@ -1,8 +1,16 @@
 {
   "cSpell.words": [
+    "addext",
+    "apiserver",
+    "bpcopy",
+    "genpkey",
     "Kompose",
     "Kustomize",
-    "MTTR"
+    "ldconfig",
+    "libname",
+    "linenumber",
+    "MTTR",
+    "xclip"
   ],
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
