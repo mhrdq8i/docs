@@ -1,7 +1,8 @@
 {
   "cSpell.words": [
     "Kompose",
-    "Kustomize"
+    "Kustomize",
+    "MTTR"
   ],
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
