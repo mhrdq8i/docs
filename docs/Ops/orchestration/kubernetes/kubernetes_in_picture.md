@@ -196,7 +196,6 @@ All kubernetes **resources**, **services**, **components** and etc... in picture
 
 ### GroupBy App
 
-???
 ??? "GroupBy App"
 
     ![labels-selector-2]
