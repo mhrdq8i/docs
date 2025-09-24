@@ -418,3 +418,43 @@ By applying these techniques, you can significantly reduce the size of your Dock
   ```
 
   → Same BuildKit engine, but now with multi-platform support and direct push.
+
+## Docker UFS
+
+### Union File System*
+
+In the context of Docker, **UFS stands for Union File System**. It's a foundational technology that enables Docker's efficient and lightweight image and container management.
+
+At its core, a Union File System allows multiple directories, known as layers, to be transparently overlaid, creating a single, unified view. This means that files and directories from different layers appear as if they are in a single filesystem, even though they are physically stored separately.
+
+### How UFS Works with Docker
+
+Docker leverages UFS to build container images and run containers in a layered fashion. Here's a breakdown of how it works:
+
+- **Image Layers:** A Docker image is not a single monolithic file. Instead, it's composed of multiple read-only layers stacked on top of each other. Each instruction in a Dockerfile (e.g., `RUN`, `COPY`, `ADD`) creates a new layer. This layered approach is highly efficient because layers can be shared and reused across different images. For instance, if you have multiple images based on the same Ubuntu base image, the Ubuntu layers are stored only once on the host machine.
+
+- **Container Layer:** When you start a container from an image, Docker adds a thin, writable layer on top of the read-only image layers. This is often called the "container layer" or "writable layer." Any changes you make inside the running container, such as creating, modifying, or deleting files, are written to this container layer. The underlying image layers remain untouched.
+
+- **Copy-on-Write (CoW):** This is a key principle of UFS. When a running container needs to modify a file that exists in one of the read-only image layers, the UFS performs a "copy-on-write" operation. It copies the file from the read-only layer up to the writable container layer and then modifies the copied file. This ensures that the original image remains immutable and that multiple containers can share the same underlying image without interfering with each other.
+
+### Advantages of UFS in Docker
+
+The use of Union File Systems in Docker offers several significant benefits:
+
+- **Efficiency and Disk Space Savings:** Because image layers are shared, you don't need to have a full copy of the entire filesystem for every container. This dramatically reduces disk space usage, especially when you have many containers based on the same images.
+
+- **Faster Container Startup:** Since Docker only needs to create the thin writable container layer when starting a new container, the startup process is incredibly fast.
+
+- **Image Versioning and Rollbacks:** The layered architecture makes it easy to version images. Each layer is a set of changes, similar to commits in a version control system. This also simplifies rolling back to a previous version of an image.
+
+- **Isolation:** The copy-on-write mechanism ensures that changes made within one container do not affect other containers, even if they are based on the same image.
+
+### Common UFS Implementations
+
+While the concept is "Union File System," Docker can use different storage drivers that implement this functionality. Some of the common ones include:
+
+- **OverlayFS (overlay2):** This is the preferred and default storage driver for most modern Linux distributions. It's known for its performance and simplicity.
+
+- **AUFS (Another Union File System):** This was one of the earliest storage drivers used by Docker and is still available, though less common now.
+
+In summary, the Union File System is a crucial technology that underpins Docker's efficiency, speed, and flexibility by enabling a layered approach to building and running containers.
