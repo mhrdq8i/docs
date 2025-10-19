@@ -27,7 +27,7 @@ scp ~/.ssh/id_rsa.pub [linux_user]@[linux_IP/linux_hostname]:~/.ssh/authorized_k
 or
 
 ```pwsh
-type $env:USERPROFILE\.ssh\id_rsa.pub | ssh {IP-ADDRESS-OR-FQDN} -l {USER} "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh {IP-ADDRESS-OR-FQDN} -p {PRT-NO} -l {USER} "cat >> .ssh/authorized_keys"
 ```
 
 ## Generalize Windows Server
