@@ -276,7 +276,9 @@ telnet  <ip> <port>
 Scan port on the host(s)
 
 ```bash
-nmap –p 80 192.168.0.1-100
+>nmap –p 80 192.168.0.1-100
+
+> nmap -Pn -p 1-65535 --min-rate 1000 gitlab.com
 ```
 
 See [nmap Cheat Sheet](../refs/nmap-cheat-sheet.pdf)
