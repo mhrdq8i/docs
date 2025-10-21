@@ -60,25 +60,27 @@ sudo vnstat --days --begin "2024-01-01 00:00" --end "2024-02-01 23:59"
 
 To enable a password-less connection
 
-=== "ssh config file"
+=== "essential"
 
-        ```bash
-        Host proxy
-            HostName 172.20.238.8
-            Port 22
-            User mehrdad
-            IdentityFile ~/.ssh/id_rsa
-        ```
+    ```bash
+    Host proxy
+        HostName 172.20.238.8
+        Port 22
+        User mehrdad
+        IdentityFile ~/.ssh/id_rsa
+    ```
 
-        ```bash
-        Host [name]
-            HostName [ip-or-hostname]
-            Port [port_number]
-            User [user]
-            ProxyCommand ssh -W %h:%p proxy
-            PreferredAuthentications publickey
-            IdentityFile ~/.ssh/id_rsa
-        ```
+=== "forward proxy"
+
+    ```bash
+    Host [name]
+        HostName [ip-or-hostname]
+        Port [port_number]
+        User [user]
+        ProxyCommand ssh -W %h:%p proxy
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/id_rsa
+    ```
 
 ### ssh 2 ssh
 
@@ -182,11 +184,18 @@ pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/deb
 
 ## ip command (iproute2 pckg)
 
-Install `ip`
+Install `ip` linux package
 
-```bash
-sudo apt install iproute2
-```
+=== "debian base dist"
+
+    ```bash
+    sudo apt install iproute2
+    ```
+=== "redhat base dist"
+
+    ```bash
+    sudo dnf install iproute2
+    ```
 
 ### ip addr
 
@@ -217,22 +226,22 @@ ip -br -c r
 
 Add a new route
 
-> via _default_ keyword
+=== "via _default_ keyword"
 
-```bash
-ip route add default via {GATEWAYIP} [dev {INTERFACE-NAME}]
-ip route add default via 192.168.146.2 dev ens33
-```
+    ```bash
+    ip route add default via {GATEWAYIP} [dev {INTERFACE-NAME}]
+    ip route add default via 192.168.146.2 dev ens33
+    ```
 
-> via _specific_ ip_address
+=== "via _specific_ ip_address"
 
-```bash
-ip route add {NETWORK/MASK} via {GATEWAYIP} [dev {INTERFACE-NAME}]
-#default route with specific address "0.0.0.0/0"
-ip route add 0.0.0.0/0 via 192.168.146.2 dev ens33
-ip route add 192.168.146.0/24 via 192.168.146.2 dev ens33
-ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
-```
+    ```bash
+    ip route add {NETWORK/MASK} via {GATEWAYIP} [dev {INTERFACE-NAME}]
+    #default route with specific address "0.0.0.0/0"
+    ip route add 0.0.0.0/0 via 192.168.146.2 dev ens33
+    ip route add 192.168.146.0/24 via 192.168.146.2 dev ens33
+    ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
+    ```
 
 Get the Gateway address
 
