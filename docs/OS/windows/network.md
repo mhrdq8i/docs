@@ -76,8 +76,23 @@ netstat -na | findstr "your_port"
 ```pwsh
 netstat -nao
 ```
+## L2
 
-## Route
+### ARP
+
+Clear all ARP cache
+
+```pwsh
+arp -d *
+```
+
+Clear an IP address
+
+```pwsh
+arp -d 172.28.96.171
+```
+
+## Route L3
 
 ### Show all routes
 
@@ -93,7 +108,7 @@ How to access to the ZiTel anton
 route add 192.168.0.254 mask 255.255.255.255 192.168.0.1
 ```
 
-**Note:** I also have set another route on the access point
+**Note:** I have also set another route on the access point
 
 ??? "Anton access route"
 
