@@ -60,21 +60,25 @@ sudo vnstat --days --begin "2024-01-01 00:00" --end "2024-02-01 23:59"
 
 To enable a password-less connection
 
-```bash
-Host proxy
-    HostName 172.20.238.8
-    Port 22
-    User mehrdad
-    IdentityFile ~/.ssh/id_rsa
+=== ssh config file
 
-Host [name]
-    HostName [ip-or-hostname]
-    Port [port_number]
-    User [user]
-    ProxyCommand ssh -W %h:%p proxy
-    PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa
-```
+        ```bash
+        Host proxy
+            HostName 172.20.238.8
+            Port 22
+            User mehrdad
+            IdentityFile ~/.ssh/id_rsa
+        ```
+
+        ```bash
+        Host [name]
+            HostName [ip-or-hostname]
+            Port [port_number]
+            User [user]
+            ProxyCommand ssh -W %h:%p proxy
+            PreferredAuthentications publickey
+            IdentityFile ~/.ssh/id_rsa
+        ```
 
 ### ssh 2 ssh
 
@@ -178,7 +182,15 @@ pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/deb
 
 ## ip command (iproute2 pckg)
 
-### Shows IPs, Routes, Interfaces, Links
+Install `ip`
+
+```bash
+sudo apt install iproute2
+```
+
+### ip addr
+
+**Note:** You can use `a` instead of `addr`
 
 Show IPs
 
@@ -186,41 +198,38 @@ Show IPs
 ip -br -c a
 ```
 
-Show Routes
-
-```bash
-ip -br -c r
-```
-
-Show Links
-
-```bash
-ip -br -c l
-```
-
-### Add a new ip_address
+Add a new ip address
 
 ```bash
 ip addr add <ip-address/cidr> dev <interface-name>
 ip addr add 172.22.170.22/24 dev enp0s3
 ```
 
-**Note:** You can use `a` instead of `addr`
+### ip route
 
-### Add a new route
+**Note:** You can use `r` instead of `route`
 
-Via _default_ keyword
+Show Routes
+
+```bash
+ip -br -c r
+```
+
+Add a new route
+
+> via _default_ keyword
 
 ```bash
 ip route add default via {GATEWAYIP} [dev {INTERFACE-NAME}]
 ip route add default via 192.168.146.2 dev ens33
 ```
 
-Via _specific_ ip_address
+> via _specific_ ip_address
 
 ```bash
 ip route add {NETWORK/MASK} via {GATEWAYIP} [dev {INTERFACE-NAME}]
-ip route add 0.0.0.0/0 via 192.168.146.2 dev ens33  #default route with specific address "0.0.0.0/0"
+#default route with specific address "0.0.0.0/0"
+ip route add 0.0.0.0/0 via 192.168.146.2 dev ens33
 ip route add 192.168.146.0/24 via 192.168.146.2 dev ens33
 ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
 ```
@@ -228,16 +237,91 @@ ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
 Get the Gateway address
 
 ```bash
-ip r get <ip-addr> 
+ip r get <ip-addr>
 ```
 
-**Note:** You can use `r` instead of `route`
+### ip link
 
-### Up & Down Interface
+`ip link` is part of the **iproute2** toolset in Linux, and it’s used to **show and configure network interfaces** (links).
+
+It works at **Layer 2 (Data Link Layer)** — meaning it deals with the physical or virtual network interfaces themselves, _not_ with IP addresses or routing.
+
+Show Links
+
+```bash
+ip -br -c l
+```
+
+Show all network interfaces
+
+```bash
+ip link show
+```
+
+Bring an interface **up**
+
+```bash
+sudo ip link set ens160 up
+```
+
+Bring an interface **down**
+
+```bash
+sudo ip link set ens160 down
+```
+
+Change an interface’s **MTU**,
+Reduces the maximum frame size (useful in tunnels or VPNs).
+
+```bash
+sudo ip link set ens160 mtu 1400
+```
+
+Change an interface’s **MAC address**
+
+```bash
+sudo ip link set dev ens160 address 00:11:22:33:44:55
+```
+
+Show a specific interface
+
+```bash
+ip link show dev ens160
+```
+
+Up & Down Interface
 
 ```bash
 ip link set <interface-name> up
 ```
+
+### ip neighbor
+
+See which devices your system has interacted with
+
+```bash
+ip neigh
+```
+
+Delete a specific entry from the ARP cache
+
+```bash
+sudo ip neigh del 192.168.100.1 dev ens160
+```
+
+Flush the entire ARP cache
+
+```bash
+sudo ip neigh flush all
+```
+
+Add a static ARP entry manually (less common)
+
+```bash
+sudo ip neigh add 192.168.100.50 lladdr 00:11:22:33:44:55 dev ens160 nud permanent
+```
+
+**Note:** You can use `n` instead of `neigh`
 
 ## Subnet Mask
 
@@ -249,7 +333,7 @@ ipcalc 0.0.0.0/1
 
 Range of Private Networks
 
-```
+```bash
 Class A  10.0.0.0/8
 Class B  172.16.0.0/12
 Class C  192.168.0.0/16

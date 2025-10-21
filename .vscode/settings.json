@@ -16,6 +16,7 @@
     "ldconfig",
     "libname",
     "linenumber",
+    "lladdr",
     "Macvlan",
     "MTTR",
     "myimage",
