@@ -141,13 +141,13 @@ scp username@remotehost.edu:~/\{foo.txt,bar.txt\} .
 
 ### scp Performance
 
-By default, SCP uses the Triple-DES cipher to encrypt the data being sent. Using the Blowfish cipher has been shown to increase speed. This can be done by using the option -c blowfish in the command line.
+By default, `SCP` uses the `Triple-DES` cipher to encrypt the data being sent. Using the Blowfish cipher has been shown to increase speed. This can be done by using the option -c blowfish in the command line.
 
 ```bash
 scp -c blowfish some_file username@remotehost.edu:~
 ```
 
-It is often suggested that the -C option for compression should also be used to increase speed. The effect of compression, however, will only significantly increase speed if your connection is very slow. Otherwise, it may just be adding an extra burden to the CPU. An example of using Blowfish and compression:
+It is often suggested that the `-C` option for compression should also be used to increase speed. The effect of compression, however, will only significantly increase speed if your connection is very slow.
 
 ```bash
 scp -c blowfish -C local_file username@remotehost.edu:~
@@ -159,39 +159,60 @@ scp -c blowfish -C local_file username@remotehost.edu:~
 Synchronize the bidirectional directory on the remote and local together
 ```
 
-Access via remote shell:
+Access via remote shell
 
-```bash
-Pull: rsync [OPTION...] [USER@]HOST:SRC... [DEST]
-Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
-Pull: sync local with remote
-Push: sync remote with local
-```
+=== "push"
+
+    ```bash
+    Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
+    Push: sync remote with local
+    ```
+=== "pull"
+
+    ```bash
+    Pull: rsync [OPTION...] [USER@]HOST:SRC... [DEST]
+    Pull: sync local with remote
+    ```
 
 Example:
 
-```bash
-push to remote: rsync -atvz \* root@<remote-ip-addr>:/root
-pull from remote: rsync -atvz  root@<remote-ip-addr>:/root/ .
-```
+=== "push"
+
+    ```bash
+    push to remote: rsync -atvz \* root@<remote-ip-addr>:/root
+    ```
+
+=== "pull"
+
+    ```bash
+    pull from remote: rsync -atvz  root@<remote-ip-addr>:/root/ .
+    ```
 
 Set up rsync via a different port
 
-```bash
-push to remote: rsync -atvz . -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp
-pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/debug.tar.gz .
-```
+=== "push"
+
+    ```bash
+    push to remote: rsync -atvz . -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp
+    ```
+
+=== "pull"
+
+    ```bash
+    pull from remote: rsync -atvz -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp/debug.tar.gz .
+    ```
 
 ## ip command (iproute2 pckg)
 
-Install `ip` linux package
+Install 'ip' linux package
 
-=== "debian base dist"
+=== "debian base"
 
     ```bash
     sudo apt install iproute2
     ```
-=== "redhat base dist"
+
+=== "redhat base"
 
     ```bash
     sudo dnf install iproute2
@@ -201,18 +222,75 @@ Install `ip` linux package
 
 **Note:** You can use `a` instead of `addr`
 
-Show IPs
+🧠 Concept
+
+`ip addr` (short for *ip address*) is used to **view, add, or remove IP addresses** on your network interfaces.
+
+It operates at **Layer 3 (Network Layer)** — managing how your system is identified on the network.
+
+Show all assigned IP addresses
+
+=== "complete syntax"
+
+    ```bash
+    ip addr show
+    ```
+
+=== "simple syntax"
+
+    ```bash
+    ip -br -c a
+    ```
+
+Add a new IP address
 
 ```bash
-ip -br -c a
+sudo ip addr add 192.168.100.50/24 dev ens160
 ```
 
-Add a new ip address
+➡️ Adds an additional address (can have multiple per interface).
+
+Remove an IP address
 
 ```bash
-ip addr add <ip-address/cidr> dev <interface-name>
-ip addr add 172.22.170.22/24 dev enp0s3
+sudo ip addr del 192.168.100.50/24 dev ens160
 ```
+
+Replace (set) an IP address
+
+```bash
+sudo ip addr replace 192.168.100.16/24 dev ens160
+```
+
+This automatically removes the old one if it exists.
+
+Bring an interface up or down (quick link control)
+
+=== "up"
+
+    ```bash
+    sudo ip link set ens160 up
+    ```
+
+=== "down"
+
+    ```bash
+    sudo ip link set ens160 down
+    ```
+
+Flush (remove) all addresses from an interface
+
+```bash
+sudo ip addr flush dev ens160
+```
+
+#### 🔍 Scopes
+
+| Scope    | Meaning                                       |
+| -------- | --------------------------------------------- |
+| `global` | Reachable from outside the host               |
+| `link`   | Valid only on the local network segment       |
+| `host`   | Valid only within the local system (loopback) |
 
 ### ip route
 
@@ -396,44 +474,66 @@ telnet  <ip> <port>
 
 Scan port on the host(s)
 
-```bash
-> nmap –p 80 192.168.0.1-100
+=== "specific port"
 
-> nmap -Pn -p 1-65535 --min-rate 1000 gitlab.com
-```
+    ```bash
+    nmap –p 80 192.168.0.1-100
+    ```
+=== "range port"
+
+    ```bash
+    nmap -Pn -p 1-65535 --min-rate 1000 gitlab.com
+    ```
 
 See [nmap Cheat Sheet](../refs/nmap-cheat-sheet.pdf)
 
 ## fuser
 
-close open port
-
 kill open port directly
 
-```bash
-fuser -k -n tcp 80
-fuser -k -n udp 80
-```
+=== "TCP"
+
+    ```bash
+    fuser -k -n tcp 80
+    ```
+
+=== "UDP"
+
+    ```bash
+    fuser -k -n udp 80
+    ```
 
 ## Kernel IP forwarding
 
-### Temporarily Enable Forwarding
+### Temporarily Enable/Disable IP Forwarding
 
-manually
+Manually
 
-```bash
-echo 0 > /proc/sys/net/ipv4/ip_forward
-## OR ##
-echo 1 > /proc/sys/net/ipv4/ip_forward
-```
+=== "Enable"
+
+    ```bash
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+    ```
+
+=== "Disable"
+
+    ```bash
+    echo 0 > /proc/sys/net/ipv4/ip_forward
+    ```
 
 via sysctl
 
-```bash
-sysctl -w net.ipv4.ip_forward=0
-## OR ##
-sysctl -w net.ipv4.ip_forward=1
-```
+=== "Enable"
+
+    ```bash
+    sysctl -w net.ipv4.ip_forward=1
+    ```
+
+=== "Disable"
+
+    ```bash
+    sysctl -w net.ipv4.ip_forward=0
+    ```
 
 ### Permanently Enable Forwarding
 
