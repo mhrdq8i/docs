@@ -218,42 +218,64 @@ ip addr add 172.22.170.22/24 dev enp0s3
 
 **Note:** You can use `r` instead of `route`
 
-Show Routes
+🧠 Concept:
 
-```bash
-ip -br -c r
-```
+`ip route` is used to **view and manage the kernel’s routing table** — basically, the rules Linux uses to decide *where* to send outgoing packets.
 
-Add a new route
+Show the routing table
 
-=== "via _default_ keyword"
+=== "complete syntax"
 
     ```bash
-    ip route add default via {GATEWAYIP} [dev {INTERFACE-NAME}]
-    ip route add default via 192.168.146.2 dev ens33
+    ip route show
     ```
 
-=== "via _specific_ ip_address"
+=== "abbreviation"
 
     ```bash
-    ip route add {NETWORK/MASK} via {GATEWAYIP} [dev {INTERFACE-NAME}]
-    #default route with specific address "0.0.0.0/0"
-    ip route add 0.0.0.0/0 via 192.168.146.2 dev ens33
-    ip route add 192.168.146.0/24 via 192.168.146.2 dev ens33
-    ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
+    ip -br -c r
     ```
 
-Get the Gateway address
+Add a new route manually
 
 ```bash
-ip r get <ip-addr>
+sudo ip route add default via {GATEWAYIP} [dev {INTERFACE-NAME}]
+sudo ip route add 10.10.0.0/16 via 192.168.100.254 dev ens160
 ```
+
+➡️ Any packet to `10.10.x.x` will be sent to gateway `192.168.100.254`.
+
+Delete a route
+
+```bash
+sudo ip route del 10.10.0.0/16
+```
+
+Temporarily remove internet access (for testing)
+
+```bash
+sudo ip route del default
+```
+
+Change the default gateway
+
+```bash
+sudo ip route replace default via 192.168.100.1 dev ens160
+```
+
+🧠 Tip: Check where traffic goes
+
+```bash
+ip route get 8.8.8.8
+```
+
+➡️ Any packet to `10.10.x.x` will be sent to gateway `192.168.100.254`.
 
 ### ip link
 
 `ip link` is part of the **iproute2** toolset in Linux, and it’s used to **show and configure network interfaces** (links).
 
-It works at **Layer 2 (Data Link Layer)** — meaning it deals with the physical or virtual network interfaces themselves, _not_ with IP addresses or routing.
+It works at **Layer 2 (Data Link Layer)** — meaning it deals with the physical or virtual network interfaces themselves, *not* with IP addresses or routing.
 
 Show Links
 
