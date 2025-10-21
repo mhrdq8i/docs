@@ -28,12 +28,12 @@ NETSTAT [-a] [-b] [-e] [-f] [-i] [-n] [-o] [-p proto] [-r] [-s] [-t] [-x] [-y] [
 
   -a            Displays all connections and listening ports.
   -b            Displays the executable involved in creating each connection or
-                listening port. In some cases well-known executables host
-                multiple independent components, and in these cases the
+                listening port. In some cases, well-known executables host
+                multiple independent components, and in these cases, the
                 sequence of components involved in creating the connection
-                or listening port is displayed. In this case the executable
-                name is in [] at the bottom, on top is the component it called,
-                and so forth until TCP/IP was reached. Note that this option
+                or listening port is displayed. In this case, the executable
+                name is in [] at the bottom, on top is the component it calls,
+                and so forth until TCP/IP is reached. Note that this option
                 can be time-consuming and will fail unless you have sufficient
                 permissions.
   -e            Displays Ethernet statistics. This may be combined with the -s
@@ -48,12 +48,12 @@ NETSTAT [-a] [-b] [-e] [-f] [-i] [-n] [-o] [-p proto] [-r] [-s] [-t] [-x] [-y] [
                 option to display per-protocol statistics, proto may be any of:
                 IP, IPv6, ICMP, ICMPv6, TCP, TCPv6, UDP, or UDPv6.
   -q            Displays all connections, listening ports, and bound
-                nonlistening TCP ports. Bound nonlistening ports may or may not
+                nonlistening TCP ports. Bound non-listening ports may or may not
                 be associated with an active connection.
   -r            Displays the routing table.
   -s            Displays per-protocol statistics.  By default, statistics are
                 shown for IP, IPv6, ICMP, ICMPv6, TCP, TCPv6, UDP, and UDPv6;
-                the -p option may be used to specify a subset of the default.
+                The -p option may be used to specify a subset of the default.
   -t            Displays the current connection offload state.
   -x            Displays NetworkDirect connections, listeners, and shared
                 endpoints.
@@ -92,17 +92,19 @@ Clear an IP address
 arp -d 172.28.96.171
 ```
 
-## Route L3
+## L3
 
-### Show all routes
+### Route
+
+#### Show all routes
 
 ```pwsh
 route print -4
 ```
 
-### Add a new route
+#### Add a new route
 
-How to access to the ZiTel anton
+How to access the ZiTel onton
 
 ```pwsh
 route add 192.168.0.254 mask 255.255.255.255 192.168.0.1
