@@ -286,7 +286,7 @@ tar cf - directory-name | xz -z > archive-name.tar.xz
 
 # Create/Extract one file to XZ file
 xz -z ramz.txt.gpg
-xz -d ramz.txt.gpg.xz
+xz -d ramz.txt.gpg.xz #
 
 # Create `XZ` file into the another file
 xz -z ramz.txt.gpg > ramz.txt.gpg.tar.xz
