@@ -135,13 +135,13 @@ scp username@remotehost.edu:~/\{foo.txt,bar.txt\} .
 
 ### scp Performance
 
-By default, SCP uses the Triple-DES cipher to encrypt the data being sent. Using the Blowfish cipher has been shown to increase speed. This can be done by using option -c blowfish in the command line.
+By default, SCP uses the Triple-DES cipher to encrypt the data being sent. Using the Blowfish cipher has been shown to increase speed. This can be done by using the option -c blowfish in the command line.
 
 ```bash
 scp -c blowfish some_file username@remotehost.edu:~
 ```
 
-It is often suggested that the -C option for compression should also be used to increase speed. The effect of compression, however, will only significantly increase speed if your connection is very slow. Otherwise, it may just be adding an extra burden to the CPU. An example of using blowfish and compression:
+It is often suggested that the -C option for compression should also be used to increase speed. The effect of compression, however, will only significantly increase speed if your connection is very slow. Otherwise, it may just be adding an extra burden to the CPU. An example of using Blowfish and compression:
 
 ```bash
 scp -c blowfish -C local_file username@remotehost.edu:~
@@ -150,7 +150,7 @@ scp -c blowfish -C local_file username@remotehost.edu:~
 ## rsync
 
 ```bash
-Synchronize bidirectional directory on remote and local together
+Synchronize the bidirectional directory on the remote and local together
 ```
 
 Access via remote shell:
@@ -169,7 +169,7 @@ push to remote: rsync -atvz \* root@<remote-ip-addr>:/root
 pull from remote: rsync -atvz  root@<remote-ip-addr>:/root/ .
 ```
 
-Setup rsync via a different port
+Set up rsync via a different port
 
 ```bash
 push to remote: rsync -atvz . -e 'ssh -p 6788' mehrdad@<remote-ip-addr>:/tmp
@@ -225,6 +225,12 @@ ip route add 192.168.146.0/24 via 192.168.146.2 dev ens33
 ip route add 192.168.50.0/24 via 192.168.50.1 dev ens34
 ```
 
+Get the Gateway address
+
+```bash
+ip r get <ip-addr> 
+```
+
 **Note:** You can use `r` instead of `route`
 
 ### Up & Down Interface
@@ -265,7 +271,7 @@ route add -net 172.22.132.0/24 gw 77.104.118.1 dev ens4
 
 ## telnet
 
-check the connection between two machines:
+Check the connection between two machines:
 
 ```bash
 telnet  <ip> <port>
