@@ -92,3 +92,66 @@ Adding more machines or nodes to distribute the workload across multiple systems
 
 **Elasticity**
 The ability to automatically scale resources up or down based on current demand, particularly common in cloud environments.
+
+---
+
+### **Replication**
+The process of copying and maintaining data across multiple servers or locations to ensure redundancy, improve fault tolerance, and enhance read performance.
+
+**How it works:**
+- Data is duplicated from a primary (master) database to one or more secondary (replica/slave) databases
+- Changes made to the primary are propagated to replicas, either synchronously or asynchronously
+
+**Key benefits:**
+- **Fault Tolerance**: If the primary server fails, a replica can take over
+- **High Availability**: Service continues even if one server goes down
+- **Read Scalability**: Read operations can be distributed across multiple replicas
+- **Geographic Distribution**: Data can be closer to users in different regions, reducing latency
+
+**Common patterns:**
+- **Master-Slave Replication**: One primary for writes, multiple replicas for reads
+- **Master-Master Replication**: Multiple nodes can accept writes
+- **Synchronous Replication**: Writes confirmed only after all replicas are updated (slower but more consistent)
+- **Asynchronous Replication**: Writes confirmed immediately, replicas updated later (faster but may lag)
+
+---
+
+### **Sharding**
+The technique of horizontally partitioning data across multiple databases or servers, where each shard contains a subset of the total data.
+
+**How it works:**
+- Data is split based on a **shard key** (e.g., user ID, geographic region, date range)
+- Each shard operates independently and holds only a portion of the dataset
+- Application logic routes requests to the appropriate shard
+
+**Key benefits:**
+- **Horizontal Scalability**: Distributes data and load across multiple machines
+- **Performance**: Smaller datasets per shard means faster queries
+- **Storage Capacity**: Overcomes single-server storage limitations
+- **Parallel Processing**: Operations can run simultaneously across shards
+
+**Sharding strategies:**
+- **Range-based**: Data divided by ranges (e.g., users A-M on shard1, N-Z on shard2)
+- **Hash-based**: Hash function determines which shard stores the data
+- **Geographic**: Data partitioned by location (e.g., US users, EU users)
+- **Directory-based**: Lookup table maps data to shards
+
+**Challenges:**
+- Complex queries across multiple shards
+- Rebalancing when adding/removing shards
+- Maintaining data consistency across shards
+- Choosing the right shard key is critical
+
+---
+
+### **Replication vs. Sharding**
+
+| Aspect | Replication | Sharding |
+|--------|-------------|----------|
+| **Purpose** | Redundancy & fault tolerance | Scale storage & processing capacity |
+| **Data** | Full copies on each server | Different subsets on each server |
+| **Reads** | Can be distributed | Must route to correct shard |
+| **Writes** | All replicas get same data | Each shard gets different data |
+| **When to use** | Need high availability & read scaling | Dataset too large for one server |
+
+**Often used together**: Many systems use both—sharding to distribute data, and replication within each shard for fault tolerance.
