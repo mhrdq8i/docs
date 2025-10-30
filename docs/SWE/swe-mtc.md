@@ -13,7 +13,8 @@ Reliability
 ├── Fault Tolerance
 │   ├── Error Detection
 │   ├── Recovery Mechanisms
-│   └── Self-Healing Systems
+│   ├── Self-Healing Systems
+│   └── Replication
 ├── Performance
 │   ├── Latency
 │   ├── Throughput
@@ -21,7 +22,8 @@ Reliability
 └── Scalability
     ├── Vertical Scaling (Scale Up)
     ├── Horizontal Scaling (Scale Out)
-    └── Elasticity
+    ├── Elasticity
+    └── Sharding
 ```
 
 ## **Reliability**
