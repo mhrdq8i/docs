@@ -8,7 +8,8 @@ Reliability
 │   ├── Uptime
 │   ├── Redundancy
 │   ├── Failover
-│   └── Disaster Recovery
+│   ├── Disaster Recovery
+│   └── Incident Management
 ├── Fault Tolerance
 │   ├── Error Detection
 │   ├── Recovery Mechanisms
@@ -42,6 +43,11 @@ The automatic switching to a redundant or standby system, server, or network whe
 
 **Disaster Recovery**
 The processes and policies for restoring systems, data, and operations after catastrophic events like natural disasters or major outages.
+
+**Incident Management**
+The process of identifying, analyzing, and responding to system failures or service disruptions to minimize impact and restore normal operations quickly. This includes detection, escalation, resolution, and post-incident analysis to prevent future occurrences.
+
+This term typically sits alongside or encompasses aspects of **Fault Tolerance** and **Availability**, as it deals with how organizations respond to and manage system reliability issues when they occur.
 
 ---
 
