@@ -2,6 +2,7 @@
 
 # Software Engineer Main Terms Concept 
 
+```bash
 Reliability
 ├── Availability
 │   ├── Uptime
@@ -20,3 +21,4 @@ Reliability
     ├── Vertical Scaling (Scale Up)
     ├── Horizontal Scaling (Scale Out)
     └── Elasticity
+```
