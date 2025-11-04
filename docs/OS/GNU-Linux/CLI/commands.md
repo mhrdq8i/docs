@@ -441,6 +441,20 @@ dos2unix file1.txt
 
 ## sudoer
 
+Add PasswordLess sudoer
+
+```sh
+sudo bash -c 'echo "mehrdad ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/mehrdad'
+sudo chmod 0440 /etc/sudoers.d/mehrdad
+```
+
+Verify it works
+Should print "root" without asking for password
+
+```sh
+sudo -n whoami
+```
+
 ### force edit visudo
 
 ```sh
