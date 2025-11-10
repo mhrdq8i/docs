@@ -217,7 +217,6 @@ Get the admin token and paste it to your dashboard page
 ```bash
 kubectl -n kube-system create token dashboard-admin --duration=87600h
 ```
-
 <!-- links -->
 
 [commands]: ../../../assets/kuber/cheatsheet/cs-commands.jpg
