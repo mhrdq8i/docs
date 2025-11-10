@@ -6,6 +6,8 @@
     "bpcopy",
     "BUILDKIT",
     "Buildx",
+    "clusterrole",
+    "clusterrolebinding",
     "containerd",
     "distroless",
     "Frontends",
@@ -21,6 +23,7 @@
     "MTTR",
     "myimage",
     "myrepo",
+    "serviceaccount",
     "trafficrouting",
     "xclip"
   ],
