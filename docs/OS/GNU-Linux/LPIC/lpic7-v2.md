@@ -471,7 +471,6 @@ They should be understand the major properties and features of commonly used Ope
 #### [702.2 Container Orchestration] (3)
 
 - [702.2.01]
-- [702.2.02]
 
 #### [702.3 Container Image Building] (5)
 
