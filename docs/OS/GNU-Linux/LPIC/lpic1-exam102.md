@@ -1,4 +1,6 @@
-# LPIC-1 Exam 101 Objectives
+# LPIC-1 Exam 102
+
+Objectives
 
 ## Topic 105: Shells and Shell Scripting
 
