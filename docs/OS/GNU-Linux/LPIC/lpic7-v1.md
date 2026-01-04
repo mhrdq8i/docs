@@ -1,5 +1,7 @@
 # LPIC 7
 
+- **Exam Objectives Version:** 1.0
+
 ## 701 Software Engineering
 
 ### 701.1 Modern Software Development (weight: 6)
