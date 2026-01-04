@@ -1,4 +1,6 @@
-# LPIC-1 Exam 101 Objectives
+# LPIC-1 Exam 101 
+
+Objectives
 
 ## Topic 101: System Architecture
 
