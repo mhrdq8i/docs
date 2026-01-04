@@ -1,4 +1,4 @@
-# LPIC 7
+# LPIC 7 - v2
 
 DevOps Tools Engineer Exam 701 Objectives
 
@@ -11,36 +11,32 @@ Each objective is assigned a weighting value.
 The weights indicate the relative importance of each objective on the exam.
 Objectives with higher weights will be covered in the exam with more questions.
 
----
-
-## Introduction
+### Introduction
 
 This is a required exam for the Linux Professional Institute DevOps Tools Engineer certification.
 It covers basic skills in using tools commonly used to implement DevOps.
 
 This page covers the currently released objective for the Linux Professional Institute DevOps Tools Engineer certification.
 
-## Candidate Description
+### Candidate Description
 
 The certification holder is either a professional software developer or a professional system administrator who is involved in the production of IT solutions which require a robust and efficient process to get from original source materials to a final deployed or distributable product or service with a particular focus on using Open Source technology.
 The certification holder has the ability to create, deliver and operate software using collaborative methods which address aspects of software development as well as system administration.
 In particular, the certification holder is adept at bridging the gap between the development and operations of a solution or product.
 The certification holder understands how these tools facilitate development and operational tasks in the delivery of stable, scalable and up to date services to users and customers.
 
-## Version Information
+### Version Information
 
 These objectives are **A DRAFT FOR** version 2.0.0.
 
-## Exams and Requirements
+### Exams and Requirements
 
 The Linux Professional Institute DevOps Tools Engineer certification is awarded after passing this exam.
 There is no requirement to possess any other certifications.
 However, LPI recommends that all Linux Professional Institute DevOps Tools Engineers maintain at least one active certification in either system administration or software development.
 This certification should be at a level equivalent to LPIC-1.
 
----
-
-# Objectives
+## **Objectives**
 
 ## 701 Software Engineering
 

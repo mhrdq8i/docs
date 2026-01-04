@@ -1,4 +1,4 @@
-# LPIC 7
+# LPIC 7 - v1
 
 - **Exam Objectives Version:** 1.0
 
