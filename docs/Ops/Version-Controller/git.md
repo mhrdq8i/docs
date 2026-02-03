@@ -31,7 +31,7 @@ git config --global core.editor "vim"
 
 ### Skip SSL C.A
 
-Skip unable to access `https://your.host/your-git/your-repor.git/` SSL certificate problem: self signed certificate
+Skip unable to access `https://your.host/your-git/your-repor.git/` SSL certificate problem: self-signed certificate
 
 ```sh
 git config --global http.sslVerify false
