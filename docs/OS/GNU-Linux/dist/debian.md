@@ -66,13 +66,15 @@ deb-src http://deb.debian.org/debian-security/ bookworm-security main
 
 ### Set `http_proxy/https_proxy` for `apt`
 
-=== "Without authentication"
+=== "without-Auth"
+
    ```bash
    Acquire::http::Proxy "http://proxy.company.com:8080";
    Acquire::https::Proxy "http://proxy.company.com:8080";
    ```
 
-=== "With authentication"
+=== "with-Auth"
+
    ```bash
    Acquire::http::Proxy "http://username:password@proxy.company.com:8080";
    Acquire::https::Proxy "http://username:password@proxy.company.com:8080";
