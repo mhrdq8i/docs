@@ -64,7 +64,21 @@ deb http://deb.debian.org/debian-security/ bookworm-security main
 deb-src http://deb.debian.org/debian-security/ bookworm-security main
 ```
 
-## Download DEB Packages
+### Set `http_proxy/https_proxy` for `apt`
+
+=== "Without authentication"
+   ```bash
+   Acquire::http::Proxy "http://proxy.company.com:8080";
+   Acquire::https::Proxy "http://proxy.company.com:8080";
+   ```
+
+=== "With authentication"
+   ```bash
+   Acquire::http::Proxy "http://username:password@proxy.company.com:8080";
+   Acquire::https::Proxy "http://username:password@proxy.company.com:8080";
+   ```
+
+### Download DEB Packages
 
 Only download deb packages for offline installation:
 
