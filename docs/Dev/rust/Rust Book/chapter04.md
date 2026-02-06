@@ -2,7 +2,11 @@
 
 ## [The Stack and the Heap][heap-stack]
 
-Many programming languages don’t require you to think about the stack and the heap very often. But in a systems programming language like Rust, whether a value is on the stack or the heap affects how the language behaves and why you have to make certain decisions.
+Many programming languages don’t require you to think
+about the stack and the heap very often.
+But in a systems programming language like Rust,
+whether a value is on the stack or the heap affects how the
+language behaves and why you have to make certain decisions.
 
 ## [What Is Ownership?][rustownership]
 
@@ -44,7 +48,8 @@ Returning values can also transfer ownership
 
 ## [References and Borrowing][references-and-borrowing]
 
->Note: The opposite of referencing by using `&` is *dereferencing*, which is accomplished with the dereference operator, `*`.
+>Note: The opposite of referencing by using `&` is *dereferencing*,
+>which is accomplished with the dereference operator, `*`.
 
 ### [Dangling References][dangling-references]
 
@@ -60,8 +65,6 @@ Returning values can also transfer ownership
 
     println!("{}, {}", r1, r2);
 ```
-
-Mutable references: have one big restriction, if you have a mutable reference to a value, you can have no other references to that value.
 
 <!-- links -->
 [rustownership]: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#what-is-ownership

@@ -11,5 +11,3 @@ A channel has two halves: a **transmitter** and a **receiver**. The transmitter 
 ### mpsc::channel
 
 `mpsc` stands for *multiple producer, single consumer*. In short, the way Rust’s standard library implements channels means a channel can have multiple *sending* ends that produce values but only one *receiving* end that consumes those values. Imagine multiple streams flowing together into one big river: everything sent down any of the streams will end up in one river at the end.
-
-
