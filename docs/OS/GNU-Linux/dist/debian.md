@@ -64,7 +64,7 @@ deb http://deb.debian.org/debian-security/ bookworm-security main
 deb-src http://deb.debian.org/debian-security/ bookworm-security main
 ```
 
-### Set http_proxy and https_proxy for apt
+Set http_proxy and https_proxy for apt
 
 === "without-Auth"
 
