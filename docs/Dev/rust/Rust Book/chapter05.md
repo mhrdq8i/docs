@@ -98,11 +98,7 @@ let winner = Player::higher_score(&p1, &p2);
 
 ```
 
----
-
-**Associated function**
-
-Any function inside `impl` block that has no `self` parameter
+Any function inside `impl` block that has no `self` parameter are **Associated function**
 
 ```rust
 impl MyType {
@@ -131,12 +127,8 @@ impl MyType {
 | `fn get_name(&self) -> &str` | Yes | No | Method |
 | `fn set_name(&mut self, n: &str)` | Yes | No | Method |
 
----
----
 
-# Rust Functions: Associated Functions, Free Functions, and Methods
-
-## Quick Reference
+### Quick Reference
 
 | Aspect | Associated Function | Free Function | Method |
 |--------|---------------------|---------------|--------|
@@ -146,9 +138,7 @@ impl MyType {
 | **Needs instance?** | No | No | Yes |
 | **Namespaced?** | Yes, under type | Yes, under module | Yes, under type |
 
----
-
-## Definition Comparison
+### Definition Comparison
 
 ```rust
 struct Player {
@@ -185,9 +175,7 @@ impl Player {
 }
 ```
 
----
-
-## Call Syntax Comparison
+### Call Syntax Comparison
 
 ```rust
 // Associated Function: Type::function()
@@ -206,7 +194,7 @@ let len = s.len();
 let upper = s.to_uppercase();
 ```
 
-## When to Use Each
+### When to Use Each
 
 - Associated Functions
 - Free Functions
@@ -371,9 +359,9 @@ Need to create an instance?
       └─ No → Free Function (module::function())
 ```
 
-## Standard Library Examples
+### Standard Library Examples
 
-### Associated Functions
+#### Associated Functions
 
 ```rust
 String::new()                    // Constructor
@@ -385,7 +373,7 @@ i32::MAX                         // Type constant
 i32::from_str("42")              // Parsing
 ```
 
-### Free Functions
+#### Free Functions
 
 ```rust
 std::mem::swap(&mut a, &mut b)   // Works on any type
@@ -397,7 +385,7 @@ std::fs::read_to_string(path)    // I/O utility
 println!("hello")                // Macro (special)
 ```
 
-### Methods
+#### Methods
 
 ```rust
 "hello".len()                    // Query
@@ -411,9 +399,9 @@ option.unwrap()                  // Consume + extract
 result.map(|x| x + 1)            // Transform inner value
 ```
 
-## Common Patterns
+### Common Patterns
 
-### Constructor Pattern
+#### Constructor Pattern
 
 ```rust
 impl Config {
@@ -423,7 +411,7 @@ impl Config {
 }
 ```
 
-### Builder Pattern
+#### Builder Pattern
 
 ```rust
 impl PlayerBuilder {
@@ -439,7 +427,7 @@ let player = PlayerBuilder::new()
     .build();
 ```
 
-### Conversion Pattern
+#### Conversion Pattern
 
 ```rust
 impl Player {
@@ -449,7 +437,7 @@ impl Player {
 }
 ```
 
-## Summary Table
+### Summary Table
 
 | I want to... | Use | Example |
 |--------------|-----|---------|
@@ -463,3 +451,197 @@ impl Player {
 | Utility across types | Free Function | `std::mem::swap()` |
 | Module-level API | Free Function | `crypto::hash()` |
 | Generic operation | Free Function | `serialize::<T>()` |
+
+## Struct Tuple
+
+### Definition
+
+A tuple struct is a named struct with unnamed fields, accessed by position (`.0`, `.1`, etc.) instead of by name.
+
+```rust
+// Tuple struct - fields by position
+struct Point(i32, i32);
+
+// Named struct - fields by name
+struct Point { x: i32, y: i32 }
+```
+
+### Comparison: Tuple vs Tuple Struct vs Named Struct
+
+| Aspect | Tuple | Tuple Struct | Named Struct |
+|--------|-------|--------------|--------------|
+| Has type name | No | Yes | Yes |
+| Fields have names | No | No | Yes |
+| Access fields | `.0`, `.1` | `.0`, `.1` | `.x`, `.y` |
+| Type identity | Structural | Nominal | Nominal |
+
+### Syntax
+
+```rust
+// Define
+struct Point(i32, i32);
+struct UserId(String);
+struct Color(u8, u8, u8);
+
+// Create
+let p = Point(10, 20);
+let id = UserId("abc".into());
+let red = Color(255, 0, 0);
+
+// Access
+let x = p.0;
+let y = p.1;
+
+// Destructure
+let Point(x, y) = p;
+let UserId(value) = id;
+let Color(r, g, b) = red;
+```
+
+### Destructuring in Function Parameters
+
+```rust
+struct Path<T>(T);
+
+// Without destructuring
+fn handler(path: Path<String>) {
+    let value = path.0;  // Access with .0
+}
+
+// With destructuring
+fn handler(Path(value): Path<String>) {
+    // value is extracted directly
+}
+```
+
+This is the pattern Axum uses for extractors:
+
+```rust
+async fn get_user(Path(user_id): Path<String>) -> String {
+    format!("User: {}", user_id)
+}
+```
+
+
+### When to Use Tuple Struct
+
+#### 1. Wrapper Types (Newtype Pattern)
+
+```rust
+struct UserId(String);
+struct PostId(String);
+
+fn get_user(id: UserId) { }
+fn get_post(id: PostId) { }
+
+let user_id = UserId("abc".into());
+let post_id = PostId("xyz".into());
+
+get_user(user_id);   // OK
+get_user(post_id);   // ERROR! Type safety prevents mixing
+```
+
+#### 2. Unit Conversion Safety
+
+```rust
+struct Meters(f64);
+struct Feet(f64);
+
+fn area(length: Meters, width: Meters) -> f64 {
+    length.0 * width.0
+}
+
+let length = Meters(10.0);
+let width = Feet(5.0);
+
+area(length, width);  // ERROR! Can't mix units
+```
+
+#### 3. Single-Value Wrappers
+
+```rust
+// Axum extractors
+struct Path<T>(pub T);
+struct Json<T>(pub T);
+struct Query<T>(pub T);
+```
+
+### When NOT to Use Tuple Struct
+
+#### Many Fields (Use Named Struct)
+
+```rust
+// Bad - what is each field?
+struct User(String, String, String, bool);
+let user = User("123".into(), "alice".into(), "a@b.com".into(), true);
+
+// Good - self-documenting
+struct User {
+    id: String,
+    username: String,
+    email: String,
+    is_active: bool,
+}
+```
+
+#### Confusable Fields (Use Named Struct)
+
+```rust
+// Bad - which is from, which is to?
+struct Transfer(String, String, f64);
+
+// Good - clear meaning
+struct Transfer {
+    from_account: String,
+    to_account: String,
+    amount: f64,
+}
+```
+
+### Field Visibility
+
+```rust
+pub struct Public(pub i32, pub i32);     // Both fields public
+pub struct Private(i32, i32);             // Both fields private
+pub struct Mixed(pub String, i32);        // First public, second private
+```
+
+### Memory Layout
+
+Tuple struct and named struct have identical memory layout:
+
+```rust
+struct PointTuple(i32, i32);
+struct PointNamed { x: i32, y: i32 }
+
+// Both in memory:
+// ┌─────────┬─────────┐
+// │  i32    │  i32    │
+// │ (0/x)   │ (1/y)   │
+// └─────────┴─────────┘
+```
+
+### Decision Guide
+
+```
+One field + need type safety?
+  → Tuple Struct: struct Wrapper(T);
+
+Two fields + meaning obvious?
+  → Tuple Struct OK: struct Point(i32, i32);
+
+Two fields + meaning unclear?
+  → Named Struct: struct Point { x: i32, y: i32 }
+
+Three+ fields?
+  → Almost always Named Struct
+```
+
+### Summary
+
+| Use | Example |
+|-----|---------|
+| Type-safe wrapper | `struct UserId(String);` |
+| Unit safety | `struct Meters(f64);` |
+| Extractor pattern | `struct Path<T>(pub T);` |
+| Simple pair with clear meaning | `struct Point(i32, i32);` |
