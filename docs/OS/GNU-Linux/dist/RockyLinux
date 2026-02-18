@@ -1,0 +1,48 @@
+# Rocky Linux
+
+## yum/dnf
+
+### Check all repo list
+
+```bash
+sudo dnf repolist --all
+```
+
+### Get the enabled repo list
+
+```bash
+dnf repolist enabled
+```
+
+### Check the repos that related to a spcific package
+
+```bash
+dnf repoquery --info <vim>
+```
+
+### CleanUp and Create Cache
+
+Cleanup
+
+```bash
+Clean the cache
+```
+
+Create 
+
+```bash
+sudo dnf makecache
+```
+
+### Install epel repo 
+
+```bash
+sudo dnf install epel-release -y
+sudo dnf install https://rpms.remirepo.net/enterprise/remi-release-9.rpm -y
+```
+
+### Get the list of package modules
+
+```bash
+dnf module list <php>
+```
