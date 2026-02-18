@@ -14,7 +14,7 @@ sudo dnf repolist --all
 dnf repolist enabled
 ```
 
-### Check the repos that related to a spcific package
+### Check the repos that are related to a specific package
 
 ```bash
 dnf repoquery --info <vim>
