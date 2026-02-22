@@ -285,9 +285,9 @@ Parallelism does.
 ## 9. Precise Engineering Definitions
 
 
-**Concurrency**"= the ability to make progress on multiple tasks.
-**Async** = non-blocking coordination of tasks.
-**Parallelism** = simultaneous execution on multiple processors.
+- **Concurrency**"= the ability to make progress on multiple tasks.
+- **Async** = non-blocking coordination of tasks.
+- **Parallelism** = simultaneous execution on multiple processors.
 
 
 ## 10. Common Misconceptions
