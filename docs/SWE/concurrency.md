@@ -88,21 +88,21 @@ Examples of I/O operations:
 
 **Blocking vs Async**
 
-Blocking Model
+=== "Blocking Model"
 
-```bash
-Task A → waits for network
-Thread is blocked
-CPU may sit idle
-```
+    ```bash
+    Task A → waits for network
+    Thread is blocked
+    CPU may sit idle
+    ```
 
-**Async Model**
+=== "Async Model"
 
-```bash
-Task A → awaits network
-Thread becomes free
-Task B executes
-```
+    ```bash
+    Task A → awaits network
+    Thread becomes free
+    Task B executes
+    ```
 
 Async avoids wasting thread time during I/O waits.
 
@@ -178,8 +178,8 @@ Tasks are physically executing simultaneously.
 === "Parallelism"
 
     ```bash
-    Parallelism
-      └── True simultaneous execution on multiple cores
+      Parallelism
+        └── True simultaneous execution on multiple cores
     ```
 
 ---
