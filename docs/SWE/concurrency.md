@@ -293,16 +293,16 @@ Parallelism does.
 ## 10. Common Misconceptions
 
 - ❌ Async means "running at the same time"
-  ✔ No — it means "not blocking."
+- ✔ No — it means "not blocking."
 
 - ❌ Concurrency requires multiple cores
-  ✔ No — it can work on a single core.
+- ✔ No — it can work on a single core.
 
 - ❌ Async is always faster
-  ✔ Only for I/O-bound workloads.
+- ✔ Only for I/O-bound workloads.
 
 - ❌ Parallelism and concurrency are the same
-  ✔ Parallelism is a subset of concurrency.
+- ✔ Parallelism is a subset of concurrency.
 
 
 ## 11. Final Mental Model
