@@ -152,9 +152,8 @@ Core 3 → Task C
 
 Tasks are physically executing simultaneously.
 
----
 
-### 4. Core Differences
+## 4. Core Differences
 
 | Concept	| What It Is	| Focus	| Requires Multiple Cores? |
 | - | - | - | - |
@@ -162,9 +161,8 @@ Tasks are physically executing simultaneously.
 | Async	| Implementation strategy	| Non-blocking execution	| No |
 | Parallelism	| Execution model	| Simultaneous execution	| Yes |
 
----
 
-### 5. Relationship Between Them
+## 5. Relationship Between Them
 
 === "Concurrency"
 
@@ -182,9 +180,8 @@ Tasks are physically executing simultaneously.
         └── True simultaneous execution on multiple cores
     ```
 
----
 
-### 6. Deep Conceptual Differences
+## 6. Deep Conceptual Differences
 
 **Concurrency is about structure**
 
@@ -216,9 +213,8 @@ It answers:
 
 > Are tasks literally running at the same time?
 
----
 
-### 7. Critical Distinction
+## 7. Critical Distinction
 
 A system can be:
 
@@ -263,9 +259,8 @@ Core 3 → Task C
 
 Tasks run simultaneously and independently.
 
----
 
-### 8. CPU-Bound vs I/O-Bound
+## 8. CPU-Bound vs I/O-Bound
 
 **Async is ideal for:**
 
@@ -286,9 +281,8 @@ Async does not speed up CPU-heavy code.
 
 Parallelism does.
 
----
 
-### 9. Precise Engineering Definitions
+## 9. Precise Engineering Definitions
 
 ```bash
 Concurrency = the ability to make progress on multiple tasks.
@@ -296,9 +290,8 @@ Async = non-blocking coordination of tasks.
 Parallelism = simultaneous execution on multiple processors.
 ```
 
----
 
-### 10. Common Misconceptions
+## 10. Common Misconceptions
 
 ❌ Async means "running at the same time"
 ✔ No — it means "not blocking."
@@ -312,9 +305,8 @@ Parallelism = simultaneous execution on multiple processors.
 ❌ Parallelism and concurrency are the same
 ✔ Parallelism is a subset of concurrency.
 
----
 
-### 11. Final Mental Model
+## 11. Final Mental Model
 
 Think of it this way:
 
@@ -324,9 +316,8 @@ Async → Don’t wait idly.
 
 Parallelism → Doing many things at the same time.
 
----
 
-### 12. Practical Guidance
+## 12. Practical Guidance
 
 When designing a system:
 
