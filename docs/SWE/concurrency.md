@@ -16,7 +16,7 @@ These terms are often confused, but they describe different aspects of how progr
 
 ## 1. Concurrency
 
-###"Definition
+### Definition
 
 Concurrency is a system property.
 
