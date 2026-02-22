@@ -1,6 +1,6 @@
 # Concurrency 
 
-Concurrency vs Async vs Parallelism
+**Concurrency** vs **Async** vs **Parallelism**
 
 Overview
 
