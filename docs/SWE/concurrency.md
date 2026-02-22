@@ -166,17 +166,21 @@ Tasks are physically executing simultaneously.
 
 ### 5. Relationship Between Them
 
-```bash
-Concurrency
-├── Async (non-blocking, event-driven)
-├── Multi-threaded concurrency
-└── Multi-process concurrency
-```
+=== "Concurrency"
 
-```bash
-Parallelism
-└── True simultaneous execution on multiple cores
-```
+    ```bash
+     Concurrency
+      ├── Async (non-blocking, event-driven)
+      ├── Multi-threaded concurrency
+      └── Multi-process concurrency
+    ```
+
+=== "Parallelism"
+
+    ```bash
+    Parallelism
+      └── True simultaneous execution on multiple cores
+    ```
 
 ---
 
