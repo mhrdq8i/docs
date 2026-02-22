@@ -109,6 +109,7 @@ Async avoids wasting thread time during I/O waits.
 ### Key Idea
 
 Async focuses on:
+
 - Non-blocking behavior
 - Efficient handling of I/O-bound workloads
 - Event-driven scheduling
@@ -283,26 +284,25 @@ Parallelism does.
 
 ## 9. Precise Engineering Definitions
 
-```bash
-Concurrency = the ability to make progress on multiple tasks.
-Async = non-blocking coordination of tasks.
-Parallelism = simultaneous execution on multiple processors.
-```
+
+**Concurrency**"= the ability to make progress on multiple tasks.
+**Async** = non-blocking coordination of tasks.
+**Parallelism** = simultaneous execution on multiple processors.
 
 
 ## 10. Common Misconceptions
 
-❌ Async means "running at the same time"
-✔ No — it means "not blocking."
+- ❌ Async means "running at the same time"
+  ✔ No — it means "not blocking."
 
-❌ Concurrency requires multiple cores
-✔ No — it can work on a single core.
+- ❌ Concurrency requires multiple cores
+  ✔ No — it can work on a single core.
 
-❌ Async is always faster
-✔ Only for I/O-bound workloads.
+- ❌ Async is always faster
+  ✔ Only for I/O-bound workloads.
 
-❌ Parallelism and concurrency are the same
-✔ Parallelism is a subset of concurrency.
+- ❌ Parallelism and concurrency are the same
+  ✔ Parallelism is a subset of concurrency.
 
 
 ## 11. Final Mental Model
