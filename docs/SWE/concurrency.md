@@ -16,7 +16,7 @@ These terms are often confused, but they describe different aspects of how progr
 
 ## 1. Concurrency
 
-**Definition**
+###"Definition
 
 Concurrency is a system property.
 
@@ -34,7 +34,7 @@ Instead, it means:
 
 ---
 
-**Important Clarification**
+### Important Clarification
 
 Concurrency is a concept, not an implementation technique.
 
@@ -50,7 +50,7 @@ It can be implemented using:
 
 ---
 
-**Example (Single-Core CPU)**
+### Example
 
 Even on a single-core CPU:
 
@@ -67,7 +67,7 @@ This is concurrency without parallelism.
 
 ## 2. Asynchronous Programming (Async)
 
-**Definition**
+### Definition
 
 Async is an implementation strategy for concurrency.
 
@@ -84,7 +84,7 @@ Examples of I/O operations:
 
 ---
 
-**Blocking vs Async**
+### Blocking vs Async
 
 === "Blocking Model"
 
@@ -106,7 +106,7 @@ Async avoids wasting thread time during I/O waits.
 
 ---
 
-**Key Idea**
+### Key Idea
 
 Async focuses on:
 - Non-blocking behavior
@@ -115,7 +115,7 @@ Async focuses on:
 
 ---
 
-**Important Clarification**
+### Important Clarification
 
 Async does NOT necessarily mean:
 
@@ -123,14 +123,13 @@ Async does NOT necessarily mean:
 - Parallel
 - Faster for CPU-heavy work
 
-
 It only means:
 
 > Non-blocking task coordination.
 
 ## 3. Parallelism
 
-**Definition**
+### Definition
 
 Parallelism means executing multiple tasks at the exact same time.
 
@@ -139,8 +138,9 @@ This requires:
 - Multiple CPU cores
 - Or multiple processors
 
+--- 
 
-Example:
+### Example
 
 ```bash
 Core 1 → Task A
@@ -181,7 +181,7 @@ Tasks are physically executing simultaneously.
 
 ## 6. Deep Conceptual Differences
 
-**Concurrency is about structure**
+### Concurrency is about structure
 
 It answers:
 
@@ -191,13 +191,13 @@ It is about program organization and system capability.
 
 ---
 
-**Async is about scheduling behavior**
+### Async is about scheduling behavior
 
 It answers:
 
 > What happens when a task must wait?
 
-Async says:
+**Async says:**
 
 - Don’t block.
 - Yield control.
@@ -205,7 +205,7 @@ Async says:
 
 ---
 
-**Parallelism is about hardware execution**
+### Parallelism is about hardware execution
 
 It answers:
 
@@ -216,7 +216,7 @@ It answers:
 
 A system can be:
 
-**Concurrent but NOT Async**
+### Concurrent but NOT Async
 
 Multi-threaded blocking example:
 
@@ -230,7 +230,7 @@ This is concurrent. But Thread 1 is still blocked.
 
 ---
 
-**Async but NOT Parallel**
+### Async but NOT Parallel
 
 Single-threaded event loop:
 
@@ -245,7 +245,7 @@ This is concurrent and async. But not parallel.
 
 ---
 
-Concurrent AND Parallel
+### Concurrent AND Parallel
 
 Multi-core system:
 
@@ -257,19 +257,20 @@ Core 3 → Task C
 
 Tasks run simultaneously and independently.
 
-
 ## 8. CPU-Bound vs I/O-Bound
 
-**Async is ideal for:**
+### Idealistic 
+
+**Async is ideal for**
 
 - I/O-bound workloads
 - High-latency network operations
 - Servers handling many connections
 
-**Parallelism is ideal for:**
+**Parallelism is ideal for**
 
 - CPU-bound workloads
- Heavy computation
+- Heavy computation
 - Hashing
 - Compression
 - Cryptography
@@ -308,17 +309,15 @@ Parallelism = simultaneous execution on multiple processors.
 
 Think of it this way:
 
-Concurrency → Dealing with many things.
-
-Async → Don’t wait idly.
-
-Parallelism → Doing many things at the same time.
+- **Concurrency** → Dealing with many things.
+- **Async** → Don’t wait idly.
+- **Parallelism** → Doing many things at the same time.
 
 
 ## 12. Practical Guidance
 
 When designing a system:
 
-- Use async to handle many I/O operations efficiently.
-- Use parallelism for heavy CPU computation.
-- Use concurrency as the architectural principle that allows both.
+- Use **async** to handle many **I/O operations** efficiently.
+- Use **parallelism** for heavy **CPU computation**.
+- Use **concurrency** as the **architectural principle** that allows both.
