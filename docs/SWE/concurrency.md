@@ -6,11 +6,9 @@ Overview
 
 This document explains the conceptual and practical differences between:
 
-**Concurrency**
-
-**Asynchronous programming (Async)**
-
-**Parallelism**
+- **Concurrency**
+- **Asynchronous programming (Async)**
+- **Parallelism**
 
 
 These terms are often confused, but they describe different aspects of how programs execute tasks.
