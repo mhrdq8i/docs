@@ -4,7 +4,7 @@
 
 > `C-` = Ctrl <br/>
 > `M-` = Alt (or Esc) <br/>
-> `C-x C-s` = Ctrl+x, Ctrl+s <br/>
+> `C-x C-s` = Ctrl+x Ctrl+s <br/>
 
 ## 🆘 SURVIVAL
 
@@ -114,6 +114,7 @@
 | `C-c b` | cargo build |
 | `C-c c` | cargo check |
 | `C-c t` | cargo test |
+| `C-c f` | cargo fmt |
 | `C-c l` | cargo clippy |
 
 ## 🐍 Python
@@ -121,28 +122,7 @@
 | Keys | Action |
 | --- | --- |
 | `C-c r` | Run file |
-| `C-c t` | pytest |
-
-## ⚙️ C/C++
-
-| Keys | Action |
-| --- | --- |
-| `C-c b` | Build |
-| `C-c r` | Run |
-
-## 🌐 Web (TS/JS)
-
-| Keys | Action |
-| --- | --- |
-| `M-.` | Go to definition |
-| Auto | Prettier on save |
-
-## 🐘 PHP
-
-| Keys | Action |
-| --- | --- |
-| `C-c r` | Run file |
-| `C-c l` | Lint |
+| `C-c d` | Debug file |
 
 ## 🐚 Bash
 
@@ -155,6 +135,7 @@
 
 | Keys | Action |
 | --- | --- |
+| `C-c a` | Ansible |
 | `C-c d` | Docker |
 | `C-c k` | Kubernetes |
 
@@ -198,6 +179,7 @@ M-x eglot
 
 # Install icons
 M-x all-the-icons-install-fonts
+M-x nerd-icons-install-fonts
 ```
 
 ## Quick Reference Box
@@ -214,5 +196,10 @@ M-x all-the-icons-install-fonts
 ║  M-. Def     │  C-c r Run    │  C-s Find    │  C-p Up       ║
 ║  M-, Back    │  C-c b Build  │  C-r Back    │  C-n Down     ║
 ║  M-? Refs    │  C-c t Test   │  M-% Replace │  M-g g Line   ║
+║              │  C-c f Format │              │               ║
 ╚═════════════════════════════════════════════════════════════╝
 ```
+
+---
+
+See more cheat-sheet [***here***](https://quickref.me/emacs.html)
