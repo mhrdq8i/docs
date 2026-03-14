@@ -78,6 +78,7 @@
 | `C-c p f` | Find file |
 | `C-c p s g` | Grep project |
 | `C-c t` | File tree |
+| `C-c m` | Toggle minimap |
 
 ## 🔀 Git (Magit)
 
