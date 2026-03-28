@@ -29,14 +29,27 @@
 
 ## 🧭 Navigation
 
-| Keys | Action |
-| --- | --- |
-| `C-p / C-n` | Up / Down |
-| `C-b / C-f` | Left / Right |
-| `C-a / C-e` | Line start / end |
-| `M-< / M->` | File start / end |
-| `M-g g` | Go to line |
-| `M-b / M-f` | Word back / forward |
+### 🕹️ Vim-style Navigation (Hydra)
+
+> Activate with `C-c SPC`, then tap keys freely. Press `q` or any unmapped key to exit.
+
+| Keys | Vim Equiv | Action |
+| --- | --- | --- |
+| `C-c SPC` | — | **Enter Hydra nav mode** |
+| `j` | `j` | Line down |
+| `k` | `k` | Line up |
+| `l` | `l` | Char right |
+| `;` | `h` | Char left |
+| `w` | `w` | Word forward |
+| `b` | `b` | Word backward |
+| `0` or `^` | `0` / `^` | Line start |
+| `$` | `$` | Line end |
+| `g` | `gg` | Buffer start |
+| `G` | `G` | Buffer end |
+| `d` | `C-d` | Page down |
+| `u` | `C-u` | Page up |
+| `:` | `:123` | Go to line number |
+| `q` | `Esc` | Exit Hydra |
 
 ## ✂️ Editing
 
