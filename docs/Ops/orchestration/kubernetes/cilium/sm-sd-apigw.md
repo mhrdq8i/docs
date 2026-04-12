@@ -528,3 +528,180 @@ Since you're running **Kong** in your stack already:
 - For your KaaS tiers, you likely want **one Kong instance per tenant cluster** (or at least per namespace) at the dedicated tier, and a **shared Kong** at the vCluster entry-level tier to keep costs down.
 - The combination of Kong (north-south) + Cilium (east-west + mesh) covers the full traffic control picture without needing a heavy Istio deployment on top.
 - For entry-level tiers (vCluster), service discovery alone is usually enough. A full mesh makes more sense at the dedicated cluster tier, where tenants need SLA-grade observability and zero-trust networking.
+
+
+
+
+## Service Mesh vs Service Discovery vs API Gateway
+
+### The Big Picture First
+
+```
+                        INTERNET / EXTERNAL CLIENTS
+                                    │
+                                    ▼
+                    ┌────────────────────────────────┐
+                    │          API GATEWAY           │  ← North-South
+                    │  Auth, Rate Limit, TLS, Route  │    (Edge)
+                    └────────────────────────────────┘
+                                    │
+                    ┌────────────────────────────────┐
+                    │       KUBERNETES CLUSTER       │
+                    │                                │
+                    │  Pod A ──────────────► Pod B   │  ← East-West
+                    │    │    Service Mesh           │    (Internal)
+                    │    │    (Envoy sidecar)        │
+                    │    │                           │
+                    │    └─ CoreDNS resolves Pod B   │  ← Service
+                    │       kube-proxy/Cilium routes │    Discovery
+                    └────────────────────────────────┘
+```
+
+They are **not alternatives**. They are three distinct layers, each solving a different problem.
+
+---
+
+### Individual Identity
+
+#### 1. Service Discovery
+> *"Where is the service?"*
+
+- **Who uses it:** Pod → Pod (internal, automatic)
+- **Layer:** L3/L4
+- **Configured by:** Kubernetes itself — zero effort from you
+- **Intelligence level:** Minimal — resolve a DNS name, route to a healthy IP
+- **Implementations:** CoreDNS, kube-proxy, Cilium (eBPF)
+
+---
+
+#### 2. Service Mesh
+> *"How should traffic behave between services?"*
+
+- **Who uses it:** Pod → Pod (internal, but with full L7 awareness)
+- **Layer:** L7
+- **Configured by:** You — traffic policies, mTLS rules, retry budgets
+- **Intelligence level:** High — observability, security, traffic shaping east-west
+- **Implementations:** Istio, Linkerd, Cilium Service Mesh, Consul Connect
+
+---
+
+#### 3. API Gateway
+> *"How does the outside world reach my services?"*
+
+- **Who uses it:** External client → Cluster (edge boundary)
+- **Layer:** L7
+- **Configured by:** You — routes, auth plugins, rate limits, TLS certs
+- **Intelligence level:** High — but focused on external consumers, not internal behavior
+- **Implementations:** Kong, Traefik, NGINX, Emissary
+
+---
+
+### Master Comparison Table
+
+| Dimension | Service Discovery | Service Mesh | API Gateway |
+|---|---|---|---|
+| **Core question** | Where is it? | How does it behave? | How do I get in? |
+| **Traffic direction** | East-West | East-West | North-South |
+| **Layer** | L3/L4 | L7 | L7 |
+| **Scope** | Internal only | Internal only | External → Internal |
+| **TLS** | ❌ | ✅ mTLS (pod-to-pod) | ✅ Terminates external TLS |
+| **Auth enforcement** | ❌ | ✅ Per service identity | ✅ Per consumer (JWT/API key) |
+| **Rate limiting** | ❌ | ⚠️ Basic | ✅ Per consumer/route/tier |
+| **Observability** | ❌ | ✅ L7 golden signals | ✅ Per-route metrics |
+| **Retries / Circuit breaking** | ❌ | ✅ | ✅ |
+| **Traffic splitting** | ❌ | ✅ (canary, A/B) | ✅ (canary, weighted) |
+| **Protocol translation** | ❌ | ⚠️ Limited | ✅ REST↔gRPC, WebSocket |
+| **Required by Kubernetes** | ✅ Always present | ❌ Optional | ❌ Optional |
+| **Operational complexity** | Zero | Very High | Medium |
+| **Performance overhead** | Zero | Medium (sidecar per pod) | Low (one proxy at edge) |
+
+---
+
+### Where Each One Lives in a Request's Journey
+
+```
+Browser / Mobile App / Partner API
+           │
+           │  HTTPS :443
+           ▼
+  ┌─────────────────────┐
+  │     API Gateway     │  ➜ Validates JWT
+  │       (Kong)        │  ➜ Checks rate limit (tenant quota)
+  │                     │  ➜ Terminates TLS
+  │                     │  ➜ Routes /api/orders → order-svc
+  └─────────────────────┘
+           │
+           │  HTTP (internal)
+           ▼
+  ┌─────────────────────┐
+  │  order-svc Pod      │
+  │  ┌───────────────┐  │
+  │  │ Envoy sidecar │  │  ➜ Enforces mTLS to downstream
+  │  │ (Service Mesh)│  │  ➜ Emits L7 metrics to Prometheus
+  │  └───────────────┘  │  ➜ Applies retry policy (3x, 100ms backoff)
+  │  [ app container ]  │
+  └─────────────────────┘
+           │
+           │  Calls inventory-svc
+           ▼
+  ┌─────────────────────┐
+  │   CoreDNS resolves  │  ➜ inventory-svc.default.svc.cluster.local
+  │   inventory-svc     │  ➜ Returns ClusterIP
+  │  (Svc Discovery)    │  ➜ kube-proxy/Cilium routes to a healthy pod
+  └─────────────────────┘
+           │
+           ▼
+  ┌─────────────────────┐
+  │  inventory-svc Pod  │
+  └─────────────────────┘
+```
+
+Every layer fired exactly once in that single request. None replaced the other.
+
+---
+
+### Overlap Zones (Where It Gets Confusing)
+
+#### API Gateway vs Service Mesh — Traffic Splitting
+Both can do canary routing, but:
+- **API Gateway canary** → splits *external* traffic between v1 and v2 of your public API
+- **Mesh canary** → splits *internal* traffic between two versions of a downstream microservice, invisible to the outside
+
+#### API Gateway vs Service Mesh — Auth
+- **API Gateway auth** → validates *who the external consumer is* (JWT, API key, OAuth)
+- **Mesh auth** → validates *which internal service is allowed to talk to which* (SPIFFE identity, mTLS cert)
+
+#### Service Mesh vs Service Discovery — Routing
+- **Service Discovery** routes at L4 — it just gets the packet to *a* pod
+- **Service Mesh** routes at L7 — it can route based on HTTP headers, gRPC method, cookie values, weight percentages
+
+---
+
+### When Do You Need Each?
+
+| Scenario | Discovery | Mesh | Gateway |
+|---|---|---|---|
+| Any Kubernetes cluster | ✅ Always | — | — |
+| Exposing services externally | ✅ | — | ✅ |
+| Multi-tenant SaaS (rate limits, auth) | ✅ | — | ✅ |
+| Zero-trust internal security (mTLS) | ✅ | ✅ | — |
+| Debugging latency between microservices | ✅ | ✅ | — |
+| Canary deploy internal service | ✅ | ✅ | — |
+| Canary deploy public API | ✅ | — | ✅ |
+| Full production microservice platform | ✅ | ✅ | ✅ |
+
+---
+
+### Recommendation for KaaS Platform
+
+Given your stack (Cilium + Kong + air-gapped Rocky Linux):
+
+**Service Discovery** → Cilium already replaces kube-proxy here using eBPF — zero extra work, better performance than iptables.
+
+**Service Mesh** → Use **Cilium Service Mesh + Hubble** instead of Istio. You get mTLS (via WireGuard), L7 visibility, and network policy enforcement with **no sidecars** — critical in air-gapped environments where every extra image and moving part is a liability. Reserve full Istio only if a large enterprise tenant specifically demands it.
+
+**API Gateway** → Kong is already in your stack and is the right call. For your KaaS tiers:
+- **vCluster (entry-level):** Shared Kong instance with namespace-scoped rate limiting per tenant
+- **Dedicated CAPI cluster (enterprise):** Dedicated Kong instance per cluster for full isolation and custom plugin sets per tenant
+
+This combination gives you the **full three-layer architecture** with the least operational overhead in your air-gapped context.
