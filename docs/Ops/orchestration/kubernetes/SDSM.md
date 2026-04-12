@@ -1,4 +1,5 @@
-# Service Mesh vs Service Discovery in Kubernetes
+# Service Mesh vs Service Discovery 
+in Kubernetes
 
 These two concepts are often mentioned together, but operate at very different layers of your cluster. Here's a clear breakdown:
 
