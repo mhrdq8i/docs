@@ -445,8 +445,8 @@ Core responsibilities:
 External Client
       │
       ▼
- ┌─────────────────────────────────────┐
- │           API Gateway               │
+ ┌────────────────────────────────────┐
+ │           API Gateway              │
  │  ┌─────────────────────────────┐   │
  │  │  Auth / JWT validation      │   │
  │  │  Rate limiting / quotas     │   │
@@ -455,7 +455,7 @@ External Client
  │  │  Protocol translation       │   │
  │  │  Request/response transform │   │
  │  └─────────────────────────────┘   │
- └─────────────────────────────────────┘
+ └────────────────────────────────────┘
       │              │             │
       ▼              ▼             ▼
   Service A      Service B     Service C
