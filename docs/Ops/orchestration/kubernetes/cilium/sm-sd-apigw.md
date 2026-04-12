@@ -404,4 +404,127 @@ Given your KaaS platform works with Cilium:
 
 - **Cilium** already replaces kube-proxy for service discovery using eBPF, which is faster and more scalable than iptables.
 - **Cilium Service Mesh** (with Hubble) can give you a significant portion of service mesh capabilities — L7 visibility, mTLS via WireGuard, network policies — **without the sidecar overhead**. This is worth considering over Istio for your air-gapped enterprise clusters since it has fewer moving parts.
+
+## Service Discovery vs API Gateway
+
+These two solve completely different problems at different boundaries of your system.
+
+---
+
+### The One-Line Mental Model
+
+| | Answers the question... | Serves traffic from... |
+|---|---|---|
+| **Service Discovery** | *"Where is service B inside the cluster?"* | Internal (pod → pod) |
+| **API Gateway** | *"How does the outside world reach my services?"* | External (client → cluster) |
+
+---
+
+### Service Discovery (recap)
+
+Already covered, but to anchor the comparison:
+
+- **Scope:** Internal cluster only
+- **Actors:** Pod A, finding Pod B
+- **Mechanism:** CoreDNS + kube-proxy (or Cilium eBPF)
+- **Protocol awareness:** L3/L4 — it just resolves an IP and routes packets
+- **Intelligence:** Minimal — round-robin or IPVS-based load balancing
+- **Who configures it:** Kubernetes itself, automatically
+
+It's fully **transparent** — your app code doesn't know it exists.
+
+---
+
+### API Gateway
+
+An API Gateway sits at the **edge of your cluster** and acts as the single entry point for all external traffic. It's an active, intelligent proxy with full application-layer awareness.
+
+Core responsibilities:
+
+```
+External Client
+      │
+      ▼
+ ┌─────────────────────────────────────┐
+ │           API Gateway               │
+ │  ┌─────────────────────────────┐   │
+ │  │  Auth / JWT validation      │   │
+ │  │  Rate limiting / quotas     │   │
+ │  │  TLS termination            │   │
+ │  │  Request routing (L7)       │   │
+ │  │  Protocol translation       │   │
+ │  │  Request/response transform │   │
+ │  └─────────────────────────────┘   │
+ └─────────────────────────────────────┘
+      │              │             │
+      ▼              ▼             ▼
+  Service A      Service B     Service C
+  (orders)       (users)       (billing)
+```
+
+### What an API Gateway provides:
+
+| Capability | Detail |
+|---|---|
+| **Routing** | `/api/orders` → Service A, `/api/users` → Service B |
+| **Auth** | Validate JWT/API keys before traffic reaches your services |
+| **Rate limiting** | 1000 req/min per tenant, per endpoint |
+| **TLS termination** | Handles HTTPS at the edge; internal traffic can be plain HTTP |
+| **Protocol translation** | REST → gRPC, WebSocket upgrading |
+| **Request transformation** | Header injection, payload rewriting |
+| **Canary / A/B routing** | Route 5% of traffic to v2 |
+| **Observability** | Per-route latency, error rates, quota usage |
+
+Common implementations: **Kong**, **Traefik**, **NGINX**, **Istio Gateway**, **Emissary (Ambassador)**
+
+---
+
+### Side-by-Side Comparison
+
+| Dimension | Service Discovery | API Gateway |
+|---|---|---|
+| **Traffic direction** | East-West (internal) | North-South (external → internal) |
+| **Layer** | L3/L4 | L7 |
+| **Who uses it** | Your microservices talking to each other | External clients (browsers, mobile, partners) |
+| **Auth enforcement** | ❌ None | ✅ Central enforcement point |
+| **Rate limiting** | ❌ None | ✅ Per consumer, per route |
+| **TLS** | Handled by mesh (optional) | ✅ Terminates external TLS |
+| **Protocol awareness** | IP/TCP only | HTTP, gRPC, WebSocket, REST |
+| **Configured by** | Kubernetes automatically | You (routes, policies, plugins) |
+| **Examples** | CoreDNS, kube-proxy, Cilium | Kong, Traefik, NGINX |
+
+---
+
+### How They Fit Together
+
+They are **not alternatives** — they work at different boundaries and are both present in a production system:
+
+```
+Internet
+   │
+   ▼
+API Gateway          ← North-South boundary (you control this)
+   │
+   ▼
+Kubernetes Cluster
+   │
+   ├── Pod A  ──(Service Discovery)──▶  Pod B
+   │
+   └── Pod C  ──(Service Discovery)──▶  Pod D
+```
+
+A request flows through **both**:
+1. External client hits the **API Gateway** → auth checked, rate limit applied, routed to the right service
+2. That service calls another internal service → **Service Discovery** resolves it, traffic flows pod-to-pod
+
+---
+
+### Practical Guidance for Your KaaS Platform
+
+Since you're running **Kong** in your stack already:
+
+- Kong is your **API Gateway** — it handles all external tenant-facing traffic, auth (JWT/key-auth plugins), and rate limiting per tenant tier.
+- **Cilium** handles your internal service discovery and east-west routing via eBPF.
+- For your KaaS tiers, you likely want **one Kong instance per tenant cluster** (or at least per namespace) at the dedicated tier, and a **shared Kong** at the vCluster entry-level tier to keep costs down.
+- The combination of Kong (north-south) + Cilium (east-west + mesh) covers the full traffic control picture without needing a heavy Istio deployment on top.
 - For entry-level tiers (vCluster), service discovery alone is usually enough. A full mesh makes more sense at the dedicated cluster tier, where tenants need SLA-grade observability and zero-trust networking.
