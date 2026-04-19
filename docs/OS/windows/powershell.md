@@ -118,6 +118,13 @@ Edit these lines
 oh-my-posh init pwsh --config C:\Users\mehrdad\oh-my-posh\themes\mehrdad.omp.json | Invoke-Expression
 ```
 
+## Set http(s) proxy
+
+```bash
+$env:http_proxy = "http://1.1.1.1:80"
+$env:https_proxy = "http://1.1.1.1:80"
+```
+
 ### Language Segment
 
 -   [Python](https://ohmyposh.dev/docs/segments/languages/python)
