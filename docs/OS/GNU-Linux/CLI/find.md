@@ -236,6 +236,12 @@ find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
 find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
 ```
 
+### 40. Delete recursively file `requirements.yml:Zone.Identifier` 
+
+```sh
+find . -type f -name "*:Zone.Identifier" -delete
+```
+
 **Tips**: When we mentioned `%0` in Bash, We assumed you were referring to the special variable `$0`, which is commonly used in shell scripts. In fact `%0` is a pointer to `$0` variable.
 
 ### Image of above commands
