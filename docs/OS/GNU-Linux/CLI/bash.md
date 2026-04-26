@@ -2,6 +2,12 @@
 
  [Move & erasing through the opened shell][MoveEraseShell]
 
+### Image of the above commands
+
+??? Toggle menu
+
+    ![pic0](https://github.com/user-attachments/assets/b46dcb87-e8d5-42b8-b748-4eb704f68c2d)
+    
 ## SET
 
 - [The set Command in Linux]
