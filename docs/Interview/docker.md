@@ -458,29 +458,3 @@ While the concept is "Union File System," Docker can use different storage drive
 - **AUFS (Another Union File System):** This was one of the earliest storage drivers used by Docker and is still available, though less common now.
 
 In summary, the Union File System is a crucial technology that underpins Docker's efficiency, speed, and flexibility by enabling a layered approach to building and running containers.
-
-
-
-## Installation
-
-### RockyLinux 9
-
-```
-# Add Docker repo
-sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-
-# Install
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-# Start and enable
-sudo systemctl start docker
-sudo systemctl enable docker
-
-# Add your user to docker group (avoid sudo)
-sudo usermod -aG docker $USER
-newgrp docker
-
-# Verify
-docker --version
-docker ps
-```
