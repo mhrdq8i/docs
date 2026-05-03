@@ -35,6 +35,28 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
+### RockyLinux 9
+
+```
+# Add Docker repo
+sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+
+# Install
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Start and enable
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Add your user to docker group (avoid sudo)
+sudo usermod -aG docker $USER
+newgrp docker
+
+# Verify
+docker --version
+docker ps
+```
+
 ### Test for successful installation
 
 ```docker
