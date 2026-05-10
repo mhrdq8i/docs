@@ -206,11 +206,24 @@ Switch branch
 git switch <existing-branch>
 ```
 
-Point head to last commit
+Point head to the last commit
 
 ```sh
 git switch -
 ```
+### git restore
+
+=== "discard changes in working directory"
+
+    ```bash
+    git restore <file>...
+    ```
+
+=== "unstage changes"
+
+    ```bash
+    git restore --staged <file>...
+    ```
 
 ### git reset - git revert
 
