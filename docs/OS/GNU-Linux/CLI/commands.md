@@ -479,6 +479,45 @@ iftop
 
 Create a new CERT file via openssl
 
+### Validate and Verify the CERTs and Keys files
+
+**1. List every cert in the chain** (compact view — order should be leaf → intermediate → root)
+   
+```bash
+openssl crl2pkcs7 -nocrl -certfile /path/to/your/fullchain.pem \
+  | openssl pkcs7 -print_certs -noout
+
+```
+
+**2. Full details for every cert** (subject, issuer, validity, SANs, key usage, etc.)
+
+```bash
+openssl crl2pkcs7 -nocrl -certfile /path/to/your/fullchain.pem \
+  | openssl pkcs7 -print_certs -text -noout
+```
+
+**3. Just the leaf** (the one HAProxy serves)
+
+```bash
+openssl x509 -in /path/to/your/fullchain.pem -noout \
+  -subject -issuer -dates -ext subjectAltName
+
+```
+
+**4. Validate that the chain actually verifies** (use the original chain file as the trust anchor for verify)
+
+```bash
+openssl verify -untrusted /path/to/your/Certum-Fullchain.txt \
+  /path/to/your/fullchain.pem
+```
+
+**5. Key still matches cert** (sanity-check after any edit)
+
+```bash
+openssl x509 -in /path/to/your/fullchain.pem -noout -modulus | openssl md5
+openssl rsa  -in /path/to/your/your.pub.key -noout -modulus | openssl md5
+```
+
 ### Create a new PrivateKey
 
 ```sh
