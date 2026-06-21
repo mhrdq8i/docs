@@ -232,22 +232,34 @@ find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
 
 ### 39. Rename Files Extension Recursively
 
+=== "Dry run"
+
+    ```sh
+    find . -type f -name "*.yaml" -exec sh -c 'echo "Renaming: $1 to ${1%.yaml}.yml"' _ {} \;
+    ```
+
+=== "Find + Rename"
+
+    ```sh
+    find . -type f -name "*.yaml" -exec rename 's/\.yaml$/.yml/' {} +
+    ```
+
 === "Simple"
 
     ```sh
     find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
     ```
 
-=== "Efficient"
-
-    ```sh
-    find . -type f -name "*.yaml" -exec sh -c 'for f; do mv "$f" "${f%.yaml}.yml"; done' _ {} +
-    ```
-
 === "Simpler & More Readable"
 
     ```sh
     find . -type f -name "*.yaml" -exec sh -c 'mv "$1" "${1%.yaml}.yml"' _ {} \;
+    ```
+    
+=== "Efficient"
+
+    ```sh
+    find . -type f -name "*.yaml" -exec sh -c 'for f; do mv "$f" "${f%.yaml}.yml"; done' _ {} +
     ```
     
 === "Safest Option - using `-execdir`"
