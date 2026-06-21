@@ -232,9 +232,37 @@ find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
 
 ### 39. Rename Files Extension Recursively
 
-```sh
-find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
-```
+=== "Simple"
+
+    ```sh
+    find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
+    ```
+
+=== "Efficient"
+
+    ```sh
+    find . -type f -name "*.yaml" -exec sh -c 'for f; do mv "$f" "${f%.yaml}.yml"; done' _ {} +
+    ```
+
+=== "Simpler & More Readable"
+
+    ```sh
+    find . -type f -name "*.yaml" -exec sh -c 'mv "$1" "${1%.yaml}.yml"' _ {} \;
+    ```
+    
+=== "Safest Option - using `-execdir`"
+
+    ```sh
+    find . -type f -name "*.yaml" -execdir sh -c 'mv "$1" "${1%.yaml}.yml"' _ {} \;
+    ```
+    
+=== "Using a while read loop"
+
+    ```sh
+    find . -type f -name "*.yaml" -print0 | while IFS= read -r -d '' file; do
+    mv "$file" "${file%.yaml}.yml"
+    done
+    ```
 
 ### 40. Delete recursively file `requirements.yml:Zone.Identifier` 
 
@@ -242,9 +270,9 @@ find . -iname "*.yaml" -exec bash -c 'mv "$0" "${0%.yaml}.yml"' {} \;
 find . -type f -name "*:Zone.Identifier" -delete
 ```
 
-**Tips**: When we mentioned `%0` in Bash, We assumed you were referring to the special variable `$0`, which is commonly used in shell scripts. In fact `%0` is a pointer to `$0` variable.
+**Tips**: When we mentioned `%0` in Bash, we assumed you were referring to the special variable `$0`, which is commonly used in shell scripts. In fact, `%0` is a pointer to the `$0` variable.
 
-### Image of above commands
+### Image of the above commands
 
 ??? Toggle menu
 
