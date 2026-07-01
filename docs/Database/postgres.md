@@ -51,12 +51,18 @@ get the list of tables
 connect to the existing DB
 ```
 
-#### Change PG password
+### Change PG password
 
 ```postgres
 \password postgres
 OR
 ALTER USER user_name PASSWORD 'new_password';
+```
+
+### Print POSTGRES environment variables
+
+```bash
+env | grep -i -E 'POSTGRES|PG'
 ```
 
 ### Connect from the other host
