@@ -282,6 +282,12 @@ find -name example ! ( -name ".." -o -name "." -o -name '\\\_\\\*.sql' )
 find . -type f -name "*:Zone.Identifier" -delete
 ```
 
+### 41. Recursively `git pull origin dev` on sub directories
+
+```sh
+find ~/w -maxdepth 6 -type d -name ".git" -not -path "*/node_modules/*" -exec sh -c 'echo "== ${1%/.git} =="; git -C "${1%/.git}" pull origin dev' _ {} \;
+```
+
 **Tips**: When we mentioned `%0` in Bash, we assumed you were referring to the special variable `$0`, which is commonly used in shell scripts. In fact, `%0` is a pointer to the `$0` variable.
 
 ### Image of the above commands
